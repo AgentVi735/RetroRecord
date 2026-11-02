@@ -5,15 +5,9 @@ namespace RetroRecord.Engine.Chart
     [System.Serializable]
     public class SyncTrack
     {
-        private SyncTrack(TempoChange[] tempoChanges, TimeSignatureChange[] timeSignatureChanges)
-        {
-            TempoChanges = tempoChanges;
-            TimeSignatureChanges = timeSignatureChanges;
-        }
-
         [field:SerializeField]
-        public TempoChange[] TempoChanges { get; private set; }
+        public TempoChange[] TempoChanges { get; set; }
         [field:SerializeField]
-        public TimeSignatureChange[] TimeSignatureChanges { get; private set; }
+        public TimeSignatureChange[] TimeSignatureChanges { get; set; }
     }
 }

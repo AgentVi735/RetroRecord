@@ -5,15 +5,13 @@ namespace RetroRecord.Engine.Chart
     [System.Serializable]
     public class Chart
     {
-        public Chart(Difficulty difficulty, Note[] notes)
-        {
-            Difficulty = difficulty;
-            Notes = notes;
-        }
-
         [field:SerializeField]
-        public Difficulty Difficulty { get; private set; }
+        public Difficulty Difficulty { get; set; }
         [field:SerializeField]
-        public Note[] Notes { get; private set; }
+        public NoteGroup[] Notes { get; set; }
+        [field:SerializeField]
+        public SongItem[] LocalEvents { get; set; }
+        [field:SerializeField]
+        public uint LastTick { get; set; }
     }
 }

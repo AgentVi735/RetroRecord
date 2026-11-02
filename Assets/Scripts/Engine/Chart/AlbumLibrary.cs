@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
 {
@@ -6,6 +7,13 @@ namespace RetroRecord.Engine.Chart
     public class AlbumLibrary : ScriptableObject
     {
         [field:SerializeField]
-        public Album[] Albums { get; private set; }
+        public Album[] Albums { get; set; }
+
+        public void ReorderAlbums()
+        {
+            Albums = Albums.OrderBy(album => album.ArtistName)
+                .ThenBy(album => album.AlbumName)
+                .ToArray();
+        }
     }
 }
