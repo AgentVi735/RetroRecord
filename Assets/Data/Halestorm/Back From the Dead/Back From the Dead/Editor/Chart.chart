@@ -1,0 +1,89 @@
+﻿[Song]
+{
+  Name = "Back From the Dead"
+  Artist = "Halestorm"
+  Charter = "Vicky"
+  Album = "Back From the Dead"
+  Year = ", 2022"
+  Offset = 0
+  Resolution = 192
+  Player2 = bass
+  Difficulty = 1
+  PreviewStart = 0
+  PreviewEnd = 0
+  Genre = "Metal"
+  MediaType = "cd"
+  MusicStream = "C:\Users\vicky\Unity\RetroRecord\Assets\Data\Halestorm\Back From the Dead\Back From the Dead\Back From the Dead.mp3"
+}
+[SyncTrack]
+{
+  0 = TS 4
+  0 = B 84000
+}
+[Events]
+{
+}
+[HardGHLGuitar]
+{
+  768 = N 4 1344
+  768 = N 5 1344
+  1440 = N 0 96
+  1536 = N 1 0
+  1728 = N 2 0
+  1824 = N 3 0
+  1920 = N 2 384
+  2112 = N 7 0
+  2160 = N 6 0
+  2208 = N 5 96
+  2304 = N 1 768
+  2304 = N 7 0
+  2352 = N 7 0
+  2400 = N 7 0
+  2448 = N 7 0
+  2496 = N 7 0
+  2544 = N 7 0
+  2592 = N 7 0
+  2640 = N 7 0
+  2688 = N 7 0
+  2736 = N 7 0
+  2784 = N 7 0
+  2832 = N 7 0
+  2880 = N 7 0
+  2928 = N 7 0
+  2976 = N 7 0
+  3024 = N 7 0
+  3072 = N 7 0
+  3120 = N 7 0
+  3168 = N 7 0
+  3216 = N 7 0
+  3264 = N 7 0
+  3312 = N 7 0
+  3360 = N 7 0
+  3408 = N 7 0
+  3456 = N 6 384
+  3840 = N 4 0
+  3888 = N 4 0
+  3936 = N 4 0
+  3984 = N 4 0
+  4032 = N 4 0
+  4080 = N 4 0
+  4128 = N 4 0
+  4176 = N 4 0
+  4224 = N 4 0
+  4272 = N 4 0
+  4320 = N 4 0
+  4368 = N 4 0
+  4416 = N 4 0
+  4464 = N 4 0
+  4512 = N 4 0
+  4560 = N 4 0
+  4608 = N 4 0
+  4656 = N 4 0
+  4704 = N 4 0
+  4752 = N 4 0
+  4800 = N 4 0
+  4848 = N 4 0
+  4896 = N 4 0
+  4944 = N 4 0
+  4992 = N 5 384
+}

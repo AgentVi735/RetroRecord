@@ -10,7 +10,6 @@ using UnityEditor;
 
 namespace RetroRecord.Engine.Chart.Editor
 {
-
     public static class SongConverter
     {
         private const int RESOLUTION = 192;
@@ -157,10 +156,8 @@ namespace RetroRecord.Engine.Chart.Editor
 
             AssetDatabase.Refresh();
 
-            song.SongInfo = new SongInfo
-            {
-                SongName = rawSongInfo.songName
-            };
+            song.SongInfo ??= new SongInfo();
+            song.SongInfo.SongName = rawSongInfo.songName;
 
             // if (rawSongInfo.audioFileName != "")
             // {
