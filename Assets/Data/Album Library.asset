@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.AlbumLibrary
   <Albums>k__BackingField:
   - {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
+  - {fileID: 11400000, guid: 1ff4375ebd4146a40a5e72c487cab915, type: 2}
+  Resolution: 192
+  CoverFileName: Cover.png

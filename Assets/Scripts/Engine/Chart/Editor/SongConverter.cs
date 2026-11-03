@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-#if UNITY_EDITOR
 using RetroRecord.Engine.Chart.Events;
+#if UNITY_EDITOR
 using UnityEditor;
 #endif
 
@@ -12,23 +12,37 @@ namespace RetroRecord.Engine.Chart.Editor
 {
     public static class SongConverter
     {
-        private const int RESOLUTION = 192;
-        private const string COVER_FILE_NAME = "Cover.png";
-        
-        private const int millisecondsInSecond = 1000;
-
-        private const string chartFileSongDataHeader = "[Song]";
-        private const string chartFileSyncTrackHeader = "[SyncTrack]";
-        private const string chartFileEventsHeader = "[Events]";
-        private const string chartFileGHLGuitarHardHeader = "[HardGHLGuitar]";
-        private const string chartFileGHLGuitarNormalHeader = "[NormalGHLGuitar]";
-        private const string chartFileGHLGuitarEasyHeader = "[EasyGHLGuitar]";
+#if UNITY_EDITOR
+        private const int k_millisecondsInSecond = 1000;
 
         private static RawSongInfo s_currentRawSongInfo;
+        private static AlbumLibrary s_albumLibrary;
+        
+        private const string k_chartFileSongDataHeader = "[Song]";
+        private const string k_chartFileSyncTrackHeader = "[SyncTrack]";
+        private const string k_chartFileEventsHeader = "[Events]";
+        private const string k_chartFileGhlGuitarHardHeader = "[HardGHLGuitar]";
+        private const string k_chartFileGhlGuitarNormalHeader = "[NormalGHLGuitar]";
+        private const string k_chartFileGhlGuitarEasyHeader = "[EasyGHLGuitar]";
 
-#if UNITY_EDITOR
+        private const string k_songInfoNameKey = "Name";
+        private const string k_songInfoArtistKey = "Artist";
+        private const string k_songInfoAlbumKey = "Album";
+        private const string k_songInfoYearKey = "Year";
+        private const string k_songInfoGenreKey = "Genre";
+        private const string k_songInfoAudioKey = "MusicStream";
+        
+        private const string k_noteKey = "N";
+        private const string k_tempoChangeKey = "B";
+        private const string k_timeSignatureChangeKey = "TS";
+        
+        private const string k_laneSwitchEventKey = "LS";
+        private const string k_showSongInfoEventKey = "SI";
+
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
+            s_albumLibrary = albumLibrary;
+            
             string[] guidsFound = AssetDatabase.FindAssets("chart", new[] { Path.Combine("Assets", "Data") });
 
             List<string> paths = new();
@@ -80,6 +94,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
         public static void ConvertAllSongsFromLibrary(AlbumLibrary library, Song[] songsToIgnore)
         {
+            s_albumLibrary = library;
             List<string> paths = (from album in library.Albums
                 from song in album.Songs
                 where !songsToIgnore.Contains(song)
@@ -150,36 +165,22 @@ namespace RetroRecord.Engine.Chart.Editor
                 song = oldSong;
             }
 
-            // string chartPath = Path.Combine(assetsPath, "Chart.asset");
-            // AssetDatabase.CreateAsset(song, chartPath);
-            // Debug.Log("Chart saved to: " + fullPath + "Chart.asset");
-
             AssetDatabase.Refresh();
 
             song.SongInfo ??= new SongInfo();
             song.SongInfo.SongName = rawSongInfo.songName;
-
-            // if (rawSongInfo.audioFileName != "")
-            // {
-                // song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(assetsPath + "Editor/" + rawSongInfo.audioFileName);
-
-                // tempPath = Path.Combine("Assets", "StreamingAssets", "Songs");
-                // if (!AssetDatabase.AssetPathExists(Path.Combine(tempPath, rawSongInfo.artistName)))
-                //     AssetDatabase.CreateFolder(tempPath, rawSongInfo.artistName);
-                // tempPath = Path.Combine(tempPath, rawSongInfo.artistName);
-                // if (!AssetDatabase.AssetPathExists(Path.Combine(tempPath, rawSongInfo.albumName)))
-                //     AssetDatabase.CreateFolder(tempPath, rawSongInfo.albumName);
-                // tempPath = Path.Combine(tempPath, rawSongInfo.albumName);
-                // if (!AssetDatabase.AssetPathExists(Path.Combine(tempPath, rawSongInfo.songName)))
-                //     AssetDatabase.CreateFolder(tempPath, rawSongInfo.songName);
-                // tempPath = Path.Combine(tempPath, rawSongInfo.songName);
-                // AssetDatabase.CopyAsset(assetsPath + "Editor/" + rawSongInfo.audioFileName,
-                //     Path.Combine(tempPath, rawSongInfo.audioFileName));
-
-                // songObj.songPath = Path.Combine("Songs", rawSongInfo.artistName, info.albumName, info.songName,
-                //     info.audioFileName);
-                // songObj.songPath = songObj.songPath.Replace('\\', '/');
-            // }
+            if (rawSongInfo.audioFileName != "")
+            {
+                string audioPath = rawSongInfo.audioFileName;
+                bool isInAssets = audioPath.Contains("Assets");
+                if (isInAssets)
+                {
+                    int idx = audioPath.IndexOf("Assets", StringComparison.Ordinal);
+                    audioPath = audioPath.Remove(0, idx);
+                    
+                    song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);
+                }
+            }
 
             string albumPath = Path.Combine("\\Data", rawSongInfo.artistName, rawSongInfo.albumName + "\\");
             string assetsAlbumPath = "Assets" + albumPath;
@@ -210,8 +211,8 @@ namespace RetroRecord.Engine.Chart.Editor
                 album.Songs = tempSongs.ToArray();
             }
 
-            if (AssetDatabase.AssetPathExists(assetsAlbumPath + COVER_FILE_NAME))
-                album.Cover = AssetDatabase.LoadAssetAtPath<Sprite>(assetsAlbumPath + COVER_FILE_NAME);
+            if (AssetDatabase.AssetPathExists(assetsAlbumPath + s_albumLibrary.CoverFileName))
+                album.Cover = AssetDatabase.LoadAssetAtPath<Sprite>(assetsAlbumPath + s_albumLibrary.CoverFileName);
 
             EditorUtility.SetDirty(album);
             Debug.Log("Saved Album at: " + albumObjPath);
@@ -254,22 +255,22 @@ namespace RetroRecord.Engine.Chart.Editor
                 string text = txt[i];
                 switch (text)
                 {
-                    case chartFileSongDataHeader:
+                    case k_chartFileSongDataHeader:
                         songDataIdx = FindBrackets(i, txt);
                         break;
-                    case chartFileSyncTrackHeader:
+                    case k_chartFileSyncTrackHeader:
                         syncTrackIdx = FindBrackets(i, txt);
                         break;
-                    case chartFileEventsHeader:
+                    case k_chartFileEventsHeader:
                         eventsIdx = FindBrackets(i, txt);
                         break;
-                    case chartFileGHLGuitarHardHeader:
+                    case k_chartFileGhlGuitarHardHeader:
                         ghlGuitarHardIdx = FindBrackets(i, txt);
                         break;
-                    case chartFileGHLGuitarNormalHeader:
+                    case k_chartFileGhlGuitarNormalHeader:
                         ghlGuitarNormalIdx = FindBrackets(i, txt);
                         break;
-                    case chartFileGHLGuitarEasyHeader:
+                    case k_chartFileGhlGuitarEasyHeader:
                         ghlGuitarEasyIdx = FindBrackets(i, txt);
                         break;
                 }
@@ -288,43 +289,39 @@ namespace RetroRecord.Engine.Chart.Editor
                 for (int i = songDataIdx.x; i < songDataIdx.y; i++)
                 {
                     string text = txt[i];
-                    if (text == "{" || text.Contains("TS"))
+                    if (text == "{" || text.Contains(k_timeSignatureChangeKey))
                         continue;
                     if (text == "}")
                         break;
 
-                    if (text.Contains("Name"))
+                    if (text.Contains(k_songInfoNameKey))
                     {
                         string a = text[10..];
                         rawSongInfo.songName = a.Replace("\"", "");
                     }
-                    else if (text.Contains("Artist"))
+                    else if (text.Contains(k_songInfoArtistKey))
                     {
                         string a = text[12..];
                         rawSongInfo.artistName = a.Replace("\"", "");
                     }
-                    else if (text.Contains("Album"))
+                    else if (text.Contains(k_songInfoAlbumKey))
                     {
                         string a = text[11..];
                         rawSongInfo.albumName = a.Replace("\"", "");
                     }
-                    else if (text.Contains("Year"))
+                    else if (text.Contains(k_songInfoYearKey))
                     {
                         string a = text[12..];
                         rawSongInfo.year = a.Replace("\"", "");
                     }
-                    else if (text.Contains("Genre"))
+                    else if (text.Contains(k_songInfoGenreKey))
                     {
                         string a = text[11..];
                         rawSongInfo.genre = a.Replace("\"", "");
                     }
-                    else if (text.Contains("MusicStream"))
+                    else if (text.Contains(k_songInfoAudioKey))
                     {
                         string a = text[17..];
-                        const char delimiter = '\\';
-                        int index = a.LastIndexOf(delimiter);
-                        if (index != -1)
-                            a = a[(index + 1)..];
                         rawSongInfo.audioFileName = a.Replace("\"", "");
                     }
                 }
@@ -438,7 +435,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
         private static SongItem GetNote(string text)
         {
-            if (text.Contains("E"))
+            if (!text.Contains(k_noteKey))
                 return GetLocalEvent(text);
             Note item = new();
             string tick = "";
@@ -506,9 +503,9 @@ namespace RetroRecord.Engine.Chart.Editor
             uint.TryParse(tick, out uint tickUInt);
             item.Tick = tickUInt;
 
-            if (!type.StartsWith("L")) return item; // LaneSwitch
+            if (!type.StartsWith(k_laneSwitchEventKey)) return item;
             LaneSwitchEvent laneSwitch = (LaneSwitchEvent)item;
-            string idx = type.Remove(0, 1);
+            string idx = type.Remove(0, k_laneSwitchEventKey.Length);
             int.TryParse(idx, out int idxInt);
             laneSwitch.Lanes = idxInt;
 
@@ -517,9 +514,9 @@ namespace RetroRecord.Engine.Chart.Editor
 
         private static SongItem GetSyncTrackItem(string text)
         {
-            if (text.Contains("TS"))
+            if (text.Contains(k_timeSignatureChangeKey))
                 return GetTimeSignature(text);
-            return text.Contains("B") ? GetTempoChange(text) : null;
+            return text.Contains(k_tempoChangeKey) ? GetTempoChange(text) : null;
         }
 
         private static TimeSignatureChange GetTimeSignature(string text)
@@ -584,7 +581,7 @@ namespace RetroRecord.Engine.Chart.Editor
             uint.TryParse(tick, out uint tickUInt);
             item.Tick = tickUInt;
 
-            if (!text.Contains("ShowInfo")) return item;
+            if (!text.Contains(k_showSongInfoEventKey)) return item;
             ShowSongInfoEvent showSongInfoEvent = (ShowSongInfoEvent)item;
             return showSongInfoEvent;
 
@@ -616,7 +613,7 @@ namespace RetroRecord.Engine.Chart.Editor
             item.Tick = tickUInt;
 
             float.TryParse(itemBpm, out float itemTempoFloat);
-            itemTempoFloat /= millisecondsInSecond;
+            itemTempoFloat /= k_millisecondsInSecond;
             item.Tempo = itemTempoFloat;
 
             return item;
@@ -710,7 +707,7 @@ namespace RetroRecord.Engine.Chart.Editor
             {
                 uint deltaTicks = item.Tick - previousTick;
 
-                double beats = deltaTicks / (double)RESOLUTION;
+                double beats = deltaTicks / (double)s_albumLibrary.Resolution;
                 currentTime += beats * (60.0 / currentBPM);
 
                 item.Time = currentTime;
@@ -781,7 +778,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             uint deltaTicks = tick - current.Tick;
 
-            double beats = (double)deltaTicks / RESOLUTION;
+            double beats = (double)deltaTicks / s_albumLibrary.Resolution;
 
             return current.Time + beats * (60.0 / current.Tempo);
         }
