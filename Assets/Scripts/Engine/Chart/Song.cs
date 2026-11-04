@@ -1,3 +1,4 @@
+using RetroRecord.Engine.Chart.Events;
 using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
@@ -5,13 +6,16 @@ namespace RetroRecord.Engine.Chart
     [CreateAssetMenu(menuName = "Data/Song", fileName = "New Song")]
     public class Song : ScriptableObject
     {
-        [field:SerializeField]
-        public SongInfo SongInfo { get; set; }
-        [field:SerializeField]
-        public SyncTrack SyncTrack { get; set; }
-        [field:SerializeField]
-        public Chart[] Charts { get; set; }
-        [field:SerializeField]
-        public SongItem[] Events { get; set; }
+        [SerializeField]
+        public SongInfo SongInfo;
+
+        [SerializeField]
+        public BeatTrack BeatTrack;
+
+        [SerializeField]
+        public Chart[] Charts;
+
+        [SerializeField]
+        public GlobalEventsTrack GlobalEvents;
     }
 }

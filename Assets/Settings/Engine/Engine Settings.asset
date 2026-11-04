@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e803e915d2f4a9bbf2761af66a7b6f7, type: 3}
+  m_Name: Engine Settings
+  m_EditorClassIdentifier: Assembly-CSharp::EngineSettingsObj
+  CoverFileName: Cover.png
+  OverrideSettings: 1
+  Song: {fileID: 11400000, guid: 26c42230deef54140a31b97601238c21, type: 2}
+  difficulty: 2
+  Volume: 0.408
+  StartTime: 0
+  HardSettings: {fileID: 11400000, guid: 5bc7c256d25686b48adb5c3fc2a03a78, type: 2}
+  NormalSettings: {fileID: 11400000, guid: 916dfd4c39babd2408ee49d729b465e9, type: 2}
+  EasySettings: {fileID: 11400000, guid: 60aa840425e0c8d4d9fa8e964445cb53, type: 2}
+  MinSecUntilNoteDespawn: 1
+  NoteHitboxInSec: 0.07
+  PerfectHitboxInSec: 0.035
+  HighwaySpeed: 12
+  NoteSpawnDistance: 2
+  MinSecShowStopSustain: 0.15
+  TimeAfterSong: 1
+  AudioOffset: 0.15
+  LaneColourUpdateTimeCount: 1
+  ShowSongNameTimeCount: 1
+  ShowSongNameStayBeatCount: 6

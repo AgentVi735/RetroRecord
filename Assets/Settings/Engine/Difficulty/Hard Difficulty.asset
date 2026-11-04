@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feae40cf93b54f32a0d7d5f90bd67adc, type: 3}
+  m_Name: Hard Difficulty
+  m_EditorClassIdentifier: Assembly-CSharp::DifficultySettings
+  LaneAmount: 8
+  StartingLane: 0
+  AreLanesInMiddle: 0
+  HighwaySpeed: 16
+  NoteHitboxSec: 0.07
+  PerfectHitboxSec: 0.035

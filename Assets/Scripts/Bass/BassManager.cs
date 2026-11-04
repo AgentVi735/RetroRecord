@@ -1,13 +1,13 @@
 ﻿using ManagedBass;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace RetroRecord.Audio
 {
     public class BassManager : MonoBehaviour
     {
         public static BassManager s_Instance { get; private set; }
 
-        public bool m_IsInitialised { get; private set; }
+        public bool IsInitialised { get; private set; }
 
         private void Awake()
         {
@@ -20,9 +20,9 @@ namespace DefaultNamespace
             s_Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            m_IsInitialised = Bass.Init();
+            IsInitialised = Bass.Init();
 
-            if (!m_IsInitialised)
+            if (!IsInitialised)
             {
                 Debug.LogError(
                     "BASS initialization failed: " + Bass.LastError
@@ -39,10 +39,10 @@ namespace DefaultNamespace
             if (s_Instance != this)
                 return;
 
-            if (m_IsInitialised)
+            if (IsInitialised)
             {
                 Bass.Free();
-                m_IsInitialised = false;
+                IsInitialised = false;
             }
 
             s_Instance = null;

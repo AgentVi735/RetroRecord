@@ -12,299 +12,344 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde023024f46eb540b2ef6bfbe33a290, type: 3}
   m_Name: Test Song
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
-  <SongInfo>k__BackingField:
-    <SongName>k__BackingField: Test Song
-    <Album>k__BackingField: {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
-    <OverrideArtist>k__BackingField: 
-    <Difficulty>k__BackingField: 0
-    <Audio>k__BackingField: {fileID: 0}
-  <SyncTrack>k__BackingField:
-    <TempoChanges>k__BackingField:
+  SongInfo:
+    SongName: Test Song
+    Album: {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
+    OverrideArtist: 
+    Difficulty: 0
+    Audio: {fileID: 0}
+  BeatTrack:
+    TempoChanges:
     - Tick: 0
       Time: 0
-      <Tempo>k__BackingField: 120
+      Tempo: 120
     - Tick: 768
       Time: 2
-      <Tempo>k__BackingField: 130
-    <TimeSignatureChanges>k__BackingField:
+      Tempo: 130
+    TimeSignatureChanges:
     - Tick: 0
       Time: 0
+      Numerator: 4
+      Denominator: 4
     - Tick: 768
       Time: 2
-  <Charts>k__BackingField:
-  - <Difficulty>k__BackingField: 2
-    <Notes>k__BackingField:
+      Numerator: 6
+      Denominator: 4
+  Charts:
+  - Difficulty: 2
+    Notes:
     - Tick: 768
       Time: 2
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 768
         Time: 2
-        <Lane>k__BackingField: 0
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 960
       Time: 2.4615384615384617
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 960
         Time: 2.4615384615384617
-        <Lane>k__BackingField: 1
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 1152
       Time: 2.9230769230769234
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 1152
         Time: 2.9230769230769234
-        <Lane>k__BackingField: 2
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 1344
       Time: 3.3846153846153846
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 1344
         Time: 3.3846153846153846
-        <Lane>k__BackingField: 3
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 1920
       Time: 4.769230769230769
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 1920
         Time: 4.769230769230769
-        <Lane>k__BackingField: 7
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 2112
       Time: 5.230769230769231
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 2112
         Time: 5.230769230769231
-        <Lane>k__BackingField: 6
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 2304
       Time: 5.6923076923076925
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 2304
         Time: 5.6923076923076925
-        <Lane>k__BackingField: 5
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 2496
       Time: 6.153846153846154
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 2496
         Time: 6.153846153846154
-        <Lane>k__BackingField: 4
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 3072
       Time: 7.538461538461538
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 3072
         Time: 7.538461538461538
-        <Lane>k__BackingField: 3
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 3072
         Time: 7.538461538461538
-        <Lane>k__BackingField: 4
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 3264
       Time: 8
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 3264
         Time: 8
-        <Lane>k__BackingField: 2
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 3264
         Time: 8
-        <Lane>k__BackingField: 5
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 3456
       Time: 8.461538461538462
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 3456
         Time: 8.461538461538462
-        <Lane>k__BackingField: 1
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 3456
         Time: 8.461538461538462
-        <Lane>k__BackingField: 6
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 3648
       Time: 8.923076923076923
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 3648
         Time: 8.923076923076923
-        <Lane>k__BackingField: 0
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 3648
         Time: 8.923076923076923
-        <Lane>k__BackingField: 7
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 4224
       Time: 10.307692307692308
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 4224
         Time: 10.307692307692308
-        <Lane>k__BackingField: 2
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 4224
         Time: 10.307692307692308
-        <Lane>k__BackingField: 3
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 4416
       Time: 10.76923076923077
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 4416
         Time: 10.76923076923077
-        <Lane>k__BackingField: 1
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 4416
         Time: 10.76923076923077
-        <Lane>k__BackingField: 2
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 4608
       Time: 11.230769230769232
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 4608
         Time: 11.230769230769232
-        <Lane>k__BackingField: 0
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 4608
         Time: 11.230769230769232
-        <Lane>k__BackingField: 1
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 4800
       Time: 11.692307692307693
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 4800
         Time: 11.692307692307693
-        <Lane>k__BackingField: 6
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 4800
         Time: 11.692307692307693
-        <Lane>k__BackingField: 7
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 4992
       Time: 12.153846153846155
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 4992
         Time: 12.153846153846155
-        <Lane>k__BackingField: 5
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 4992
         Time: 12.153846153846155
-        <Lane>k__BackingField: 6
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 5184
       Time: 12.615384615384617
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 5184
         Time: 12.615384615384617
-        <Lane>k__BackingField: 4
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 5184
         Time: 12.615384615384617
-        <Lane>k__BackingField: 5
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
-    <LocalEvents>k__BackingField: []
-    <LastTick>k__BackingField: 5184
-  - <Difficulty>k__BackingField: 1
-    <Notes>k__BackingField:
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
+    LocalEvents:
+      LaneSwitchEvents: []
+    LastTick: 5184
+  - Difficulty: 1
+    Notes:
     - Tick: 768
       Time: 2
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 768
         Time: 2
-        <Lane>k__BackingField: 3
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 864
       Time: 2.230769230769231
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 864
         Time: 2.230769230769231
-        <Lane>k__BackingField: 2
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 912
       Time: 2.3461538461538463
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 912
         Time: 2.3461538461538463
-        <Lane>k__BackingField: 1
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 960
       Time: 2.4615384615384617
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 960
         Time: 2.4615384615384617
-        <Lane>k__BackingField: 0
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
-    <LocalEvents>k__BackingField: []
-    <LastTick>k__BackingField: 960
-  - <Difficulty>k__BackingField: 0
-    <Notes>k__BackingField:
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
+    LocalEvents:
+      LaneSwitchEvents: []
+    LastTick: 960
+  - Difficulty: 0
+    Notes:
     - Tick: 768
       Time: 2
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 768
         Time: 2
-        <Lane>k__BackingField: 3
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
       - Tick: 768
         Time: 2
-        <Lane>k__BackingField: 4
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 960
       Time: 2.4615384615384617
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 960
         Time: 2.4615384615384617
-        <Lane>k__BackingField: 5
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 1152
       Time: 2.9230769230769234
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 1152
         Time: 2.9230769230769234
-        <Lane>k__BackingField: 6
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
     - Tick: 1488
       Time: 3.730769230769231
-      <Notes>k__BackingField:
+      Notes:
       - Tick: 1488
         Time: 3.730769230769231
-        <Lane>k__BackingField: 2
-        <TickSustainLength>k__BackingField: 0
-        <TimeSustainLength>k__BackingField: 0
-    <LocalEvents>k__BackingField: []
-    <LastTick>k__BackingField: 1488
-  <Events>k__BackingField: []
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+        WasHit: 0
+    LocalEvents:
+      LaneSwitchEvents: []
+    LastTick: 1488
+  GlobalEvents:
+    ShowSongInfoEvents: []

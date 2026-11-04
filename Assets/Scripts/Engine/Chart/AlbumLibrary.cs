@@ -6,7 +6,8 @@ namespace RetroRecord.Engine.Chart
     [CreateAssetMenu(menuName = "Data/Album Library", fileName = "Album Library")]
     public class AlbumLibrary : ScriptableObject
     {
-        [field: SerializeField] public Album[] Albums { get; set; }
+        [SerializeField]
+        public Album[] Albums;
 
         public void ReorderAlbums()
         {

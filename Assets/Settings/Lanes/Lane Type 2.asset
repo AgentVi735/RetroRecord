@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4317446d256242b4bca51d2e0cb3cbbb, type: 3}
+  m_Name: Lane Type 2
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Player.LaneSettings
+  <LaneSprite>k__BackingField:
+    <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    <DefaultColor>k__BackingField: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
+    <SecondaryColor>k__BackingField: {r: 0.40784314, g: 0.09019608, b: 0.09019608, a: 1}
+  <StrikelineSprite>k__BackingField:
+    <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    <DefaultColor>k__BackingField: {r: 0.39607844, g: 0.1764706, b: 0.54901963, a: 1}
+    <SecondaryColor>k__BackingField: {r: 0.46666667, g: 0, b: 0.79607844, a: 1}
+  <StrikelineHitSprite>k__BackingField:
+    <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    <DefaultColor>k__BackingField: {r: 0.2627451, g: 0.12941177, b: 0.35686275, a: 1}
+    <SecondaryColor>k__BackingField: {r: 0.34117648, g: 0.050980393, b: 0.54901963, a: 1}

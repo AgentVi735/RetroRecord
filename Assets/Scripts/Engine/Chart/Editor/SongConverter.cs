@@ -160,8 +160,8 @@ namespace RetroRecord.Engine.Chart.Editor
             {
                 Song oldSong = AssetDatabase.LoadAssetAtPath<Song>(objPath);
                 oldSong.Charts = song.Charts;
-                oldSong.SyncTrack = song.SyncTrack;
-                oldSong.Events = song.Events;
+                oldSong.BeatTrack = song.BeatTrack;
+                oldSong.GlobalEvents = song.GlobalEvents;
                 song = oldSong;
             }
 
@@ -172,13 +172,16 @@ namespace RetroRecord.Engine.Chart.Editor
             if (rawSongInfo.audioFileName != "")
             {
                 string audioPath = rawSongInfo.audioFileName;
-                bool isInAssets = audioPath.Contains("Assets");
-                if (isInAssets)
+                if (!string.IsNullOrEmpty(audioPath))
                 {
-                    int idx = audioPath.IndexOf("Assets", StringComparison.Ordinal);
-                    audioPath = audioPath.Remove(0, idx);
+                    bool isInAssets = audioPath.Contains("Assets");
+                    if (isInAssets)
+                    {
+                        int idx = audioPath.IndexOf("Assets", StringComparison.Ordinal);
+                        audioPath = audioPath.Remove(0, idx);
                     
-                    song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);
+                        song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);
+                    }
                 }
             }
 
@@ -366,6 +369,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
                     SongItem item = GetEvent(text);
 
+                    if (item == null) continue;
                     events.Add(item);
                 }
 
@@ -395,19 +399,30 @@ namespace RetroRecord.Engine.Chart.Editor
             }
 
             Song song = ScriptableObject.CreateInstance<Song>();
-            song.SyncTrack = new SyncTrack();
+            song.BeatTrack = new BeatTrack();
             if (syncTrackIdx.x != -1)
             {
-                song.SyncTrack.TempoChanges = tempoChangesArray;
+                song.BeatTrack.TempoChanges = tempoChangesArray;
                 TimeSignatureChange[] timeSignaturesArray = timeSignatures.ToArray();
                 CalculateTimeSignatureTimes(timeSignaturesArray);
-                song.SyncTrack.TimeSignatureChanges = timeSignaturesArray;
+                song.BeatTrack.TimeSignatureChanges = timeSignaturesArray;
             }
 
             if (charts.Count > 0)
                 song.Charts = charts.ToArray();
+            
+            GlobalEventsTrack globalEventsTrack = new();
+            List<ShowSongInfoEvent> showSongInfoEvents = new();
 
-            song.Events = eventsArray;
+            if (eventsArray.Length > 0)
+            {
+                showSongInfoEvents.AddRange(eventsArray
+                    .Where(songItem => songItem.GetItemType() == SongItemType.ShowSongInfo).Cast<ShowSongInfoEvent>());
+            }
+
+            globalEventsTrack.ShowSongInfoEvents = showSongInfoEvents.ToArray();
+            
+            song.GlobalEvents = globalEventsTrack;
             s_currentRawSongInfo = rawSongInfo;
 
             return song;
@@ -504,10 +519,9 @@ namespace RetroRecord.Engine.Chart.Editor
             item.Tick = tickUInt;
 
             if (!type.StartsWith(k_laneSwitchEventKey)) return item;
-            LaneSwitchEvent laneSwitch = (LaneSwitchEvent)item;
+            LaneSwitchEvent laneSwitch = LaneSwitchEvent.Clone(item);
             string idx = type.Remove(0, k_laneSwitchEventKey.Length);
-            int.TryParse(idx, out int idxInt);
-            laneSwitch.Lanes = idxInt;
+            laneSwitch.Lanes = idx;
 
             return laneSwitch;
         }
@@ -567,7 +581,12 @@ namespace RetroRecord.Engine.Chart.Editor
 
         private static SongItem GetEvent(string text)
         {
-            SongItem item = new();
+            return text.Contains(k_showSongInfoEventKey) ? GetShowSongInfoEvent(text) : null;
+        }
+        
+        private static ShowSongInfoEvent GetShowSongInfoEvent(string text)
+        {
+            ShowSongInfoEvent item = new();
             string tick = "";
             int spaceAmt = 0;
             foreach (char character in text)
@@ -581,9 +600,7 @@ namespace RetroRecord.Engine.Chart.Editor
             uint.TryParse(tick, out uint tickUInt);
             item.Tick = tickUInt;
 
-            if (!text.Contains(k_showSongInfoEventKey)) return item;
-            ShowSongInfoEvent showSongInfoEvent = (ShowSongInfoEvent)item;
-            return showSongInfoEvent;
+            return item;
 
         }
 
@@ -626,7 +643,8 @@ namespace RetroRecord.Engine.Chart.Editor
             List<Note> notes = new();
             uint currentTick = 0;
 
-            List<SongItem> localEvents = new();
+            LocalEventsTrack localEventsTrack = new();
+            List<LaneSwitchEvent> laneSwitchEvents = new();
 
             for (int i = idx.x; i < idx.y; i++)
             {
@@ -665,7 +683,8 @@ namespace RetroRecord.Engine.Chart.Editor
                         break;
                     }
                     case SongItemType.LaneSwitch:
-                        localEvents.Add(item);
+                        LaneSwitchEvent laneSwitchEvent = (LaneSwitchEvent)item;
+                        laneSwitchEvents.Add(laneSwitchEvent);
                         break;
                 }
             }
@@ -681,11 +700,12 @@ namespace RetroRecord.Engine.Chart.Editor
                     lastTick = item.Tick + item.TickSustainLength;
             }
 
+            localEventsTrack.LaneSwitchEvents = laneSwitchEvents.ToArray();
             Chart chart = new()
             {
                 Difficulty = difficulty,
                 Notes = noteGroups.ToArray(),
-                LocalEvents = localEvents.ToArray(),
+                LocalEvents = localEventsTrack,
                 LastTick = lastTick
             };
 
@@ -741,7 +761,7 @@ namespace RetroRecord.Engine.Chart.Editor
                 item.Time = TickToSecondsAlt(item.Tick);
         }
 
-        private static void CalculateSongItemTimes(NoteGroup[] noteGroups, SongItem[] laneSwitches)
+        private static void CalculateSongItemTimes(NoteGroup[] noteGroups, LocalEventsTrack localEvents)
         {
             if (noteGroups.Length == 0)
                 return;
@@ -760,7 +780,7 @@ namespace RetroRecord.Engine.Chart.Editor
                 }
             }
 
-            foreach (SongItem item in laneSwitches)
+            foreach (LaneSwitchEvent item in localEvents.LaneSwitchEvents)
                 item.Time = TickToSecondsAlt(item.Tick);
         }
 

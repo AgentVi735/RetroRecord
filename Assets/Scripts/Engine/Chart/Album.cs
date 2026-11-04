@@ -5,17 +5,22 @@ namespace RetroRecord.Engine.Chart
     [CreateAssetMenu(menuName = "Data/Album", fileName = "New Album")]
     public class Album : ScriptableObject
     {
-        [field:SerializeField]
-        public string AlbumName { get; set; }
-        [field:SerializeField]
-        public string ArtistName { get; set; }
-        [field:SerializeField]
-        public int Year { get; set; }
-        [field:SerializeField]
-        public string Genre { get; set; }
-        [field:SerializeField]
-        public Sprite Cover { get; set; }
-        [field:SerializeField]
-        public Song[] Songs { get; set; }
+        [SerializeField]
+        public string AlbumName;
+
+        [SerializeField]
+        public string ArtistName;
+
+        [SerializeField]
+        public int Year;
+
+        [SerializeField]
+        public string Genre;
+
+        [SerializeField]
+        public Sprite Cover;
+
+        [SerializeField]
+        public Song[] Songs;
     }
 }

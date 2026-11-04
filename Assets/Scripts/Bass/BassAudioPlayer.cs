@@ -1,16 +1,13 @@
 ﻿using System;
 using ManagedBass;
+using RetroRecord.Engine;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace RetroRecord.Audio
 {
     public class BassAudioPlayer : MonoBehaviour
     {
-        [Header("Audio")] [SerializeField]
         private AudioClip m_audioClip;
-        [SerializeField]
-        private bool m_playOnStart;
-
         private int m_streamHandle;
         private float[] m_samples;
 
@@ -18,13 +15,13 @@ namespace DefaultNamespace
         private int m_channels;
         private int m_totalFrames;
 
-        public bool m_IsLoaded => m_streamHandle != 0;
+        public bool IsLoaded => m_streamHandle != 0;
 
-        public double m_PlaybackPosition
+        public double PlaybackPosition
         {
             get
             {
-                if (!m_IsLoaded)
+                if (!IsLoaded)
                     return 0;
 
                 long position = Bass.ChannelGetPosition(m_streamHandle);
@@ -32,7 +29,7 @@ namespace DefaultNamespace
             }
         }
 
-        public double m_Duration
+        public double Duration
         {
             get
             {
@@ -43,19 +40,11 @@ namespace DefaultNamespace
             }
         }
 
-        private void Start()
-        {
-            if (m_playOnStart)
-                Play();
-
-            SetVolume(0.1f);
-        }
-
         public void Load(AudioClip clip)
         {
             FreeStream();
 
-            if (BassManager.s_Instance == null || !BassManager.s_Instance.m_IsInitialised)
+            if (BassManager.s_Instance == null || !BassManager.s_Instance.IsInitialised)
             {
                 Debug.LogError("BASS has not been initialized");
                 return;
@@ -143,6 +132,7 @@ namespace DefaultNamespace
                 Load(m_audioClip);
             }
 
+            SetPosition(EngineSettings.s_AudioOffset);
             if (m_streamHandle != 0)
                 Bass.ChannelPlay(m_streamHandle);
         }

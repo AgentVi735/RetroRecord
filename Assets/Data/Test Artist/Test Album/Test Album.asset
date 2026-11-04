@@ -12,16 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46ab3c28a534ce8be023423d1cd1d6c, type: 3}
   m_Name: Test Album
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Album
-  <AlbumName>k__BackingField: Test Album
-  <ArtistName>k__BackingField: Test Artist
-  <Year>k__BackingField: 1970
-  <Genre>k__BackingField: Rock
-  <Cover>k__BackingField: {fileID: 0}
-  <Songs>k__BackingField:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  AlbumName: Test Album
+  ArtistName: Test Artist
+  Year: 1970
+  Genre: Rock
+  Cover: {fileID: 0}
+  Songs:
   - {fileID: 11400000, guid: 2eed790f2bc206c47a5b1b49aeb4c6ab, type: 2}

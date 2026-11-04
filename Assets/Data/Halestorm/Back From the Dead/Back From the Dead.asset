@@ -12,21 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46ab3c28a534ce8be023423d1cd1d6c, type: 3}
   m_Name: Back From the Dead
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Album
-  <AlbumName>k__BackingField: Back From the Dead
-  <ArtistName>k__BackingField: Halestorm
-  <Year>k__BackingField: 2022
-  <Genre>k__BackingField: Metal
-  <Cover>k__BackingField: {fileID: 21300000, guid: 5d81c8c99c9351c4d8e0d478191e3c8e, type: 3}
-  <Songs>k__BackingField:
+  AlbumName: Back From the Dead
+  ArtistName: Halestorm
+  Year: 2022
+  Genre: Metal
+  Cover: {fileID: 21300000, guid: 5d81c8c99c9351c4d8e0d478191e3c8e, type: 3}
+  Songs:
   - {fileID: 11400000, guid: 26c42230deef54140a31b97601238c21, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

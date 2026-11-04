@@ -5,15 +5,19 @@ namespace RetroRecord.Engine.Chart
     [System.Serializable]
     public class SongInfo
     {
-        [field:SerializeField]
-        public string SongName { get; set; }
-        [field:SerializeField]
-        public Album Album { get; set; }
-        [field:SerializeField]
-        public string OverrideArtist { get; set; }
-        [field:SerializeField]
-        public ushort Difficulty { get; set; }
-        [field:SerializeField]
-        public AudioClip Audio { get; set; }
+        [SerializeField]
+        public string SongName;
+        
+        [SerializeField]
+        public Album Album;
+        
+        [SerializeField]
+        public string OverrideArtist;
+        
+        [SerializeField]
+        public ushort Difficulty;
+        
+        [SerializeField]
+        public AudioClip Audio;
     }
 }
