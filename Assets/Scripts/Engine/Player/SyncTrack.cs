@@ -1,8 +1,6 @@
-﻿using UnityEngine;
-
-namespace RetroRecord.Engine.Player
+﻿namespace RetroRecord.Engine.Player
 {
-    public class SyncTrack : MonoBehaviour
+    public static class SyncTrack
     {
         public static double TickToSeconds(uint tick)
         {

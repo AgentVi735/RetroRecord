@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using RetroRecord.Audio;
 using RetroRecord.Engine.Player.Renderer;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -10,7 +12,13 @@ namespace RetroRecord.Engine.Player
     public class EngineManager : MonoBehaviour
     {
         public static EngineManager s_Instance;
-
+        
+        [SerializeField]
+        private EngineSettings m_engineSettings;
+        
+        [SerializeField]
+        private BassManager m_bassManager;
+        
         [SerializeField]
         private NotesManager m_notesManager;
 
@@ -20,29 +28,47 @@ namespace RetroRecord.Engine.Player
         [SerializeField]
         private SongPlayer m_songPlayer;
 
-        private void Start()
+        [SerializeField]
+        private StatisticsManager m_statisticsManager;
+
+        [SerializeField]
+        private bool m_autoStart;
+
+        [SerializeField]
+        private float m_delayUntilStart;
+
+        private void Awake()
         {
-            Initialize(true);
+            Initialize();
         }
 
-        public void Initialize(bool shouldAutoStart)
+        public void Initialize()
         {
             s_Instance = this;
+            m_engineSettings.Initialize();
+            m_bassManager.Initialize();
+            m_songPlayer.Initialize();
             m_songPlayer.LoadSong();
             m_highwayRenderer.Initialize();
+            m_statisticsManager.Initialize();
             m_notesManager.Initialize();
-
-            if (shouldAutoStart)
-                Invoke(nameof(StartSong), 0.1f);
         }
 
-        public void StartSong()
+        private void Start()
         {
+            if (m_autoStart)
+                StartCoroutine(StartSong());
+        }
+
+        private IEnumerator StartSong()
+        {
+            yield return new WaitForSeconds(m_delayUntilStart);
             m_songPlayer.StartMusic();
         }
 
         public void Finished()
         {
+            StatisticsManager.Dispose();
             StartCoroutine(FinishWait());
         }
 

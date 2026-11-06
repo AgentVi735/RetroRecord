@@ -103,8 +103,8 @@ namespace RetroRecord.Engine.Player
                     break;
             }
 
-            // int noteCount = m_noteGroups.Sum(group => group.Notes.Length);
-            // SongStats.Initialize(noteCount - m_currentGroupIndex);
+            int noteCount = m_noteGroups.Sum(group => group.Notes.Length);
+            StatisticsManager.s_Instance.SetTotalNotes((uint)(noteCount - m_currentGroupIndex));
 
             m_inputManager.Initialize(m_noteGroups, m_currentGroupIndex);
         }
@@ -213,7 +213,7 @@ namespace RetroRecord.Engine.Player
                     m_highwayRenderer.ChangeLaneLayout(m_localEvents.LaneSwitchEvents[item.Index].Lanes);
                     break;
                 case SongItemType.ShowSongInfo:
-                    // SongStats.ShowSongNameEvent(item.Time);
+                    // SongStats.ShowSongNameEvent(item.Time); TODO
                     break;
             }
         }
@@ -234,7 +234,7 @@ namespace RetroRecord.Engine.Player
                 const uint strongStep = 4;
 
                 uint measureBeatCount = beatlineCount % currentTimeSig.Numerator;
-                uint strongRate = currentTimeSig.Denominator is <= 4 or < strongStep
+                uint strongRate = currentTimeSig.Denominator <= 4
                     ? 1
                     : currentTimeSig.Denominator / strongStep;
 
@@ -254,7 +254,7 @@ namespace RetroRecord.Engine.Player
                     return BeatlineType.Measure;
 
                 // Only use weak beats on x/8 or greater
-                if (currentTimeSig.Denominator is <= 4 or < strongStep)
+                if (currentTimeSig.Denominator <= 4)
                     return BeatlineType.Strong;
 
                 // Emphasize beatlines periodically
@@ -302,10 +302,10 @@ namespace RetroRecord.Engine.Player
             int timeSigIndex = 0;
 
             // Iterate through all the time signatures
-            var currentTimeSig = m_timeSignatureChanges[timeSigIndex++];
+            TimeSignatureChange currentTimeSig = m_timeSignatureChanges[timeSigIndex++];
             for (; timeSigIndex < m_timeSignatureChanges.Length; timeSigIndex++)
             {
-                var nextTimeSig = m_timeSignatureChanges[timeSigIndex];
+                TimeSignatureChange nextTimeSig = m_timeSignatureChanges[timeSigIndex];
 
                 // Determine bounds
                 uint startTick = currentTimeSig.Tick;

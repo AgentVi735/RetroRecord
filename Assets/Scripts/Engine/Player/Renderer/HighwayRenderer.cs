@@ -167,7 +167,7 @@ namespace RetroRecord.Engine.Player.Renderer
 
         public void HitNote(Note item, InputAction action, bool isPerfect)
         {
-            // SongStats.HitNote(isPerfect);
+            StatisticsManager.s_Instance.HitNote(isPerfect);
             foreach (NoteObject note in m_activeNotes)
             {
                 if (note.Note.Tick != item.Tick || note.Note.Lane != item.Lane)
@@ -186,7 +186,7 @@ namespace RetroRecord.Engine.Player.Renderer
 
         public void MissNote(Note item)
         {
-            // SongStats.MissNote();
+            StatisticsManager.s_Instance.MissNote();
             foreach (NoteObject note in m_activeNotes)
             {
                 if (note.Note.Tick != item.Tick || note.Note.Lane != item.Lane) continue;

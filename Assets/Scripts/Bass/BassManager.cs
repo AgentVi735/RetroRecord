@@ -9,7 +9,7 @@ namespace RetroRecord.Audio
 
         public bool IsInitialised { get; private set; }
 
-        private void Awake()
+        public void Initialize()
         {
             if (s_Instance != null && s_Instance != this)
             {

@@ -59,7 +59,7 @@ namespace RetroRecord.Engine
         /// </summary>
         public static float s_ShowSongNameStayBeatCount = 4;
 
-        private void Awake()
+        public void Initialize()
         {
             if (!m_settings) return;
 

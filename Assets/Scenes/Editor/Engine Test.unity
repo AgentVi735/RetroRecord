@@ -1140,6 +1140,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &987996282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 987996283}
+  - component: {fileID: 987996284}
+  m_Layer: 0
+  m_Name: StatisticsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &987996283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987996282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &987996284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987996282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0d814f2b404dd7a5fe9fc1320862da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.StatisticsManager
 --- !u!1001 &1027916329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2007,50 +2051,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1767455806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1767455808}
-  - component: {fileID: 1767455807}
-  m_Layer: 0
-  m_Name: SyncTrack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1767455807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767455806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f179946153b44f294e9c9959eb98064, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Player.SyncTrack
---- !u!4 &1767455808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767455806}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897579542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,9 +2151,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4ef42f72774c2ebd88b76631b5215f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EngineManager
+  m_engineSettings: {fileID: 2038263459}
+  m_bassManager: {fileID: 1709767317}
   m_notesManager: {fileID: 2037834004}
   m_highwayRenderer: {fileID: 539115988}
   m_songPlayer: {fileID: 1427049901}
+  m_statisticsManager: {fileID: 987996284}
+  m_autoStart: 1
+  m_delayUntilStart: 1
 --- !u!1 &2037834003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,13 +2260,13 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 599626647}
   - {fileID: 575895202}
+  - {fileID: 1985344718}
   - {fileID: 1709767318}
   - {fileID: 1437768309}
-  - {fileID: 1985344718}
   - {fileID: 2038263460}
   - {fileID: 1427049902}
-  - {fileID: 1767455808}
   - {fileID: 2037834005}
   - {fileID: 1897579544}
+  - {fileID: 987996283}
   - {fileID: 176330516}
   - {fileID: 62528129}

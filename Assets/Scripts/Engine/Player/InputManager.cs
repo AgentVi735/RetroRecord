@@ -129,13 +129,6 @@ namespace RetroRecord.Engine.Player
             if (m_nextGroup == null)
                 return;
 
-            // // auto hit notes (obsolete)
-            // while (Math.Abs(nextNote.time - SongPlayer.CurrentAudioTime) < 0.01f)
-            // {
-            //     highwayRenderer.HitNote(nextNote.tick, nextNote.intValue);
-            //     MoveToNextNote();
-            // }
-
             while (m_nextGroup?.Time < SongPlayer.s_Instance.ConvertedCurrentInputTime - EngineSettings.s_NoteHitboxSec)
                 MoveToNextGroup(true);
         }

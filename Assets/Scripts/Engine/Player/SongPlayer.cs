@@ -31,7 +31,7 @@ namespace RetroRecord.Engine.Player
 
         private double m_songTime;
 
-        private void Awake()
+        public void Initialize()
         {
             if (s_Instance != null)
             {

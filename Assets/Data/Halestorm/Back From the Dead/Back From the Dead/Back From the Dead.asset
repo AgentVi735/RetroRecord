@@ -2099,4 +2099,6 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 24408
   GlobalEvents:
-    ShowSongInfoEvents: []
+    ShowSongInfoEvents:
+    - Tick: 768
+      Time: 2.857142857142857
