@@ -6,7 +6,7 @@ import math
 # ============================================
 size = 4096
 
-num_tracks = 5                 # 1–7 (ignored if maxi single)
+num_tracks = 7                 # 1–7 (ignored if maxi single)
 is_maxi_single = False
 
 # Lead-in / Lead-out
