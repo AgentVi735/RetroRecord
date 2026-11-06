@@ -28,7 +28,7 @@ MonoBehaviour:
   NoteSpawnDistance: 2
   MinSecShowStopSustain: 0.16
   TimeAfterSong: 1
-  AudioOffset: 0
+  AudioOffset: 0.16
   LaneColourUpdateTimeCount: 1
   ShowSongNameTimeCount: 1
   ShowSongNameStayBeatCount: 6
