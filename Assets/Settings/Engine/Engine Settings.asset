@@ -26,9 +26,9 @@ MonoBehaviour:
   PerfectHitboxInSec: 0.035
   HighwaySpeed: 12
   NoteSpawnDistance: 2
-  MinSecShowStopSustain: 0.15
+  MinSecShowStopSustain: 0.16
   TimeAfterSong: 1
-  AudioOffset: 0.15
+  AudioOffset: 0
   LaneColourUpdateTimeCount: 1
   ShowSongNameTimeCount: 1
   ShowSongNameStayBeatCount: 6

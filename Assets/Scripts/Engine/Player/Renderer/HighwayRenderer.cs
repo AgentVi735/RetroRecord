@@ -149,7 +149,7 @@ namespace RetroRecord.Engine.Player.Renderer
             for (int i = 0; i < m_activeNotes.Count; i++)
             {
                 NoteObject note = m_activeNotes[i];
-                if (!(note.DespawnTime < SongPlayer.s_Instance.ConvertedCurrentInputTime)) continue;
+                if (!(note.DespawnTime < SongPlayer.ConvertedCurrentInputTime)) continue;
                 note.Unload();
                 m_activeNotes.Remove(note);
             }
@@ -157,7 +157,7 @@ namespace RetroRecord.Engine.Player.Renderer
             for (int i = 0; i < m_activeBeatlines.Count; i++)
             {
                 BeatlineObject beatline = m_activeBeatlines[i];
-                if (!(beatline.Time < SongPlayer.s_Instance.ConvertedCurrentInputTime)) continue;
+                if (!(beatline.Time < SongPlayer.ConvertedCurrentInputTime)) continue;
                 beatline.Unload();
                 m_activeBeatlines.Remove(beatline);
             }

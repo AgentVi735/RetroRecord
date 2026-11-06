@@ -4,6 +4,7 @@ using System.Linq;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Chart.Events;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.UI;
 using UnityEngine;
 
 namespace RetroRecord.Engine.Player
@@ -18,6 +19,9 @@ namespace RetroRecord.Engine.Player
 
         [SerializeField]
         private SongPlayer m_songPlayer;
+
+        [SerializeField]
+        private SongInfoDisplay m_songInfoDisplay;
 
         private NoteGroup[] m_noteGroups;
         private TempoChange[] m_tempoChanges;
@@ -114,14 +118,14 @@ namespace RetroRecord.Engine.Player
             if (!SongPlayer.s_Instance.HasStarted)
                 return;
 
-            m_highwayRenderer.UpdatePos(SyncTrack.TimeToYPos(SongPlayer.s_Instance.ConvertedCurrentInputTime));
+            m_highwayRenderer.UpdatePos(SyncTrack.TimeToYPos(SongPlayer.ConvertedCurrentInputTime));
 
             // Check for next note
             if (m_currentGroupIndex < m_noteGroups.Length)
             {
                 NoteGroup currentGroup = m_noteGroups[m_currentGroupIndex];
                 while (m_currentGroupIndex < m_noteGroups.Length && currentGroup.Time <=
-                       SongPlayer.s_Instance.ConvertedCurrentInputTime + EngineSettings.s_NoteSpawnDistance)
+                       SongPlayer.ConvertedCurrentInputTime + EngineSettings.s_NoteSpawnDistance)
                 {
                     foreach (Note note in currentGroup.Notes)
                         ProcessItem(note);
@@ -137,7 +141,7 @@ namespace RetroRecord.Engine.Player
             {
                 TempoChange currentTempoChange = m_tempoChanges[m_currentTempoChangeIndex];
                 while (m_currentTempoChangeIndex < m_tempoChanges.Length &&
-                       currentTempoChange.Time <= SongPlayer.s_Instance.ConvertedCurrentInputTime)
+                       currentTempoChange.Time <= SongPlayer.ConvertedCurrentInputTime)
                 {
                     ProcessItem(currentTempoChange);
 
@@ -152,7 +156,7 @@ namespace RetroRecord.Engine.Player
             {
                 EventItem currentEventItem = m_localEvents.Items[m_currentLocalEventIndex];
                 while (m_currentLocalEventIndex < m_localEvents.Items.Length &&
-                       currentEventItem.Time <= SongPlayer.s_Instance.ConvertedCurrentInputTime)
+                       currentEventItem.Time <= SongPlayer.ConvertedCurrentInputTime)
                 {
                     ProcessEvent(currentEventItem);
 
@@ -167,7 +171,7 @@ namespace RetroRecord.Engine.Player
             {
                 EventItem currentEventItem = m_globalEvents.Items[m_currentGlobalEventIndex];
                 while (m_currentGlobalEventIndex < m_globalEvents.Items.Length &&
-                       currentEventItem.Time <= SongPlayer.s_Instance.ConvertedCurrentInputTime)
+                       currentEventItem.Time <= SongPlayer.ConvertedCurrentInputTime)
                 {
                     ProcessEvent(currentEventItem);
 
@@ -181,7 +185,7 @@ namespace RetroRecord.Engine.Player
             if (m_currentBeatlineIndex >= m_beatlines.Count) return;
             Beatline currentBeatline = m_beatlines[m_currentBeatlineIndex];
             while (m_currentBeatlineIndex < m_beatlines.Count &&
-                   currentBeatline.Time <= SongPlayer.s_Instance.ConvertedCurrentInputTime +
+                   currentBeatline.Time <= SongPlayer.ConvertedCurrentInputTime +
                    EngineSettings.s_NoteSpawnDistance)
             {
                 m_highwayRenderer.SpawnBeatline(currentBeatline);
@@ -213,7 +217,7 @@ namespace RetroRecord.Engine.Player
                     m_highwayRenderer.ChangeLaneLayout(m_localEvents.LaneSwitchEvents[item.Index].Lanes);
                     break;
                 case SongItemType.ShowSongInfo:
-                    // SongStats.ShowSongNameEvent(item.Time); TODO
+                    m_songInfoDisplay.ShowSongNameEvent(item.Time);
                     break;
             }
         }

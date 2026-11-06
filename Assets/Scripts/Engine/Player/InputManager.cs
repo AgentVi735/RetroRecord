@@ -81,7 +81,7 @@ namespace RetroRecord.Engine.Player
                 return;
             double time = ctx.time;
 
-            double diff = Math.Abs(m_nextGroup.Time - (time - SongPlayer.s_Instance.InputTimeOffset));
+            double diff = Math.Abs(m_nextGroup.Time - (time - SongPlayer.InputTimeOffset));
             if (diff > EngineSettings.s_NoteHitboxSec)
                 return;
 
@@ -100,7 +100,7 @@ namespace RetroRecord.Engine.Player
                 if (m_nextGroup2 == null)
                     return;
 
-                diff = Math.Abs(m_nextGroup2.Time - (time - SongPlayer.s_Instance.InputTimeOffset));
+                diff = Math.Abs(m_nextGroup2.Time - (time - SongPlayer.InputTimeOffset));
                 if (diff > EngineSettings.s_NoteHitboxSec)
                     return;
 
@@ -129,7 +129,7 @@ namespace RetroRecord.Engine.Player
             if (m_nextGroup == null)
                 return;
 
-            while (m_nextGroup?.Time < SongPlayer.s_Instance.ConvertedCurrentInputTime - EngineSettings.s_NoteHitboxSec)
+            while (m_nextGroup?.Time < SongPlayer.ConvertedCurrentInputTime - EngineSettings.s_NoteHitboxSec)
                 MoveToNextGroup(true);
         }
 

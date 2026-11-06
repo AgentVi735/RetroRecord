@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using RetroRecord.Audio;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.UI;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -32,6 +32,9 @@ namespace RetroRecord.Engine.Player
         private StatisticsManager m_statisticsManager;
 
         [SerializeField]
+        private SongInfoDisplay m_songInfoDisplay;
+
+        [SerializeField]
         private bool m_autoStart;
 
         [SerializeField]
@@ -42,7 +45,7 @@ namespace RetroRecord.Engine.Player
             Initialize();
         }
 
-        public void Initialize()
+        private void Initialize()
         {
             s_Instance = this;
             m_engineSettings.Initialize();
@@ -52,6 +55,7 @@ namespace RetroRecord.Engine.Player
             m_highwayRenderer.Initialize();
             m_statisticsManager.Initialize();
             m_notesManager.Initialize();
+            StartCoroutine(m_songInfoDisplay.Initialize(EngineSettings.s_Song.SongInfo));
         }
 
         private void Start()

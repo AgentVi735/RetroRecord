@@ -14,15 +14,15 @@ namespace RetroRecord.Engine.Player
         /// <summary>
         /// The current Audio Time, used for visual times.
         /// </summary>
-        public double CurrentAudioTime { get; private set; }
+        public static double CurrentAudioTime { get; private set; }
 
-        public double CurrentInputTime { get; private set; }
-        public double InputTimeOffset { get; private set; }
+        public static double CurrentInputTime { get; private set; }
+        public static double InputTimeOffset { get; private set; }
 
         /// <summary>
         /// The current Input Time, used for checking input times.
         /// </summary>
-        public double ConvertedCurrentInputTime { get; private set; }
+        public static double ConvertedCurrentInputTime { get; private set; }
 
         public double AudioOffset { get; private set; }
 

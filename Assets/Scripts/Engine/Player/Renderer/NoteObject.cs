@@ -88,9 +88,9 @@ namespace RetroRecord.Engine.Player.Renderer
         {
             while (m_isHoldingSustain)
             {
-                if (m_sustainEndTime > SongPlayer.s_Instance.CurrentAudioTime)
+                if (m_sustainEndTime > SongPlayer.CurrentAudioTime)
                 {
-                    Vector3 pos = new(m_lanePos, SyncTrack.TimeToYPos(SongPlayer.s_Instance.CurrentAudioTime));
+                    Vector3 pos = new(m_lanePos, SyncTrack.TimeToYPos(SongPlayer.CurrentAudioTime));
                     m_lineRenderer.SetPosition(0, pos);
                     transform.position = pos;
                 }
@@ -108,7 +108,7 @@ namespace RetroRecord.Engine.Player.Renderer
         private void OnCancelledInput(InputAction.CallbackContext ctx)
         {
             m_isHoldingSustain = false;
-            if (Math.Abs(Note.Time + Note.TimeSustainLength - SongPlayer.s_Instance.CurrentAudioTime) >
+            if (Math.Abs(Note.Time + Note.TimeSustainLength - SongPlayer.CurrentAudioTime) >
                 EngineSettings.s_MinSecShowStopSustain)
             {
                 m_spriteRenderer.color = m_missedNoteColor;

@@ -19,7 +19,6 @@ namespace RetroRecord.Engine.Player.Renderer
         [SerializeField]
         private Vector3 m_middleLanePos;
 
-        private int m_newColorIdx = -1;
         private Color m_prevColor;
         private Color m_newColor;
         private Coroutine m_changeColorCoroutine;
@@ -50,13 +49,11 @@ namespace RetroRecord.Engine.Player.Renderer
             {
                 m_spriteRenderer.color = m_settings.LaneSprite.DefaultColor;
                 m_strikeline.ChangeColor(false);
-                m_newColorIdx = Idx < 4 ? 0 : 2;
             }
             else
             {
                 m_spriteRenderer.color = m_settings.LaneSprite.SecondaryColor;
                 m_strikeline.ChangeColor(true);
-                m_newColorIdx = Idx < 4 ? 1 : 3;
             }
 
             m_newColor = m_spriteRenderer.color;
@@ -76,19 +73,16 @@ namespace RetroRecord.Engine.Player.Renderer
                 return;
             m_settings = newSettings;
             Color tempNewColor;
-            int tempNewColorIdx;
             bool isAlt;
             if (Idx % 2 == 0)
             {
                 tempNewColor = m_settings.LaneSprite.DefaultColor;
                 isAlt = false;
-                tempNewColorIdx = 0;
             }
             else
             {
                 tempNewColor = m_settings.LaneSprite.SecondaryColor;
                 isAlt = true;
-                tempNewColorIdx = 1;
             }
 
             if (m_changeColorCoroutine != null)
@@ -97,7 +91,6 @@ namespace RetroRecord.Engine.Player.Renderer
             m_prevColor = m_newColor;
             m_strikeline.ChangeColor(isAlt);
 
-            m_newColorIdx = tempNewColorIdx;
             m_newColor = tempNewColor;
 
             m_changeColorCoroutine = StartCoroutine(ChangeColorLoop());
@@ -105,12 +98,12 @@ namespace RetroRecord.Engine.Player.Renderer
 
         private IEnumerator ChangeColorLoop()
         {
-            float startTime = (float)SongPlayer.s_Instance.CurrentAudioTime;
+            float startTime = (float)SongPlayer.CurrentAudioTime;
             float time = startTime + 60 * EngineSettings.s_LaneColorUpdateBeatCount / NotesManager.s_CurrentTempo;
             float amt = 0;
             while (amt < 1)
             {
-                amt = Mathf.InverseLerp(startTime, time, (float)SongPlayer.s_Instance.CurrentAudioTime);
+                amt = Mathf.InverseLerp(startTime, time, (float)SongPlayer.CurrentAudioTime);
                 m_spriteRenderer.color = Color.Lerp(m_prevColor, m_newColor, amt);
                 m_strikeline.UpdateColorAmt(amt);
                 yield return null;
