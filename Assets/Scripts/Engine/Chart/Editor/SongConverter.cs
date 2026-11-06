@@ -483,6 +483,8 @@ namespace RetroRecord.Engine.Chart.Editor
             if (laneByte == 8)
                 laneByte = 5;
             item.Lane = laneByte;
+            if (item.Lane > 7)
+                return null;
 
             uint.TryParse(length, out uint lengthUInt);
             if (lengthUInt > 0)
@@ -655,6 +657,8 @@ namespace RetroRecord.Engine.Chart.Editor
                     break;
 
                 SongItem item = GetNote(text);
+                if (item == null)
+                    continue;
                 switch (item.GetItemType())
                 {
                     case SongItemType.Note when currentTick == 0:
