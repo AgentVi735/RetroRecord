@@ -7,6 +7,8 @@
         public string albumName;
         public string year;
         public string genre;
+        public string charter;
         public string audioFileName;
+        public string difficulty;
     }
 }

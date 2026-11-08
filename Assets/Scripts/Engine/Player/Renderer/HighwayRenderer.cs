@@ -82,7 +82,11 @@ namespace RetroRecord.Engine.Player.Renderer
             for (int i = 0; i < Lanes.Length; i++)
             {
                 HighwayLane lane = Lanes[i];
-                LaneSettings settings = lane.Idx < 4 ? m_laneSettings[0] : m_laneSettings[1];
+                LaneSettings settings;
+                if (EngineSettings.s_CurrentDifficultySettings.StartingLane >= 2)
+                    settings = m_laneSettings[0];
+                else
+                    settings = lane.Idx < 4 ? m_laneSettings[0] : m_laneSettings[1];
                 if (i >= EngineSettings.s_CurrentDifficultySettings.StartingLane &&
                     i < EngineSettings.s_CurrentDifficultySettings.LaneAmount +
                     EngineSettings.s_CurrentDifficultySettings.StartingLane)

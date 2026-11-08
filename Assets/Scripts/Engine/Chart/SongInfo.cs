@@ -15,6 +15,9 @@ namespace RetroRecord.Engine.Chart
         public string OverrideArtist;
         
         [SerializeField]
+        public string Charter;
+        
+        [SerializeField]
         public ushort Difficulty;
         
         [SerializeField]

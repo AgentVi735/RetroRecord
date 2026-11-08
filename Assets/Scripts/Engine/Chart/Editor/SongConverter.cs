@@ -31,6 +31,8 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_songInfoYearKey = "Year";
         private const string k_songInfoGenreKey = "Genre";
         private const string k_songInfoAudioKey = "MusicStream";
+        private const string k_songInfoDifficultyKey = "Difficulty";
+        private const string k_songInfoCharterKey = "Charter";
         
         private const string k_noteKey = "N";
         private const string k_tempoChangeKey = "B";
@@ -169,6 +171,10 @@ namespace RetroRecord.Engine.Chart.Editor
 
             song.SongInfo ??= new SongInfo();
             song.SongInfo.SongName = rawSongInfo.songName;
+            bool isValidDifficulty = ushort.TryParse(rawSongInfo.difficulty, out ushort difficulty);
+            if (isValidDifficulty)
+                song.SongInfo.Difficulty = difficulty;
+            song.SongInfo.Charter = rawSongInfo.charter;
             if (rawSongInfo.audioFileName != "")
             {
                 string audioPath = rawSongInfo.audioFileName;
@@ -326,6 +332,16 @@ namespace RetroRecord.Engine.Chart.Editor
                     {
                         string a = text[17..];
                         rawSongInfo.audioFileName = a.Replace("\"", "");
+                    }
+                    else if (text.Contains(k_songInfoDifficultyKey))
+                    {
+                        string a = text[15..];
+                        rawSongInfo.difficulty = a.Replace("\"", "");
+                    }
+                    else if (text.Contains(k_songInfoCharterKey))
+                    {
+                        string a = text[13..];
+                        rawSongInfo.charter = a.Replace("\"", "");
                     }
                 }
             }

@@ -285,9 +285,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: Idx
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_middleLanePos.x
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_middleLanePos.y
@@ -813,6 +821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1147812417693124514, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Color.b
       value: 0.09019608
@@ -828,6 +840,14 @@ PrefabInstance:
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: Idx
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_middleLanePos.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_middleLanePos.y
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_defaultLanePos.x
@@ -1197,6 +1217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_defaultLanePos.x
       value: -5.75
@@ -1278,6 +1302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1147812417693124514, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1296,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_middleLanePos.x
-      value: 1.5
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_middleLanePos.y
@@ -1394,6 +1422,10 @@ PrefabInstance:
     - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Name
       value: Lane (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1147812417693124514, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Color.b
@@ -1504,6 +1536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1147812417693124514, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Color.b
       value: 0.21568628
@@ -1519,6 +1555,14 @@ PrefabInstance:
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: Idx
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_middleLanePos.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_middleLanePos.y
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_defaultLanePos.x
@@ -1613,6 +1657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1147812417693124514, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1631,11 +1679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_middleLanePos.x
-      value: -1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_middleLanePos.y
-      value: 4.45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_defaultLanePos.x
@@ -1730,6 +1778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lane (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 396676551466835266, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1147812417693124514, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_Color.b
       value: 0.21568628
@@ -1745,6 +1797,10 @@ PrefabInstance:
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: Idx
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
+      propertyPath: m_middleLanePos.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3492935028407748827, guid: 5e52e721930b22246ad0fa165d649ab5, type: 3}
       propertyPath: m_defaultLanePos.x

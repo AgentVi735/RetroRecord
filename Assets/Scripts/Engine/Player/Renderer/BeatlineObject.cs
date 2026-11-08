@@ -34,16 +34,19 @@ namespace RetroRecord.Engine.Player.Renderer
         private float m_eightLaneXScale = 6;
 
         [SerializeField]
-        private float m_defaultXScale = 4.5f;
+        private float m_normalXScale = 4.5f;
+        
+        [SerializeField]
+        private float m_easyXScale = 6;
 
         [SerializeField]
-        private float m_eightLanesXPos = -3.5f;
+        private float m_hardLanesXPos = -3.5f;
 
         [SerializeField]
-        private float m_sixLanesXPos = -2.75f;
+        private float m_normalLanesXPos = -2.75f;
 
         [SerializeField]
-        private float m_threeLanesXPos;
+        private float m_easyLanesXPos;
 
         public void Initialize()
         {
@@ -51,22 +54,23 @@ namespace RetroRecord.Engine.Player.Renderer
             float posXL;
             float posXR;
 
-            switch (EngineSettings.s_CurrentDifficultySettings.LaneAmount)
+            switch (EngineSettings.s_Difficulty)
             {
                 default:
+                case Difficulty.Hard:
                     scaleX = m_eightLaneXScale;
-                    posXL = m_eightLanesXPos;
-                    posXR = -m_eightLanesXPos;
+                    posXL = m_hardLanesXPos;
+                    posXR = -m_hardLanesXPos;
                     break;
-                case 6:
-                    scaleX = m_defaultXScale;
-                    posXL = m_sixLanesXPos;
-                    posXR = -m_sixLanesXPos;
+                case Difficulty.Normal:
+                    scaleX = m_normalXScale;
+                    posXL = m_normalLanesXPos;
+                    posXR = -m_normalLanesXPos;
                     break;
-                case 3:
-                    scaleX = m_defaultXScale;
-                    posXL = m_threeLanesXPos;
-                    posXR = -m_threeLanesXPos;
+                case Difficulty.Easy:
+                    scaleX = m_easyXScale;
+                    posXL = m_easyLanesXPos;
+                    posXR = -m_easyLanesXPos;
                     m_rightRenderer.gameObject.SetActive(false);
                     break;
             }

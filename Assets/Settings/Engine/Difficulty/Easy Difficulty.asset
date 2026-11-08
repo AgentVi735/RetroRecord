@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feae40cf93b54f32a0d7d5f90bd67adc, type: 3}
   m_Name: Easy Difficulty
   m_EditorClassIdentifier: Assembly-CSharp::DifficultySettings
-  LaneAmount: 3
-  StartingLane: 1
-  AreLanesInMiddle: 1
+  LaneAmount: 4
+  StartingLane: 2
+  <AreLanesInMiddle>k__BackingField: 1
   HighwaySpeed: 6
   NoteHitboxSec: 0.15
   PerfectHitboxSec: 0.075

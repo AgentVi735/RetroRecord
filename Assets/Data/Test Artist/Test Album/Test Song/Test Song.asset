@@ -16,7 +16,8 @@ MonoBehaviour:
     SongName: Test Song
     Album: {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
     OverrideArtist: 
-    Difficulty: 0
+    Charter: Vicky
+    Difficulty: 2
     Audio: {fileID: 0}
   BeatTrack:
     TempoChanges:

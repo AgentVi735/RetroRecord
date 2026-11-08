@@ -49,10 +49,6 @@ namespace RetroRecord.Engine.Player
                 m_actionCallbacks[i] = context => OnLaneInput(context, value);
                 action.performed += m_actionCallbacks[i];
                 m_highwayRenderer.SetLaneAction(i, action);
-                if (!EngineSettings.s_CurrentDifficultySettings.AreLanesInMiddle) continue;
-                InputAction altAction = actionMap.FindAction(m_laneNames[i + 3]);
-                altAction.performed += m_actionCallbacks[i];
-                m_highwayRenderer.SetLaneAction(i, altAction);
             }
         }
 
@@ -69,9 +65,6 @@ namespace RetroRecord.Engine.Player
                     continue;
                 InputAction action = actionMap.FindAction(m_laneNames[i]);
                 action.performed -= m_actionCallbacks[i];
-                if (!EngineSettings.s_CurrentDifficultySettings.AreLanesInMiddle) continue;
-                InputAction altAction = actionMap.FindAction(m_laneNames[i + 3]);
-                altAction.performed -= m_actionCallbacks[i];
             }
         }
 
