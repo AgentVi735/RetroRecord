@@ -63,7 +63,7 @@ namespace RetroRecord.Engine.UI
         {
 
             float startTime = (float)eventTime;
-            float totalTime = 60 * EngineSettings.s_ShowSongNameBeatCount / NotesManager.s_CurrentTempo;
+            float totalTime = 60 * EngineSettings.ShowSongNameBeatCount / NotesManager.s_CurrentTempo;
             float time = startTime + totalTime;
             while (SongPlayer.CurrentAudioTime < time)
             {
@@ -74,12 +74,12 @@ namespace RetroRecord.Engine.UI
 
             m_canvasGroup.alpha = 1;
             float waitTime = (float)SongPlayer.CurrentAudioTime +
-                             60 * EngineSettings.s_ShowSongNameStayBeatCount / NotesManager.s_CurrentTempo;
+                             60 * EngineSettings.ShowSongNameStayBeatCount / NotesManager.s_CurrentTempo;
             while (SongPlayer.CurrentAudioTime < waitTime)
                 yield return null;
         
             startTime = (float)SongPlayer.CurrentAudioTime;
-            totalTime = 60 * EngineSettings.s_ShowSongNameBeatCount / NotesManager.s_CurrentTempo;
+            totalTime = 60 * EngineSettings.ShowSongNameBeatCount / NotesManager.s_CurrentTempo;
             time = startTime + totalTime;
         
             while (SongPlayer.CurrentAudioTime < time)

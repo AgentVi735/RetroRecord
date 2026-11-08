@@ -32,17 +32,17 @@ namespace RetroRecord.Engine.Player
         public void Initialize(NoteGroup[] givenGroups, int currentIdx)
         {
             m_groups = givenGroups;
-            m_nextGroup = m_groups[0];
-            m_nextGroup2 = m_groups[1];
             m_groupIdx = currentIdx;
+            m_nextGroup = m_groups[m_groupIdx];
+            m_nextGroup2 = m_groupIdx < m_groups.Length ? m_groups[m_groupIdx + 1] : null;
             InputActionMap actionMap = m_inputActionAsset.FindActionMap(m_actionMapName);
             m_actionCallbacks = new Action<InputAction.CallbackContext>[m_laneNames.Length];
 
             for (int i = 0; i < m_laneNames.Length; i++)
             {
-                if (i < EngineSettings.s_CurrentDifficultySettings.StartingLane ||
-                    i >= EngineSettings.s_CurrentDifficultySettings.LaneAmount +
-                    EngineSettings.s_CurrentDifficultySettings.StartingLane)
+                if (i < EngineSettings.CurrentDifficultySettings.StartingLane ||
+                    i >= EngineSettings.CurrentDifficultySettings.LaneAmount +
+                    EngineSettings.CurrentDifficultySettings.StartingLane)
                     continue;
                 InputAction action = actionMap.FindAction(m_laneNames[i]);
                 int value = i;
@@ -59,9 +59,9 @@ namespace RetroRecord.Engine.Player
                 return;
             for (int i = 0; i < m_laneNames.Length; i++)
             {
-                if (i < EngineSettings.s_CurrentDifficultySettings.StartingLane ||
-                    i >= EngineSettings.s_CurrentDifficultySettings.LaneAmount +
-                    EngineSettings.s_CurrentDifficultySettings.StartingLane)
+                if (i < EngineSettings.CurrentDifficultySettings.StartingLane ||
+                    i >= EngineSettings.CurrentDifficultySettings.LaneAmount +
+                    EngineSettings.CurrentDifficultySettings.StartingLane)
                     continue;
                 InputAction action = actionMap.FindAction(m_laneNames[i]);
                 action.performed -= m_actionCallbacks[i];
@@ -75,7 +75,7 @@ namespace RetroRecord.Engine.Player
             double time = ctx.time;
 
             double diff = Math.Abs(m_nextGroup.Time - (time - SongPlayer.InputTimeOffset));
-            if (diff > EngineSettings.s_NoteHitboxSec)
+            if (diff > EngineSettings.NoteHitboxSec)
                 return;
 
             Note item = null;
@@ -94,7 +94,7 @@ namespace RetroRecord.Engine.Player
                     return;
 
                 diff = Math.Abs(m_nextGroup2.Time - (time - SongPlayer.InputTimeOffset));
-                if (diff > EngineSettings.s_NoteHitboxSec)
+                if (diff > EngineSettings.NoteHitboxSec)
                     return;
 
                 Note item2 = m_nextGroup2.Notes.FirstOrDefault(a => a.Lane == idx && !a.WasHit);
@@ -102,12 +102,12 @@ namespace RetroRecord.Engine.Player
                     return;
 
                 item2.WasHit = true;
-                m_highwayRenderer.HitNote(item2, ctx.action, diff < EngineSettings.s_PerfectHitboxSec);
+                m_highwayRenderer.HitNote(item2, ctx.action, diff < EngineSettings.PerfectHitboxSec);
                 return;
             }
 
 
-            m_highwayRenderer.HitNote(item, ctx.action, diff < EngineSettings.s_PerfectHitboxSec);
+            m_highwayRenderer.HitNote(item, ctx.action, diff < EngineSettings.PerfectHitboxSec);
 
             int amt = m_nextGroup.Notes.Count(groupItem => groupItem.WasHit);
             if (amt == m_nextGroup.Notes.Length)
@@ -122,7 +122,7 @@ namespace RetroRecord.Engine.Player
             if (m_nextGroup == null)
                 return;
 
-            while (m_nextGroup?.Time < SongPlayer.ConvertedCurrentInputTime - EngineSettings.s_NoteHitboxSec)
+            while (m_nextGroup?.Time < SongPlayer.ConvertedCurrentInputTime - EngineSettings.NoteHitboxSec)
                 MoveToNextGroup(true);
         }
 

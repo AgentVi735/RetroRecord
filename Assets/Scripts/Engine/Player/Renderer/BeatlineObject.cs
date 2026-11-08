@@ -54,7 +54,7 @@ namespace RetroRecord.Engine.Player.Renderer
             float posXL;
             float posXR;
 
-            switch (EngineSettings.s_Difficulty)
+            switch (EngineSettings.Difficulty)
             {
                 default:
                 case Difficulty.Hard:

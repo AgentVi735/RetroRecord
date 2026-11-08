@@ -18,7 +18,6 @@ namespace RetroRecord.Audio
             }
 
             s_Instance = this;
-            DontDestroyOnLoad(gameObject);
 
             IsInitialised = Bass.Init();
 

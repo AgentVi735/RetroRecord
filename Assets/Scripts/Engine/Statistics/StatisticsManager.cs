@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 
-namespace RetroRecord.Engine
+namespace RetroRecord.Engine.Statistics
 {
     public class StatisticsManager : MonoBehaviour
     {
         public static StatisticsManager s_Instance { get; private set; }
 
-        private uint m_totalNotes;
-        private uint m_notesHit;
-        private uint m_perfectNotes;
-        private uint m_notesMissed;
+        private Statistics m_statistics;
+        public Statistics Statistics => m_statistics;
 
         public void Initialize()
         {
@@ -20,12 +18,12 @@ namespace RetroRecord.Engine
             }
 
             s_Instance = this;
-            DontDestroyOnLoad(gameObject);
+            m_statistics = new Statistics();
         }
 
         public void SetTotalNotes(uint totalNotes)
         {
-            m_totalNotes = totalNotes;
+            m_statistics.TotalNotes = totalNotes;
         }
 
         public static void Dispose()
@@ -43,14 +41,14 @@ namespace RetroRecord.Engine
 
         public void HitNote(bool isPerfect)
         {
-            m_notesHit++;
+            m_statistics.NotesHit++;
             if (isPerfect)
-                m_perfectNotes++;
+                m_statistics.PerfectNotes++;
         }
 
         public void MissNote()
         {
-            m_notesMissed++;
+            m_statistics.NotesMissed++;
         }
     }
 }

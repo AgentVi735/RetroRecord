@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using RetroRecord.Engine.Chart;
+using RetroRecord.Engine.Statistics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -83,23 +84,23 @@ namespace RetroRecord.Engine.Player.Renderer
             {
                 HighwayLane lane = Lanes[i];
                 LaneSettings settings;
-                if (EngineSettings.s_CurrentDifficultySettings.StartingLane >= 2)
+                if (EngineSettings.CurrentDifficultySettings.StartingLane >= 2)
                     settings = m_laneSettings[0];
                 else
                     settings = lane.Idx < 4 ? m_laneSettings[0] : m_laneSettings[1];
-                if (i >= EngineSettings.s_CurrentDifficultySettings.StartingLane &&
-                    i < EngineSettings.s_CurrentDifficultySettings.LaneAmount +
-                    EngineSettings.s_CurrentDifficultySettings.StartingLane)
+                if (i >= EngineSettings.CurrentDifficultySettings.StartingLane &&
+                    i < EngineSettings.CurrentDifficultySettings.LaneAmount +
+                    EngineSettings.CurrentDifficultySettings.StartingLane)
                     lane.Initialize(true, settings);
                 else
                     lane.Initialize(false, settings);
             }
 
-            float xScale = EngineSettings.s_CurrentDifficultySettings.LaneAmount * 1.5f +
-                           (EngineSettings.s_CurrentDifficultySettings.AreLanesInMiddle ? 0.25f : 1.25f);
-            m_hitboxTransform.localScale = new Vector3(xScale, SyncTrack.TimeToYPos(EngineSettings.s_NoteHitboxSec), 1);
+            float xScale = EngineSettings.CurrentDifficultySettings.LaneAmount * 1.5f +
+                           (EngineSettings.CurrentDifficultySettings.AreLanesInMiddle ? 0.25f : 1.25f);
+            m_hitboxTransform.localScale = new Vector3(xScale, SyncTrack.TimeToYPos(EngineSettings.NoteHitboxSec), 1);
             m_perfectHitboxTransform.localScale =
-                new Vector3(xScale, SyncTrack.TimeToYPos(EngineSettings.s_PerfectHitboxSec), 1);
+                new Vector3(xScale, SyncTrack.TimeToYPos(EngineSettings.PerfectHitboxSec), 1);
 
             UpdatePos(0);
         }

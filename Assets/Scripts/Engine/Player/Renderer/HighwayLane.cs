@@ -60,7 +60,7 @@ namespace RetroRecord.Engine.Player.Renderer
 
             m_strikeline.UpdateColorAmt(1);
 
-            transform.localPosition = EngineSettings.s_CurrentDifficultySettings.AreLanesInMiddle
+            transform.localPosition = EngineSettings.CurrentDifficultySettings.AreLanesInMiddle
                 ? m_middleLanePos
                 : m_defaultLanePos;
         }
@@ -99,7 +99,7 @@ namespace RetroRecord.Engine.Player.Renderer
         private IEnumerator ChangeColorLoop()
         {
             float startTime = (float)SongPlayer.CurrentAudioTime;
-            float time = startTime + 60 * EngineSettings.s_LaneColorUpdateBeatCount / NotesManager.s_CurrentTempo;
+            float time = startTime + 60 * EngineSettings.LaneColorUpdateBeatCount / NotesManager.s_CurrentTempo;
             float amt = 0;
             while (amt < 1)
             {

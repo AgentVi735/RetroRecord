@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using RetroRecord.Audio;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.Statistics;
 using RetroRecord.Engine.UI;
+using RetroRecord.Engine.UI.Statistics;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -12,6 +14,12 @@ namespace RetroRecord.Engine.Player
     public class EngineManager : MonoBehaviour
     {
         public static EngineManager s_Instance;
+
+        [SerializeField]
+        private GameObject m_gameParent;
+
+        [SerializeField]
+        private StatisticsDisplay m_statisticsDisplay;
         
         [SerializeField]
         private EngineSettings m_engineSettings;
@@ -58,7 +66,7 @@ namespace RetroRecord.Engine.Player
             m_highwayRenderer.Initialize();
             m_statisticsManager.Initialize();
             m_notesManager.Initialize();
-            StartCoroutine(m_songInfoDisplay.Initialize(EngineSettings.s_Song.SongInfo));
+            StartCoroutine(m_songInfoDisplay.Initialize(EngineSettings.Song.SongInfo));
         }
 
         private void Start()
@@ -76,14 +84,19 @@ namespace RetroRecord.Engine.Player
 
         public void Finished()
         {
-            StatisticsManager.Dispose();
             StartCoroutine(FinishWait());
         }
 
         private IEnumerator FinishWait()
         {
-            yield return new WaitForSeconds(EngineSettings.s_TimeAfterSong);
+            yield return new WaitForSeconds(EngineSettings.TimeAfterSong);
+            
+            m_statisticsDisplay.Enable();
+            StatisticsManager.Dispose();
+        }
 
+        private static void ExitGame()
+        {
 #if UNITY_EDITOR
             EditorApplication.ExitPlaymode();
 #else

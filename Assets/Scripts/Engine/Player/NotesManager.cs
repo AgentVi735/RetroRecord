@@ -4,6 +4,7 @@ using System.Linq;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Chart.Events;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.Statistics;
 using RetroRecord.Engine.UI;
 using UnityEngine;
 
@@ -49,10 +50,10 @@ namespace RetroRecord.Engine.Player
 
         public void Initialize()
         {
-            Song song = EngineSettings.s_Song;
+            Song song = EngineSettings.Song;
             Chart.Chart noteChart =
                 song.Charts.FirstOrDefault(difficultyChart =>
-                    difficultyChart.Difficulty == EngineSettings.s_Difficulty);
+                    difficultyChart.Difficulty == EngineSettings.Difficulty);
 
             if (noteChart == null)
                 return;
@@ -64,8 +65,8 @@ namespace RetroRecord.Engine.Player
             m_globalEvents = song.GlobalEvents;
 
             double spawnTime = 0;
-            if (EngineSettings.s_StartTime > 0)
-                spawnTime = EngineSettings.s_StartTime + EngineSettings.s_NoteSpawnDistance;
+            if (EngineSettings.StartTime > 0)
+                spawnTime = EngineSettings.StartTime + EngineSettings.NoteSpawnDistance;
 
             for (int i = 0; i < m_tempoChanges.Length; i++)
             {
@@ -101,7 +102,7 @@ namespace RetroRecord.Engine.Player
             for (int i = 0; i < m_beatlines.Count; i++)
             {
                 Beatline item = m_beatlines[i];
-                if (item.Time <= spawnTime - EngineSettings.s_NoteSpawnDistance)
+                if (item.Time <= spawnTime - EngineSettings.NoteSpawnDistance)
                     m_currentBeatlineIndex = i;
                 else
                     break;
@@ -125,7 +126,7 @@ namespace RetroRecord.Engine.Player
             {
                 NoteGroup currentGroup = m_noteGroups[m_currentGroupIndex];
                 while (m_currentGroupIndex < m_noteGroups.Length && currentGroup.Time <=
-                       SongPlayer.ConvertedCurrentInputTime + EngineSettings.s_NoteSpawnDistance)
+                       SongPlayer.ConvertedCurrentInputTime + EngineSettings.NoteSpawnDistance)
                 {
                     foreach (Note note in currentGroup.Notes)
                         ProcessItem(note);
@@ -186,7 +187,7 @@ namespace RetroRecord.Engine.Player
             Beatline currentBeatline = m_beatlines[m_currentBeatlineIndex];
             while (m_currentBeatlineIndex < m_beatlines.Count &&
                    currentBeatline.Time <= SongPlayer.ConvertedCurrentInputTime +
-                   EngineSettings.s_NoteSpawnDistance)
+                   EngineSettings.NoteSpawnDistance)
             {
                 m_highwayRenderer.SpawnBeatline(currentBeatline);
 
@@ -283,7 +284,7 @@ namespace RetroRecord.Engine.Player
             if (!keepExisting)
             {
                 m_beatlines.Clear();
-                m_beatlines.Capacity = (int)(lastTick / EngineSettings.k_RESOLUTION);
+                m_beatlines.Capacity = (int)(lastTick / EngineSettings.RESOLUTION);
             }
             else
             {
@@ -342,7 +343,7 @@ namespace RetroRecord.Engine.Player
             {
                 uint beatlineTickFactor =
                     timeSignature.Denominator * (uint)Math.Pow(2, getBeatlinePower(timeSignature));
-                uint beatlineTickRate = (EngineSettings.k_RESOLUTION * 4) / beatlineTickFactor;
+                uint beatlineTickRate = (EngineSettings.RESOLUTION * 4) / beatlineTickFactor;
 
                 uint beatlineCount = 0;
                 uint currentTick = startTick;

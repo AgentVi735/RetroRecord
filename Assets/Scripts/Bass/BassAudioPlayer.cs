@@ -22,21 +22,22 @@ namespace RetroRecord.Audio
             get
             {
                 if (!IsLoaded)
-                    return 0;
+                    return -1;
 
                 long position = Bass.ChannelGetPosition(m_streamHandle);
                 return Bass.ChannelBytes2Seconds(m_streamHandle, position);
             }
         }
 
-        public double Duration
+        public double Length
         {
             get
             {
-                if (m_sampleRate == 0)
-                    return 0;
+                if (m_streamHandle == 0)
+                    return -1;
 
-                return (double)m_totalFrames / m_sampleRate;
+                return (double)m_samples.Length /
+                       (m_sampleRate * m_channels);
             }
         }
 
@@ -55,7 +56,7 @@ namespace RetroRecord.Audio
                 Debug.LogError("AudioClip is null");
                 return;
             }
-
+            
             clip.LoadAudioData();
 
             if (clip.loadState != AudioDataLoadState.Loaded)
@@ -115,7 +116,7 @@ namespace RetroRecord.Audio
             int byteLength = remainingData.Length * sizeof(float);
 
             int result = Bass.StreamPutData(m_streamHandle, remainingData, byteLength);
-
+            
             if (result >= 0) return;
 
             Debug.LogError("Failed to feed BASS stream: " + Bass.LastError);
@@ -132,9 +133,11 @@ namespace RetroRecord.Audio
                 Load(m_audioClip);
             }
 
-            SetPosition(EngineSettings.s_AudioOffset);
+            SetPosition(EngineSettings.AudioOffset + EngineSettings.StartTime);
             if (m_streamHandle != 0)
                 Bass.ChannelPlay(m_streamHandle);
+            
+            SetVolume(EngineSettings.Volume);
         }
 
         public void Pause()
@@ -163,7 +166,7 @@ namespace RetroRecord.Audio
             bool wasPlaying =
                 m_streamHandle != 0 &&
                 Bass.ChannelIsActive(m_streamHandle) == PlaybackState.Playing;
-
+            
             CreateStreamFromSamples(frame);
 
             if (wasPlaying && m_streamHandle != 0)
@@ -176,18 +179,7 @@ namespace RetroRecord.Audio
 
             Bass.ChannelSetAttribute(m_streamHandle, ChannelAttribute.Volume, Mathf.Clamp01(volume));
         }
-
-        // private void Update()
-        // {
-        //     if (streamHandle == 0 || samples == null)
-        //         return;
-        //
-        //     if (Bass.ChannelIsActive(streamHandle) != PlaybackState.Stopped) return;
-        //     
-        //     CreateStreamFromSamples(0);
-        //     Bass.ChannelPlay(streamHandle);
-        // }
-
+        
         private void FreeStream()
         {
             if (m_streamHandle == 0) return;

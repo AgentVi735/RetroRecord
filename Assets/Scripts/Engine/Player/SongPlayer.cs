@@ -1,4 +1,5 @@
 ﻿using RetroRecord.Audio;
+using RetroRecord.Engine.Statistics;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
@@ -49,9 +50,9 @@ namespace RetroRecord.Engine.Player
             InputTimeOffset = 0;
             ConvertedCurrentInputTime = 0;
             HasFinished = false;
-            m_audioPlayer.Load(EngineSettings.s_Song.SongInfo.Audio);
+            m_audioPlayer.Load(EngineSettings.Song.SongInfo.Audio);
 
-            SongTime = m_audioPlayer.Duration;
+            SongTime = m_audioPlayer.Length;
         }
 
         public void StartMusic()
@@ -59,7 +60,8 @@ namespace RetroRecord.Engine.Player
             HasStarted = true;
             m_audioPlayer.Play();
 
-            InputTimeOffset = InputState.currentTime - 0;
+            InputTimeOffset = InputState.currentTime - EngineSettings.StartTime;
+            AudioOffset = EngineSettings.StartTime + EngineSettings.AudioOffset;
             UpdateTimes();
         }
 
@@ -67,7 +69,7 @@ namespace RetroRecord.Engine.Player
         {
             CurrentInputTime = InputState.currentTime;
             ConvertedCurrentInputTime = CurrentInputTime - InputTimeOffset;
-            CurrentAudioTime = m_audioPlayer.PlaybackPosition - AudioOffset;
+            CurrentAudioTime = m_audioPlayer.PlaybackPosition + AudioOffset;
         }
 
         private void Update()
@@ -76,9 +78,9 @@ namespace RetroRecord.Engine.Player
                 return;
 
             UpdateTimes();
-
-            if (!(CurrentAudioTime >= SongTime)) return;
-            Finished();
+            
+            if (CurrentAudioTime >= SongTime)
+                Finished();
         }
 
         private void Finished()

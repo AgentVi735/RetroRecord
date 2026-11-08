@@ -13,7 +13,7 @@ namespace RetroRecord.Engine.Chart
         public double TickToTime(uint givenTick)
         {
             double tickDelta = givenTick - Tick;
-            double beatDelta = tickDelta / EngineSettings.k_RESOLUTION;
+            double beatDelta = tickDelta / EngineSettings.RESOLUTION;
             double timeDelta = beatDelta * (60 / Tempo);
 
             return Time + timeDelta;
