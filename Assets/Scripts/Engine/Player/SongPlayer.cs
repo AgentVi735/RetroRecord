@@ -29,7 +29,7 @@ namespace RetroRecord.Engine.Player
         public bool HasStarted { get; private set; }
         public bool HasFinished { get; private set; }
 
-        private double m_songTime;
+        public static double SongTime;
 
         public void Initialize()
         {
@@ -51,7 +51,7 @@ namespace RetroRecord.Engine.Player
             HasFinished = false;
             m_audioPlayer.Load(EngineSettings.s_Song.SongInfo.Audio);
 
-            m_songTime = m_audioPlayer.Duration;
+            SongTime = m_audioPlayer.Duration;
         }
 
         public void StartMusic()
@@ -77,7 +77,7 @@ namespace RetroRecord.Engine.Player
 
             UpdateTimes();
 
-            if (!(CurrentAudioTime >= m_songTime)) return;
+            if (!(CurrentAudioTime >= SongTime)) return;
             Finished();
         }
 

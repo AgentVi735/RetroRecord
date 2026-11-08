@@ -35,6 +35,9 @@ namespace RetroRecord.Engine.Player
         private SongInfoDisplay m_songInfoDisplay;
 
         [SerializeField]
+        private SongDurationDisplay m_songDurationDisplay;
+
+        [SerializeField]
         private bool m_autoStart;
 
         [SerializeField]
@@ -67,6 +70,7 @@ namespace RetroRecord.Engine.Player
         private IEnumerator StartSong()
         {
             yield return new WaitForSeconds(m_delayUntilStart);
+            m_songDurationDisplay.IsEnabled = true;
             m_songPlayer.StartMusic();
         }
 
