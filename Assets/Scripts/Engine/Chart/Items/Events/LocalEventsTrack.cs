@@ -18,7 +18,7 @@ namespace RetroRecord.Engine.Chart.Events
             if (LaneSwitchEvents is { Length: > 0 })
                 items.AddRange(LaneSwitchEvents.Select(EventItem.CreateItem));
 
-            Items = items.ToArray();
+            Items = items.OrderBy(item => item.Tick).ToArray();
         }
         
         public int GetCurrentTimeIndex(double spawnTime)

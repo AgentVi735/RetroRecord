@@ -7,18 +7,25 @@ namespace RetroRecord.Engine.Chart.Events
     [System.Serializable]
     public class GlobalEventsTrack
     {
+        [field:SerializeField]
         public EventItem[] Items { get; private set; }
         
         [SerializeField]
         public ShowSongInfoEvent[] ShowSongInfoEvents;
+
+        [SerializeField]
+        public EffectItem[] Effects;
 
         public void SetItems()
         {
             List<EventItem> items = new();
             if (ShowSongInfoEvents is { Length: > 0 })
                 items.AddRange(ShowSongInfoEvents.Select(EventItem.CreateItem));
+            
+            if (Effects is { Length: > 0 })
+                items.AddRange(Effects.Select(EventItem.CreateItem));
 
-            Items = items.ToArray();
+            Items = items.OrderBy(item => item.Tick).ToArray();
         }
         
         public int GetCurrentTimeIndex(double spawnTime)

@@ -22,6 +22,7 @@
 }
 [Events]
 {
+  768 = E "Ef-F"
   1536 = E "section Intro"
   2352 = E "SI"
   5376 = E "section Verse 1"

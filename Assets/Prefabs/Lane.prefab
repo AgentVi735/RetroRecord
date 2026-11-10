@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3688539506758842084}
   - component: {fileID: 1147812417693124514}
   - component: {fileID: 3492935028407748827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,10 +110,6 @@ MonoBehaviour:
   m_strikeline: {fileID: 5369160360992629876}
   m_defaultLanePos: {x: 0, y: 0, z: 0}
   m_middleLanePos: {x: 0, y: 0, z: 0}
-  m_leftColor0: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
-  m_leftColor1: {r: 1, g: 1, b: 1, a: 1}
-  m_rightColor0: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
-  m_rightColor1: {r: 0.40784314, g: 0.09019608, b: 0.09019608, a: 1}
   Idx: 0
 --- !u!1 &2664772995821601598
 GameObject:
@@ -126,7 +122,7 @@ GameObject:
   - component: {fileID: 8189504260136561034}
   - component: {fileID: 7682300843546899572}
   - component: {fileID: 5369160360992629876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Strikeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,11 +217,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HighwayStrikeline
   m_spriteRenderer: {fileID: 7682300843546899572}
-  m_leftColor0: {r: 0.29411766, g: 0.45490196, b: 0.2509804, a: 1}
-  m_leftColor0Hit: {r: 0.2509804, g: 0.36862746, b: 0.22352941, a: 1}
-  m_leftColor1: {r: 0.4117647, g: 0.9529412, b: 0.26666668, a: 1}
-  m_leftColor1Hit: {r: 0.20784314, g: 0.7176471, b: 0.07450981, a: 1}
-  m_rightColor0: {r: 0.39607844, g: 0.1764706, b: 0.54901963, a: 1}
-  m_rightColor0Hit: {r: 0.2627451, g: 0.12941177, b: 0.35686275, a: 1}
-  m_rightColor1: {r: 0.46666667, g: 0, b: 0.79607844, a: 1}
-  m_rightColor1Hit: {r: 0.34117648, g: 0.050980393, b: 0.54901963, a: 1}

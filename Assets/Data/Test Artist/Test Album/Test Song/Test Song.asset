@@ -354,3 +354,4 @@ MonoBehaviour:
     LastTick: 1488
   GlobalEvents:
     ShowSongInfoEvents: []
+    Effects: []

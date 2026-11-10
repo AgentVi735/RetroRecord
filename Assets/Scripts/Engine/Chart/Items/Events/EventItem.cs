@@ -1,5 +1,6 @@
 ﻿namespace RetroRecord.Engine.Chart.Events
 {
+    [System.Serializable]
     public class EventItem
     {
         public uint Tick;
@@ -8,30 +9,6 @@
         public int Index;
 
         public static EventItem CreateItem(SongItem item, int index)
-        {
-            EventItem eventItem = new()
-            {
-                Tick = item.Tick,
-                Time = item.Time,
-                ItemType = item.GetItemType(),
-                Index = index
-            };
-            return eventItem;
-        }
-
-        public static EventItem CreateItem(LaneSwitchEvent item, int index)
-        {
-            EventItem eventItem = new()
-            {
-                Tick = item.Tick,
-                Time = item.Time,
-                ItemType = item.GetItemType(),
-                Index = index
-            };
-            return eventItem;
-        }
-
-        public static EventItem CreateItem(ShowSongInfoEvent item, int index)
         {
             EventItem eventItem = new()
             {

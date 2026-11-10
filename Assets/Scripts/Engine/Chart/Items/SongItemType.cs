@@ -6,5 +6,6 @@
     TempoChange,
     TimeSignature,
     LaneSwitch,
-    ShowSongInfo
+    ShowSongInfo,
+    Effect
 }

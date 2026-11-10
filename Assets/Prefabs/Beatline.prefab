@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6183418755331942757}
   - component: {fileID: 6587901968643625056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376524145020169370}
   - component: {fileID: 3787699455377879004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beatline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,10 +147,11 @@ MonoBehaviour:
   m_strongYScale: 0.1
   m_weakYScale: 0.025
   m_eightLaneXScale: 6
-  m_defaultXScale: 4.5
-  m_eightLanesXPos: -3.5
-  m_sixLanesXPos: -2.75
-  m_threeLanesXPos: 0
+  m_normalXScale: 4.5
+  m_easyXScale: 6
+  m_hardLanesXPos: -3.5
+  m_normalLanesXPos: -2.75
+  m_easyLanesXPos: 0
 --- !u!1 &7623519623061952299
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051476487222625674}
   - component: {fileID: 5054652188093011458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

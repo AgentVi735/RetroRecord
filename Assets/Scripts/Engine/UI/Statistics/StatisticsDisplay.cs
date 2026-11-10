@@ -55,6 +55,10 @@ namespace RetroRecord.Engine.UI.Statistics
             float perfectPercentageFloat = (float)statistics.PerfectNotes / statistics.NotesHit * 100;
             int hitPercentage = Mathf.FloorToInt(hitPercentageFloat);
             int perfectPercentage = Mathf.FloorToInt(perfectPercentageFloat);
+            if (statistics.PerfectNotes == 0)
+                perfectPercentage = 0;
+            if (statistics.NotesHit == 0)
+                hitPercentage = 0;
             m_notesHitText.text = $"{statistics.NotesHit} / {statistics.TotalNotes} ({hitPercentage}%)";
             m_perfectNotesHitText.text = $"{statistics.PerfectNotes} ({perfectPercentage}%)";
             m_notesMissedText.text = $"{statistics.NotesMissed}";

@@ -17185,3 +17185,9 @@ MonoBehaviour:
     ShowSongInfoEvents:
     - Tick: 2352
       Time: 8.75
+    Effects:
+    - Tick: 768
+      Time: 2.857142857142857
+      EffectType: 1
+      TickDuration: 192
+      TimeDuration: 0.7142857142857144

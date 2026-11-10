@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Chart.Events;
+using RetroRecord.Engine.Effects;
 using RetroRecord.Engine.Player.Renderer;
 using RetroRecord.Engine.Statistics;
 using RetroRecord.Engine.UI;
@@ -23,6 +24,9 @@ namespace RetroRecord.Engine.Player
 
         [SerializeField]
         private SongInfoDisplay m_songInfoDisplay;
+
+        [SerializeField]
+        private EffectsManager m_effectManager;
 
         private NoteGroup[] m_noteGroups;
         private TempoChange[] m_tempoChanges;
@@ -219,6 +223,9 @@ namespace RetroRecord.Engine.Player
                     break;
                 case SongItemType.ShowSongInfo:
                     m_songInfoDisplay.ShowSongNameEvent(item.Time);
+                    break;
+                case SongItemType.Effect:
+                    m_effectManager.ShowEffect(m_globalEvents.Effects[item.Index]);
                     break;
             }
         }

@@ -40,6 +40,10 @@ namespace RetroRecord.Engine.Chart.Editor
         
         private const string k_laneSwitchEventKey = "LS";
         private const string k_showSongInfoEventKey = "SI";
+        private const string k_effectEventKey = "Ef";
+
+        private const string k_flameEffectKey = "F";
+        private const uint k_flameEffectTickLength = 192;
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
@@ -429,14 +433,19 @@ namespace RetroRecord.Engine.Chart.Editor
             
             GlobalEventsTrack globalEventsTrack = new();
             List<ShowSongInfoEvent> showSongInfoEvents = new();
+            List<EffectItem> effectEvents = new();
 
             if (eventsArray.Length > 0)
             {
                 showSongInfoEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.ShowSongInfo).Cast<ShowSongInfoEvent>());
+                
+                effectEvents.AddRange(eventsArray
+                    .Where(songItem => songItem.GetItemType() == SongItemType.Effect).Cast<EffectItem>());
             }
 
             globalEventsTrack.ShowSongInfoEvents = showSongInfoEvents.ToArray();
+            globalEventsTrack.Effects = effectEvents.ToArray();
             
             song.GlobalEvents = globalEventsTrack;
             s_currentRawSongInfo = rawSongInfo;
@@ -599,6 +608,8 @@ namespace RetroRecord.Engine.Chart.Editor
 
         private static SongItem GetEvent(string text)
         {
+            if (text.Contains(k_effectEventKey))
+                return GetEffectEvent(text);
             return text.Contains(k_showSongInfoEventKey) ? GetShowSongInfoEvent(text) : null;
         }
         
@@ -619,7 +630,49 @@ namespace RetroRecord.Engine.Chart.Editor
             item.Tick = tickUInt;
 
             return item;
+        }
+        
+        private static EffectItem GetEffectEvent(string text)
+        {
+            EffectItem item = new();
+            string tick = "";
+            string effectType = "";
+            int spaceAmt = 0;
+            bool isLookingForType = false;
+            foreach (char character in text)
+            {
+                switch (character)
+                {
+                    case ' ':
+                        spaceAmt++;
+                        break;
+                    case '-':
+                        isLookingForType = true;
+                        break;
+                    case '"':
+                        isLookingForType = false;
+                        break;
+                    default:
+                    {
+                        if (isLookingForType)
+                            effectType += character;
+                        else if (spaceAmt == 2)
+                            tick += character;
+                        break;
+                    }
+                }
+            }
 
+            uint.TryParse(tick, out uint tickUInt);
+            item.Tick = tickUInt;
+
+            item.EffectType = effectType switch
+            {
+                k_flameEffectKey => EffectType.Flame,
+                _ => EffectType.None
+            };
+
+            return item;
         }
 
         private static TempoChange GetTempoChange(string text)
@@ -777,8 +830,29 @@ namespace RetroRecord.Engine.Chart.Editor
 
             items = items.OrderBy(item => item.Tick).ToArray();
 
-            foreach (SongItem item in items)
+            for (int i = 0; i < items.Length; i++)
+            {
+                SongItem item = items[i];
                 item.Time = TickToSecondsAlt(item.Tick);
+
+                if (item.GetItemType() != SongItemType.Effect) continue;
+
+                EffectItem effectItem = (EffectItem)item;
+
+                switch (effectItem.EffectType)
+                {
+                    default:
+                        continue;
+                    case EffectType.Flame:
+                        effectItem.TickDuration = k_flameEffectTickLength;
+                        break;
+                }
+
+                double endTime = TickToSecondsAlt(effectItem.Tick + effectItem.TickDuration);
+                endTime -= effectItem.Time;
+                effectItem.TimeDuration = endTime;
+                items[i] = effectItem;
+            }
         }
 
         private static void CalculateSongItemTimes(NoteGroup[] noteGroups, LocalEventsTrack localEvents)
