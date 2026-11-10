@@ -7,6 +7,9 @@ namespace RetroRecord.Engine.Effects
     {
         [SerializeField]
         private FlameEffectDisplay m_flameEffectDisplay;
+        
+        [SerializeField]
+        private FlameEffectDisplay m_sparkEffectDisplay;
 
         public void ShowEffect(EffectItem item)
         {
@@ -18,6 +21,9 @@ namespace RetroRecord.Engine.Effects
                     break;
                 case EffectType.Flame:
                     m_flameEffectDisplay.Enable(item.TimeDuration);
+                    break;
+                case EffectType.Spark:
+                    m_sparkEffectDisplay.Enable(item.TimeDuration);
                     break;
             }
         }

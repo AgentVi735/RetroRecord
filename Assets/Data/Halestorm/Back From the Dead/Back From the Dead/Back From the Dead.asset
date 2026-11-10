@@ -17182,12 +17182,63 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 56256
   GlobalEvents:
+    <Items>k__BackingField: []
     ShowSongInfoEvents:
-    - Tick: 2352
-      Time: 8.75
+    - Tick: 2304
+      Time: 8.571428571428571
     Effects:
     - Tick: 768
       Time: 2.857142857142857
+      EffectType: 2
+      TickDuration: 384
+      TimeDuration: 1.4285714285714284
+    - Tick: 2304
+      Time: 8.571428571428571
+      EffectType: 2
+      TickDuration: 384
+      TimeDuration: 1.4285714285714288
+    - Tick: 3840
+      Time: 14.285714285714286
+      EffectType: 2
+      TickDuration: 384
+      TimeDuration: 1.4285714285714288
+    - Tick: 12288
+      Time: 45.714285714285715
       EffectType: 1
       TickDuration: 192
-      TimeDuration: 0.7142857142857144
+      TimeDuration: 0.7142857142857153
+    - Tick: 18432
+      Time: 68.57142857142857
+      EffectType: 2
+      TickDuration: 384
+      TimeDuration: 1.4285714285714306
+    - Tick: 26880
+      Time: 100
+      EffectType: 1
+      TickDuration: 192
+      TimeDuration: 0.7142857142857224
+    - Tick: 33024
+      Time: 122.85714285714286
+      EffectType: 2
+      TickDuration: 384
+      TimeDuration: 1.4285714285714306
+    - Tick: 36096
+      Time: 134.28571428571428
+      EffectType: 2
+      TickDuration: 384
+      TimeDuration: 1.4285714285714448
+    - Tick: 43776
+      Time: 162.85714285714286
+      EffectType: 1
+      TickDuration: 192
+      TimeDuration: 0.7142857142857224
+    - Tick: 46848
+      Time: 174.28571428571428
+      EffectType: 1
+      TickDuration: 192
+      TimeDuration: 0.7142857142857224
+    - Tick: 52992
+      Time: 197.14285714285714
+      EffectType: 1
+      TickDuration: 192
+      TimeDuration: 0.7142857142857224

@@ -353,5 +353,6 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 1488
   GlobalEvents:
+    <Items>k__BackingField: []
     ShowSongInfoEvents: []
     Effects: []

@@ -1,5 +1,6 @@
 ﻿public enum EffectType
 {
     None,
-    Flame
+    Flame,
+    Spark
 }

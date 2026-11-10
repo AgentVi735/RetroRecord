@@ -43,7 +43,9 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_effectEventKey = "Ef";
 
         private const string k_flameEffectKey = "F";
-        private const uint k_flameEffectTickLength = 192;
+        private const float k_flameEffectBeatCount = 1;
+        private const string k_sparkEffectKey = "S";
+        private const float k_sparkEffectBeatCount = 2;
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
@@ -669,6 +671,7 @@ namespace RetroRecord.Engine.Chart.Editor
             item.EffectType = effectType switch
             {
                 k_flameEffectKey => EffectType.Flame,
+                k_sparkEffectKey => EffectType.Spark,
                 _ => EffectType.None
             };
 
@@ -844,7 +847,10 @@ namespace RetroRecord.Engine.Chart.Editor
                     default:
                         continue;
                     case EffectType.Flame:
-                        effectItem.TickDuration = k_flameEffectTickLength;
+                        effectItem.TickDuration = (uint)Mathf.RoundToInt(k_flameEffectBeatCount * EngineSettings.RESOLUTION);
+                        break;
+                    case EffectType.Spark:
+                        effectItem.TickDuration = (uint)Mathf.RoundToInt(k_sparkEffectBeatCount * EngineSettings.RESOLUTION);
                         break;
                 }
 
