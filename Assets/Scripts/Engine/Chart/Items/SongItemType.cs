@@ -7,5 +7,6 @@
     TimeSignature,
     LaneSwitch,
     ShowSongInfo,
-    Effect
+    Effect,
+    Light
 }

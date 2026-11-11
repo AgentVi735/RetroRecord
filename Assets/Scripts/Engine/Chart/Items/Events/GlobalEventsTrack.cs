@@ -15,6 +15,9 @@ namespace RetroRecord.Engine.Chart.Events
 
         [SerializeField]
         public EffectItem[] Effects;
+        
+        [SerializeField]
+        public LightsEvent[] Lights;
 
         public void SetItems()
         {
@@ -24,6 +27,9 @@ namespace RetroRecord.Engine.Chart.Events
             
             if (Effects is { Length: > 0 })
                 items.AddRange(Effects.Select(EventItem.CreateItem));
+            
+            if (Lights is { Length: > 0 })
+                items.AddRange(Lights.Select(EventItem.CreateItem));
 
             Items = items.OrderBy(item => item.Tick).ToArray();
         }

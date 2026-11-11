@@ -4,6 +4,7 @@ using System.Linq;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Chart.Events;
 using RetroRecord.Engine.Effects;
+using RetroRecord.Engine.Lights;
 using RetroRecord.Engine.Player.Renderer;
 using RetroRecord.Engine.Settings;
 using RetroRecord.Engine.Statistics;
@@ -28,6 +29,9 @@ namespace RetroRecord.Engine.Player
 
         [SerializeField]
         private EffectsManager m_effectManager;
+
+        [SerializeField]
+        private LightManager m_lightManager;
 
         private NoteGroup[] m_noteGroups;
         private TempoChange[] m_tempoChanges;
@@ -266,6 +270,9 @@ namespace RetroRecord.Engine.Player
                     break;
                 case SongItemType.Effect:
                     m_effectManager.ShowEffect(m_globalEvents.Effects[item.Index]);
+                    break;
+                case SongItemType.Light:
+                    m_lightManager.ChangeCurrentColor(m_globalEvents.Lights[item.Index].Index);
                     break;
             }
         }

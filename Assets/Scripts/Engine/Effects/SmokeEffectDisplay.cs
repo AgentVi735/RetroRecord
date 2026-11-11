@@ -32,7 +32,7 @@ namespace RetroRecord.Engine.Effects
             m_isOn = !m_isOn;
 
             Color startColor = m_smokeSprites[0].color;
-            Color endColor = m_isOn ? m_finalColor : ColorEx.clear;
+            Color endColor = m_isOn ? m_finalColor : ColorEx.clear2;
 
             if (m_currentFadeTime > 0)
                 m_currentFadeTime = duration - m_currentFadeTime;

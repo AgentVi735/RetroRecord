@@ -19,6 +19,7 @@ namespace RetroRecord.Engine.Chart.Editor
         private static RawSongInfo s_currentRawSongInfo;
         private static AlbumLibrary s_albumLibrary;
         
+        // Chart File Headers
         private const string k_chartFileSongDataHeader = "[Song]";
         private const string k_chartFileSyncTrackHeader = "[SyncTrack]";
         private const string k_chartFileEventsHeader = "[Events]";
@@ -26,6 +27,7 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_chartFileGhlGuitarNormalHeader = "[NormalGHLGuitar]";
         private const string k_chartFileGhlGuitarEasyHeader = "[EasyGHLGuitar]";
 
+        // Song Info Keys
         private const string k_songInfoNameKey = "Name";
         private const string k_songInfoArtistKey = "Artist";
         private const string k_songInfoAlbumKey = "Album";
@@ -35,20 +37,25 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_songInfoDifficultyKey = "Difficulty";
         private const string k_songInfoCharterKey = "Charter";
         
+        // Chart Keys
         private const string k_noteKey = "N";
         private const string k_tempoChangeKey = "B";
         private const string k_timeSignatureChangeKey = "TS";
         
+        // Event Keys
         private const string k_laneSwitchEventKey = "LS";
         private const string k_showSongInfoEventKey = "SI";
         private const string k_effectEventKey = "Ef";
+        private const string k_lightEventKey = "Li";
 
+        // Effects Data
         private const string k_flameEffectKey = "Fl";
         private const float k_flameEffectBeatCount = 1;
         private const string k_sparkEffectKey = "Sp";
         private const float k_sparkEffectBeatCount = 2;
         private const string k_smokeEffectKey = "Sm";
         private const float k_smokeEffectBeatCount = 1;
+        
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
@@ -439,6 +446,7 @@ namespace RetroRecord.Engine.Chart.Editor
             GlobalEventsTrack globalEventsTrack = new();
             List<ShowSongInfoEvent> showSongInfoEvents = new();
             List<EffectItem> effectEvents = new();
+            List<LightsEvent> lightsEvents = new();
 
             if (eventsArray.Length > 0)
             {
@@ -447,10 +455,14 @@ namespace RetroRecord.Engine.Chart.Editor
                 
                 effectEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.Effect).Cast<EffectItem>());
+                
+                lightsEvents.AddRange(eventsArray
+                    .Where(songItem => songItem.GetItemType() == SongItemType.Light).Cast<LightsEvent>());
             }
 
             globalEventsTrack.ShowSongInfoEvents = showSongInfoEvents.ToArray();
             globalEventsTrack.Effects = effectEvents.ToArray();
+            globalEventsTrack.Lights = lightsEvents.ToArray();
             
             song.GlobalEvents = globalEventsTrack;
             s_currentRawSongInfo = rawSongInfo;
@@ -615,6 +627,10 @@ namespace RetroRecord.Engine.Chart.Editor
         {
             if (text.Contains(k_effectEventKey))
                 return GetEffectEvent(text);
+            
+            if (text.Contains(k_lightEventKey))
+                return GetLightEvent(text);
+            
             return text.Contains(k_showSongInfoEventKey) ? GetShowSongInfoEvent(text) : null;
         }
         
@@ -689,6 +705,49 @@ namespace RetroRecord.Engine.Chart.Editor
                 k_smokeEffectKey => EffectType.Smoke,
                 _ => EffectType.None
             };
+
+            return item;
+        }
+        
+        private static LightsEvent GetLightEvent(string text)
+        {
+            LightsEvent item = new();
+            string tick = "";
+            string lightInfo = "";
+            int spaceAmt = 0;
+            bool isLookingForType = false;
+            foreach (char character in text)
+            {
+                switch (character)
+                {
+                    case ' ':
+                        spaceAmt++;
+                        break;
+                    case '-':
+                        isLookingForType = true;
+                        break;
+                    case '"':
+                        isLookingForType = false;
+                        break;
+                    default:
+                    {
+                        if (isLookingForType)
+                        {
+                            if (spaceAmt == 5)
+                                lightInfo += character;
+                        }
+                        else if (spaceAmt == 2)
+                            tick += character;
+                        break;
+                    }
+                }
+            }
+
+            uint.TryParse(tick, out uint tickUint);
+            item.Tick = tickUint;
+            
+            uint.TryParse(lightInfo, out uint lightUint);
+            item.Index = lightUint;
 
             return item;
         }

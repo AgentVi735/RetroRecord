@@ -8,13 +8,14 @@ namespace RetroRecord.Engine.Lights
         [SerializeField]
         private SpriteRenderer m_renderer;
 
-        private float m_defaultOpacity;
-        private int m_count;
+        [SerializeField]
+        private int m_colorOffset;
+
+        private ushort m_count;
         
         public void Setup()
         {
-            m_defaultOpacity = m_renderer.color.a;
-            m_renderer.color = ColorEx.clear;
+            m_renderer.color = ColorEx.clear2;
         }
         
         public void Setup(float xPos)
@@ -23,14 +24,19 @@ namespace RetroRecord.Engine.Lights
             Setup();
         }
 
-        public void ChangeColor()
+        public void ChangeColor(LightColor data)
         {
-            m_renderer.color = m_count switch
+            if (data == null)
             {
-                0 => Color.blue,
-                1 => Color.red,
-                _ => m_renderer.color
-            };
+                m_renderer.color = Color.clear;
+                return;
+            }
+
+            int idx = m_count + m_colorOffset;
+            while (idx >= data.Colors.Length)
+                idx -= data.Colors.Length;
+
+            m_renderer.color = data.Colors[idx];
 
             m_count++;
 
