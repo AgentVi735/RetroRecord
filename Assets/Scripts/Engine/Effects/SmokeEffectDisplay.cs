@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using RetroRecord.Engine.Chart;
+using RetroRecord.General;
 using UnityEngine;
 
 namespace RetroRecord.Engine.Effects
@@ -13,8 +14,6 @@ namespace RetroRecord.Engine.Effects
         private double m_currentFadeTime;
 
         private bool m_isOn;
-
-        private readonly Color m_clearColor = new(1, 1, 1, 0);
 
         [SerializeField]
         private Color m_finalColor;
@@ -33,7 +32,7 @@ namespace RetroRecord.Engine.Effects
             m_isOn = !m_isOn;
 
             Color startColor = m_smokeSprites[0].color;
-            Color endColor = m_isOn ? m_finalColor : m_clearColor;
+            Color endColor = m_isOn ? m_finalColor : ColorEx.clear;
 
             if (m_currentFadeTime > 0)
                 m_currentFadeTime = duration - m_currentFadeTime;

@@ -148,7 +148,7 @@ namespace RetroRecord.Engine.Player.Renderer
             m_activeBeatlines.Add(obj);
         }
 
-        private void Update()
+        public void ManualUpdate()
         {
             if (!SongPlayer.s_Instance.HasStarted) return;
 

@@ -1,9 +1,10 @@
-﻿using RetroRecord.Engine.Settings;
+﻿using System;
+using RetroRecord.Engine.Settings;
 using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
 {
-    [System.Serializable]
+    [Serializable]
     public class TempoChange : SongItem
     {
         [SerializeField]
@@ -18,6 +19,16 @@ namespace RetroRecord.Engine.Chart
             double timeDelta = beatDelta * (60 / Tempo);
 
             return Time + timeDelta;
+        }
+        
+
+        public uint TimeToTick(double time)
+        {
+            double timeDelta = time - Time;
+            double beatDelta = timeDelta / (60 / Tempo);
+            double tickDelta = beatDelta * EngineSettings.RESOLUTION;
+
+            return Tick + (uint) Math.Round(tickDelta);
         }
         
         public new static TempoChange Clone(SongItem item)

@@ -115,7 +115,7 @@ namespace RetroRecord.Engine.Player
                 MoveToNextGroup(false);
         }
 
-        private void Update()
+        public void ManualUpdate()
         {
             if (!SongPlayer.s_Instance.HasStarted)
                 return;

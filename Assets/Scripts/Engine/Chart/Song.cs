@@ -1,4 +1,5 @@
 using RetroRecord.Engine.Chart.Events;
+using RetroRecord.Engine.Lights;
 using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
@@ -17,5 +18,8 @@ namespace RetroRecord.Engine.Chart
 
         [SerializeField]
         public GlobalEventsTrack GlobalEvents;
+
+        [SerializeField]
+        public LightColor[] Lights;
     }
 }

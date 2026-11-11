@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using RetroRecord.Audio;
+using RetroRecord.Engine.Lights;
 using RetroRecord.Engine.Player.Renderer;
 using RetroRecord.Engine.Settings;
 using RetroRecord.Engine.Statistics;
@@ -32,10 +34,16 @@ namespace RetroRecord.Engine.Player
         private NotesManager m_notesManager;
 
         [SerializeField]
+        private InputManager m_inputManager;
+
+        [SerializeField]
         private HighwayRenderer m_highwayRenderer;
 
         [SerializeField]
         private SongPlayer m_songPlayer;
+
+        [SerializeField]
+        private LightManager m_lightManager;
 
         [SerializeField]
         private StatisticsManager m_statisticsManager;
@@ -67,6 +75,7 @@ namespace RetroRecord.Engine.Player
             m_highwayRenderer.Initialize();
             m_statisticsManager.Initialize();
             m_notesManager.Initialize();
+            m_lightManager.Initialize();
             StartCoroutine(m_songInfoDisplay.Initialize(EngineSettings.Song.SongInfo));
         }
 
@@ -74,6 +83,18 @@ namespace RetroRecord.Engine.Player
         {
             if (m_autoStart)
                 StartCoroutine(StartSong());
+        }
+
+        private void Update()
+        {
+            if (!SongPlayer.s_Instance.HasStarted)
+                return;
+            
+            m_inputManager.ManualUpdate();
+            m_songPlayer.ManualUpdate();
+            m_notesManager.ManualUpdate();
+            m_highwayRenderer.ManualUpdate();
+            m_lightManager.ManualUpdate();
         }
 
         private IEnumerator StartSong()

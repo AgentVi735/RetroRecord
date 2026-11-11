@@ -1,16 +1,26 @@
-﻿using UnityEngine;
+﻿using System;
+using RetroRecord.Engine.Settings;
+using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
 {
-    [System.Serializable]
+    [Serializable]
     public class TimeSignatureChange : SongItem
     {
         [SerializeField]
         public uint Numerator;
         [SerializeField]
         public uint Denominator;
+
+        [NonSerialized]
+        public double QuarterNoteCount;
         
         public override SongItemType GetItemType() => SongItemType.TimeSignature;
+        
+        public double GetQuarterNoteProgress(uint tick)
+        {
+            return (tick - Tick) / (double) EngineSettings.RESOLUTION;
+        }
         
         public new static TimeSignatureChange Clone(SongItem item)
         {

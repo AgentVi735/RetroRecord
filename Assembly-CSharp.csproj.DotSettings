@@ -4,8 +4,12 @@
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cchart/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cchart_005Cevents/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cchart_005Citems_005Cevents/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Clights/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cplayer/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cplayer_005Crenderer/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cstatistics/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cui/@EntryIndexedValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cui_005Cstatistics/@EntryIndexedValue">False</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cengine_005Cui_005Cstatistics/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cgeneral/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cscenemanagement/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToInclude/=assets_005Cscripts_005Cscenemanagement_005Ceditor/@EntryIndexedValue">False</s:Boolean></wpf:ResourceDictionary>

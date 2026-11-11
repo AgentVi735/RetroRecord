@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using RetroRecord.Engine.Lights;
 using RetroRecord.Engine.Settings;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,6 +11,9 @@ namespace RetroRecord.Engine.Player.Renderer
     {
         [SerializeField]
         private SpriteRenderer m_spriteRenderer;
+
+        [SerializeField]
+        private LightController m_lightController;
 
         [SerializeField]
         private HighwayStrikeline m_strikeline;
@@ -64,6 +68,8 @@ namespace RetroRecord.Engine.Player.Renderer
             transform.localPosition = EngineSettings.CurrentDifficultySettings.AreLanesInMiddle
                 ? m_middleLanePos
                 : m_defaultLanePos;
+
+            m_lightController.Setup(transform.position.x);
         }
 
         public void ChangeColor(LaneSettings newSettings)

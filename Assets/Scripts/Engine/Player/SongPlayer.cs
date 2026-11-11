@@ -73,7 +73,7 @@ namespace RetroRecord.Engine.Player
             CurrentAudioTime = m_audioPlayer.PlaybackPosition + AudioOffset;
         }
 
-        private void Update()
+        public void ManualUpdate()
         {
             if (!HasStarted)
                 return;

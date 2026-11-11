@@ -41,7 +41,8 @@ namespace RetroRecord.Engine.Player
         private bool m_isPlaying;
 
         private int m_currentGroupIndex;
-        private int m_currentTempoChangeIndex;
+        private int m_currentTempoIndex;
+        private int m_currentTimeSignatureIndex;
         private int m_currentLocalEventIndex;
         private int m_currentGlobalEventIndex;
         private int m_currentBeatlineIndex;
@@ -78,11 +79,29 @@ namespace RetroRecord.Engine.Player
                 TempoChange item = m_tempoChanges[i];
                 if (item.Time <= spawnTime)
                 {
-                    m_currentTempoChangeIndex = i;
+                    m_currentTempoIndex = i;
                     s_CurrentTempo = item.Tempo;
+                    SyncTrack.s_CurrentTempoChange = item;
                 }
                 else
                     break;
+            }
+
+            TimeSignatureChange previousChange = null;
+            for (int i = 0; i < m_timeSignatureChanges.Length; i++)
+            {
+                TimeSignatureChange item = m_timeSignatureChanges[i];
+                double quarterNoteCount = 0;
+                if (item.Tick > 0 && previousChange != null)
+                    quarterNoteCount = previousChange.QuarterNoteCount +
+                                       previousChange.GetQuarterNoteProgress(item.Tick);
+
+                item.QuarterNoteCount = quarterNoteCount;
+                previousChange = item;
+
+                if (!(item.Time <= spawnTime)) continue;
+                m_currentTempoIndex = i;
+                SyncTrack.s_CurrentTimeSignature = item;
             }
 
             for (int i = 0; i < m_noteGroups.Length; i++)
@@ -119,7 +138,7 @@ namespace RetroRecord.Engine.Player
             m_inputManager.Initialize(m_noteGroups, m_currentGroupIndex);
         }
 
-        private void Update()
+        public void ManualUpdate()
         {
             if (!SongPlayer.s_Instance.HasStarted)
                 return;
@@ -143,17 +162,32 @@ namespace RetroRecord.Engine.Player
             }
 
             // Check for current tempo change
-            if (m_currentTempoChangeIndex < m_tempoChanges.Length)
+            if (m_currentTempoIndex < m_tempoChanges.Length)
             {
-                TempoChange currentTempoChange = m_tempoChanges[m_currentTempoChangeIndex];
-                while (m_currentTempoChangeIndex < m_tempoChanges.Length &&
+                TempoChange currentTempoChange = m_tempoChanges[m_currentTempoIndex];
+                while (m_currentTempoIndex < m_tempoChanges.Length &&
                        currentTempoChange.Time <= SongPlayer.ConvertedCurrentInputTime)
                 {
                     ProcessItem(currentTempoChange);
 
-                    m_currentTempoChangeIndex++;
-                    if (m_currentTempoChangeIndex < m_tempoChanges.Length)
-                        currentTempoChange = m_tempoChanges[m_currentTempoChangeIndex];
+                    m_currentTempoIndex++;
+                    if (m_currentTempoIndex < m_tempoChanges.Length)
+                        currentTempoChange = m_tempoChanges[m_currentTempoIndex];
+                }
+            }
+            
+            // Check for current time signature change
+            if (m_currentTimeSignatureIndex < m_timeSignatureChanges.Length)
+            {
+                TimeSignatureChange currentTimeSignature = m_timeSignatureChanges[m_currentTimeSignatureIndex];
+                while (m_currentTimeSignatureIndex < m_timeSignatureChanges.Length &&
+                       currentTimeSignature.Time <= SongPlayer.ConvertedCurrentInputTime)
+                {
+                    ProcessItem(currentTimeSignature);
+
+                    m_currentTimeSignatureIndex++;
+                    if (m_currentTimeSignatureIndex < m_timeSignatureChanges.Length)
+                        currentTimeSignature = m_timeSignatureChanges[m_currentTimeSignatureIndex];
                 }
             }
 
@@ -210,7 +244,12 @@ namespace RetroRecord.Engine.Player
                     m_highwayRenderer.SpawnNote((Note)item);
                     break;
                 case SongItemType.TempoChange:
-                    s_CurrentTempo = ((TempoChange)item).Tempo;
+                    TempoChange change = (TempoChange)item;
+                    s_CurrentTempo = change.Tempo;
+                    SyncTrack.s_CurrentTempoChange = change;
+                    break;
+                case SongItemType.TimeSignature:
+                    SyncTrack.s_CurrentTimeSignature = (TimeSignatureChange)item;
                     break;
             }
         }
