@@ -5,6 +5,7 @@ using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Chart.Events;
 using RetroRecord.Engine.Effects;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.Settings;
 using RetroRecord.Engine.Statistics;
 using RetroRecord.Engine.UI;
 using UnityEngine;

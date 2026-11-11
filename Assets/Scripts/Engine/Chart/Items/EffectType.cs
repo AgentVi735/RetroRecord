@@ -2,5 +2,6 @@
 {
     None,
     Flame,
-    Spark
+    Spark,
+    Smoke
 }

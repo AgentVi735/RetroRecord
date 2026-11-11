@@ -1,7 +1,7 @@
 ﻿using RetroRecord.Engine.Chart;
 using UnityEngine;
 
-namespace RetroRecord.Engine
+namespace RetroRecord.Engine.Settings
 {
     public class EngineSettings : MonoBehaviour
     {

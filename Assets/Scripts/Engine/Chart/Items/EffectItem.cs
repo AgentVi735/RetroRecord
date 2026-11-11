@@ -7,6 +7,7 @@ namespace RetroRecord.Engine.Chart
     {
         public override SongItemType GetItemType() => SongItemType.Effect;
         
+        [SerializeField]
         public EffectType EffectType;
 
         [SerializeField]

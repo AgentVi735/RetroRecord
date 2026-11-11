@@ -1,4 +1,6 @@
-﻿namespace RetroRecord.Engine.Player
+﻿using RetroRecord.Engine.Settings;
+
+namespace RetroRecord.Engine.Player
 {
     public static class SyncTrack
     {

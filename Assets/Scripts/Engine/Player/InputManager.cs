@@ -2,6 +2,7 @@
 using System.Linq;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.Settings;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Player;
+using RetroRecord.Engine.Settings;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

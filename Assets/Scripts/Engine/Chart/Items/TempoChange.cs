@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RetroRecord.Engine.Settings;
+using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
 {

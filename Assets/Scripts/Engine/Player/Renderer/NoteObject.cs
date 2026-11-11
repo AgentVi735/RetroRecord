@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using RetroRecord.Engine.Chart;
+using RetroRecord.Engine.Settings;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

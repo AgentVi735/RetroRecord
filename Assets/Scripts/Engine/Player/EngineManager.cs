@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using RetroRecord.Audio;
 using RetroRecord.Engine.Player.Renderer;
+using RetroRecord.Engine.Settings;
 using RetroRecord.Engine.Statistics;
 using RetroRecord.Engine.UI;
 using RetroRecord.Engine.UI.Statistics;

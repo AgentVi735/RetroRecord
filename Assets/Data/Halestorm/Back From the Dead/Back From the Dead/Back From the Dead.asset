@@ -17189,9 +17189,19 @@ MonoBehaviour:
     Effects:
     - Tick: 768
       Time: 2.857142857142857
+      EffectType: 3
+      TickDuration: 192
+      TimeDuration: 0.7142857142857144
+    - Tick: 768
+      Time: 2.857142857142857
       EffectType: 2
       TickDuration: 384
       TimeDuration: 1.4285714285714284
+    - Tick: 2112
+      Time: 7.857142857142858
+      EffectType: 3
+      TickDuration: 192
+      TimeDuration: 0.7142857142857135
     - Tick: 2304
       Time: 8.571428571428571
       EffectType: 2
@@ -17227,6 +17237,16 @@ MonoBehaviour:
       EffectType: 2
       TickDuration: 384
       TimeDuration: 1.4285714285714448
+    - Tick: 40704
+      Time: 151.42857142857144
+      EffectType: 3
+      TickDuration: 192
+      TimeDuration: 0.714285714285694
+    - Tick: 43584
+      Time: 162.14285714285714
+      EffectType: 3
+      TickDuration: 192
+      TimeDuration: 0.7142857142857224
     - Tick: 43776
       Time: 162.85714285714286
       EffectType: 1

@@ -1,6 +1,7 @@
 ﻿using System;
 using ManagedBass;
 using RetroRecord.Engine;
+using RetroRecord.Engine.Settings;
 using UnityEngine;
 
 namespace RetroRecord.Audio

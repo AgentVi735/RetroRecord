@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RetroRecord.Engine
+namespace RetroRecord.Engine.Settings
 {
     [CreateAssetMenu(menuName = "Settings/Difficulty")]
     public class DifficultySettings : ScriptableObject

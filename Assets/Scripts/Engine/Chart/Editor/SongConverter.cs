@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using RetroRecord.Engine.Chart.Events;
+using RetroRecord.Engine.Settings;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -42,10 +43,12 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_showSongInfoEventKey = "SI";
         private const string k_effectEventKey = "Ef";
 
-        private const string k_flameEffectKey = "F";
+        private const string k_flameEffectKey = "Fl";
         private const float k_flameEffectBeatCount = 1;
-        private const string k_sparkEffectKey = "S";
+        private const string k_sparkEffectKey = "Sp";
         private const float k_sparkEffectBeatCount = 2;
+        private const string k_smokeEffectKey = "Sm";
+        private const float k_smokeEffectBeatCount = 1;
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
@@ -639,6 +642,7 @@ namespace RetroRecord.Engine.Chart.Editor
             EffectItem item = new();
             string tick = "";
             string effectType = "";
+            string extraInfo = "";
             int spaceAmt = 0;
             bool isLookingForType = false;
             foreach (char character in text)
@@ -657,7 +661,17 @@ namespace RetroRecord.Engine.Chart.Editor
                     default:
                     {
                         if (isLookingForType)
-                            effectType += character;
+                        {
+                            switch (spaceAmt)
+                            {
+                                case 5:
+                                    effectType += character;
+                                    break;
+                                case 6:
+                                    extraInfo += character;
+                                    break;
+                            }
+                        }
                         else if (spaceAmt == 2)
                             tick += character;
                         break;
@@ -672,6 +686,7 @@ namespace RetroRecord.Engine.Chart.Editor
             {
                 k_flameEffectKey => EffectType.Flame,
                 k_sparkEffectKey => EffectType.Spark,
+                k_smokeEffectKey => EffectType.Smoke,
                 _ => EffectType.None
             };
 
@@ -851,6 +866,9 @@ namespace RetroRecord.Engine.Chart.Editor
                         break;
                     case EffectType.Spark:
                         effectItem.TickDuration = (uint)Mathf.RoundToInt(k_sparkEffectBeatCount * EngineSettings.RESOLUTION);
+                        break;
+                    case EffectType.Smoke:
+                        effectItem.TickDuration = (uint)Mathf.RoundToInt(k_smokeEffectBeatCount * EngineSettings.RESOLUTION);
                         break;
                 }
 

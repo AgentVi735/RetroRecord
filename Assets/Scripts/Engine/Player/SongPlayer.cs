@@ -1,4 +1,5 @@
 ﻿using RetroRecord.Audio;
+using RetroRecord.Engine.Settings;
 using RetroRecord.Engine.Statistics;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
