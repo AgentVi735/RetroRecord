@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using RetroRecord.Engine.Chart;
+using RetroRecord.Engine.Chart.Events;
 using RetroRecord.Engine.Player;
 using RetroRecord.Engine.Settings;
 using UnityEngine;
@@ -27,6 +27,9 @@ namespace RetroRecord.Engine.Lights
 
         [SerializeField]
         private LightController[] m_sideLights;
+
+        [SerializeField]
+        private LightColor m_flickeringColor;
 
         private LightColor[] m_lightData;
 
@@ -77,81 +80,73 @@ namespace RetroRecord.Engine.Lights
             m_lastCount = m_currentCount;
         }
 
-        public void ChangeCurrentColor(uint index)
+        public void OnLightEvent(LightsEvent lightsEvent)
         {
+            uint index = lightsEvent.Index;
             if (m_lightData.Length <= index)
             {
                 Debug.LogError("Color index is higher than the amount of Light Data");
                 return;
             }
 
-            LightColor data = m_lightData[index];
-            switch (data.Side)
+            switch (lightsEvent.Type)
             {
-                default:
-                case LightSide.All:
-                    m_currentSideColor = data;
-                    m_currentLaneColor = data;
-                    break;
-                case LightSide.Side:
-                    m_currentSideColor = data;
-                    break;
-                case LightSide.Lanes:
-                    m_currentLaneColor = data;
-                    break;
-            }
-            
-            if (m_currentLaneColor?.Type == LightType.Flickering || m_currentSideColor?.Type == LightType.Flickering)
-                ToggleOnNoteFlickering(true);
-            else
-                ToggleOnNoteFlickering(false);
-            
-            if (m_currentLaneColor?.Type == LightType.QuarterBeat)
-                m_onQuarterBeatLane?.Invoke(m_currentLaneColor);
-            if (m_currentSideColor?.Type == LightType.QuarterBeat)
-                m_onQuarterBeatSide?.Invoke(m_currentSideColor);
-        }
-
-        private void ToggleOnNoteFlickering(bool toggle)
-        {
-            switch (toggle)
-            {
-                case true when !m_hasFlickers:
-                    m_inputManager.OnNoteTime += OnNoteFlicker;
-                    m_hasFlickers = true;
-                    break;
-                case false when m_hasFlickers:
-                    m_inputManager.OnNoteTime -= OnNoteFlicker;
-                    m_hasFlickers = false;
-                    break;
-            }
-        }
-
-        private void OnNoteFlicker(NoteGroup noteGroup)
-        {
-            switch (m_currentLaneColor?.Type)
-            {
-                case LightType.Flickering:
+                case LightType.Switch:
                 {
-                    byte[] lanes = new byte[noteGroup.Notes.Length];
-                    for (int i = 0; i < noteGroup.Notes.Length; i++)
-                        lanes[i] = noteGroup.Notes[i].Lane;
-                    foreach (LightController light in m_laneLights)
+                    LightColor data = m_lightData[index];
+                    switch (data.Side)
                     {
-                        bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
-                        light.EnableFlicker(noteGroup.TimeUntilNextNote, m_currentLaneColor, shouldBeOn);
+                        default:
+                        case LightSide.All:
+                            m_currentSideColor = data;
+                            m_currentLaneColor = data;
+                            break;
+                        case LightSide.Side:
+                            m_currentSideColor = data;
+                            break;
+                        case LightSide.Lanes:
+                            m_currentLaneColor = data;
+                            break;
+                    }
+
+                    if (m_currentLaneColor?.Type == LightType.Switch)
+                    {
+                        foreach (LightController light in m_laneLights)
+                            light.ForceChangeColor(m_currentLaneColor);
+                    }
+                    if (m_currentSideColor?.Type == LightType.Switch)
+                    {
+                        foreach (LightController light in m_sideLights)
+                            light.ForceChangeColor(m_currentSideColor);
                     }
                     break;
                 }
-            }
-
-            switch (m_currentSideColor?.Type)
-            {
                 case LightType.Flickering:
-                    foreach (LightController light in m_sideLights)
-                        light.EnableFlicker(noteGroup.TimeUntilNextNote, m_currentSideColor, true);
+                    OnNoteFlicker(lightsEvent);
                     break;
             }
+        }
+
+        private void OnNoteFlicker(LightsEvent lightsEvent)
+        {
+            if (lightsEvent.NoteGroup != null)
+            {
+                byte[] lanes = new byte[lightsEvent.NoteGroup.Notes.Length];
+                for (int i = 0; i < lightsEvent.NoteGroup.Notes.Length; i++)
+                {
+                    Note note = lightsEvent.NoteGroup.Notes[i];
+                    lanes[i] = note.Lane;
+                }
+
+                foreach (LightController light in m_laneLights)
+                {
+                    bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
+                    light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, m_flickeringColor, shouldBeOn);
+                }
+            }
+
+            foreach (LightController light in m_sideLights)
+                light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, m_flickeringColor, true);
         }
     }
 }

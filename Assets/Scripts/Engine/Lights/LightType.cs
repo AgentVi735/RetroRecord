@@ -1,5 +1,5 @@
 ﻿public enum LightType
 {
-    QuarterBeat,
+    Switch,
     Flickering
 }

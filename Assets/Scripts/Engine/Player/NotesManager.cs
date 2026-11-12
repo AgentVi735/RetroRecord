@@ -119,7 +119,7 @@ namespace RetroRecord.Engine.Player
 
                 foreach (Note note in group.Notes)
                     note.WasHit = false;
-
+                
                 if (lastGroup != null)
                 {
                     lastGroup.TicksUntilNextNote = group.Tick - lastGroup.Tick;
@@ -134,6 +134,15 @@ namespace RetroRecord.Engine.Player
             
             m_globalEvents.SetItems();
             m_currentGlobalEventIndex = m_globalEvents.GetCurrentTimeIndex(spawnTime);
+            
+            foreach (LightsEvent item in m_globalEvents.Lights)
+            {
+                foreach (NoteGroup noteGroup in m_noteGroups)
+                {
+                    if (noteGroup.Tick == item.Tick)
+                        item.NoteGroup = noteGroup;
+                }
+            }
 
             GenerateBeatlines(noteChart.LastTick);
             RefreshStrongBeats();
@@ -283,7 +292,7 @@ namespace RetroRecord.Engine.Player
                     m_effectManager.ShowEffect(m_globalEvents.Effects[item.Index]);
                     break;
                 case SongItemType.Light:
-                    m_lightManager.ChangeCurrentColor(m_globalEvents.Lights[item.Index].Index);
+                    m_lightManager.OnLightEvent(m_globalEvents.Lights[item.Index]);
                     break;
             }
         }

@@ -14,7 +14,7 @@ namespace RetroRecord.Engine.Chart
 
         [SerializeField]
         public double TimeSustainLength;
-
+        
         [NonSerialized]
         public bool WasHit = false;
 

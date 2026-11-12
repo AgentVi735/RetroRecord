@@ -9,9 +9,15 @@ namespace RetroRecord.Engine.Chart
         [SerializeField]
         public Note[] Notes;
         
+        /// <summary>
+        /// Ticks until next flicker note if this Note Group has a flicker note
+        /// </summary>
         [NonSerialized]
         public uint TicksUntilNextNote;
         
+        /// <summary>
+        /// Time in seconds until next flicker note if this Note Group has a flicker note
+        /// </summary>
         [NonSerialized]
         public double TimeUntilNextNote;
 

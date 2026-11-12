@@ -1,12 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace RetroRecord.Engine.Chart.Events
 {
-    [System.Serializable]
+    [Serializable]
     public class LightsEvent : SongItem
     {
         [SerializeField]
         public uint Index;
+
+        [SerializeField]
+        public uint TickUntilNextFlicker;
+        
+        [SerializeField]
+        public double TimeUntilNextFlicker;
+
+        [SerializeField]
+        public LightType Type;
+
+        [SerializeField]
+        public LightTime TimeType;
+
+        [NonSerialized]
+        public NoteGroup NoteGroup;
 
         public override SongItemType GetItemType() => SongItemType.Light;
         

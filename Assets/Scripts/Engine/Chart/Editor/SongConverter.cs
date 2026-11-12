@@ -56,6 +56,16 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_smokeEffectKey = "Sm";
         private const float k_smokeEffectBeatCount = 1;
         
+        // Lights Keys
+        private const string k_lightFlickerEventKey = "LiF";
+        private const string k_lightFlickerWholeEventKey = "LiFW";
+        private const string k_lightFlickerHalfEventKey = "LiFH";
+        private const string k_lightFlickerQuarterEventKey = "LiFQ";
+        private const string k_lightFlickerQuaverEventKey = "LiFV";
+        private const string k_lightFlickerSemiQuaverEventKey = "LiFS";
+        private const string k_lightFlickerThirtySecondEventKey = "LiFT";
+        private const string k_lightFlickerSixtyFourthEventKey = "LiFF";
+        
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
@@ -658,7 +668,6 @@ namespace RetroRecord.Engine.Chart.Editor
             EffectItem item = new();
             string tick = "";
             string effectType = "";
-            string extraInfo = "";
             int spaceAmt = 0;
             bool isLookingForType = false;
             foreach (char character in text)
@@ -682,9 +691,6 @@ namespace RetroRecord.Engine.Chart.Editor
                             {
                                 case 5:
                                     effectType += character;
-                                    break;
-                                case 6:
-                                    extraInfo += character;
                                     break;
                             }
                         }
@@ -748,6 +754,30 @@ namespace RetroRecord.Engine.Chart.Editor
             
             uint.TryParse(lightInfo, out uint lightUint);
             item.Index = lightUint;
+
+            if (text.Contains(k_lightFlickerEventKey))
+            {
+                item.Type = LightType.Flickering;
+                if (text.Contains(k_lightFlickerWholeEventKey))
+                    item.TimeType = LightTime.WholeNote;
+                else if (text.Contains(k_lightFlickerHalfEventKey))
+                    item.TimeType = LightTime.HalfNote;
+                else if (text.Contains(k_lightFlickerQuarterEventKey))
+                    item.TimeType = LightTime.QuarterNote;
+                else if (text.Contains(k_lightFlickerQuaverEventKey))
+                    item.TimeType = LightTime.QuaverNote;
+                else if (text.Contains(k_lightFlickerSemiQuaverEventKey))
+                    item.TimeType = LightTime.SemiQuaverNote;
+                else if (text.Contains(k_lightFlickerThirtySecondEventKey))
+                    item.TimeType = LightTime.ThirtySecondNote;
+                else if (text.Contains(k_lightFlickerSixtyFourthEventKey))
+                    item.TimeType = LightTime.SixtyFourthNote;
+            }
+            else
+            {
+                item.Type = LightType.Switch;
+                item.TimeType = LightTime.QuarterNote;
+            }
 
             return item;
         }
@@ -912,29 +942,54 @@ namespace RetroRecord.Engine.Chart.Editor
                 SongItem item = items[i];
                 item.Time = TickToSecondsAlt(item.Tick);
 
-                if (item.GetItemType() != SongItemType.Effect) continue;
-
-                EffectItem effectItem = (EffectItem)item;
-
-                switch (effectItem.EffectType)
+                if (item.GetItemType() == SongItemType.Effect)
                 {
-                    default:
-                        continue;
-                    case EffectType.Flame:
-                        effectItem.TickDuration = (uint)Mathf.RoundToInt(k_flameEffectBeatCount * EngineSettings.RESOLUTION);
-                        break;
-                    case EffectType.Spark:
-                        effectItem.TickDuration = (uint)Mathf.RoundToInt(k_sparkEffectBeatCount * EngineSettings.RESOLUTION);
-                        break;
-                    case EffectType.Smoke:
-                        effectItem.TickDuration = (uint)Mathf.RoundToInt(k_smokeEffectBeatCount * EngineSettings.RESOLUTION);
-                        break;
-                }
+                    EffectItem effectItem = (EffectItem)item;
 
-                double endTime = TickToSecondsAlt(effectItem.Tick + effectItem.TickDuration);
-                endTime -= effectItem.Time;
-                effectItem.TimeDuration = endTime;
-                items[i] = effectItem;
+                    switch (effectItem.EffectType)
+                    {
+                        default:
+                            continue;
+                        case EffectType.Flame:
+                            effectItem.TickDuration = (uint)Mathf.RoundToInt(k_flameEffectBeatCount * EngineSettings.RESOLUTION);
+                            break;
+                        case EffectType.Spark:
+                            effectItem.TickDuration = (uint)Mathf.RoundToInt(k_sparkEffectBeatCount * EngineSettings.RESOLUTION);
+                            break;
+                        case EffectType.Smoke:
+                            effectItem.TickDuration = (uint)Mathf.RoundToInt(k_smokeEffectBeatCount * EngineSettings.RESOLUTION);
+                            break;
+                    }
+
+                    double endTime = TickToSecondsAlt(effectItem.Tick + effectItem.TickDuration);
+                    endTime -= effectItem.Time;
+                    effectItem.TimeDuration = endTime;
+                    items[i] = effectItem;
+                }
+                else if (item.GetItemType() == SongItemType.Light)
+                {
+                    LightsEvent lightsItem = (LightsEvent)item;
+
+                    if (lightsItem.Type == LightType.Switch)
+                        continue;
+
+                    lightsItem.TickUntilNextFlicker = lightsItem.TimeType switch
+                    {
+                        LightTime.WholeNote => (uint)Mathf.RoundToInt(4 * EngineSettings.RESOLUTION),
+                        LightTime.HalfNote => (uint)Mathf.RoundToInt(2 * EngineSettings.RESOLUTION),
+                        LightTime.QuarterNote => (uint)Mathf.RoundToInt(1 * EngineSettings.RESOLUTION),
+                        LightTime.QuaverNote => (uint)Mathf.RoundToInt(0.5f * EngineSettings.RESOLUTION),
+                        LightTime.SemiQuaverNote => (uint)Mathf.RoundToInt(0.25f * EngineSettings.RESOLUTION),
+                        LightTime.ThirtySecondNote => (uint)Mathf.RoundToInt(0.125f * EngineSettings.RESOLUTION),
+                        LightTime.SixtyFourthNote => (uint)Mathf.RoundToInt(0.0625f * EngineSettings.RESOLUTION),
+                        _ => (uint)Mathf.RoundToInt(1 * EngineSettings.RESOLUTION)
+                    };
+                    
+                    double endTime = TickToSecondsAlt(lightsItem.Tick + lightsItem.TickUntilNextFlicker);
+                    endTime -= lightsItem.Time;
+                    lightsItem.TimeUntilNextFlicker = endTime;
+                    items[i] = lightsItem;
+                }
             }
         }
 
