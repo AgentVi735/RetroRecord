@@ -40,6 +40,9 @@ namespace RetroRecord.Engine.Lights
         private event Action<LightColor> m_onQuarterBeatSide;
         private event Action<LightColor> m_onQuarterBeatLane;
 
+        private BeatHandler m_sideHandler;
+        private BeatHandler m_lanesHandler;
+
         private int m_lastCount;
         private bool m_hasFlickers;
 
@@ -68,16 +71,26 @@ namespace RetroRecord.Engine.Lights
             m_onQuarterBeatSide = null;
         }
 
+        // TODO:
+        // moet op een manier meerdere versies hebben
+        // ig via een nieuwe class zoals yarg doet?
+        // ik moet dan een class hebben die elke update runt dus die moet in een list opgeslagen worden. misschien is een array beter zodat ik er altijd mr 2 heb
+        // 1 class voor side en 1 voor lane
+        // kan ook anders gwn 2 vars worden
+        
         public void ManualUpdate()
         {
-            uint quarterTick = SyncTrack.TimeToTick(SongPlayer.ConvertedCurrentInputTime);
-            double progress = SyncTrack.GetQuarterNotePosition(quarterTick);
+            m_sideHandler?.Update();
+            m_lanesHandler?.Update();
             
-            m_currentProgress = progress;
-            if (m_currentCount == m_lastCount) return;
-            m_onQuarterBeatSide?.Invoke(m_currentSideColor);
-            m_onQuarterBeatLane?.Invoke(m_currentLaneColor);
-            m_lastCount = m_currentCount;
+            // uint quarterTick = SyncTrack.TimeToTick(SongPlayer.ConvertedCurrentInputTime);
+            // double progress = SyncTrack.GetQuarterNotePosition(quarterTick);
+            //
+            // m_currentProgress = progress;
+            // if (m_currentCount == m_lastCount) return;
+            // m_onQuarterBeatSide?.Invoke(m_currentSideColor);
+            // m_onQuarterBeatLane?.Invoke(m_currentLaneColor);
+            // m_lastCount = m_currentCount;
         }
 
         public void OnLightEvent(LightsEvent lightsEvent)
@@ -98,14 +111,14 @@ namespace RetroRecord.Engine.Lights
                     {
                         default:
                         case LightSide.All:
-                            m_currentSideColor = data;
-                            m_currentLaneColor = data;
+                            CreateNewSideHandler(data);
+                            CreateNewLaneHandler(data);
                             break;
                         case LightSide.Side:
-                            m_currentSideColor = data;
+                            CreateNewSideHandler(data);
                             break;
                         case LightSide.Lanes:
-                            m_currentLaneColor = data;
+                            CreateNewLaneHandler(data);
                             break;
                     }
 
@@ -125,6 +138,18 @@ namespace RetroRecord.Engine.Lights
                     OnNoteFlicker(lightsEvent);
                     break;
             }
+        }
+
+        private void CreateNewSideHandler(LightColor data)
+        {
+            m_currentSideColor = data;
+            m_sideHandler = new BeatHandler(m_currentSideColor, m_onQuarterBeatSide);
+        }
+
+        private void CreateNewLaneHandler(LightColor data)
+        {
+            m_currentLaneColor = data;
+            m_lanesHandler = new BeatHandler(m_currentLaneColor, m_onQuarterBeatLane);
         }
 
         private void OnNoteFlicker(LightsEvent lightsEvent)

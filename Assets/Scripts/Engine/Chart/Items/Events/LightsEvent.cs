@@ -1,4 +1,5 @@
 ﻿using System;
+using RetroRecord.Engine.Lights;
 using UnityEngine;
 
 namespace RetroRecord.Engine.Chart.Events

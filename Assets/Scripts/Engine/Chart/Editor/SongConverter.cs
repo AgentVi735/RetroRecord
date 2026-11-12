@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using RetroRecord.Engine.Chart.Events;
+using RetroRecord.Engine.Lights;
 using RetroRecord.Engine.Settings;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -973,17 +974,7 @@ namespace RetroRecord.Engine.Chart.Editor
                     if (lightsItem.Type == LightType.Switch)
                         continue;
 
-                    lightsItem.TickUntilNextFlicker = lightsItem.TimeType switch
-                    {
-                        LightTime.WholeNote => (uint)Mathf.RoundToInt(4 * EngineSettings.RESOLUTION),
-                        LightTime.HalfNote => (uint)Mathf.RoundToInt(2 * EngineSettings.RESOLUTION),
-                        LightTime.QuarterNote => (uint)Mathf.RoundToInt(1 * EngineSettings.RESOLUTION),
-                        LightTime.QuaverNote => (uint)Mathf.RoundToInt(0.5f * EngineSettings.RESOLUTION),
-                        LightTime.SemiQuaverNote => (uint)Mathf.RoundToInt(0.25f * EngineSettings.RESOLUTION),
-                        LightTime.ThirtySecondNote => (uint)Mathf.RoundToInt(0.125f * EngineSettings.RESOLUTION),
-                        LightTime.SixtyFourthNote => (uint)Mathf.RoundToInt(0.0625f * EngineSettings.RESOLUTION),
-                        _ => (uint)Mathf.RoundToInt(1 * EngineSettings.RESOLUTION)
-                    };
+                    lightsItem.TickUntilNextFlicker = (uint)Mathf.RoundToInt(lightsItem.TimeType.GetDivisor() * EngineSettings.RESOLUTION);
                     
                     double endTime = TickToSecondsAlt(lightsItem.Tick + lightsItem.TickUntilNextFlicker);
                     endTime -= lightsItem.Time;

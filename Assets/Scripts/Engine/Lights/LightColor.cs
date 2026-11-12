@@ -13,5 +13,8 @@ namespace RetroRecord.Engine.Lights
         
         [field:SerializeField]
         public LightSide Side { get; private set; }
+        
+        [field:SerializeField]
+        public LightTime Time { get; private set; }
     }
 }
