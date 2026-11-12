@@ -38,6 +38,7 @@ namespace RetroRecord.Engine.Lights
         private event Action<LightColor> m_onQuarterBeatLane;
 
         private int m_lastCount;
+        private bool m_hasFlickers;
 
         private double m_currentProgress { get; set; }
         private int m_currentCount => Mathf.FloorToInt((float)m_currentProgress);
@@ -49,13 +50,13 @@ namespace RetroRecord.Engine.Lights
             foreach (LightController light in m_sideLights)
             {
                 light.Setup();
-                m_onQuarterBeatSide += light.ChangeColor;
+                m_onQuarterBeatSide += light.OnQuarterBeat;
             }
             
             foreach (LightController light in m_laneLights)
             {
                 light.Setup();
-                m_onQuarterBeatLane += light.ChangeColor;
+                m_onQuarterBeatLane += light.OnQuarterBeat;
             }
         }
 
@@ -105,15 +106,25 @@ namespace RetroRecord.Engine.Lights
             else
                 ToggleOnNoteFlickering(false);
             
+            if (m_currentLaneColor?.Type == LightType.QuarterBeat)
+                m_onQuarterBeatLane?.Invoke(m_currentLaneColor);
+            if (m_currentSideColor?.Type == LightType.QuarterBeat)
+                m_onQuarterBeatSide?.Invoke(m_currentSideColor);
         }
 
         private void ToggleOnNoteFlickering(bool toggle)
         {
-            Debug.Log($"{toggle}");
-            if (toggle)
-                m_inputManager.OnNoteTime += OnNoteFlicker;
-            else
-                m_inputManager.OnNoteTime -= OnNoteFlicker;
+            switch (toggle)
+            {
+                case true when !m_hasFlickers:
+                    m_inputManager.OnNoteTime += OnNoteFlicker;
+                    m_hasFlickers = true;
+                    break;
+                case false when m_hasFlickers:
+                    m_inputManager.OnNoteTime -= OnNoteFlicker;
+                    m_hasFlickers = false;
+                    break;
+            }
         }
 
         private void OnNoteFlicker(NoteGroup noteGroup)
@@ -125,9 +136,9 @@ namespace RetroRecord.Engine.Lights
                     byte[] lanes = new byte[noteGroup.Notes.Length];
                     for (int i = 0; i < noteGroup.Notes.Length; i++)
                         lanes[i] = noteGroup.Notes[i].Lane;
-                    foreach (LightController light in m_sideLights)
+                    foreach (LightController light in m_laneLights)
                     {
-                        bool shouldBeOn = lanes.Contains((byte)light.laneIndex);
+                        bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
                         light.EnableFlicker(noteGroup.TimeUntilNextNote, m_currentLaneColor, shouldBeOn);
                     }
                     break;

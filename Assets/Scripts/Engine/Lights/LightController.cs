@@ -14,24 +14,28 @@ namespace RetroRecord.Engine.Lights
 
         private ushort m_count;
 
-        [field:SerializeField]
-        public int laneIndex { get; private set; }
-        
+        [field: SerializeField]
+        public int LaneIndex { get; private set; }
+
+        private Coroutine m_flickeringCoroutine;
+
         public void Setup()
         {
             m_renderer.color = ColorEx.clear2;
         }
-        
+
         public void Setup(float xPos)
         {
             transform.position = new Vector3(xPos, transform.position.y, 0);
             Setup();
         }
 
-        public void ChangeColor(LightColor data)
+        public void OnQuarterBeat(LightColor data)
         {
-            if (data == null)
+            if (data == null || data.Colors == null || data.Colors.Length == 0)
             {
+                if (m_flickeringCoroutine != null)
+                    StopCoroutine(m_flickeringCoroutine);
                 m_renderer.color = Color.clear;
                 return;
             }
@@ -40,6 +44,9 @@ namespace RetroRecord.Engine.Lights
             {
                 case LightType.QuarterBeat:
                 {
+                    if (m_flickeringCoroutine != null)
+                        StopCoroutine(m_flickeringCoroutine);
+                    
                     int idx = m_count + m_colorOffset;
                     while (idx >= data.Colors.Length)
                         idx -= data.Colors.Length;
@@ -60,9 +67,11 @@ namespace RetroRecord.Engine.Lights
 
         public void EnableFlicker(double time, LightColor color, bool shouldBeOn)
         {
-            Debug.Log($"{time} | {color.Type} | {color.Side} | {shouldBeOn}");
+            if (m_flickeringCoroutine != null)
+                StopCoroutine(m_flickeringCoroutine);
+            
             if (shouldBeOn)
-                StartCoroutine(Flicker((float)time, color));
+                m_flickeringCoroutine = StartCoroutine(Flicker((float)time, color));
             else
                 m_renderer.color = color.Colors[1];
         }
@@ -71,7 +80,6 @@ namespace RetroRecord.Engine.Lights
         {
             for (float i = 0; i < time; i += Time.deltaTime)
             {
-                Debug.Log($"{i} | {time} | {time / i} | {i / time}");
                 m_renderer.color = Color.Lerp(color.Colors[0], color.Colors[1], i / time);
                 yield return null;
             }

@@ -400,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 166884642}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: -1
+  <LaneIndex>k__BackingField: -1
 --- !u!1 &176330515
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 184267829}
   m_colorOffset: 1
-  <laneIndex>k__BackingField: -1
+  <LaneIndex>k__BackingField: -1
 --- !u!1 &195258276
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 195258278}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 7
+  <LaneIndex>k__BackingField: 7
 --- !u!1001 &213542135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 816882391}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 5
+  <LaneIndex>k__BackingField: 5
 --- !u!1 &821060969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 918298199}
   m_colorOffset: 1
-  <laneIndex>k__BackingField: -1
+  <LaneIndex>k__BackingField: -1
 --- !u!1 &979174463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,7 +2739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 979174465}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: -1
+  <LaneIndex>k__BackingField: -1
 --- !u!1 &987996282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 1180346584}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 2
+  <LaneIndex>k__BackingField: 2
 --- !u!1 &1221083252
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,7 +5001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 1508781331}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 6
+  <LaneIndex>k__BackingField: 6
 --- !u!1 &1563460892
 GameObject:
   m_ObjectHideFlags: 0
@@ -5366,7 +5366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 1679947286}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 0
+  <LaneIndex>k__BackingField: 0
 --- !u!1 &1709767316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,7 +5953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 1861519038}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 3
+  <LaneIndex>k__BackingField: 3
 --- !u!1 &1897579542
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,7 +6269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 1942555844}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 1
+  <LaneIndex>k__BackingField: 1
 --- !u!1 &1985344717
 GameObject:
   m_ObjectHideFlags: 0
@@ -6682,7 +6682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightController
   m_renderer: {fileID: 2121945234}
   m_colorOffset: 0
-  <laneIndex>k__BackingField: 4
+  <LaneIndex>k__BackingField: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

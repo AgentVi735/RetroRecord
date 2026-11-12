@@ -90,11 +90,11 @@ namespace RetroRecord.Engine.Player
             if (!SongPlayer.s_Instance.HasStarted)
                 return;
             
-            m_inputManager.ManualUpdate();
             m_songPlayer.ManualUpdate();
             m_notesManager.ManualUpdate();
             m_highwayRenderer.ManualUpdate();
             m_lightManager.ManualUpdate();
+            m_inputManager.ManualUpdate();
         }
 
         private IEnumerator StartSong()
