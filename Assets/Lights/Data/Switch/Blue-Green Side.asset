@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7a75a53533b42e9a8e0bf2add49bb52, type: 3}
-  m_Name: Black-Black
+  m_Name: Blue-Green Side
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightColor
   <Colors>k__BackingField:
-  - {r: 0, g: 0, b: 0, a: 0.8}
-  - {r: 0, g: 0, b: 0, a: 0.8}
+  - {r: 0, g: 0.031416334, b: 0.6037736, a: 0.69803923}
+  - {r: 0.049167525, g: 0.3301887, b: 0.017132433, a: 0.69803923}
   <Type>k__BackingField: 0
-  <Side>k__BackingField: 0
+  <Side>k__BackingField: 1
   <Time>k__BackingField: 2

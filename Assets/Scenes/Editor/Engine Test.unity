@@ -4121,7 +4121,6 @@ MonoBehaviour:
   - {fileID: 184267830}
   - {fileID: 166884643}
   - {fileID: 918298200}
-  m_flickeringColor: {fileID: 11400000, guid: 2cba3a581d1d7784ea2b4522bffa1e76, type: 2}
 --- !u!1 &1340678595
 GameObject:
   m_ObjectHideFlags: 0

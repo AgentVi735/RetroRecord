@@ -22,9 +22,6 @@ namespace RetroRecord.Engine.Lights
         [SerializeField]
         private LightController[] m_sideLights;
 
-        [SerializeField]
-        private LightColor m_flickeringColor;
-
         private LightColor[] m_lightData;
 
         private LightColor m_currentSideColor;
@@ -129,24 +126,31 @@ namespace RetroRecord.Engine.Lights
 
         private void OnNoteFlicker(LightsEvent lightsEvent)
         {
-            if (lightsEvent.NoteGroup != null)
-            {
-                byte[] lanes = new byte[lightsEvent.NoteGroup.Notes.Length];
-                for (int i = 0; i < lightsEvent.NoteGroup.Notes.Length; i++)
-                {
-                    Note note = lightsEvent.NoteGroup.Notes[i];
-                    lanes[i] = note.Lane;
-                }
+            LightColor color = m_lightData[lightsEvent.Index];
 
-                foreach (LightController light in m_laneLights)
+            if (color.Side is LightSide.All or LightSide.Lanes)
+            {
+                if (lightsEvent.NoteGroup != null)
                 {
-                    bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
-                    light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, m_flickeringColor, shouldBeOn);
+                    byte[] lanes = new byte[lightsEvent.NoteGroup.Notes.Length];
+                    for (int i = 0; i < lightsEvent.NoteGroup.Notes.Length; i++)
+                    {
+                        Note note = lightsEvent.NoteGroup.Notes[i];
+                        lanes[i] = note.Lane;
+                    }
+
+                    foreach (LightController light in m_laneLights)
+                    {
+                        bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
+                        light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, color, shouldBeOn);
+                    }
                 }
             }
-
+            
+            if (color.Side is not (LightSide.All or LightSide.Side)) return;
+            
             foreach (LightController light in m_sideLights)
-                light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, m_flickeringColor, true);
+                light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, color, true);
         }
     }
 }
