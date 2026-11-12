@@ -10,6 +10,9 @@ namespace RetroRecord.Engine.Player.Renderer
     public class HighwayRenderer : MonoBehaviour
     {
         [SerializeField]
+        private NotesManager m_notesManager;
+        
+        [SerializeField]
         private LaneSettings[] m_laneSettings;
         
         [SerializeField]
@@ -104,6 +107,8 @@ namespace RetroRecord.Engine.Player.Renderer
                 new Vector3(xScale, SyncTrack.TimeToYPos(EngineSettings.PerfectHitboxSec), 1);
 
             UpdatePos(0);
+
+            m_notesManager.OnNoteSpawn += SpawnNote;
         }
 
         public void SetLaneAction(int idx, InputAction action) => Lanes[idx].SetActionEvents(action);

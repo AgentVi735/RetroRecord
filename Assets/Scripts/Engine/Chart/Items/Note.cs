@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
 {
-    [System.Serializable]
+    [Serializable]
     public class Note : SongItem
     {
         [SerializeField]
@@ -14,6 +15,7 @@ namespace RetroRecord.Engine.Chart
         [SerializeField]
         public double TimeSustainLength;
 
+        [NonSerialized]
         public bool WasHit = false;
 
         public override SongItemType GetItemType() => SongItemType.Note;

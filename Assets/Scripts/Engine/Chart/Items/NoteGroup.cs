@@ -1,12 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace RetroRecord.Engine.Chart
 {
-    [System.Serializable]
+    [Serializable]
     public class NoteGroup : SongItem
     {
         [SerializeField]
         public Note[] Notes;
+        
+        [NonSerialized]
+        public uint TicksUntilNextNote;
+        
+        [NonSerialized]
+        public double TimeUntilNextNote;
 
         public override SongItemType GetItemType() => SongItemType.NoteGroup;
         

@@ -47,7 +47,6 @@ MonoBehaviour:
         Lane: 0
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 960
       Time: 2.4615384615384617
       Notes:
@@ -56,7 +55,6 @@ MonoBehaviour:
         Lane: 1
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 1152
       Time: 2.9230769230769234
       Notes:
@@ -65,7 +63,6 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 1344
       Time: 3.3846153846153846
       Notes:
@@ -74,7 +71,6 @@ MonoBehaviour:
         Lane: 3
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 1920
       Time: 4.769230769230769
       Notes:
@@ -83,7 +79,6 @@ MonoBehaviour:
         Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 2112
       Time: 5.230769230769231
       Notes:
@@ -92,7 +87,6 @@ MonoBehaviour:
         Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 2304
       Time: 5.6923076923076925
       Notes:
@@ -101,7 +95,6 @@ MonoBehaviour:
         Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 2496
       Time: 6.153846153846154
       Notes:
@@ -110,7 +103,6 @@ MonoBehaviour:
         Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 3072
       Time: 7.538461538461538
       Notes:
@@ -119,13 +111,11 @@ MonoBehaviour:
         Lane: 3
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 3072
         Time: 7.538461538461538
         Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 3264
       Time: 8
       Notes:
@@ -134,13 +124,11 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 3264
         Time: 8
         Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 3456
       Time: 8.461538461538462
       Notes:
@@ -149,13 +137,11 @@ MonoBehaviour:
         Lane: 1
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 3456
         Time: 8.461538461538462
         Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 3648
       Time: 8.923076923076923
       Notes:
@@ -164,13 +150,11 @@ MonoBehaviour:
         Lane: 0
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 3648
         Time: 8.923076923076923
         Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 4224
       Time: 10.307692307692308
       Notes:
@@ -179,13 +163,11 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 4224
         Time: 10.307692307692308
         Lane: 3
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 4416
       Time: 10.76923076923077
       Notes:
@@ -194,13 +176,11 @@ MonoBehaviour:
         Lane: 1
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 4416
         Time: 10.76923076923077
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 4608
       Time: 11.230769230769232
       Notes:
@@ -209,13 +189,11 @@ MonoBehaviour:
         Lane: 0
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 4608
         Time: 11.230769230769232
         Lane: 1
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 4800
       Time: 11.692307692307693
       Notes:
@@ -224,13 +202,11 @@ MonoBehaviour:
         Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 4800
         Time: 11.692307692307693
         Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 4992
       Time: 12.153846153846155
       Notes:
@@ -239,13 +215,11 @@ MonoBehaviour:
         Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 4992
         Time: 12.153846153846155
         Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 5184
       Time: 12.615384615384617
       Notes:
@@ -254,13 +228,11 @@ MonoBehaviour:
         Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 5184
         Time: 12.615384615384617
         Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     LocalEvents:
       LaneSwitchEvents: []
     LastTick: 5184
@@ -274,7 +246,6 @@ MonoBehaviour:
         Lane: 3
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 864
       Time: 2.230769230769231
       Notes:
@@ -283,7 +254,6 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 912
       Time: 2.3461538461538463
       Notes:
@@ -292,7 +262,6 @@ MonoBehaviour:
         Lane: 1
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 960
       Time: 2.4615384615384617
       Notes:
@@ -301,7 +270,6 @@ MonoBehaviour:
         Lane: 0
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     LocalEvents:
       LaneSwitchEvents: []
     LastTick: 960
@@ -315,13 +283,11 @@ MonoBehaviour:
         Lane: 3
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
       - Tick: 768
         Time: 2
         Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 960
       Time: 2.4615384615384617
       Notes:
@@ -330,7 +296,6 @@ MonoBehaviour:
         Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 1152
       Time: 2.9230769230769234
       Notes:
@@ -339,7 +304,6 @@ MonoBehaviour:
         Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     - Tick: 1488
       Time: 3.730769230769231
       Notes:
@@ -348,7 +312,6 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-        WasHit: 0
     LocalEvents:
       LaneSwitchEvents: []
     LastTick: 1488

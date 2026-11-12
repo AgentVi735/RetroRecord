@@ -30,6 +30,8 @@ namespace RetroRecord.Engine.Player
         private NoteGroup m_nextGroup2;
         private int m_groupIdx;
 
+        public event Action<NoteGroup> OnNoteTime;
+
         public void Initialize(NoteGroup[] givenGroups, int currentIdx)
         {
             m_groups = givenGroups;
@@ -129,6 +131,7 @@ namespace RetroRecord.Engine.Player
 
         private void MoveToNextGroup(bool hasMissed)
         {
+            OnNoteTime?.Invoke(m_nextGroup);
             if (hasMissed)
             {
                 foreach (Note note in m_nextGroup.Notes)

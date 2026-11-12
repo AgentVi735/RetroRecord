@@ -51,6 +51,8 @@ namespace RetroRecord.Engine.Player
         private int m_currentGlobalEventIndex;
         private int m_currentBeatlineIndex;
 
+        public event Action<Note> OnNoteSpawn;
+
         public static float s_CurrentTempo { get; private set; } = 120;
 
         public delegate uint GetBeatlineRatePower(TimeSignatureChange timeSignature);
@@ -108,6 +110,7 @@ namespace RetroRecord.Engine.Player
                 SyncTrack.s_CurrentTimeSignature = item;
             }
 
+            NoteGroup lastGroup = null;
             for (int i = 0; i < m_noteGroups.Length; i++)
             {
                 NoteGroup group = m_noteGroups[i];
@@ -116,6 +119,14 @@ namespace RetroRecord.Engine.Player
 
                 foreach (Note note in group.Notes)
                     note.WasHit = false;
+
+                if (lastGroup != null)
+                {
+                    lastGroup.TicksUntilNextNote = group.Tick - lastGroup.Tick;
+                    lastGroup.TimeUntilNextNote = group.Time - lastGroup.Time;
+                }
+
+                lastGroup = group;
             }
 
             m_localEvents.SetItems();
@@ -245,7 +256,7 @@ namespace RetroRecord.Engine.Player
             switch (item.GetItemType())
             {
                 case SongItemType.Note:
-                    m_highwayRenderer.SpawnNote((Note)item);
+                    OnNoteSpawn?.Invoke((Note)item);
                     break;
                 case SongItemType.TempoChange:
                     TempoChange change = (TempoChange)item;
@@ -439,6 +450,11 @@ namespace RetroRecord.Engine.Player
             }
 
             m_strongBeatlines.TrimExcess();
+        }
+
+        private void OnDestroy()
+        {
+            OnNoteSpawn = null;
         }
     }
 }
