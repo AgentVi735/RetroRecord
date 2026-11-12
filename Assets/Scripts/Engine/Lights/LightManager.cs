@@ -8,12 +8,6 @@ using UnityEngine;
 
 namespace RetroRecord.Engine.Lights
 {
-    // TODO:
-    // LightColor moet een Time var hebben die bepaalt hoeveel in de maat de kleur moet veranderen
-    // Dus bijvoorbeeld 1/4ste, 1/8ste, 1/16de, 1/2de, 1/1ste, etc
-    // Er komt een class/method die kijkt of er eentje af moet gaan, zo ja kijkt het welke en hoe ver die is, etc (moet in update)
-    // Type QuarterBeat moet verandert worden naar switch
-    
     public class LightManager : MonoBehaviour
     {
         [SerializeField]
@@ -46,9 +40,6 @@ namespace RetroRecord.Engine.Lights
         private int m_lastCount;
         private bool m_hasFlickers;
 
-        private double m_currentProgress { get; set; }
-        private int m_currentCount => Mathf.FloorToInt((float)m_currentProgress);
-
         public void Initialize()
         {
             m_lightData = EngineSettings.Song.Lights;
@@ -70,27 +61,11 @@ namespace RetroRecord.Engine.Lights
         {
             m_onQuarterBeatSide = null;
         }
-
-        // TODO:
-        // moet op een manier meerdere versies hebben
-        // ig via een nieuwe class zoals yarg doet?
-        // ik moet dan een class hebben die elke update runt dus die moet in een list opgeslagen worden. misschien is een array beter zodat ik er altijd mr 2 heb
-        // 1 class voor side en 1 voor lane
-        // kan ook anders gwn 2 vars worden
         
         public void ManualUpdate()
         {
             m_sideHandler?.Update();
             m_lanesHandler?.Update();
-            
-            // uint quarterTick = SyncTrack.TimeToTick(SongPlayer.ConvertedCurrentInputTime);
-            // double progress = SyncTrack.GetQuarterNotePosition(quarterTick);
-            //
-            // m_currentProgress = progress;
-            // if (m_currentCount == m_lastCount) return;
-            // m_onQuarterBeatSide?.Invoke(m_currentSideColor);
-            // m_onQuarterBeatLane?.Invoke(m_currentLaneColor);
-            // m_lastCount = m_currentCount;
         }
 
         public void OnLightEvent(LightsEvent lightsEvent)
