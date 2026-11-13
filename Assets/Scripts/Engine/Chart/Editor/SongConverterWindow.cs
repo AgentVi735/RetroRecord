@@ -7,22 +7,31 @@ namespace RetroRecord.Engine.Chart.Editor
 {
     public class SongConverterWindow : EditorWindow
     {
-        private AlbumLibrary albumLibrary
+        private AlbumLibrary AlbumLibrary
         {
-            get => _albumLibrary;
+            get => m_albumLibrary;
             set
             {
-                _albumLibrary = value;
+                m_albumLibrary = value;
                 EditorPrefs.SetString("AlbumPath", AssetDatabase.GetAssetPath(value));
             }
         }
 
-        [SerializeField] private AlbumLibrary _albumLibrary;
-        [SerializeField] private Song[] values = Array.Empty<Song>();
-        private bool hasInitialized;
+        [SerializeField]
+        private AlbumLibrary m_albumLibrary;
 
-        private SerializedObject serializedObject;
-        private SerializedProperty valuesProperty;
+        [SerializeField]
+        private Song[] m_values = Array.Empty<Song>();
+
+        private bool m_hasInitialized;
+
+        private SerializedObject m_serializedObject;
+        private SerializedProperty m_valuesProperty;
+
+        private SerializedProperty m_singleChartToUpdateProp;
+
+        [SerializeField]
+        private Song m_singleChart;
 
         [MenuItem("Tools/Song Converter")]
         public static void ShowWindow()
@@ -32,19 +41,19 @@ namespace RetroRecord.Engine.Chart.Editor
 
         private void OnEnable()
         {
-            if (albumLibrary == null || serializedObject == null)
-                hasInitialized = false;
+            if (AlbumLibrary == null || m_serializedObject == null)
+                m_hasInitialized = false;
         }
 
         private void Initialize()
         {
-            hasInitialized = true;
+            m_hasInitialized = true;
             string path = EditorPrefs.GetString("AlbumPath");
             if (string.IsNullOrEmpty(path))
                 path = "Assets/Data/Album Library.asset";
             if (AssetDatabase.AssetPathExists(path))
             {
-                albumLibrary = AssetDatabase.LoadAssetAtPath<AlbumLibrary>(path);
+                AlbumLibrary = AssetDatabase.LoadAssetAtPath<AlbumLibrary>(path);
                 Debug.Log($"Loaded album library from {path}");
             }
             else
@@ -52,17 +61,18 @@ namespace RetroRecord.Engine.Chart.Editor
                 Debug.Log($"Couldn't load album library at {path}");
             }
 
-            serializedObject = new SerializedObject(this);
-            valuesProperty = serializedObject.FindProperty("values");
+            m_serializedObject = new SerializedObject(this);
+            m_valuesProperty = m_serializedObject.FindProperty("m_values");
+            m_singleChartToUpdateProp = m_serializedObject.FindProperty("m_singleChart");
         }
 
         private void OnGUI()
         {
-            if (!hasInitialized)
+            if (!m_hasInitialized)
                 Initialize();
             GUILayout.Space(10);
 
-            albumLibrary = (AlbumLibrary)EditorGUILayout.ObjectField(albumLibrary, typeof(Album), false);
+            AlbumLibrary = (AlbumLibrary)EditorGUILayout.ObjectField(AlbumLibrary, typeof(Album), false);
 
             GUILayout.Space(10);
 
@@ -75,27 +85,41 @@ namespace RetroRecord.Engine.Chart.Editor
             // for (int i = 0; i < values.Length; i++)
             //     values[i] = (SongObject)EditorGUILayout.ObjectField(new GUIContent($"Song {i}"), values[i], typeof(SongObject), false);
 
-            serializedObject.Update();
+            m_serializedObject.Update();
 
             // Show the array with children (elements) visible
-            EditorGUILayout.PropertyField(valuesProperty, true);
+            if (m_valuesProperty != null)
+                EditorGUILayout.PropertyField(m_valuesProperty, true);
+            
+            if (m_singleChartToUpdateProp != null)
+                EditorGUILayout.PropertyField(m_singleChartToUpdateProp);
 
-            serializedObject.ApplyModifiedProperties();
+            m_serializedObject.ApplyModifiedProperties();
 
             GUILayout.Space(10);
 
             if (GUILayout.Button("Convert all songs from library"))
             {
                 AssetDatabase.Refresh();
-                SongConverter.ConvertAllSongsFromLibrary(albumLibrary, values);
+                SongConverter.ConvertAllSongsFromLibrary(AlbumLibrary, m_values);
                 AssetDatabase.Refresh();
             }
 
             GUILayout.Space(10);
 
-            if (!GUILayout.Button("Scan all songs and convert")) return;
+            if (GUILayout.Button("Scan all songs and convert"))
+            {
+                AssetDatabase.Refresh();
+                SongConverter.ConvertAllSongs(AlbumLibrary);
+                AssetDatabase.Refresh();
+            }
+
+            GUILayout.Space(10);
+
+            if (m_singleChart == null) return;
+            if (!GUILayout.Button("Update selected song")) return;
             AssetDatabase.Refresh();
-            SongConverter.ConvertAllSongs(albumLibrary);
+            SongConverter.ConvertOneSongsFromLibrary(AlbumLibrary, m_singleChart);
             AssetDatabase.Refresh();
         }
     }

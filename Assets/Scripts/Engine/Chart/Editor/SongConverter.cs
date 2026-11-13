@@ -19,7 +19,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
         private static RawSongInfo s_currentRawSongInfo;
         private static AlbumLibrary s_albumLibrary;
-        
+
         // Chart File Headers
         private const string k_chartFileSongDataHeader = "[Song]";
         private const string k_chartFileSyncTrackHeader = "[SyncTrack]";
@@ -37,12 +37,12 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_songInfoAudioKey = "MusicStream";
         private const string k_songInfoDifficultyKey = "Difficulty";
         private const string k_songInfoCharterKey = "Charter";
-        
+
         // Chart Keys
         private const string k_noteKey = "N";
         private const string k_tempoChangeKey = "B";
         private const string k_timeSignatureChangeKey = "TS";
-        
+
         // Event Keys
         private const string k_laneSwitchEventKey = "LS";
         private const string k_sectionEventKey = "section";
@@ -57,7 +57,7 @@ namespace RetroRecord.Engine.Chart.Editor
         private const float k_sparkEffectBeatCount = 2;
         private const string k_smokeEffectKey = "Sm";
         private const float k_smokeEffectBeatCount = 1;
-        
+
         // Lights Keys
         private const string k_lightFlashEventKey = "LiF";
         private const string k_lightFlashWholeEventKey = "LiFW";
@@ -67,12 +67,12 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_lightFlashSemiQuaverEventKey = "LiFS";
         private const string k_lightFlashThirtySecondEventKey = "LiFT";
         private const string k_lightFlashSixtyFourthEventKey = "LiFF";
-        
+
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
             s_albumLibrary = albumLibrary;
-            
+
             string[] guidsFound = AssetDatabase.FindAssets("chart", new[] { Path.Combine("Assets", "Songs") });
 
             List<string> paths = new();
@@ -118,7 +118,7 @@ namespace RetroRecord.Engine.Chart.Editor
             albumLibrary.Albums = albumLibrary.Albums.OrderBy(album => album.ArtistName)
                 .ThenBy(album => album.AlbumName)
                 .ToArray();
-            
+
             AssetDatabase.Refresh();
         }
 
@@ -158,7 +158,36 @@ namespace RetroRecord.Engine.Chart.Editor
 
             foreach (string path in paths)
                 ConvertSong(path);
-            
+
+            AssetDatabase.Refresh();
+        }
+
+        public static void ConvertOneSongsFromLibrary(AlbumLibrary library, Song song)
+        {
+            s_albumLibrary = library;
+            string path = AssetDatabase.GetAssetPath(song);
+
+            if (path.StartsWith("Assets"))
+                path = path.Remove(0, 6);
+            if (path.Contains('.'))
+            {
+                const char delimiter = '/';
+                int index = path.LastIndexOf(delimiter);
+                if (index != -1)
+                    path = path[..(index + 1)];
+            }
+
+            if (path.EndsWith("Editor") || path.EndsWith("Editor/"))
+            {
+                int amtToRemove = 6;
+                if (path.EndsWith('/'))
+                    amtToRemove++;
+
+                path = path.Remove(path.Length - amtToRemove - 1, amtToRemove);
+            }
+
+            ConvertSong(path);
+
             AssetDatabase.Refresh();
         }
 
@@ -213,24 +242,33 @@ namespace RetroRecord.Engine.Chart.Editor
                     {
                         int idx = audioPath.IndexOf("Assets", StringComparison.Ordinal);
                         audioPath = audioPath.Remove(0, idx);
-                    
+
                         song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);
                     }
                 }
             }
 
-            string albumPath = Path.Combine("\\Songs", rawSongInfo.artistName, rawSongInfo.albumName + "\\");
-            string assetsAlbumPath = "Assets" + albumPath;
-            string albumObjPath = assetsAlbumPath + rawSongInfo.albumName + ".asset";
+            string assetsAlbumPath;
             Album album;
-            if (!AssetDatabase.AssetPathExists(albumObjPath))
+            if (song.SongInfo.Album == null)
             {
-                album = ScriptableObject.CreateInstance<Album>();
-                AssetDatabase.CreateAsset(album, albumObjPath);
-                Debug.Log("Album created at: " + albumObjPath);
+                string albumPath = Path.Combine("\\Songs", rawSongInfo.artistName, rawSongInfo.albumName + "\\");
+                assetsAlbumPath = "Assets" + albumPath;
+                string albumObjPath = assetsAlbumPath + rawSongInfo.albumName + ".asset";
+                if (!AssetDatabase.AssetPathExists(albumObjPath))
+                {
+                    album = ScriptableObject.CreateInstance<Album>();
+                    AssetDatabase.CreateAsset(album, albumObjPath);
+                    Debug.Log("Album created at: " + albumObjPath);
+                }
+                else
+                    album = AssetDatabase.LoadAssetAtPath<Album>(albumObjPath);
             }
             else
-                album = AssetDatabase.LoadAssetAtPath<Album>(albumObjPath);
+            {
+                album = song.SongInfo.Album;
+                assetsAlbumPath = AssetDatabase.GetAssetPath(album);
+            }
 
             album.AlbumName = rawSongInfo.albumName;
             if (string.IsNullOrEmpty(album.ArtistName))
@@ -248,11 +286,14 @@ namespace RetroRecord.Engine.Chart.Editor
                 album.Songs = tempSongs.ToArray();
             }
 
-            if (AssetDatabase.AssetPathExists(assetsAlbumPath + s_albumLibrary.CoverFileName))
-                album.Cover = AssetDatabase.LoadAssetAtPath<Sprite>(assetsAlbumPath + s_albumLibrary.CoverFileName);
+            if (album.Cover == null)
+            {
+                if (AssetDatabase.AssetPathExists(assetsAlbumPath + s_albumLibrary.CoverFileName))
+                    album.Cover = AssetDatabase.LoadAssetAtPath<Sprite>(assetsAlbumPath + s_albumLibrary.CoverFileName);
+            }
 
             EditorUtility.SetDirty(album);
-            Debug.Log("Saved Album at: " + albumObjPath);
+            Debug.Log("Saved Album at: " + assetsAlbumPath);
 
             song.SongInfo.Album = album;
 
@@ -454,7 +495,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             if (charts.Count > 0)
                 song.Charts = charts.ToArray();
-            
+
             GlobalEventsTrack globalEventsTrack = new();
             List<SectionEvent> sectionEvents = new();
             List<ShowSongInfoEvent> showSongInfoEvents = new();
@@ -465,13 +506,13 @@ namespace RetroRecord.Engine.Chart.Editor
             {
                 sectionEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.Section).Cast<SectionEvent>());
-                
+
                 showSongInfoEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.ShowSongInfo).Cast<ShowSongInfoEvent>());
-                
+
                 effectEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.Effect).Cast<EffectItem>());
-                
+
                 lightsEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.Light).Cast<LightsEvent>());
             }
@@ -480,7 +521,7 @@ namespace RetroRecord.Engine.Chart.Editor
             globalEventsTrack.ShowSongInfoEvents = showSongInfoEvents.ToArray();
             globalEventsTrack.Effects = effectEvents.ToArray();
             globalEventsTrack.Lights = lightsEvents.ToArray();
-            
+
             song.GlobalEvents = globalEventsTrack;
             s_currentRawSongInfo = rawSongInfo;
 
@@ -644,16 +685,16 @@ namespace RetroRecord.Engine.Chart.Editor
         {
             if (text.Contains(k_effectEventKey))
                 return GetEffectEvent(text);
-            
+
             if (text.Contains(k_lightEventKey))
                 return GetLightEvent(text);
-            
+
             if (text.Contains(k_sectionEventKey))
                 return GetSectionEvent(text);
-            
+
             return text.Contains(k_showSongInfoEventKey) ? GetShowSongInfoEvent(text) : null;
         }
-        
+
         private static SectionEvent GetSectionEvent(string text)
         {
             SectionEvent item = new();
@@ -680,6 +721,7 @@ namespace RetroRecord.Engine.Chart.Editor
                                 sectionName += character;
                                 break;
                         }
+
                         break;
                     }
                 }
@@ -692,7 +734,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             return item;
         }
-        
+
         private static ShowSongInfoEvent GetShowSongInfoEvent(string text)
         {
             ShowSongInfoEvent item = new();
@@ -711,7 +753,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             return item;
         }
-        
+
         private static EffectItem GetEffectEvent(string text)
         {
             EffectItem item = new();
@@ -745,6 +787,7 @@ namespace RetroRecord.Engine.Chart.Editor
                         }
                         else if (spaceAmt == 2)
                             tick += character;
+
                         break;
                     }
                 }
@@ -763,7 +806,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             return item;
         }
-        
+
         private static LightsEvent GetLightEvent(string text)
         {
             LightsEvent item = new();
@@ -793,6 +836,7 @@ namespace RetroRecord.Engine.Chart.Editor
                         }
                         else if (spaceAmt == 2)
                             tick += character;
+
                         break;
                     }
                 }
@@ -800,7 +844,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             uint.TryParse(tick, out uint tickUint);
             item.Tick = tickUint;
-            
+
             uint.TryParse(lightInfo, out uint lightUint);
             item.Index = lightUint;
 
@@ -1000,13 +1044,16 @@ namespace RetroRecord.Engine.Chart.Editor
                         default:
                             continue;
                         case EffectType.Flame:
-                            effectItem.TickDuration = (uint)Mathf.RoundToInt(k_flameEffectBeatCount * EngineSettings.RESOLUTION);
+                            effectItem.TickDuration =
+                                (uint)Mathf.RoundToInt(k_flameEffectBeatCount * EngineSettings.RESOLUTION);
                             break;
                         case EffectType.Spark:
-                            effectItem.TickDuration = (uint)Mathf.RoundToInt(k_sparkEffectBeatCount * EngineSettings.RESOLUTION);
+                            effectItem.TickDuration =
+                                (uint)Mathf.RoundToInt(k_sparkEffectBeatCount * EngineSettings.RESOLUTION);
                             break;
                         case EffectType.Smoke:
-                            effectItem.TickDuration = (uint)Mathf.RoundToInt(k_smokeEffectBeatCount * EngineSettings.RESOLUTION);
+                            effectItem.TickDuration =
+                                (uint)Mathf.RoundToInt(k_smokeEffectBeatCount * EngineSettings.RESOLUTION);
                             break;
                     }
 
@@ -1022,8 +1069,9 @@ namespace RetroRecord.Engine.Chart.Editor
                     if (lightsItem.Type == LightType.Switch)
                         continue;
 
-                    lightsItem.TickUntilNextFlicker = (uint)Mathf.RoundToInt(lightsItem.TimeType.GetDivisor() * EngineSettings.RESOLUTION);
-                    
+                    lightsItem.TickUntilNextFlicker =
+                        (uint)Mathf.RoundToInt(lightsItem.TimeType.GetDivisor() * EngineSettings.RESOLUTION);
+
                     double endTime = TickToSecondsAlt(lightsItem.Tick + lightsItem.TickUntilNextFlicker);
                     endTime -= lightsItem.Time;
                     lightsItem.TimeUntilNextFlicker = endTime;
