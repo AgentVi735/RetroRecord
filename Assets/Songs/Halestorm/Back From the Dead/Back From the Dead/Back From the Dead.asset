@@ -18,7 +18,7 @@ MonoBehaviour:
     OverrideArtist: 
     Charter: Vicky
     Difficulty: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: e87e995bc17f49c4a836b71df91d83e0, type: 3}
   BeatTrack:
     TempoChanges:
     - Tick: 0

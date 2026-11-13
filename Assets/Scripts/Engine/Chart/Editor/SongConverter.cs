@@ -232,18 +232,21 @@ namespace RetroRecord.Engine.Chart.Editor
             if (isValidDifficulty)
                 song.SongInfo.Difficulty = difficulty;
             song.SongInfo.Charter = rawSongInfo.charter;
-            if (rawSongInfo.audioFileName != "")
+            if (song.SongInfo.Audio == null)
             {
-                string audioPath = rawSongInfo.audioFileName;
-                if (!string.IsNullOrEmpty(audioPath))
+                if (rawSongInfo.audioFileName != "")
                 {
-                    bool isInAssets = audioPath.Contains("Assets");
-                    if (isInAssets)
+                    string audioPath = rawSongInfo.audioFileName;
+                    if (!string.IsNullOrEmpty(audioPath))
                     {
-                        int idx = audioPath.IndexOf("Assets", StringComparison.Ordinal);
-                        audioPath = audioPath.Remove(0, idx);
+                        bool isInAssets = audioPath.Contains("Assets");
+                        if (isInAssets)
+                        {
+                            int idx = audioPath.IndexOf("Assets", StringComparison.Ordinal);
+                            audioPath = audioPath.Remove(0, idx);
 
-                        song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);
+                            song.SongInfo.Audio = AssetDatabase.LoadAssetAtPath<AudioClip>(audioPath);
+                        }
                     }
                 }
             }

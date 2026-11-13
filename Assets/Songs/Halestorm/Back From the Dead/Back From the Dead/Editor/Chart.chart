@@ -13,7 +13,7 @@
   PreviewEnd = 0
   Genre = "Metal"
   MediaType = "cd"
-  MusicStream = "C:\Users\vicky\Unity\RetroRecord\Assets\Data\Halestorm\Back From the Dead\Back From the Dead\Back From the Dead.mp3"
+  MusicStream = "C:\Users\vicky\Unity\RetroRecord\Assets\Songs\Halestorm\Back From the Dead\Back From the Dead\Back From the Dead.mp3"
 }
 [SyncTrack]
 {
