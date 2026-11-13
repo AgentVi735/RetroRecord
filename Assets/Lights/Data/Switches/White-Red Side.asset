@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a75a53533b42e9a8e0bf2add49bb52, type: 3}
+  m_Name: White-Red Side
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightColor
+  <Colors>k__BackingField:
+  - {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 0.46666667}
+  - {r: 0.27450982, g: 0, b: 0, a: 0.7529412}
+  <Type>k__BackingField: 0
+  <Side>k__BackingField: 1
+  <Time>k__BackingField: 4

@@ -134,7 +134,8 @@ namespace RetroRecord.Engine.Player
             
             m_globalEvents.SetItems();
             m_currentGlobalEventIndex = m_globalEvents.GetCurrentTimeIndex(spawnTime);
-            
+
+            LightsEvent currentLightEvent = null;
             foreach (LightsEvent item in m_globalEvents.Lights)
             {
                 foreach (NoteGroup noteGroup in m_noteGroups)
@@ -142,7 +143,13 @@ namespace RetroRecord.Engine.Player
                     if (noteGroup.Tick == item.Tick)
                         item.NoteGroup = noteGroup;
                 }
+                
+                if (item.Time > spawnTime) continue;
+                currentLightEvent = item;
             }
+            
+            if (currentLightEvent != null)
+                m_lightManager.OnLightEvent(currentLightEvent);
 
             GenerateBeatlines(noteChart.LastTick);
             RefreshStrongBeats();

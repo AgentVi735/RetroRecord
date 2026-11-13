@@ -58,14 +58,14 @@ namespace RetroRecord.Engine.Chart.Editor
         private const float k_smokeEffectBeatCount = 1;
         
         // Lights Keys
-        private const string k_lightFlickerEventKey = "LiF";
-        private const string k_lightFlickerWholeEventKey = "LiFW";
-        private const string k_lightFlickerHalfEventKey = "LiFH";
-        private const string k_lightFlickerQuarterEventKey = "LiFQ";
-        private const string k_lightFlickerQuaverEventKey = "LiFV";
-        private const string k_lightFlickerSemiQuaverEventKey = "LiFS";
-        private const string k_lightFlickerThirtySecondEventKey = "LiFT";
-        private const string k_lightFlickerSixtyFourthEventKey = "LiFF";
+        private const string k_lightFlashEventKey = "LiF";
+        private const string k_lightFlashWholeEventKey = "LiFW";
+        private const string k_lightFlashHalfEventKey = "LiFH";
+        private const string k_lightFlashQuarterEventKey = "LiFQ";
+        private const string k_lightFlashQuaverEventKey = "LiFV";
+        private const string k_lightFlashSemiQuaverEventKey = "LiFS";
+        private const string k_lightFlashThirtySecondEventKey = "LiFT";
+        private const string k_lightFlashSixtyFourthEventKey = "LiFF";
         
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
@@ -756,22 +756,22 @@ namespace RetroRecord.Engine.Chart.Editor
             uint.TryParse(lightInfo, out uint lightUint);
             item.Index = lightUint;
 
-            if (text.Contains(k_lightFlickerEventKey))
+            if (text.Contains(k_lightFlashEventKey))
             {
-                item.Type = LightType.Flickering;
-                if (text.Contains(k_lightFlickerWholeEventKey))
+                item.Type = LightType.Flash;
+                if (text.Contains(k_lightFlashWholeEventKey))
                     item.TimeType = LightTime.WholeNote;
-                else if (text.Contains(k_lightFlickerHalfEventKey))
+                else if (text.Contains(k_lightFlashHalfEventKey))
                     item.TimeType = LightTime.HalfNote;
-                else if (text.Contains(k_lightFlickerQuarterEventKey))
+                else if (text.Contains(k_lightFlashQuarterEventKey))
                     item.TimeType = LightTime.QuarterNote;
-                else if (text.Contains(k_lightFlickerQuaverEventKey))
+                else if (text.Contains(k_lightFlashQuaverEventKey))
                     item.TimeType = LightTime.QuaverNote;
-                else if (text.Contains(k_lightFlickerSemiQuaverEventKey))
+                else if (text.Contains(k_lightFlashSemiQuaverEventKey))
                     item.TimeType = LightTime.SemiQuaverNote;
-                else if (text.Contains(k_lightFlickerThirtySecondEventKey))
+                else if (text.Contains(k_lightFlashThirtySecondEventKey))
                     item.TimeType = LightTime.ThirtySecondNote;
-                else if (text.Contains(k_lightFlickerSixtyFourthEventKey))
+                else if (text.Contains(k_lightFlashSixtyFourthEventKey))
                     item.TimeType = LightTime.SixtyFourthNote;
             }
             else

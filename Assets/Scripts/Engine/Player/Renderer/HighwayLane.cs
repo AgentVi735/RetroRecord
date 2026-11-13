@@ -69,7 +69,7 @@ namespace RetroRecord.Engine.Player.Renderer
                 ? m_middleLanePos
                 : m_defaultLanePos;
 
-            m_lightController.Setup(transform.position.x);
+            m_lightController.Setup(transform.position.x, shouldTurnOn);
         }
 
         public void ChangeColor(LaneSettings newSettings)

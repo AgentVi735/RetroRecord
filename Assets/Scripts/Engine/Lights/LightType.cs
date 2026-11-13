@@ -1,5 +1,5 @@
 ﻿public enum LightType
 {
     Switch,
-    Flickering
+    Flash
 }

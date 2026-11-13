@@ -17,33 +17,39 @@ namespace RetroRecord.Engine.Lights
         [field: SerializeField]
         public int LaneIndex { get; private set; }
 
-        private Coroutine m_flickeringCoroutine;
+        private Coroutine m_flashCoroutine;
 
-        private bool m_isFlickering;
+        private bool m_isFlashing;
+        
+        public bool IsEnabled { get; private set; }
 
         public void Setup()
         {
+            if (LaneIndex == -1)
+                IsEnabled = true;
             m_renderer.color = ColorEx.clear2;
         }
 
-        public void Setup(float xPos)
+        public void Setup(float xPos, bool shouldBeEnabled)
         {
+            IsEnabled = shouldBeEnabled;
+            gameObject.SetActive(IsEnabled);
             transform.position = new Vector3(xPos, transform.position.y, 0);
             Setup();
         }
 
         public void ForceChangeColor(LightColor data)
         {
-            if (m_flickeringCoroutine != null)
-                StopCoroutine(m_flickeringCoroutine);
+            if (m_flashCoroutine != null)
+                StopCoroutine(m_flashCoroutine);
 
-            m_isFlickering = false;
+            m_isFlashing = false;
             OnQuarterBeat(data);
         }
 
         public void OnQuarterBeat(LightColor data)
         {
-            if (m_isFlickering)
+            if (m_isFlashing)
                 return;
             
             if (data == null || data.Colors == null || data.Colors.Length == 0)
@@ -68,22 +74,22 @@ namespace RetroRecord.Engine.Lights
                         m_count = 0;
                     break;
                 }
-                case LightType.Flickering:
+                case LightType.Flash:
                 default:
                     break;
             }
         }
 
-        public void EnableFlicker(double time, LightColor color, bool shouldBeOn)
+        public void EnableFlash(double time, LightColor color, bool shouldBeOn)
         {
-            if (m_flickeringCoroutine != null)
-                StopCoroutine(m_flickeringCoroutine);
+            if (m_flashCoroutine != null)
+                StopCoroutine(m_flashCoroutine);
 
-            m_isFlickering = true;
-            m_flickeringCoroutine = StartCoroutine(Flicker((float)time, color, shouldBeOn));
+            m_isFlashing = true;
+            m_flashCoroutine = StartCoroutine(Flash((float)time, color, shouldBeOn));
         }
 
-        private IEnumerator Flicker(float time, LightColor color, bool shouldBeOn)
+        private IEnumerator Flash(float time, LightColor color, bool shouldBeOn)
         {
             if (shouldBeOn)
             {
@@ -98,8 +104,6 @@ namespace RetroRecord.Engine.Lights
                 m_renderer.color = color.Colors[1];
                 yield return new WaitForSeconds(time);
             }
-
-            // m_isFlickering = false;
         }
     }
 }

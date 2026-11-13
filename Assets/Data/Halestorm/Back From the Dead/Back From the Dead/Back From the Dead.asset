@@ -38,13 +38,13 @@ MonoBehaviour:
       - Tick: 768
         Time: 2.857142857142857
         Lane: 4
-        TickSustainLength: 1344
-        TimeSustainLength: 5
+        TickSustainLength: 768
+        TimeSustainLength: 2.857142857142857
       - Tick: 768
         Time: 2.857142857142857
         Lane: 5
-        TickSustainLength: 1344
-        TimeSustainLength: 5
+        TickSustainLength: 768
+        TimeSustainLength: 2.857142857142857
     - Tick: 1440
       Time: 5.357142857142858
       Notes:
@@ -61,12 +61,32 @@ MonoBehaviour:
         Lane: 1
         TickSustainLength: 0
         TimeSustainLength: 0
+      - Tick: 1536
+        Time: 5.714285714285714
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1536
+        Time: 5.714285714285714
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 1728
       Time: 6.428571428571429
       Notes:
       - Tick: 1728
         Time: 6.428571428571429
         Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1728
+        Time: 6.428571428571429
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1728
+        Time: 6.428571428571429
+        Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 1824
@@ -85,6 +105,16 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 384
         TimeSustainLength: 1.428571428571428
+      - Tick: 1920
+        Time: 7.142857142857143
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1920
+        Time: 7.142857142857143
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 2112
       Time: 7.857142857142858
       Notes:
@@ -7381,12 +7411,28 @@ MonoBehaviour:
         Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
+    - Tick: 53040
+      Time: 197.32142857142858
+      Notes:
+      - Tick: 53040
+        Time: 197.32142857142858
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 53088
       Time: 197.5
       Notes:
       - Tick: 53088
         Time: 197.5
-        Lane: 5
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53136
+      Time: 197.67857142857144
+      Notes:
+      - Tick: 53136
+        Time: 197.67857142857144
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53184
@@ -7394,7 +7440,15 @@ MonoBehaviour:
       Notes:
       - Tick: 53184
         Time: 197.85714285714286
-        Lane: 6
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53232
+      Time: 198.03571428571428
+      Notes:
+      - Tick: 53232
+        Time: 198.03571428571428
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53280
@@ -7402,7 +7456,15 @@ MonoBehaviour:
       Notes:
       - Tick: 53280
         Time: 198.21428571428572
-        Lane: 4
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53328
+      Time: 198.39285714285714
+      Notes:
+      - Tick: 53328
+        Time: 198.39285714285714
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53376
@@ -7410,7 +7472,15 @@ MonoBehaviour:
       Notes:
       - Tick: 53376
         Time: 198.57142857142858
-        Lane: 6
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53424
+      Time: 198.75
+      Notes:
+      - Tick: 53424
+        Time: 198.75
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53472
@@ -7418,7 +7488,15 @@ MonoBehaviour:
       Notes:
       - Tick: 53472
         Time: 198.92857142857144
-        Lane: 5
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53520
+      Time: 199.10714285714286
+      Notes:
+      - Tick: 53520
+        Time: 199.10714285714286
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53568
@@ -7429,12 +7507,28 @@ MonoBehaviour:
         Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
+    - Tick: 53616
+      Time: 199.46428571428572
+      Notes:
+      - Tick: 53616
+        Time: 199.46428571428572
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 53664
       Time: 199.64285714285714
       Notes:
       - Tick: 53664
         Time: 199.64285714285714
-        Lane: 5
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53712
+      Time: 199.82142857142858
+      Notes:
+      - Tick: 53712
+        Time: 199.82142857142858
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53760
@@ -7447,7 +7541,15 @@ MonoBehaviour:
         TimeSustainLength: 0.5357142857142776
       - Tick: 53760
         Time: 200
-        Lane: 6
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53808
+      Time: 200.17857142857144
+      Notes:
+      - Tick: 53808
+        Time: 200.17857142857144
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53856
@@ -7455,7 +7557,15 @@ MonoBehaviour:
       Notes:
       - Tick: 53856
         Time: 200.35714285714286
-        Lane: 4
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 53904
+      Time: 200.53571428571428
+      Notes:
+      - Tick: 53904
+        Time: 200.53571428571428
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53952
@@ -7468,7 +7578,15 @@ MonoBehaviour:
         TimeSustainLength: 0
       - Tick: 53952
         Time: 200.71428571428572
-        Lane: 6
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 54000
+      Time: 200.89285714285714
+      Notes:
+      - Tick: 54000
+        Time: 200.89285714285714
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54048
@@ -7481,7 +7599,15 @@ MonoBehaviour:
         TimeSustainLength: 0
       - Tick: 54048
         Time: 201.07142857142858
-        Lane: 5
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 54096
+      Time: 201.25
+      Notes:
+      - Tick: 54096
+        Time: 201.25
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54144
@@ -7494,17 +7620,9 @@ MonoBehaviour:
         TimeSustainLength: 0.3571428571428328
       - Tick: 54144
         Time: 201.42857142857144
-        Lane: 7
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 54240
-      Time: 201.78571428571428
-      Notes:
-      - Tick: 54240
-        Time: 201.78571428571428
-        Lane: 5
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        Lane: 6
+        TickSustainLength: 384
+        TimeSustainLength: 1.4285714285714164
     - Tick: 54336
       Time: 202.14285714285714
       Notes:
@@ -7513,19 +7631,6 @@ MonoBehaviour:
         Lane: 3
         TickSustainLength: 96
         TimeSustainLength: 0.3571428571428612
-      - Tick: 54336
-        Time: 202.14285714285714
-        Lane: 6
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 54432
-      Time: 202.5
-      Notes:
-      - Tick: 54432
-        Time: 202.5
-        Lane: 4
-        TickSustainLength: 0
-        TimeSustainLength: 0
     - Tick: 54528
       Time: 202.85714285714286
       Notes:
@@ -7536,7 +7641,15 @@ MonoBehaviour:
         TimeSustainLength: 2.5
       - Tick: 54528
         Time: 202.85714285714286
-        Lane: 7
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 54576
+      Time: 203.03571428571428
+      Notes:
+      - Tick: 54576
+        Time: 203.03571428571428
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54624
@@ -7544,7 +7657,15 @@ MonoBehaviour:
       Notes:
       - Tick: 54624
         Time: 203.21428571428572
-        Lane: 5
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 54672
+      Time: 203.39285714285714
+      Notes:
+      - Tick: 54672
+        Time: 203.39285714285714
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54720
@@ -7552,7 +7673,15 @@ MonoBehaviour:
       Notes:
       - Tick: 54720
         Time: 203.57142857142858
-        Lane: 6
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 54768
+      Time: 203.75
+      Notes:
+      - Tick: 54768
+        Time: 203.75
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54816
@@ -7563,12 +7692,28 @@ MonoBehaviour:
         Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
+    - Tick: 54864
+      Time: 204.10714285714286
+      Notes:
+      - Tick: 54864
+        Time: 204.10714285714286
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 54912
       Time: 204.28571428571428
       Notes:
       - Tick: 54912
         Time: 204.28571428571428
-        Lane: 6
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 54960
+      Time: 204.46428571428572
+      Notes:
+      - Tick: 54960
+        Time: 204.46428571428572
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55008
@@ -7576,7 +7721,15 @@ MonoBehaviour:
       Notes:
       - Tick: 55008
         Time: 204.64285714285714
-        Lane: 5
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55056
+      Time: 204.82142857142858
+      Notes:
+      - Tick: 55056
+        Time: 204.82142857142858
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55104
@@ -7584,7 +7737,15 @@ MonoBehaviour:
       Notes:
       - Tick: 55104
         Time: 205
-        Lane: 7
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55152
+      Time: 205.17857142857144
+      Notes:
+      - Tick: 55152
+        Time: 205.17857142857144
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55200
@@ -7592,7 +7753,15 @@ MonoBehaviour:
       Notes:
       - Tick: 55200
         Time: 205.35714285714286
-        Lane: 5
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55248
+      Time: 205.53571428571428
+      Notes:
+      - Tick: 55248
+        Time: 205.53571428571428
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55296
@@ -7605,7 +7774,15 @@ MonoBehaviour:
         TimeSustainLength: 0.5357142857142776
       - Tick: 55296
         Time: 205.71428571428572
-        Lane: 6
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55344
+      Time: 205.89285714285714
+      Notes:
+      - Tick: 55344
+        Time: 205.89285714285714
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55392
@@ -7613,6 +7790,14 @@ MonoBehaviour:
       Notes:
       - Tick: 55392
         Time: 206.07142857142858
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55440
+      Time: 206.25
+      Notes:
+      - Tick: 55440
+        Time: 206.25
         Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -7626,7 +7811,15 @@ MonoBehaviour:
         TimeSustainLength: 0
       - Tick: 55488
         Time: 206.42857142857144
-        Lane: 6
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55536
+      Time: 206.60714285714286
+      Notes:
+      - Tick: 55536
+        Time: 206.60714285714286
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55584
@@ -7639,7 +7832,15 @@ MonoBehaviour:
         TimeSustainLength: 0
       - Tick: 55584
         Time: 206.78571428571428
-        Lane: 5
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55632
+      Time: 206.96428571428572
+      Notes:
+      - Tick: 55632
+        Time: 206.96428571428572
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55680
@@ -7652,6 +7853,24 @@ MonoBehaviour:
         TimeSustainLength: 0.3571428571428612
       - Tick: 55680
         Time: 207.14285714285714
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 55680
+        Time: 207.14285714285714
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55728
+      Time: 207.32142857142858
+      Notes:
+      - Tick: 55728
+        Time: 207.32142857142858
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 55728
+        Time: 207.32142857142858
         Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -7660,7 +7879,25 @@ MonoBehaviour:
       Notes:
       - Tick: 55776
         Time: 207.5
-        Lane: 5
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 55776
+        Time: 207.5
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55824
+      Time: 207.67857142857144
+      Notes:
+      - Tick: 55824
+        Time: 207.67857142857144
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 55824
+        Time: 207.67857142857144
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55872
@@ -7676,12 +7913,48 @@ MonoBehaviour:
         Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
+      - Tick: 55872
+        Time: 207.85714285714286
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 55920
+      Time: 208.03571428571428
+      Notes:
+      - Tick: 55920
+        Time: 208.03571428571428
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 55920
+        Time: 208.03571428571428
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 55968
       Time: 208.21428571428572
       Notes:
       - Tick: 55968
         Time: 208.21428571428572
-        Lane: 4
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 55968
+        Time: 208.21428571428572
+        Lane: 7
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 56016
+      Time: 208.39285714285714
+      Notes:
+      - Tick: 56016
+        Time: 208.39285714285714
+        Lane: 6
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 56016
+        Time: 208.39285714285714
+        Lane: 7
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 56064
@@ -7709,13 +7982,13 @@ MonoBehaviour:
       - Tick: 768
         Time: 2.857142857142857
         Lane: 4
-        TickSustainLength: 1296
-        TimeSustainLength: 4.821428571428571
+        TickSustainLength: 672
+        TimeSustainLength: 2.5000000000000004
       - Tick: 768
         Time: 2.857142857142857
         Lane: 5
-        TickSustainLength: 1296
-        TimeSustainLength: 4.821428571428571
+        TickSustainLength: 672
+        TimeSustainLength: 2.5000000000000004
     - Tick: 1440
       Time: 5.357142857142858
       Notes:
@@ -7732,12 +8005,22 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
+      - Tick: 1536
+        Time: 5.714285714285714
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 1728
       Time: 6.428571428571429
       Notes:
       - Tick: 1728
         Time: 6.428571428571429
         Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1728
+        Time: 6.428571428571429
+        Lane: 5
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 1824
@@ -7756,6 +8039,11 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 288
         TimeSustainLength: 1.071428571428572
+      - Tick: 1920
+        Time: 7.142857142857143
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 2112
       Time: 7.857142857142858
       Notes:
@@ -12365,7 +12653,7 @@ MonoBehaviour:
         TimeSustainLength: 2.5
       - Tick: 52992
         Time: 197.14285714285714
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53088
@@ -12373,7 +12661,7 @@ MonoBehaviour:
       Notes:
       - Tick: 53088
         Time: 197.5
-        Lane: 5
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53184
@@ -12381,7 +12669,7 @@ MonoBehaviour:
       Notes:
       - Tick: 53184
         Time: 197.85714285714286
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53280
@@ -12397,7 +12685,7 @@ MonoBehaviour:
       Notes:
       - Tick: 53376
         Time: 198.57142857142858
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53472
@@ -12405,7 +12693,7 @@ MonoBehaviour:
       Notes:
       - Tick: 53472
         Time: 198.92857142857144
-        Lane: 5
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53568
@@ -12413,7 +12701,7 @@ MonoBehaviour:
       Notes:
       - Tick: 53568
         Time: 199.28571428571428
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53664
@@ -12434,7 +12722,7 @@ MonoBehaviour:
         TimeSustainLength: 0.5357142857142776
       - Tick: 53760
         Time: 200
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53856
@@ -12442,7 +12730,7 @@ MonoBehaviour:
       Notes:
       - Tick: 53856
         Time: 200.35714285714286
-        Lane: 5
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 53952
@@ -12455,7 +12743,7 @@ MonoBehaviour:
         TimeSustainLength: 0
       - Tick: 53952
         Time: 200.71428571428572
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54048
@@ -12481,17 +12769,9 @@ MonoBehaviour:
         TimeSustainLength: 0.3571428571428328
       - Tick: 54144
         Time: 201.42857142857144
-        Lane: 4
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 54240
-      Time: 201.78571428571428
-      Notes:
-      - Tick: 54240
-        Time: 201.78571428571428
         Lane: 5
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        TickSustainLength: 336
+        TimeSustainLength: 1.25
     - Tick: 54336
       Time: 202.14285714285714
       Notes:
@@ -12500,19 +12780,6 @@ MonoBehaviour:
         Lane: 3
         TickSustainLength: 96
         TimeSustainLength: 0.3571428571428612
-      - Tick: 54336
-        Time: 202.14285714285714
-        Lane: 4
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 54432
-      Time: 202.5
-      Notes:
-      - Tick: 54432
-        Time: 202.5
-        Lane: 6
-        TickSustainLength: 0
-        TimeSustainLength: 0
     - Tick: 54528
       Time: 202.85714285714286
       Notes:
@@ -12531,7 +12798,7 @@ MonoBehaviour:
       Notes:
       - Tick: 54624
         Time: 203.21428571428572
-        Lane: 5
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54720
@@ -12547,7 +12814,7 @@ MonoBehaviour:
       Notes:
       - Tick: 54816
         Time: 203.92857142857144
-        Lane: 6
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 54912
@@ -12563,7 +12830,7 @@ MonoBehaviour:
       Notes:
       - Tick: 55008
         Time: 204.64285714285714
-        Lane: 5
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55104
@@ -12579,7 +12846,7 @@ MonoBehaviour:
       Notes:
       - Tick: 55200
         Time: 205.35714285714286
-        Lane: 6
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55296
@@ -12600,7 +12867,7 @@ MonoBehaviour:
       Notes:
       - Tick: 55392
         Time: 206.07142857142858
-        Lane: 5
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55488
@@ -12626,7 +12893,7 @@ MonoBehaviour:
         TimeSustainLength: 0
       - Tick: 55584
         Time: 206.78571428571428
-        Lane: 6
+        Lane: 4
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55680
@@ -12639,7 +12906,7 @@ MonoBehaviour:
         TimeSustainLength: 0.3571428571428612
       - Tick: 55680
         Time: 207.14285714285714
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55776
@@ -12647,7 +12914,7 @@ MonoBehaviour:
       Notes:
       - Tick: 55776
         Time: 207.5
-        Lane: 5
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55872
@@ -12660,7 +12927,7 @@ MonoBehaviour:
         TimeSustainLength: 0.3571428571428612
       - Tick: 55872
         Time: 207.85714285714286
-        Lane: 4
+        Lane: 6
         TickSustainLength: 0
         TimeSustainLength: 0
     - Tick: 55968
@@ -15099,7 +15366,747 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 56256
   GlobalEvents:
-    <Items>k__BackingField: []
+    <Items>k__BackingField:
+    - Tick: 0
+      Time: 0
+      ItemType: 8
+      Index: 0
+    - Tick: 768
+      Time: 2.857142857142857
+      ItemType: 7
+      Index: 0
+    - Tick: 768
+      Time: 2.857142857142857
+      ItemType: 7
+      Index: 1
+    - Tick: 768
+      Time: 2.857142857142857
+      ItemType: 8
+      Index: 1
+    - Tick: 1536
+      Time: 5.714285714285714
+      ItemType: 8
+      Index: 2
+    - Tick: 1728
+      Time: 6.428571428571429
+      ItemType: 8
+      Index: 3
+    - Tick: 1920
+      Time: 7.142857142857143
+      ItemType: 8
+      Index: 4
+    - Tick: 2112
+      Time: 7.857142857142858
+      ItemType: 7
+      Index: 2
+    - Tick: 2112
+      Time: 7.857142857142858
+      ItemType: 8
+      Index: 5
+    - Tick: 2304
+      Time: 8.571428571428571
+      ItemType: 6
+      Index: 0
+    - Tick: 2304
+      Time: 8.571428571428571
+      ItemType: 7
+      Index: 3
+    - Tick: 2304
+      Time: 8.571428571428571
+      ItemType: 8
+      Index: 6
+    - Tick: 2304
+      Time: 8.571428571428571
+      ItemType: 8
+      Index: 7
+    - Tick: 3456
+      Time: 12.857142857142858
+      ItemType: 8
+      Index: 8
+    - Tick: 3840
+      Time: 14.285714285714286
+      ItemType: 7
+      Index: 4
+    - Tick: 3840
+      Time: 14.285714285714286
+      ItemType: 8
+      Index: 9
+    - Tick: 4992
+      Time: 18.571428571428573
+      ItemType: 8
+      Index: 10
+    - Tick: 5376
+      Time: 20
+      ItemType: 8
+      Index: 11
+    - Tick: 6144
+      Time: 22.857142857142858
+      ItemType: 8
+      Index: 12
+    - Tick: 6336
+      Time: 23.571428571428573
+      ItemType: 8
+      Index: 13
+    - Tick: 6432
+      Time: 23.92857142857143
+      ItemType: 8
+      Index: 14
+    - Tick: 6624
+      Time: 24.642857142857142
+      ItemType: 8
+      Index: 15
+    - Tick: 6720
+      Time: 25
+      ItemType: 8
+      Index: 16
+    - Tick: 6816
+      Time: 25.357142857142858
+      ItemType: 8
+      Index: 17
+    - Tick: 6912
+      Time: 25.714285714285715
+      ItemType: 8
+      Index: 18
+    - Tick: 6912
+      Time: 25.714285714285715
+      ItemType: 8
+      Index: 19
+    - Tick: 7680
+      Time: 28.571428571428573
+      ItemType: 8
+      Index: 20
+    - Tick: 7872
+      Time: 29.285714285714285
+      ItemType: 8
+      Index: 21
+    - Tick: 7968
+      Time: 29.642857142857142
+      ItemType: 8
+      Index: 22
+    - Tick: 8160
+      Time: 30.357142857142858
+      ItemType: 8
+      Index: 23
+    - Tick: 8256
+      Time: 30.714285714285715
+      ItemType: 8
+      Index: 24
+    - Tick: 8352
+      Time: 31.071428571428573
+      ItemType: 8
+      Index: 25
+    - Tick: 8448
+      Time: 31.42857142857143
+      ItemType: 8
+      Index: 26
+    - Tick: 8448
+      Time: 31.42857142857143
+      ItemType: 8
+      Index: 27
+    - Tick: 9216
+      Time: 34.285714285714285
+      ItemType: 8
+      Index: 28
+    - Tick: 9408
+      Time: 35
+      ItemType: 8
+      Index: 29
+    - Tick: 9504
+      Time: 35.35714285714286
+      ItemType: 8
+      Index: 30
+    - Tick: 9696
+      Time: 36.07142857142857
+      ItemType: 8
+      Index: 31
+    - Tick: 9792
+      Time: 36.42857142857143
+      ItemType: 8
+      Index: 32
+    - Tick: 9888
+      Time: 36.785714285714285
+      ItemType: 8
+      Index: 33
+    - Tick: 9984
+      Time: 37.142857142857146
+      ItemType: 8
+      Index: 34
+    - Tick: 9984
+      Time: 37.142857142857146
+      ItemType: 8
+      Index: 35
+    - Tick: 10752
+      Time: 40
+      ItemType: 8
+      Index: 36
+    - Tick: 12288
+      Time: 45.714285714285715
+      ItemType: 7
+      Index: 5
+    - Tick: 12288
+      Time: 45.714285714285715
+      ItemType: 8
+      Index: 37
+    - Tick: 12288
+      Time: 45.714285714285715
+      ItemType: 8
+      Index: 38
+    - Tick: 18048
+      Time: 67.14285714285714
+      ItemType: 8
+      Index: 39
+    - Tick: 18072
+      Time: 67.23214285714286
+      ItemType: 8
+      Index: 40
+    - Tick: 18096
+      Time: 67.32142857142857
+      ItemType: 8
+      Index: 41
+    - Tick: 18120
+      Time: 67.41071428571429
+      ItemType: 8
+      Index: 42
+    - Tick: 18144
+      Time: 67.5
+      ItemType: 8
+      Index: 43
+    - Tick: 18168
+      Time: 67.58928571428572
+      ItemType: 8
+      Index: 44
+    - Tick: 18192
+      Time: 67.67857142857143
+      ItemType: 8
+      Index: 45
+    - Tick: 18216
+      Time: 67.76785714285714
+      ItemType: 8
+      Index: 46
+    - Tick: 18240
+      Time: 67.85714285714286
+      ItemType: 8
+      Index: 47
+    - Tick: 18432
+      Time: 68.57142857142857
+      ItemType: 7
+      Index: 6
+    - Tick: 18432
+      Time: 68.57142857142857
+      ItemType: 8
+      Index: 48
+    - Tick: 18432
+      Time: 68.57142857142857
+      ItemType: 8
+      Index: 49
+    - Tick: 18528
+      Time: 68.92857142857143
+      ItemType: 8
+      Index: 50
+    - Tick: 18576
+      Time: 69.10714285714286
+      ItemType: 8
+      Index: 51
+    - Tick: 18624
+      Time: 69.28571428571429
+      ItemType: 8
+      Index: 52
+    - Tick: 18672
+      Time: 69.46428571428572
+      ItemType: 8
+      Index: 53
+    - Tick: 18720
+      Time: 69.64285714285714
+      ItemType: 8
+      Index: 54
+    - Tick: 18768
+      Time: 69.82142857142857
+      ItemType: 8
+      Index: 55
+    - Tick: 18816
+      Time: 70
+      ItemType: 8
+      Index: 56
+    - Tick: 18864
+      Time: 70.17857142857143
+      ItemType: 8
+      Index: 57
+    - Tick: 18912
+      Time: 70.35714285714286
+      ItemType: 8
+      Index: 58
+    - Tick: 18960
+      Time: 70.53571428571429
+      ItemType: 8
+      Index: 59
+    - Tick: 19008
+      Time: 70.71428571428572
+      ItemType: 8
+      Index: 60
+    - Tick: 19056
+      Time: 70.89285714285714
+      ItemType: 8
+      Index: 61
+    - Tick: 19104
+      Time: 71.07142857142857
+      ItemType: 8
+      Index: 62
+    - Tick: 19152
+      Time: 71.25
+      ItemType: 8
+      Index: 63
+    - Tick: 19200
+      Time: 71.42857142857143
+      ItemType: 8
+      Index: 64
+    - Tick: 19248
+      Time: 71.60714285714286
+      ItemType: 8
+      Index: 65
+    - Tick: 19296
+      Time: 71.78571428571429
+      ItemType: 8
+      Index: 66
+    - Tick: 19344
+      Time: 71.96428571428572
+      ItemType: 8
+      Index: 67
+    - Tick: 19392
+      Time: 72.14285714285714
+      ItemType: 8
+      Index: 68
+    - Tick: 19440
+      Time: 72.32142857142857
+      ItemType: 8
+      Index: 69
+    - Tick: 19488
+      Time: 72.5
+      ItemType: 8
+      Index: 70
+    - Tick: 19536
+      Time: 72.67857142857143
+      ItemType: 8
+      Index: 71
+    - Tick: 19872
+      Time: 73.92857142857143
+      ItemType: 8
+      Index: 72
+    - Tick: 19872
+      Time: 73.92857142857143
+      ItemType: 8
+      Index: 73
+    - Tick: 20736
+      Time: 77.14285714285714
+      ItemType: 8
+      Index: 74
+    - Tick: 20928
+      Time: 77.85714285714286
+      ItemType: 8
+      Index: 75
+    - Tick: 21024
+      Time: 78.21428571428572
+      ItemType: 8
+      Index: 76
+    - Tick: 21216
+      Time: 78.92857142857143
+      ItemType: 8
+      Index: 77
+    - Tick: 21312
+      Time: 79.28571428571429
+      ItemType: 8
+      Index: 78
+    - Tick: 21408
+      Time: 79.64285714285714
+      ItemType: 8
+      Index: 79
+    - Tick: 21504
+      Time: 80
+      ItemType: 8
+      Index: 80
+    - Tick: 21504
+      Time: 80
+      ItemType: 8
+      Index: 81
+    - Tick: 22272
+      Time: 82.85714285714286
+      ItemType: 8
+      Index: 82
+    - Tick: 22464
+      Time: 83.57142857142857
+      ItemType: 8
+      Index: 83
+    - Tick: 22560
+      Time: 83.92857142857143
+      ItemType: 8
+      Index: 84
+    - Tick: 22752
+      Time: 84.64285714285714
+      ItemType: 8
+      Index: 85
+    - Tick: 22848
+      Time: 85
+      ItemType: 8
+      Index: 86
+    - Tick: 22944
+      Time: 85.35714285714286
+      ItemType: 8
+      Index: 87
+    - Tick: 23040
+      Time: 85.71428571428572
+      ItemType: 8
+      Index: 88
+    - Tick: 23040
+      Time: 85.71428571428572
+      ItemType: 8
+      Index: 89
+    - Tick: 23808
+      Time: 88.57142857142857
+      ItemType: 8
+      Index: 90
+    - Tick: 24000
+      Time: 89.28571428571429
+      ItemType: 8
+      Index: 91
+    - Tick: 24096
+      Time: 89.64285714285714
+      ItemType: 8
+      Index: 92
+    - Tick: 24288
+      Time: 90.35714285714286
+      ItemType: 8
+      Index: 93
+    - Tick: 24384
+      Time: 90.71428571428572
+      ItemType: 8
+      Index: 94
+    - Tick: 24480
+      Time: 91.07142857142857
+      ItemType: 8
+      Index: 95
+    - Tick: 24576
+      Time: 91.42857142857143
+      ItemType: 8
+      Index: 96
+    - Tick: 24576
+      Time: 91.42857142857143
+      ItemType: 8
+      Index: 97
+    - Tick: 25344
+      Time: 94.28571428571429
+      ItemType: 8
+      Index: 98
+    - Tick: 26112
+      Time: 97.14285714285714
+      ItemType: 8
+      Index: 99
+    - Tick: 26136
+      Time: 97.23214285714286
+      ItemType: 8
+      Index: 100
+    - Tick: 26160
+      Time: 97.32142857142857
+      ItemType: 8
+      Index: 101
+    - Tick: 26184
+      Time: 97.41071428571429
+      ItemType: 8
+      Index: 102
+    - Tick: 26208
+      Time: 97.5
+      ItemType: 8
+      Index: 103
+    - Tick: 26256
+      Time: 97.67857142857143
+      ItemType: 8
+      Index: 104
+    - Tick: 26304
+      Time: 97.85714285714286
+      ItemType: 8
+      Index: 105
+    - Tick: 26352
+      Time: 98.03571428571429
+      ItemType: 8
+      Index: 106
+    - Tick: 26400
+      Time: 98.21428571428572
+      ItemType: 8
+      Index: 107
+    - Tick: 26448
+      Time: 98.39285714285714
+      ItemType: 8
+      Index: 108
+    - Tick: 26496
+      Time: 98.57142857142857
+      ItemType: 8
+      Index: 109
+    - Tick: 26544
+      Time: 98.75
+      ItemType: 8
+      Index: 110
+    - Tick: 26592
+      Time: 98.92857142857143
+      ItemType: 8
+      Index: 111
+    - Tick: 26880
+      Time: 100
+      ItemType: 7
+      Index: 7
+    - Tick: 26880
+      Time: 100
+      ItemType: 8
+      Index: 112
+    - Tick: 26880
+      Time: 100
+      ItemType: 8
+      Index: 113
+    - Tick: 32448
+      Time: 120.71428571428572
+      ItemType: 8
+      Index: 114
+    - Tick: 32472
+      Time: 120.80357142857143
+      ItemType: 8
+      Index: 115
+    - Tick: 32496
+      Time: 120.89285714285714
+      ItemType: 8
+      Index: 116
+    - Tick: 32520
+      Time: 120.98214285714286
+      ItemType: 8
+      Index: 117
+    - Tick: 32544
+      Time: 121.07142857142857
+      ItemType: 8
+      Index: 118
+    - Tick: 32568
+      Time: 121.16071428571429
+      ItemType: 8
+      Index: 119
+    - Tick: 32592
+      Time: 121.25
+      ItemType: 8
+      Index: 120
+    - Tick: 32616
+      Time: 121.33928571428572
+      ItemType: 8
+      Index: 121
+    - Tick: 32640
+      Time: 121.42857142857143
+      ItemType: 8
+      Index: 122
+    - Tick: 32664
+      Time: 121.51785714285714
+      ItemType: 8
+      Index: 123
+    - Tick: 32688
+      Time: 121.60714285714286
+      ItemType: 8
+      Index: 124
+    - Tick: 32712
+      Time: 121.69642857142857
+      ItemType: 8
+      Index: 125
+    - Tick: 32736
+      Time: 121.78571428571429
+      ItemType: 8
+      Index: 126
+    - Tick: 32760
+      Time: 121.875
+      ItemType: 8
+      Index: 127
+    - Tick: 32784
+      Time: 121.96428571428572
+      ItemType: 8
+      Index: 128
+    - Tick: 32808
+      Time: 122.05357142857143
+      ItemType: 8
+      Index: 129
+    - Tick: 32832
+      Time: 122.14285714285714
+      ItemType: 8
+      Index: 130
+    - Tick: 33024
+      Time: 122.85714285714286
+      ItemType: 7
+      Index: 8
+    - Tick: 33024
+      Time: 122.85714285714286
+      ItemType: 8
+      Index: 131
+    - Tick: 33792
+      Time: 125.71428571428572
+      ItemType: 8
+      Index: 132
+    - Tick: 33984
+      Time: 126.42857142857143
+      ItemType: 8
+      Index: 133
+    - Tick: 34176
+      Time: 127.14285714285714
+      ItemType: 8
+      Index: 134
+    - Tick: 34368
+      Time: 127.85714285714286
+      ItemType: 8
+      Index: 135
+    - Tick: 34560
+      Time: 128.57142857142858
+      ItemType: 8
+      Index: 136
+    - Tick: 35328
+      Time: 131.42857142857144
+      ItemType: 8
+      Index: 137
+    - Tick: 35520
+      Time: 132.14285714285714
+      ItemType: 8
+      Index: 138
+    - Tick: 35712
+      Time: 132.85714285714286
+      ItemType: 8
+      Index: 139
+    - Tick: 35808
+      Time: 133.21428571428572
+      ItemType: 8
+      Index: 140
+    - Tick: 35856
+      Time: 133.39285714285714
+      ItemType: 8
+      Index: 141
+    - Tick: 35904
+      Time: 133.57142857142858
+      ItemType: 8
+      Index: 142
+    - Tick: 35952
+      Time: 133.75
+      ItemType: 8
+      Index: 143
+    - Tick: 36000
+      Time: 133.92857142857144
+      ItemType: 8
+      Index: 144
+    - Tick: 36096
+      Time: 134.28571428571428
+      ItemType: 7
+      Index: 9
+    - Tick: 36096
+      Time: 134.28571428571428
+      ItemType: 8
+      Index: 145
+    - Tick: 40704
+      Time: 151.42857142857144
+      ItemType: 7
+      Index: 10
+    - Tick: 40704
+      Time: 151.42857142857144
+      ItemType: 8
+      Index: 146
+    - Tick: 43584
+      Time: 162.14285714285714
+      ItemType: 7
+      Index: 11
+    - Tick: 43776
+      Time: 162.85714285714286
+      ItemType: 7
+      Index: 12
+    - Tick: 43776
+      Time: 162.85714285714286
+      ItemType: 8
+      Index: 147
+    - Tick: 46848
+      Time: 174.28571428571428
+      ItemType: 7
+      Index: 13
+    - Tick: 46848
+      Time: 174.28571428571428
+      ItemType: 8
+      Index: 148
+    - Tick: 46848
+      Time: 174.28571428571428
+      ItemType: 8
+      Index: 149
+    - Tick: 52416
+      Time: 195
+      ItemType: 8
+      Index: 150
+    - Tick: 52440
+      Time: 195.08928571428572
+      ItemType: 8
+      Index: 151
+    - Tick: 52464
+      Time: 195.17857142857144
+      ItemType: 8
+      Index: 152
+    - Tick: 52488
+      Time: 195.26785714285714
+      ItemType: 8
+      Index: 153
+    - Tick: 52512
+      Time: 195.35714285714286
+      ItemType: 8
+      Index: 154
+    - Tick: 52536
+      Time: 195.44642857142858
+      ItemType: 8
+      Index: 155
+    - Tick: 52560
+      Time: 195.53571428571428
+      ItemType: 8
+      Index: 156
+    - Tick: 52584
+      Time: 195.625
+      ItemType: 8
+      Index: 157
+    - Tick: 52608
+      Time: 195.71428571428572
+      ItemType: 8
+      Index: 158
+    - Tick: 52632
+      Time: 195.80357142857144
+      ItemType: 8
+      Index: 159
+    - Tick: 52656
+      Time: 195.89285714285714
+      ItemType: 8
+      Index: 160
+    - Tick: 52680
+      Time: 195.98214285714286
+      ItemType: 8
+      Index: 161
+    - Tick: 52704
+      Time: 196.07142857142858
+      ItemType: 8
+      Index: 162
+    - Tick: 52728
+      Time: 196.16071428571428
+      ItemType: 8
+      Index: 163
+    - Tick: 52752
+      Time: 196.25
+      ItemType: 8
+      Index: 164
+    - Tick: 52776
+      Time: 196.33928571428572
+      ItemType: 8
+      Index: 165
+    - Tick: 52800
+      Time: 196.42857142857144
+      ItemType: 8
+      Index: 166
+    - Tick: 52992
+      Time: 197.14285714285714
+      ItemType: 7
+      Index: 14
+    - Tick: 52992
+      Time: 197.14285714285714
+      ItemType: 8
+      Index: 167
+    - Tick: 56064
+      Time: 208.57142857142858
+      ItemType: 8
+      Index: 168
     ShowSongInfoEvents:
     - Tick: 2304
       Time: 8.571428571428571
@@ -15180,864 +16187,1204 @@ MonoBehaviour:
       TickDuration: 192
       TimeDuration: 0.7142857142857224
     Lights:
+    - Tick: 0
+      Time: 0
+      Index: 0
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
     - Tick: 768
       Time: 2.857142857142857
-      Index: 0
+      Index: 1
+      TickUntilNextFlicker: 768
+      TimeUntilNextFlicker: 2.857142857142857
+      Type: 1
+      TimeType: 0
+    - Tick: 1536
+      Time: 5.714285714285714
+      Index: 1
+      TickUntilNextFlicker: 192
+      TimeUntilNextFlicker: 0.7142857142857144
+      Type: 1
+      TimeType: 2
+    - Tick: 1728
+      Time: 6.428571428571429
+      Index: 1
+      TickUntilNextFlicker: 192
+      TimeUntilNextFlicker: 0.7142857142857144
+      Type: 1
+      TimeType: 2
+    - Tick: 1920
+      Time: 7.142857142857143
+      Index: 1
+      TickUntilNextFlicker: 192
+      TimeUntilNextFlicker: 0.7142857142857144
+      Type: 1
+      TimeType: 2
+    - Tick: 2112
+      Time: 7.857142857142858
+      Index: 1
+      TickUntilNextFlicker: 192
+      TimeUntilNextFlicker: 0.7142857142857135
+      Type: 1
+      TimeType: 2
+    - Tick: 2304
+      Time: 8.571428571428571
+      Index: 3
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
+    - Tick: 2304
+      Time: 8.571428571428571
+      Index: 4
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
+    - Tick: 3456
+      Time: 12.857142857142858
+      Index: 5
+      TickUntilNextFlicker: 384
+      TimeUntilNextFlicker: 1.4285714285714288
+      Type: 1
+      TimeType: 1
+    - Tick: 3840
+      Time: 14.285714285714286
+      Index: 3
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
+    - Tick: 4992
+      Time: 18.571428571428573
+      Index: 5
+      TickUntilNextFlicker: 384
+      TimeUntilNextFlicker: 1.428571428571427
+      Type: 1
+      TimeType: 1
+    - Tick: 5376
+      Time: 20
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 6144
       Time: 22.857142857142858
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857153
       Type: 1
       TimeType: 2
     - Tick: 6336
       Time: 23.571428571428573
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.35714285714285765
       Type: 1
       TimeType: 3
     - Tick: 6432
       Time: 23.92857142857143
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857117
       Type: 1
       TimeType: 2
     - Tick: 6624
       Time: 24.642857142857142
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.35714285714285765
       Type: 1
       TimeType: 3
     - Tick: 6720
       Time: 25
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.35714285714285765
       Type: 1
       TimeType: 3
     - Tick: 6816
       Time: 25.357142857142858
-      Index: 0
+      Index: 10
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.35714285714285765
+      Type: 1
+      TimeType: 3
+    - Tick: 6912
+      Time: 25.714285714285715
+      Index: 4
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
-    - Tick: 6816
-      Time: 25.357142857142858
-      Index: 2
+    - Tick: 6912
+      Time: 25.714285714285715
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 7680
       Time: 28.571428571428573
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857117
       Type: 1
       TimeType: 2
     - Tick: 7872
       Time: 29.285714285714285
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.35714285714285765
       Type: 1
       TimeType: 3
     - Tick: 7968
       Time: 29.642857142857142
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857153
       Type: 1
       TimeType: 2
     - Tick: 8160
       Time: 30.357142857142858
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.35714285714285765
       Type: 1
       TimeType: 3
     - Tick: 8256
       Time: 30.714285714285715
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.35714285714285765
       Type: 1
       TimeType: 3
     - Tick: 8352
       Time: 31.071428571428573
-      Index: 0
+      Index: 10
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.35714285714285765
+      Type: 1
+      TimeType: 3
+    - Tick: 8448
+      Time: 31.42857142857143
+      Index: 4
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
-    - Tick: 8352
-      Time: 31.071428571428573
-      Index: 2
+    - Tick: 8448
+      Time: 31.42857142857143
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 9216
       Time: 34.285714285714285
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857153
       Type: 1
       TimeType: 2
     - Tick: 9408
       Time: 35
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 9504
       Time: 35.35714285714286
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857082
       Type: 1
       TimeType: 2
     - Tick: 9696
       Time: 36.07142857142857
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 9792
       Time: 36.42857142857143
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428541
       Type: 1
       TimeType: 3
     - Tick: 9888
       Time: 36.785714285714285
-      Index: 0
+      Index: 10
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
+    - Tick: 9984
+      Time: 37.142857142857146
+      Index: 4
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
-    - Tick: 9888
-      Time: 36.785714285714285
-      Index: 2
+    - Tick: 9984
+      Time: 37.142857142857146
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 10752
       Time: 40
-      Index: 1
+      Index: 9
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 12288
       Time: 45.714285714285715
-      Index: 0
+      Index: 11
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
+    - Tick: 12288
+      Time: 45.714285714285715
+      Index: 16
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428541
+      Type: 1
+      TimeType: 3
     - Tick: 18048
       Time: 67.14285714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 18072
       Time: 67.23214285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 18096
       Time: 67.32142857142857
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 18120
       Time: 67.41071428571429
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 18144
       Time: 67.5
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 18168
       Time: 67.58928571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 18192
       Time: 67.67857142857143
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 18216
       Time: 67.76785714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 18240
       Time: 67.85714285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 18432
       Time: 68.57142857142857
-      Index: 0
+      Index: 12
+      TickUntilNextFlicker: 384
+      TimeUntilNextFlicker: 1.4285714285714306
+      Type: 1
+      TimeType: 1
+    - Tick: 18432
+      Time: 68.57142857142857
+      Index: 13
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
+    - Tick: 18528
+      Time: 68.92857142857143
+      Index: 13
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18576
+      Time: 69.10714285714286
+      Index: 13
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18624
+      Time: 69.28571428571429
+      Index: 13
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18672
+      Time: 69.46428571428572
+      Index: 13
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714164
+      Type: 1
+      TimeType: 4
+    - Tick: 18720
+      Time: 69.64285714285714
+      Index: 13
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18768
+      Time: 69.82142857142857
+      Index: 13
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18816
+      Time: 70
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18864
+      Time: 70.17857142857143
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18912
+      Time: 70.35714285714286
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 18960
+      Time: 70.53571428571429
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19008
+      Time: 70.71428571428572
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714164
+      Type: 1
+      TimeType: 4
+    - Tick: 19056
+      Time: 70.89285714285714
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19104
+      Time: 71.07142857142857
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19152
+      Time: 71.25
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19200
+      Time: 71.42857142857143
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19248
+      Time: 71.60714285714286
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19296
+      Time: 71.78571428571429
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19344
+      Time: 71.96428571428572
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714164
+      Type: 1
+      TimeType: 4
+    - Tick: 19392
+      Time: 72.14285714285714
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19440
+      Time: 72.32142857142857
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19488
+      Time: 72.5
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19536
+      Time: 72.67857142857143
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714306
+      Type: 1
+      TimeType: 4
+    - Tick: 19872
+      Time: 73.92857142857143
+      Index: 4
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
+    - Tick: 19872
+      Time: 73.92857142857143
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 20736
       Time: 77.14285714285714
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857224
       Type: 1
       TimeType: 2
     - Tick: 20928
       Time: 77.85714285714286
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 21024
       Time: 78.21428571428572
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857082
       Type: 1
       TimeType: 2
     - Tick: 21216
       Time: 78.92857142857143
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 21312
       Time: 79.28571428571429
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.357142857142847
       Type: 1
       TimeType: 3
     - Tick: 21408
       Time: 79.64285714285714
-      Index: 0
+      Index: 10
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
+    - Tick: 21504
+      Time: 80
+      Index: 4
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
-    - Tick: 21408
-      Time: 79.64285714285714
-      Index: 2
+    - Tick: 21504
+      Time: 80
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 22272
       Time: 82.85714285714286
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857082
       Type: 1
       TimeType: 2
     - Tick: 22464
       Time: 83.57142857142857
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 22560
       Time: 83.92857142857143
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857082
       Type: 1
       TimeType: 2
     - Tick: 22752
       Time: 84.64285714285714
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 22848
       Time: 85
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 22944
       Time: 85.35714285714286
-      Index: 0
+      Index: 10
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
+    - Tick: 23040
+      Time: 85.71428571428572
+      Index: 4
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
-    - Tick: 22944
-      Time: 85.35714285714286
-      Index: 2
+    - Tick: 23040
+      Time: 85.71428571428572
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 23808
       Time: 88.57142857142857
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857224
       Type: 1
       TimeType: 2
     - Tick: 24000
       Time: 89.28571428571429
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.357142857142847
       Type: 1
       TimeType: 3
     - Tick: 24096
       Time: 89.64285714285714
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 192
       TimeUntilNextFlicker: 0.7142857142857224
       Type: 1
       TimeType: 2
     - Tick: 24288
       Time: 90.35714285714286
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 24384
       Time: 90.71428571428572
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.357142857142847
       Type: 1
       TimeType: 3
     - Tick: 24480
       Time: 91.07142857142857
-      Index: 0
+      Index: 10
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
+    - Tick: 24576
+      Time: 91.42857142857143
+      Index: 4
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
-    - Tick: 24480
-      Time: 91.07142857142857
-      Index: 2
+    - Tick: 24576
+      Time: 91.42857142857143
+      Index: 6
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 25344
       Time: 94.28571428571429
-      Index: 1
+      Index: 9
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 26112
       Time: 97.14285714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 26136
       Time: 97.23214285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 26160
       Time: 97.32142857142857
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 26184
       Time: 97.41071428571429
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 26208
       Time: 97.5
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26256
       Time: 97.67857142857143
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26304
       Time: 97.85714285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26352
       Time: 98.03571428571429
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26400
       Time: 98.21428571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714164
       Type: 1
       TimeType: 4
     - Tick: 26448
       Time: 98.39285714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26496
       Time: 98.57142857142857
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26544
       Time: 98.75
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26592
       Time: 98.92857142857143
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714306
       Type: 1
       TimeType: 4
     - Tick: 26880
       Time: 100
-      Index: 0
+      Index: 11
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
+    - Tick: 26880
+      Time: 100
+      Index: 16
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
     - Tick: 32448
       Time: 120.71428571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32472
       Time: 120.80357142857143
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32496
       Time: 120.89285714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 32520
       Time: 120.98214285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32544
       Time: 121.07142857142857
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 32568
       Time: 121.16071428571429
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32592
       Time: 121.25
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 32616
       Time: 121.33928571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32640
       Time: 121.42857142857143
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32664
       Time: 121.51785714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 32688
       Time: 121.60714285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32712
       Time: 121.69642857142857
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 32736
       Time: 121.78571428571429
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32760
       Time: 121.875
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 32784
       Time: 121.96428571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32808
       Time: 122.05357142857143
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857082
       Type: 1
       TimeType: 5
     - Tick: 32832
       Time: 122.14285714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 33024
       Time: 122.85714285714286
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 768
       TimeUntilNextFlicker: 2.857142857142861
       Type: 1
       TimeType: 0
     - Tick: 33792
       Time: 125.71428571428572
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.357142857142847
       Type: 1
       TimeType: 3
     - Tick: 33984
       Time: 126.42857142857143
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 34176
       Time: 127.14285714285714
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 34368
       Time: 127.85714285714286
-      Index: 5
+      Index: 7
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 34560
       Time: 128.57142857142858
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 768
       TimeUntilNextFlicker: 2.857142857142861
       Type: 1
       TimeType: 0
     - Tick: 35328
       Time: 131.42857142857144
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428328
       Type: 1
       TimeType: 3
     - Tick: 35520
       Time: 132.14285714285714
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 96
       TimeUntilNextFlicker: 0.3571428571428612
       Type: 1
       TimeType: 3
     - Tick: 35712
       Time: 132.85714285714286
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714164
       Type: 1
       TimeType: 4
-    - Tick: 35760
-      Time: 133.03571428571428
-      Index: 5
-      TickUntilNextFlicker: 48
-      TimeUntilNextFlicker: 0.1785714285714448
-      Type: 1
-      TimeType: 4
     - Tick: 35808
       Time: 133.21428571428572
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714164
       Type: 1
       TimeType: 4
     - Tick: 35856
       Time: 133.39285714285714
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714448
       Type: 1
       TimeType: 4
     - Tick: 35904
       Time: 133.57142857142858
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714164
       Type: 1
       TimeType: 4
     - Tick: 35952
       Time: 133.75
-      Index: 5
+      Index: 8
       TickUntilNextFlicker: 48
       TimeUntilNextFlicker: 0.1785714285714448
       Type: 1
       TimeType: 4
+    - Tick: 36000
+      Time: 133.92857142857144
+      Index: 8
+      TickUntilNextFlicker: 48
+      TimeUntilNextFlicker: 0.1785714285714164
+      Type: 1
+      TimeType: 4
     - Tick: 36096
       Time: 134.28571428571428
-      Index: 1
+      Index: 3
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
     - Tick: 40704
       Time: 151.42857142857144
-      Index: 0
+      Index: 14
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
+    - Tick: 43776
+      Time: 162.85714285714286
+      Index: 3
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
+    - Tick: 46848
+      Time: 174.28571428571428
+      Index: 11
+      TickUntilNextFlicker: 0
+      TimeUntilNextFlicker: 0
+      Type: 0
+      TimeType: 2
+    - Tick: 46848
+      Time: 174.28571428571428
+      Index: 16
+      TickUntilNextFlicker: 96
+      TimeUntilNextFlicker: 0.3571428571428612
+      Type: 1
+      TimeType: 3
     - Tick: 52416
       Time: 195
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52440
       Time: 195.08928571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52464
       Time: 195.17857142857144
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.08928571428569398
       Type: 1
       TimeType: 5
     - Tick: 52488
       Time: 195.26785714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52512
       Time: 195.35714285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52536
       Time: 195.44642857142858
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.08928571428569398
       Type: 1
       TimeType: 5
     - Tick: 52560
       Time: 195.53571428571428
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52584
       Time: 195.625
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52608
       Time: 195.71428571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52632
       Time: 195.80357142857144
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.08928571428569398
       Type: 1
       TimeType: 5
     - Tick: 52656
       Time: 195.89285714285714
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52680
       Time: 195.98214285714286
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52704
       Time: 196.07142857142858
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.08928571428569398
       Type: 1
       TimeType: 5
     - Tick: 52728
       Time: 196.16071428571428
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52752
       Time: 196.25
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52776
       Time: 196.33928571428572
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.0892857142857224
       Type: 1
       TimeType: 5
     - Tick: 52800
       Time: 196.42857142857144
-      Index: 4
+      Index: 8
       TickUntilNextFlicker: 24
       TimeUntilNextFlicker: 0.08928571428569398
       Type: 1
       TimeType: 5
     - Tick: 52992
       Time: 197.14285714285714
-      Index: 0
-      TickUntilNextFlicker: 0
-      TimeUntilNextFlicker: 0
-      Type: 0
-      TimeType: 2
-    - Tick: 56352
-      Time: 209.64285714285714
       Index: 3
       TickUntilNextFlicker: 0
       TimeUntilNextFlicker: 0
       Type: 0
       TimeType: 2
+    - Tick: 56064
+      Time: 208.57142857142858
+      Index: 15
+      TickUntilNextFlicker: 384
+      TimeUntilNextFlicker: 1.4285714285714164
+      Type: 1
+      TimeType: 1
   Lights:
-  - {fileID: 11400000, guid: 3797e560126244e4992a2702c1977131, type: 2}
-  - {fileID: 11400000, guid: 86b314f24853f5648b81395ecb136bc8, type: 2}
-  - {fileID: 11400000, guid: cf6e7a5a4a824be49a19316d1df9b5e7, type: 2}
   - {fileID: 11400000, guid: 024a17b8019ed4c46aacfa39b21968eb, type: 2}
-  - {fileID: 11400000, guid: 2cba3a581d1d7784ea2b4522bffa1e76, type: 2}
-  - {fileID: 11400000, guid: 00bb86cf6a2b88246a5374500c2a4ebb, type: 2}
+  - {fileID: 11400000, guid: 74a704d8c42fbdf45a3f0b98b03321df, type: 2}
+  - {fileID: 11400000, guid: 999f03a95353f494b89b8d2b0e257842, type: 2}
+  - {fileID: 11400000, guid: 5b8d48e2a7c60224c94db5516475e538, type: 2}
+  - {fileID: 11400000, guid: cf6e7a5a4a824be49a19316d1df9b5e7, type: 2}
+  - {fileID: 11400000, guid: 21662bda538994b409d1af04a5e86c24, type: 2}
+  - {fileID: 11400000, guid: 8f9a5c199cf7d294fbb4577ab799ac9b, type: 2}
+  - {fileID: 11400000, guid: 7d374a70256c2884ba05f9f27a06194a, type: 2}
+  - {fileID: 11400000, guid: e9c3da51f3ffe1b42a8ab88e46af1c13, type: 2}
+  - {fileID: 11400000, guid: 3797e560126244e4992a2702c1977131, type: 2}
+  - {fileID: 11400000, guid: b7cffb019e1378149874027495a7b9f1, type: 2}
+  - {fileID: 11400000, guid: 61aa84b809c3f9e4e9265edd7f40a1ae, type: 2}
+  - {fileID: 11400000, guid: 1fb0a27863582d840bf5d84639de4499, type: 2}
+  - {fileID: 11400000, guid: d3db8a233b5341b4189c59fa13733518, type: 2}
+  - {fileID: 11400000, guid: c90b8083113f68b4c8bc0c949dbc9d65, type: 2}
+  - {fileID: 11400000, guid: 8754123d4c46c8243a49ea98f8549a40, type: 2}
+  - {fileID: 11400000, guid: 35aa102ead8468b47aae7a58e330e0d4, type: 2}

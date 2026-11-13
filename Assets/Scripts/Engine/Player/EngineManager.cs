@@ -74,8 +74,8 @@ namespace RetroRecord.Engine.Player
             m_songPlayer.LoadSong();
             m_highwayRenderer.Initialize();
             m_statisticsManager.Initialize();
-            m_notesManager.Initialize();
             m_lightManager.Initialize();
+            m_notesManager.Initialize();
             StartCoroutine(m_songInfoDisplay.Initialize(EngineSettings.Song.SongInfo));
         }
 

@@ -44,11 +44,13 @@ namespace RetroRecord.Engine.Lights
             foreach (LightController light in m_sideLights)
             {
                 light.Setup();
+                if (!light.IsEnabled) continue;
                 m_onQuarterBeatSide += light.OnQuarterBeat;
             }
             
             foreach (LightController light in m_laneLights)
             {
+                if (!light.IsEnabled) continue;
                 light.Setup();
                 m_onQuarterBeatLane += light.OnQuarterBeat;
             }
@@ -106,8 +108,8 @@ namespace RetroRecord.Engine.Lights
                     }
                     break;
                 }
-                case LightType.Flickering:
-                    OnNoteFlicker(lightsEvent);
+                case LightType.Flash:
+                    OnNoteFlash(lightsEvent);
                     break;
             }
         }
@@ -124,7 +126,7 @@ namespace RetroRecord.Engine.Lights
             m_lanesHandler = new BeatHandler(m_currentLaneColor, m_onQuarterBeatLane);
         }
 
-        private void OnNoteFlicker(LightsEvent lightsEvent)
+        private void OnNoteFlash(LightsEvent lightsEvent)
         {
             LightColor color = m_lightData[lightsEvent.Index];
 
@@ -141,8 +143,9 @@ namespace RetroRecord.Engine.Lights
 
                     foreach (LightController light in m_laneLights)
                     {
+                        if (!light.IsEnabled) continue;
                         bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
-                        light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, color, shouldBeOn);
+                        light.EnableFlash(lightsEvent.TimeUntilNextFlicker, color, shouldBeOn);
                     }
                 }
             }
@@ -150,7 +153,12 @@ namespace RetroRecord.Engine.Lights
             if (color.Side is not (LightSide.All or LightSide.Side)) return;
             
             foreach (LightController light in m_sideLights)
-                light.EnableFlicker(lightsEvent.TimeUntilNextFlicker, color, true);
+            {
+                if (!light.IsEnabled) continue;
+                light.EnableFlash(lightsEvent.TimeUntilNextFlicker, color, true);
+            }
+            
         }
+
     }
 }
