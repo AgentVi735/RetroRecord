@@ -317,6 +317,7 @@ MonoBehaviour:
     LastTick: 1488
   GlobalEvents:
     <Items>k__BackingField: []
+    Sections: []
     ShowSongInfoEvents: []
     Effects: []
     Lights: []

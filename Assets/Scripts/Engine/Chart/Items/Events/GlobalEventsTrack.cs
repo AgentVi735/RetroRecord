@@ -9,6 +9,9 @@ namespace RetroRecord.Engine.Chart.Events
     {
         [field:SerializeField]
         public EventItem[] Items { get; private set; }
+
+        [SerializeField]
+        public SectionEvent[] Sections;
         
         [SerializeField]
         public ShowSongInfoEvent[] ShowSongInfoEvents;
@@ -22,6 +25,10 @@ namespace RetroRecord.Engine.Chart.Events
         public void SetItems()
         {
             List<EventItem> items = new();
+            
+            if (Sections is { Length: > 0 })
+                items.AddRange(Sections.Select(EventItem.CreateItem));
+            
             if (ShowSongInfoEvents is { Length: > 0 })
                 items.AddRange(ShowSongInfoEvents.Select(EventItem.CreateItem));
             

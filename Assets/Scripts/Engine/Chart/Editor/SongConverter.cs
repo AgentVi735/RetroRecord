@@ -45,6 +45,7 @@ namespace RetroRecord.Engine.Chart.Editor
         
         // Event Keys
         private const string k_laneSwitchEventKey = "LS";
+        private const string k_sectionEventKey = "section";
         private const string k_showSongInfoEventKey = "SI";
         private const string k_effectEventKey = "Ef";
         private const string k_lightEventKey = "Li";
@@ -455,12 +456,16 @@ namespace RetroRecord.Engine.Chart.Editor
                 song.Charts = charts.ToArray();
             
             GlobalEventsTrack globalEventsTrack = new();
+            List<SectionEvent> sectionEvents = new();
             List<ShowSongInfoEvent> showSongInfoEvents = new();
             List<EffectItem> effectEvents = new();
             List<LightsEvent> lightsEvents = new();
 
             if (eventsArray.Length > 0)
             {
+                sectionEvents.AddRange(eventsArray
+                    .Where(songItem => songItem.GetItemType() == SongItemType.Section).Cast<SectionEvent>());
+                
                 showSongInfoEvents.AddRange(eventsArray
                     .Where(songItem => songItem.GetItemType() == SongItemType.ShowSongInfo).Cast<ShowSongInfoEvent>());
                 
@@ -471,6 +476,7 @@ namespace RetroRecord.Engine.Chart.Editor
                     .Where(songItem => songItem.GetItemType() == SongItemType.Light).Cast<LightsEvent>());
             }
 
+            globalEventsTrack.Sections = sectionEvents.ToArray();
             globalEventsTrack.ShowSongInfoEvents = showSongInfoEvents.ToArray();
             globalEventsTrack.Effects = effectEvents.ToArray();
             globalEventsTrack.Lights = lightsEvents.ToArray();
@@ -642,7 +648,49 @@ namespace RetroRecord.Engine.Chart.Editor
             if (text.Contains(k_lightEventKey))
                 return GetLightEvent(text);
             
+            if (text.Contains(k_sectionEventKey))
+                return GetSectionEvent(text);
+            
             return text.Contains(k_showSongInfoEventKey) ? GetShowSongInfoEvent(text) : null;
+        }
+        
+        private static SectionEvent GetSectionEvent(string text)
+        {
+            SectionEvent item = new();
+            string tick = "";
+            string sectionName = "";
+            int spaceAmt = 0;
+            foreach (char character in text)
+            {
+                switch (character)
+                {
+                    case ' ':
+                        spaceAmt++;
+                        break;
+                    case '"':
+                        break;
+                    default:
+                    {
+                        switch (spaceAmt)
+                        {
+                            case 2:
+                                tick += character;
+                                break;
+                            case > 5:
+                                sectionName += character;
+                                break;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            uint.TryParse(tick, out uint tickUInt);
+            item.Tick = tickUInt;
+
+            item.SectionName = sectionName;
+
+            return item;
         }
         
         private static ShowSongInfoEvent GetShowSongInfoEvent(string text)

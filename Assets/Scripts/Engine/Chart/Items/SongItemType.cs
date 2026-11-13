@@ -8,5 +8,6 @@
     LaneSwitch,
     ShowSongInfo,
     Effect,
-    Light
+    Light,
+    Section
 }

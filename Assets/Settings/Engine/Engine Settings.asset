@@ -16,8 +16,8 @@ MonoBehaviour:
   OverrideSettings: 1
   Song: {fileID: 11400000, guid: 26c42230deef54140a31b97601238c21, type: 2}
   difficulty: 2
-  Volume: 0.477
-  StartTime: 40
+  Volume: 0.58
+  StartTime: 0
   HardSettings: {fileID: 11400000, guid: 5bc7c256d25686b48adb5c3fc2a03a78, type: 2}
   NormalSettings: {fileID: 11400000, guid: 916dfd4c39babd2408ee49d729b465e9, type: 2}
   EasySettings: {fileID: 11400000, guid: 60aa840425e0c8d4d9fa8e964445cb53, type: 2}
