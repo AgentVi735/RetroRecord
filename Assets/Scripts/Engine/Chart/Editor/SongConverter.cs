@@ -73,7 +73,7 @@ namespace RetroRecord.Engine.Chart.Editor
         {
             s_albumLibrary = albumLibrary;
             
-            string[] guidsFound = AssetDatabase.FindAssets("chart", new[] { Path.Combine("Assets", "Data") });
+            string[] guidsFound = AssetDatabase.FindAssets("chart", new[] { Path.Combine("Assets", "Songs") });
 
             List<string> paths = new();
 
@@ -174,7 +174,7 @@ namespace RetroRecord.Engine.Chart.Editor
             string objPath = assetsPath + rawSongInfo.songName + ".asset";
             if (!AssetDatabase.AssetPathExists(objPath))
             {
-                string tempPath = Path.Combine("Assets", "Data");
+                string tempPath = Path.Combine("Assets", "Songs");
                 if (!AssetDatabase.AssetPathExists(Path.Combine(tempPath, rawSongInfo.artistName)))
                     AssetDatabase.CreateFolder(tempPath, rawSongInfo.artistName);
                 tempPath = Path.Combine(tempPath, rawSongInfo.artistName);
@@ -219,7 +219,7 @@ namespace RetroRecord.Engine.Chart.Editor
                 }
             }
 
-            string albumPath = Path.Combine("\\Data", rawSongInfo.artistName, rawSongInfo.albumName + "\\");
+            string albumPath = Path.Combine("\\Songs", rawSongInfo.artistName, rawSongInfo.albumName + "\\");
             string assetsAlbumPath = "Assets" + albumPath;
             string albumObjPath = assetsAlbumPath + rawSongInfo.albumName + ".asset";
             Album album;
