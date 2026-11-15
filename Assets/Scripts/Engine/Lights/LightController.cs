@@ -47,6 +47,15 @@ namespace RetroRecord.Engine.Lights
             OnQuarterBeat(data);
         }
 
+        public void ForceLerpColor(LightColor color, double time)
+        {
+            if (m_lerpCoroutine != null)
+                StopCoroutine(m_lerpCoroutine);
+
+            m_isLerping = true;
+            m_lerpCoroutine = StartCoroutine(LerpToNewColor((float)time, color));
+        }
+
         public void OnQuarterBeat(LightColor data)
         {
             if (m_isLerping)
@@ -61,10 +70,16 @@ namespace RetroRecord.Engine.Lights
             switch (data.Type)
             {
                 case LightType.Static:
-                    m_renderer.color = data.Colors[m_colorOffset];
+                {
+                    int idx = m_colorOffset;
+                    while (idx >= data.Colors.Length)
+                        idx -= data.Colors.Length;
+                    m_renderer.color = data.Colors[idx];
                     m_count = 0;
                     break;
+                }
                 case LightType.Switch:
+                {
                     int idx = m_count + m_colorOffset;
                     while (idx >= data.Colors.Length)
                         idx -= data.Colors.Length;
@@ -76,6 +91,7 @@ namespace RetroRecord.Engine.Lights
                     if (m_count > 1)
                         m_count = 0;
                     break;
+                }
                 case LightType.Flash:
                 case LightType.Lerp:
                 default:
@@ -94,19 +110,43 @@ namespace RetroRecord.Engine.Lights
 
         private IEnumerator Lerp(float time, LightColor color, bool shouldBeOn)
         {
+            Color startColor = color.Colors[0];
+            Color endColor = color.Colors[1];
+            
             if (shouldBeOn)
             {
                 for (float i = 0; i < time; i += Time.deltaTime)
                 {
-                    m_renderer.color = Color.Lerp(color.Colors[0], color.Colors[1], i / time);
+                    m_renderer.color = Color.Lerp(startColor, endColor, i / time);
                     yield return null;
                 }
+                
+                m_renderer.color = endColor;
             }
             else
             {
-                m_renderer.color = color.Colors[1];
+                m_renderer.color = endColor;
                 yield return new WaitForSeconds(time);
             }
+        }
+
+        private IEnumerator LerpToNewColor(float time, LightColor newColor)
+        {
+            if (newColor.Type == LightType.Static)
+                m_count = 0;
+            int idx = m_count + m_colorOffset;
+            while (idx >= newColor.Colors.Length)
+                idx -= newColor.Colors.Length;
+            Color startColor = m_renderer.color;
+            Color endColor = newColor.Colors[idx];
+            
+            for (float i = 0; i < time; i += Time.deltaTime)
+            {
+                m_renderer.color = Color.Lerp(startColor, endColor, i / time);
+                yield return null;
+            }
+            
+            m_renderer.color = endColor;
         }
     }
 }

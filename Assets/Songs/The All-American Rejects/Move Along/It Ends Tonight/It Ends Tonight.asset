@@ -6888,6 +6888,10 @@ MonoBehaviour:
       Time: 35.45454545454545
       ItemType: 9
       Index: 2
+    - Tick: 9984
+      Time: 35.45454545454545
+      ItemType: 8
+      Index: 4
     - Tick: 15936
       Time: 56.62860364787342
       ItemType: 9
@@ -6959,6 +6963,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 192
       Time: 0.6818181818181818
       Index: 1
@@ -6966,13 +6971,7 @@ MonoBehaviour:
       AltLightTime: 1.3636363636363638
       Type: 3
       TimeType: 1
-    - Tick: 768
-      Time: 2.727272727272727
-      Index: 2
-      AltLightTick: 0
-      AltLightTime: 0
-      Type: 1
-      TimeType: 2
+      ShouldLerp: 0
     - Tick: 768
       Time: 2.727272727272727
       Index: 3
@@ -6980,8 +6979,27 @@ MonoBehaviour:
       AltLightTime: 0.6818181818181817
       Type: 0
       TimeType: 2
+      ShouldLerp: 1
+    - Tick: 768
+      Time: 2.727272727272727
+      Index: 4
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181817
+      Type: 0
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 9984
+      Time: 35.45454545454545
+      Index: 5
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 0
+      TimeType: 2
+      ShouldLerp: 1
   Lights:
   - {fileID: 11400000, guid: 024a17b8019ed4c46aacfa39b21968eb, type: 2}
   - {fileID: 11400000, guid: 076457d05b29595499109a8cde643819, type: 2}
   - {fileID: 11400000, guid: cf6e7a5a4a824be49a19316d1df9b5e7, type: 2}
   - {fileID: 11400000, guid: 0891ef4730f50c64f98d71bf754a31bd, type: 2}
+  - {fileID: 11400000, guid: bb6b08715da3c744fa6db81f0c3ca2a9, type: 2}
+  - {fileID: 11400000, guid: 9f8b8dcfa9d39fb4a8cb3b2d499897b1, type: 2}

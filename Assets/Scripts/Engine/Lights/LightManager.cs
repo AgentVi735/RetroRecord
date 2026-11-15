@@ -96,16 +96,27 @@ namespace RetroRecord.Engine.Lights
                             CreateNewLaneHandler(data);
                             break;
                     }
-                    
+
+                    bool shouldLerp = lightsEvent.ShouldLerp;
                     if (m_currentLaneColor?.Type == data.Type)
                     {
                         foreach (LightController light in m_laneLights)
-                            light.ForceChangeColor(m_currentLaneColor);
+                        {
+                            if (shouldLerp)
+                                light.ForceLerpColor(m_currentLaneColor, lightsEvent.AltLightTime);
+                            else
+                                light.ForceChangeColor(m_currentLaneColor);
+                        }
                     }
                     if (m_currentSideColor?.Type == data.Type)
                     {
                         foreach (LightController light in m_sideLights)
-                            light.ForceChangeColor(m_currentSideColor);
+                        {
+                            if (shouldLerp)
+                                light.ForceLerpColor(m_currentSideColor, lightsEvent.AltLightTime);
+                            else
+                                light.ForceChangeColor(m_currentSideColor);
+                        }
                     }
                     break;
                 case LightType.Flash:

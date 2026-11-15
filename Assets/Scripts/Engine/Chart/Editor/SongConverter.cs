@@ -69,6 +69,7 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_lightSemiQuaverEventKey = "_S";
         private const string k_lightThirtySecondEventKey = "_T";
         private const string k_lightSixtyFourthEventKey = "_F";
+        private const string k_lightLerpToEventKey = "_LP";
 
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
@@ -859,25 +860,18 @@ namespace RetroRecord.Engine.Chart.Editor
             item.Index = lightUint;
 
             if (text.Contains(k_lightFlashEventKey))
-            {
                 item.Type = LightType.Flash;
-                item = SetLightTimeType(item, text);
-            }
             else if (text.Contains(k_lightLerpEventKey))
-            {
                 item.Type = LightType.Lerp;
-                item = SetLightTimeType(item, text);
-            }
             else if (text.Contains(k_lightStaticEventKey))
-            {
                 item.Type = LightType.Static;
-                item.TimeType = LightTime.QuarterNote;
-            }
             else
-            {
                 item.Type = LightType.Switch;
-                item.TimeType = LightTime.QuarterNote;
-            }
+
+            item = SetLightTimeType(item, text);
+
+            if (text.Contains(k_lightLerpToEventKey))
+                item.ShouldLerp = true;
 
             return item;
         }
@@ -1094,7 +1088,7 @@ namespace RetroRecord.Engine.Chart.Editor
                 {
                     LightsEvent lightsItem = (LightsEvent)item;
 
-                    if (lightsItem.Type == LightType.Switch)
+                    if (lightsItem.Type is LightType.Switch or LightType.Static && !lightsItem.ShouldLerp)
                         continue;
 
                     lightsItem.AltLightTick =

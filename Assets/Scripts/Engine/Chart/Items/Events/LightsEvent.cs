@@ -22,6 +22,9 @@ namespace RetroRecord.Engine.Chart.Events
         [SerializeField]
         public LightTime TimeType;
 
+        [SerializeField]
+        public bool ShouldLerp;
+
         [NonSerialized]
         public NoteGroup NoteGroup;
 
