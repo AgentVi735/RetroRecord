@@ -11,10 +11,10 @@ namespace RetroRecord.Engine.Chart.Events
         public uint Index;
 
         [SerializeField]
-        public uint TickUntilNextFlicker;
+        public uint AltLightTick;
         
         [SerializeField]
-        public double TimeUntilNextFlicker;
+        public double AltLightTime;
 
         [SerializeField]
         public LightType Type;

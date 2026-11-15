@@ -22,15 +22,20 @@
   * Smoke effect = Sm
 
     * active for 1/4 beat
-* Light = Li-X (x == Lights\[] index)
+* Light = Li-X (X == Lights\[] index \&\& A == Type)
 
-  * Flashing = LiF-X
+  * Types
 
-    * 1/1 = LiFW-X
-    * 1/2 = LiFH-X
-    * 1/4 = LiFQ-X
-    * 1/8 = LiFV-X
-    * 1/16 = LiFS-X
-    * 1/32 = LiFT-X
-    * 1/64 = LiFF-X
+    * Static = LiS\_A-X
+    * Flashing = LiF\_A-X
+    * Lerp = LiL\_A-X
+  * Times
+
+    * 1/1 = Li\_W-X
+    * 1/2 = Li\_H-X
+    * 1/4 = Li\_Q-X
+    * 1/8 = Li\_V-X
+    * 1/16 = Li\_S-X
+    * 1/32 = Li\_T-X
+    * 1/64 = Li\_F-X
 

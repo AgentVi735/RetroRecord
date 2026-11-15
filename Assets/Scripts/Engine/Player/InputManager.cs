@@ -35,7 +35,8 @@ namespace RetroRecord.Engine.Player
             m_groups = givenGroups;
             m_groupIdx = currentIdx;
             NextGroup = m_groups[m_groupIdx];
-            NextGroup2 = m_groupIdx < m_groups.Length ? m_groups[m_groupIdx + 1] : null;
+            if (m_groups.Length > 1)
+                NextGroup2 = m_groupIdx < m_groups.Length ? m_groups[m_groupIdx + 1] : null;
             InputActionMap actionMap = m_inputActionAsset.FindActionMap(m_actionMapName);
             m_actionCallbacks = new Action<InputAction.CallbackContext>[m_laneNames.Length];
 

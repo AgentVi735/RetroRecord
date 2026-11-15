@@ -17,9 +17,9 @@ namespace RetroRecord.Engine.Lights
         [field: SerializeField]
         public int LaneIndex { get; private set; }
 
-        private Coroutine m_flashCoroutine;
+        private Coroutine m_lerpCoroutine;
 
-        private bool m_isFlashing;
+        private bool m_isLerping;
         
         public bool IsEnabled { get; private set; }
 
@@ -40,16 +40,16 @@ namespace RetroRecord.Engine.Lights
 
         public void ForceChangeColor(LightColor data)
         {
-            if (m_flashCoroutine != null)
-                StopCoroutine(m_flashCoroutine);
+            if (m_lerpCoroutine != null)
+                StopCoroutine(m_lerpCoroutine);
 
-            m_isFlashing = false;
+            m_isLerping = false;
             OnQuarterBeat(data);
         }
 
         public void OnQuarterBeat(LightColor data)
         {
-            if (m_isFlashing)
+            if (m_isLerping)
                 return;
             
             if (data == null || data.Colors == null || data.Colors.Length == 0)
@@ -60,8 +60,11 @@ namespace RetroRecord.Engine.Lights
 
             switch (data.Type)
             {
+                case LightType.Static:
+                    m_renderer.color = data.Colors[m_colorOffset];
+                    m_count = 0;
+                    break;
                 case LightType.Switch:
-                {
                     int idx = m_count + m_colorOffset;
                     while (idx >= data.Colors.Length)
                         idx -= data.Colors.Length;
@@ -73,23 +76,23 @@ namespace RetroRecord.Engine.Lights
                     if (m_count > 1)
                         m_count = 0;
                     break;
-                }
                 case LightType.Flash:
+                case LightType.Lerp:
                 default:
                     break;
             }
         }
 
-        public void EnableFlash(double time, LightColor color, bool shouldBeOn)
+        public void EnableLerp(double time, LightColor color, bool shouldBeOn)
         {
-            if (m_flashCoroutine != null)
-                StopCoroutine(m_flashCoroutine);
+            if (m_lerpCoroutine != null)
+                StopCoroutine(m_lerpCoroutine);
 
-            m_isFlashing = true;
-            m_flashCoroutine = StartCoroutine(Flash((float)time, color, shouldBeOn));
+            m_isLerping = true;
+            m_lerpCoroutine = StartCoroutine(Lerp((float)time, color, shouldBeOn));
         }
 
-        private IEnumerator Flash(float time, LightColor color, bool shouldBeOn)
+        private IEnumerator Lerp(float time, LightColor color, bool shouldBeOn)
         {
             if (shouldBeOn)
             {

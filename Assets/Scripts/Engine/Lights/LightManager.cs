@@ -78,8 +78,9 @@ namespace RetroRecord.Engine.Lights
 
             switch (lightsEvent.Type)
             {
+                default:
+                case LightType.Static:
                 case LightType.Switch:
-                {
                     LightColor data = m_lightData[index];
                     switch (data.Side)
                     {
@@ -95,21 +96,23 @@ namespace RetroRecord.Engine.Lights
                             CreateNewLaneHandler(data);
                             break;
                     }
-
-                    if (m_currentLaneColor?.Type == LightType.Switch)
+                    
+                    if (m_currentLaneColor?.Type == data.Type)
                     {
                         foreach (LightController light in m_laneLights)
                             light.ForceChangeColor(m_currentLaneColor);
                     }
-                    if (m_currentSideColor?.Type == LightType.Switch)
+                    if (m_currentSideColor?.Type == data.Type)
                     {
                         foreach (LightController light in m_sideLights)
                             light.ForceChangeColor(m_currentSideColor);
                     }
                     break;
-                }
                 case LightType.Flash:
-                    OnNoteFlash(lightsEvent);
+                    OnFlash(lightsEvent);
+                    break;
+                case LightType.Lerp:
+                    OnLerp(lightsEvent);
                     break;
             }
         }
@@ -117,16 +120,20 @@ namespace RetroRecord.Engine.Lights
         private void CreateNewSideHandler(LightColor data)
         {
             m_currentSideColor = data;
-            m_sideHandler = new BeatHandler(m_currentSideColor, m_onQuarterBeatSide);
+            m_sideHandler = data.Type == LightType.Switch
+                ? new BeatHandler(m_currentSideColor, m_onQuarterBeatSide)
+                : null;
         }
 
         private void CreateNewLaneHandler(LightColor data)
         {
             m_currentLaneColor = data;
-            m_lanesHandler = new BeatHandler(m_currentLaneColor, m_onQuarterBeatLane);
+            m_lanesHandler = data.Type == LightType.Switch
+                ? new BeatHandler(m_currentLaneColor, m_onQuarterBeatLane)
+                : null;
         }
 
-        private void OnNoteFlash(LightsEvent lightsEvent)
+        private void OnFlash(LightsEvent lightsEvent)
         {
             LightColor color = m_lightData[lightsEvent.Index];
 
@@ -145,7 +152,7 @@ namespace RetroRecord.Engine.Lights
                     {
                         if (!light.IsEnabled) continue;
                         bool shouldBeOn = lanes.Contains((byte)light.LaneIndex);
-                        light.EnableFlash(lightsEvent.TimeUntilNextFlicker, color, shouldBeOn);
+                        light.EnableLerp(lightsEvent.AltLightTime, color, shouldBeOn);
                     }
                 }
             }
@@ -155,10 +162,30 @@ namespace RetroRecord.Engine.Lights
             foreach (LightController light in m_sideLights)
             {
                 if (!light.IsEnabled) continue;
-                light.EnableFlash(lightsEvent.TimeUntilNextFlicker, color, true);
+                light.EnableLerp(lightsEvent.AltLightTime, color, true);
             }
-            
         }
 
+        private void OnLerp(LightsEvent lightsEvent)
+        {
+            LightColor color = m_lightData[lightsEvent.Index];
+
+            if (color.Side != LightSide.Side)
+            {
+                foreach (LightController light in m_laneLights)
+                {
+                    if (!light.IsEnabled) continue;
+                    light.EnableLerp(lightsEvent.AltLightTime, color, true);
+                }
+            }
+
+            if (color.Side == LightSide.Lanes) return;
+
+            foreach (LightController light in m_sideLights)
+            {
+                if (!light.IsEnabled) continue;
+                light.EnableLerp(lightsEvent.AltLightTime, color, true);
+            }
+        }
     }
 }

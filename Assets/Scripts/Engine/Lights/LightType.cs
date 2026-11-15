@@ -1,5 +1,7 @@
 ﻿public enum LightType
 {
+    Static,
     Switch,
-    Flash
+    Flash,
+    Lerp
 }

@@ -44,6 +44,11 @@
 }
 [Events]
 {
+  0 = E "Li-0"
+  192 = E "LiL_H-1"
+  384 = E "SI"
+  768 = E "Li-2"
+  768 = E "LiS-3"
   768 = E "section Intro"
   3840 = E "section Verse 1"
   9984 = E "section Pre-Chorus 1"
@@ -1026,4 +1031,9 @@
   65184 = N 1 1440
   65184 = N 5 0
   65280 = N 7 3840
+}
+[NormalGHLGuitar]
+{
+  3040 = N 2 0
+  3072 = N 2 0
 }

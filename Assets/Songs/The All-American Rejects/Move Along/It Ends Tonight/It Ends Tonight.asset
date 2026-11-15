@@ -6833,8 +6833,89 @@ MonoBehaviour:
     LocalEvents:
       LaneSwitchEvents: []
     LastTick: 69120
+  - Difficulty: 1
+    Notes:
+    - Tick: 3040
+      Time: 10.795454545454545
+      Notes:
+      - Tick: 3040
+        Time: 10.795454545454545
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3072
+      Time: 10.909090909090908
+      Notes:
+      - Tick: 3072
+        Time: 10.909090909090908
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    LocalEvents:
+      LaneSwitchEvents: []
+    LastTick: 3072
   GlobalEvents:
-    <Items>k__BackingField: []
+    <Items>k__BackingField:
+    - Tick: 0
+      Time: 0
+      ItemType: 8
+      Index: 0
+    - Tick: 192
+      Time: 0.6818181818181818
+      ItemType: 8
+      Index: 1
+    - Tick: 384
+      Time: 1.3636363636363635
+      ItemType: 6
+      Index: 0
+    - Tick: 768
+      Time: 2.727272727272727
+      ItemType: 9
+      Index: 0
+    - Tick: 768
+      Time: 2.727272727272727
+      ItemType: 8
+      Index: 2
+    - Tick: 768
+      Time: 2.727272727272727
+      ItemType: 8
+      Index: 3
+    - Tick: 3840
+      Time: 13.636363636363635
+      ItemType: 9
+      Index: 1
+    - Tick: 9984
+      Time: 35.45454545454545
+      ItemType: 9
+      Index: 2
+    - Tick: 15936
+      Time: 56.62860364787342
+      ItemType: 9
+      Index: 3
+    - Tick: 19200
+      Time: 68.25086070116495
+      ItemType: 9
+      Index: 4
+    - Tick: 25728
+      Time: 91.47204609155642
+      ItemType: 9
+      Index: 5
+    - Tick: 31296
+      Time: 111.27612132666614
+      ItemType: 9
+      Index: 6
+    - Tick: 37632
+      Time: 133.80746928904858
+      ItemType: 9
+      Index: 7
+    - Tick: 46656
+      Time: 165.88427179688557
+      ItemType: 9
+      Index: 8
+    - Tick: 59136
+      Time: 210.23521047463555
+      ItemType: 9
+      Index: 9
     Sections:
     - Tick: 768
       Time: 2.727272727272727
@@ -6866,7 +6947,41 @@ MonoBehaviour:
     - Tick: 59136
       Time: 210.23521047463555
       SectionName: Outro
-    ShowSongInfoEvents: []
+    ShowSongInfoEvents:
+    - Tick: 384
+      Time: 1.3636363636363635
     Effects: []
-    Lights: []
-  Lights: []
+    Lights:
+    - Tick: 0
+      Time: 0
+      Index: 0
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+    - Tick: 192
+      Time: 0.6818181818181818
+      Index: 1
+      AltLightTick: 384
+      AltLightTime: 1.3636363636363638
+      Type: 3
+      TimeType: 1
+    - Tick: 768
+      Time: 2.727272727272727
+      Index: 2
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+    - Tick: 768
+      Time: 2.727272727272727
+      Index: 3
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181817
+      Type: 0
+      TimeType: 2
+  Lights:
+  - {fileID: 11400000, guid: 024a17b8019ed4c46aacfa39b21968eb, type: 2}
+  - {fileID: 11400000, guid: 076457d05b29595499109a8cde643819, type: 2}
+  - {fileID: 11400000, guid: cf6e7a5a4a824be49a19316d1df9b5e7, type: 2}
+  - {fileID: 11400000, guid: 0891ef4730f50c64f98d71bf754a31bd, type: 2}

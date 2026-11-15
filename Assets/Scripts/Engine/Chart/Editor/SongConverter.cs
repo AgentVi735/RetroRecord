@@ -59,14 +59,16 @@ namespace RetroRecord.Engine.Chart.Editor
         private const float k_smokeEffectBeatCount = 1;
 
         // Lights Keys
+        private const string k_lightStaticEventKey = "LiS";
         private const string k_lightFlashEventKey = "LiF";
-        private const string k_lightFlashWholeEventKey = "LiFW";
-        private const string k_lightFlashHalfEventKey = "LiFH";
-        private const string k_lightFlashQuarterEventKey = "LiFQ";
-        private const string k_lightFlashQuaverEventKey = "LiFV";
-        private const string k_lightFlashSemiQuaverEventKey = "LiFS";
-        private const string k_lightFlashThirtySecondEventKey = "LiFT";
-        private const string k_lightFlashSixtyFourthEventKey = "LiFF";
+        private const string k_lightLerpEventKey = "LiL";
+        private const string k_lightWholeEventKey = "_W";
+        private const string k_lightHalfEventKey = "_H";
+        private const string k_lightQuarterEventKey = "_Q";
+        private const string k_lightQuaverEventKey = "_V";
+        private const string k_lightSemiQuaverEventKey = "_S";
+        private const string k_lightThirtySecondEventKey = "_T";
+        private const string k_lightSixtyFourthEventKey = "_F";
 
 
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
@@ -859,20 +861,17 @@ namespace RetroRecord.Engine.Chart.Editor
             if (text.Contains(k_lightFlashEventKey))
             {
                 item.Type = LightType.Flash;
-                if (text.Contains(k_lightFlashWholeEventKey))
-                    item.TimeType = LightTime.WholeNote;
-                else if (text.Contains(k_lightFlashHalfEventKey))
-                    item.TimeType = LightTime.HalfNote;
-                else if (text.Contains(k_lightFlashQuarterEventKey))
-                    item.TimeType = LightTime.QuarterNote;
-                else if (text.Contains(k_lightFlashQuaverEventKey))
-                    item.TimeType = LightTime.QuaverNote;
-                else if (text.Contains(k_lightFlashSemiQuaverEventKey))
-                    item.TimeType = LightTime.SemiQuaverNote;
-                else if (text.Contains(k_lightFlashThirtySecondEventKey))
-                    item.TimeType = LightTime.ThirtySecondNote;
-                else if (text.Contains(k_lightFlashSixtyFourthEventKey))
-                    item.TimeType = LightTime.SixtyFourthNote;
+                item = SetLightTimeType(item, text);
+            }
+            else if (text.Contains(k_lightLerpEventKey))
+            {
+                item.Type = LightType.Lerp;
+                item = SetLightTimeType(item, text);
+            }
+            else if (text.Contains(k_lightStaticEventKey))
+            {
+                item.Type = LightType.Static;
+                item.TimeType = LightTime.QuarterNote;
             }
             else
             {
@@ -880,6 +879,27 @@ namespace RetroRecord.Engine.Chart.Editor
                 item.TimeType = LightTime.QuarterNote;
             }
 
+            return item;
+        }
+
+        private static LightsEvent SetLightTimeType(LightsEvent item, string text)
+        {
+            if (text.Contains(k_lightWholeEventKey))
+                item.TimeType = LightTime.WholeNote;
+            else if (text.Contains(k_lightHalfEventKey))
+                item.TimeType = LightTime.HalfNote;
+            else if (text.Contains(k_lightQuarterEventKey))
+                item.TimeType = LightTime.QuarterNote;
+            else if (text.Contains(k_lightQuaverEventKey))
+                item.TimeType = LightTime.QuaverNote;
+            else if (text.Contains(k_lightSemiQuaverEventKey))
+                item.TimeType = LightTime.SemiQuaverNote;
+            else if (text.Contains(k_lightThirtySecondEventKey))
+                item.TimeType = LightTime.ThirtySecondNote;
+            else if (text.Contains(k_lightSixtyFourthEventKey))
+                item.TimeType = LightTime.SixtyFourthNote;
+            else
+                item.TimeType = LightTime.QuarterNote;
             return item;
         }
 
@@ -1077,12 +1097,12 @@ namespace RetroRecord.Engine.Chart.Editor
                     if (lightsItem.Type == LightType.Switch)
                         continue;
 
-                    lightsItem.TickUntilNextFlicker =
+                    lightsItem.AltLightTick =
                         (uint)Mathf.RoundToInt(lightsItem.TimeType.GetDivisor() * EngineSettings.RESOLUTION);
 
-                    double endTime = TickToSecondsAlt(lightsItem.Tick + lightsItem.TickUntilNextFlicker);
+                    double endTime = TickToSecondsAlt(lightsItem.Tick + lightsItem.AltLightTick);
                     endTime -= lightsItem.Time;
-                    lightsItem.TimeUntilNextFlicker = endTime;
+                    lightsItem.AltLightTime = endTime;
                     items[i] = lightsItem;
                 }
             }
