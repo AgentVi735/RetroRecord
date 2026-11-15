@@ -50,7 +50,7 @@ namespace RetroRecord.Engine.Chart.Editor
             m_hasInitialized = true;
             string path = EditorPrefs.GetString("AlbumPath");
             if (string.IsNullOrEmpty(path))
-                path = "Assets/Data/Album Library.asset";
+                path = "Assets/Songs/Album Library.asset";
             if (AssetDatabase.AssetPathExists(path))
             {
                 AlbumLibrary = AssetDatabase.LoadAssetAtPath<AlbumLibrary>(path);
@@ -72,7 +72,7 @@ namespace RetroRecord.Engine.Chart.Editor
                 Initialize();
             GUILayout.Space(10);
 
-            AlbumLibrary = (AlbumLibrary)EditorGUILayout.ObjectField(AlbumLibrary, typeof(Album), false);
+            AlbumLibrary = (AlbumLibrary)EditorGUILayout.ObjectField(AlbumLibrary, typeof(AlbumLibrary), false);
 
             GUILayout.Space(10);
 
