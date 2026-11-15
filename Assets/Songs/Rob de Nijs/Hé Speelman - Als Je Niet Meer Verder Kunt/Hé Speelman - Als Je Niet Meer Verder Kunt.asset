@@ -17,4 +17,5 @@ MonoBehaviour:
   Year: 1974
   Genre: Nederpop
   Cover: {fileID: 21300000, guid: 3cef14ac88e31ed4ba31aec1eb1080de, type: 3}
-  Songs: []
+  Songs:
+  - {fileID: 11400000, guid: 7cfe8a913a3749349b3e352bb3c1996a, type: 2}
