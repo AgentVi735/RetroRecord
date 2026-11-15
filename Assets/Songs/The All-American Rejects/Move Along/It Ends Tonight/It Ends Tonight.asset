@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde023024f46eb540b2ef6bfbe33a290, type: 3}
+  m_Name: It Ends Tonight
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
+  SongInfo:
+    SongName: It Ends Tonight
+    Album: {fileID: 11400000, guid: 29c2a3468fadd23489488ccf2548954d, type: 2}
+    OverrideArtist: 
+    Charter: Vicky
+    Difficulty: 2
+    Audio: {fileID: 8300000, guid: 1f3ebc1772c842e4fbc4e7d3bc827518, type: 3}
+  BeatTrack:
+    TempoChanges:
+    - Tick: 0
+      Time: 0
+      Tempo: 88
+    - Tick: 13056
+      Time: 46.36363636363636
+      Tempo: 85
+    - Tick: 13824
+      Time: 49.18716577540106
+      Tempo: 91
+    - Tick: 14592
+      Time: 51.8245284127637
+      Tempo: 87
+    - Tick: 15360
+      Time: 54.58314910241887
+      Tempo: 88
+    - Tick: 17664
+      Time: 62.76496728423705
+      Tempo: 87
+    - Tick: 18432
+      Time: 65.52358797389222
+      Tempo: 88
+    - Tick: 23040
+      Time: 81.88722433752858
+      Tempo: 86
+    - Tick: 23232
+      Time: 82.58489875613323
+      Tempo: 87
+    - Tick: 23808
+      Time: 84.65386427337461
+      Tempo: 88
+    - Tick: 29952
+      Time: 106.47204609155642
+      Tempo: 87
+    - Tick: 30720
+      Time: 109.2306667812116
+      Tempo: 88
+    - Tick: 36864
+      Time: 131.0488485993934
+      Tempo: 87
+    - Tick: 37632
+      Time: 133.80746928904858
+      Tempo: 88
+    - Tick: 45312
+      Time: 161.08019656177586
+      Tempo: 87
+    - Tick: 46080
+      Time: 163.83881725143104
+      Tempo: 88
+    - Tick: 47616
+      Time: 169.2933627059765
+      Tempo: 87
+    - Tick: 48384
+      Time: 172.05198339563168
+      Tempo: 89
+    - Tick: 49152
+      Time: 174.74861260911482
+      Tempo: 88
+    - Tick: 49920
+      Time: 177.47588533638753
+      Tempo: 87
+    - Tick: 50688
+      Time: 180.2345060260427
+      Tempo: 89
+    - Tick: 51456
+      Time: 182.93113523952584
+      Tempo: 87
+    - Tick: 52224
+      Time: 185.68975592918102
+      Tempo: 88
+    TimeSignatureChanges:
+    - Tick: 0
+      Time: 0
+      Numerator: 4
+      Denominator: 4
+  Charts: []
+  GlobalEvents:
+    <Items>k__BackingField: []
+    Sections:
+    - Tick: 768
+      Time: 2.727272727272727
+      SectionName: Intro
+    - Tick: 3840
+      Time: 13.636363636363635
+      SectionName: Verse1
+    - Tick: 9984
+      Time: 35.45454545454545
+      SectionName: Pre-Chorus1
+    - Tick: 15936
+      Time: 56.62860364787342
+      SectionName: Chorus1
+    - Tick: 19200
+      Time: 68.25086070116495
+      SectionName: Verse2
+    - Tick: 25728
+      Time: 91.47204609155642
+      SectionName: Pre-Chorus2
+    - Tick: 31296
+      Time: 111.27612132666614
+      SectionName: Chorus2
+    - Tick: 37632
+      Time: 133.80746928904858
+      SectionName: Bridge
+    - Tick: 46656
+      Time: 165.88427179688557
+      SectionName: Chorus3
+    ShowSongInfoEvents: []
+    Effects: []
+    Lights: []
+  Lights: []

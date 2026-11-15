@@ -1,0 +1,56 @@
+﻿[Song]
+{
+  Name = "It Ends Tonight"
+  Artist = "The All-American Rejects"
+  Charter = "Vicky"
+  Album = "Move Along"
+  Year = ", 2005"
+  Offset = 0
+  Resolution = 192
+  Player2 = bass
+  Difficulty = 2
+  PreviewStart = 0
+  PreviewEnd = 0
+  Genre = "Emo pop"
+  MediaType = "cd"
+  MusicStream = "C:\Users\vicky\Unity\RetroRecord\Assets\Songs\The All-American Rejects\Move Along\It Ends Tonight\It Ends Tonight.mp3"
+}
+[SyncTrack]
+{
+  0 = TS 4
+  0 = B 88000
+  13056 = B 85000
+  13824 = B 91000
+  14592 = B 87000
+  15360 = B 88000
+  17664 = B 87000
+  18432 = B 88000
+  23040 = B 86000
+  23232 = B 87000
+  23808 = B 88000
+  29952 = B 87000
+  30720 = B 88000
+  36864 = B 87000
+  37632 = B 88000
+  45312 = B 87000
+  46080 = B 88000
+  47616 = B 87000
+  48384 = B 89000
+  49152 = B 88000
+  49920 = B 87000
+  50688 = B 89000
+  51456 = B 87000
+  52224 = B 88000
+}
+[Events]
+{
+  768 = E "section Intro"
+  3840 = E "section Verse 1"
+  9984 = E "section Pre-Chorus 1"
+  15936 = E "section Chorus 1"
+  19200 = E "section Verse 2"
+  25728 = E "section Pre-Chorus 2"
+  31296 = E "section Chorus 2"
+  37632 = E "section Bridge"
+  46656 = E "section Chorus 3"
+}
