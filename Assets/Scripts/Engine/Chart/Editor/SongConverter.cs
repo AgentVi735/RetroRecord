@@ -227,11 +227,13 @@ namespace RetroRecord.Engine.Chart.Editor
             AssetDatabase.Refresh();
 
             song.SongInfo ??= new SongInfo();
-            song.SongInfo.SongName = rawSongInfo.songName;
+            if (string.IsNullOrEmpty(song.SongInfo.SongName))
+                song.SongInfo.SongName = rawSongInfo.songName;
             bool isValidDifficulty = ushort.TryParse(rawSongInfo.difficulty, out ushort difficulty);
             if (isValidDifficulty)
                 song.SongInfo.Difficulty = difficulty;
-            song.SongInfo.Charter = rawSongInfo.charter;
+            if (string.IsNullOrEmpty(song.SongInfo.Charter))
+                song.SongInfo.Charter = rawSongInfo.charter;
             if (song.SongInfo.Audio == null)
             {
                 if (rawSongInfo.audioFileName != "")
@@ -273,15 +275,18 @@ namespace RetroRecord.Engine.Chart.Editor
                 assetsAlbumPath = AssetDatabase.GetAssetPath(album);
             }
 
-            album.AlbumName = rawSongInfo.albumName;
+            if (string.IsNullOrEmpty(album.AlbumName))
+                album.AlbumName = rawSongInfo.albumName;
             if (string.IsNullOrEmpty(album.ArtistName))
                 album.ArtistName = rawSongInfo.artistName;
             else if (album.ArtistName != rawSongInfo.artistName)
                 song.SongInfo.OverrideArtist = rawSongInfo.artistName;
             else if (album.ArtistName == song.SongInfo.OverrideArtist)
                 song.SongInfo.OverrideArtist = "";
-            album.Year = Convert.ToInt32(rawSongInfo.year);
-            album.Genre = rawSongInfo.genre;
+            if (album.Year == 0)
+                album.Year = Convert.ToInt32(rawSongInfo.year);
+            if (string.IsNullOrEmpty(album.Genre))
+                album.Genre = rawSongInfo.genre;
             if (album.Songs == null || !album.Songs.Contains(song))
             {
                 List<Song> tempSongs = album.Songs != null ? album.Songs.ToList() : new List<Song>();
