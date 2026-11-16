@@ -4678,11 +4678,6 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 192
         TimeSustainLength: 0.681818181818187
-      - Tick: 45120
-        Time: 160.39837837995768
-        Lane: 4
-        TickSustainLength: 0
-        TimeSustainLength: 0
     - Tick: 45168
       Time: 160.5688329254122
       Notes:
@@ -6855,71 +6850,7 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 3072
   GlobalEvents:
-    <Items>k__BackingField:
-    - Tick: 0
-      Time: 0
-      ItemType: 8
-      Index: 0
-    - Tick: 192
-      Time: 0.6818181818181818
-      ItemType: 8
-      Index: 1
-    - Tick: 384
-      Time: 1.3636363636363635
-      ItemType: 6
-      Index: 0
-    - Tick: 768
-      Time: 2.727272727272727
-      ItemType: 9
-      Index: 0
-    - Tick: 768
-      Time: 2.727272727272727
-      ItemType: 8
-      Index: 2
-    - Tick: 768
-      Time: 2.727272727272727
-      ItemType: 8
-      Index: 3
-    - Tick: 3840
-      Time: 13.636363636363635
-      ItemType: 9
-      Index: 1
-    - Tick: 9984
-      Time: 35.45454545454545
-      ItemType: 9
-      Index: 2
-    - Tick: 9984
-      Time: 35.45454545454545
-      ItemType: 8
-      Index: 4
-    - Tick: 15936
-      Time: 56.62860364787342
-      ItemType: 9
-      Index: 3
-    - Tick: 19200
-      Time: 68.25086070116495
-      ItemType: 9
-      Index: 4
-    - Tick: 25728
-      Time: 91.47204609155642
-      ItemType: 9
-      Index: 5
-    - Tick: 31296
-      Time: 111.27612132666614
-      ItemType: 9
-      Index: 6
-    - Tick: 37632
-      Time: 133.80746928904858
-      ItemType: 9
-      Index: 7
-    - Tick: 46656
-      Time: 165.88427179688557
-      ItemType: 9
-      Index: 8
-    - Tick: 59136
-      Time: 210.23521047463555
-      ItemType: 9
-      Index: 9
+    <Items>k__BackingField: []
     Sections:
     - Tick: 768
       Time: 2.727272727272727
@@ -6972,30 +6903,1582 @@ MonoBehaviour:
       Type: 3
       TimeType: 1
       ShouldLerp: 0
-    - Tick: 768
-      Time: 2.727272727272727
+    - Tick: 576
+      Time: 2.0454545454545454
       Index: 3
       AltLightTick: 192
       AltLightTime: 0.6818181818181817
       Type: 0
       TimeType: 2
       ShouldLerp: 1
-    - Tick: 768
-      Time: 2.727272727272727
+    - Tick: 576
+      Time: 2.0454545454545454
       Index: 4
       AltLightTick: 192
       AltLightTime: 0.6818181818181817
       Type: 0
       TimeType: 2
       ShouldLerp: 1
-    - Tick: 9984
-      Time: 35.45454545454545
+    - Tick: 768
+      Time: 2.727272727272727
+      Index: 6
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 9792
+      Time: 34.77272727272727
       Index: 5
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 9792
+      Time: 34.77272727272727
+      Index: 7
       AltLightTick: 192
       AltLightTime: 0.6818181818181799
       Type: 0
       TimeType: 2
       ShouldLerp: 1
+    - Tick: 9984
+      Time: 35.45454545454545
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10080
+      Time: 35.79545454545454
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10176
+      Time: 36.13636363636363
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10272
+      Time: 36.47727272727273
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10368
+      Time: 36.81818181818181
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10464
+      Time: 37.15909090909091
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10560
+      Time: 37.5
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10656
+      Time: 37.840909090909086
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10752
+      Time: 38.18181818181818
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10848
+      Time: 38.52272727272727
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 10944
+      Time: 38.86363636363636
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11040
+      Time: 39.20454545454545
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11136
+      Time: 39.54545454545454
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11232
+      Time: 39.88636363636363
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11328
+      Time: 40.22727272727273
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11424
+      Time: 40.56818181818181
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11520
+      Time: 40.90909090909091
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11616
+      Time: 41.25
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11712
+      Time: 41.590909090909086
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11808
+      Time: 41.93181818181818
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 11904
+      Time: 42.272727272727266
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12000
+      Time: 42.61363636363636
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12096
+      Time: 42.95454545454545
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12192
+      Time: 43.29545454545454
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12288
+      Time: 43.63636363636363
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12384
+      Time: 43.97727272727273
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12480
+      Time: 44.31818181818181
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12576
+      Time: 44.65909090909091
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12672
+      Time: 45
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12768
+      Time: 45.340909090909086
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12864
+      Time: 45.68181818181818
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 12960
+      Time: 46.022727272727266
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6938502673796805
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13056
+      Time: 46.36363636363636
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.705882352941174
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13152
+      Time: 46.71657754010695
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.7058823529411811
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13248
+      Time: 47.069518716577534
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.7058823529411811
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13344
+      Time: 47.42245989304813
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.705882352941174
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13440
+      Time: 47.775401069518715
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.705882352941174
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13536
+      Time: 48.1283422459893
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.705882352941174
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13632
+      Time: 48.48128342245989
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.705882352941174
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13728
+      Time: 48.834224598930476
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6826115061409155
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13824
+      Time: 49.18716577540106
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.659340659340657
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 13920
+      Time: 49.51683610507139
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.659340659340657
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14016
+      Time: 49.84650643474172
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6593406593406641
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14112
+      Time: 50.17617676441205
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6593406593406641
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14208
+      Time: 50.505847094082384
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.659340659340657
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14304
+      Time: 50.83551742375271
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.659340659340657
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14400
+      Time: 51.16518775342304
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.659340659340657
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14496
+      Time: 51.49485808309337
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6744979158772253
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14592
+      Time: 51.8245284127637
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14688
+      Time: 52.169355998970595
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14784
+      Time: 52.51418358517749
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14880
+      Time: 52.85901117138439
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 14976
+      Time: 53.203838757591285
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15072
+      Time: 53.54866634379818
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15168
+      Time: 53.89349393000508
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15264
+      Time: 54.238321516211975
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6857366771159903
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15360
+      Time: 54.58314910241887
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15456
+      Time: 54.924058193327966
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15552
+      Time: 55.26496728423705
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15648
+      Time: 55.605876375146146
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15744
+      Time: 55.94678546605524
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15840
+      Time: 56.287694556964325
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 15936
+      Time: 56.62860364787342
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181799
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 16032
+      Time: 56.969512738782505
+      Index: 9
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 16032
+      Time: 56.969512738782505
+      Index: 8
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 16128
+      Time: 57.3104218296916
+      Index: 10
+      AltLightTick: 768
+      AltLightTime: 2.7272727272727266
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 16896
+      Time: 60.037694556964325
+      Index: 10
+      AltLightTick: 768
+      AltLightTime: 2.7272727272727266
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 17664
+      Time: 62.76496728423705
+      Index: 10
+      AltLightTick: 768
+      AltLightTime: 2.7586206896551673
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 18432
+      Time: 65.52358797389222
+      Index: 10
+      AltLightTick: 768
+      AltLightTime: 2.7272727272727337
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 19200
+      Time: 68.25086070116495
+      Index: 11
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 19200
+      Time: 68.25086070116495
+      Index: 12
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25344
+      Time: 90.10840972792006
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25440
+      Time: 90.44931881882916
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25536
+      Time: 90.79022790973825
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25632
+      Time: 91.13113700064733
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25728
+      Time: 91.47204609155642
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25824
+      Time: 91.81295518246552
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 25920
+      Time: 92.15386427337461
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26016
+      Time: 92.4947733642837
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26112
+      Time: 92.8356824551928
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26208
+      Time: 93.17659154610187
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26304
+      Time: 93.51750063701097
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26400
+      Time: 93.85840972792006
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26496
+      Time: 94.19931881882916
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26592
+      Time: 94.54022790973825
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26688
+      Time: 94.88113700064733
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26784
+      Time: 95.22204609155642
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 26880
+      Time: 95.56295518246552
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 26976
+      Time: 95.90386427337461
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 27072
+      Time: 96.2447733642837
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 27264
+      Time: 96.92659154610187
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 27360
+      Time: 97.26750063701097
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 27456
+      Time: 97.60840972792006
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 27648
+      Time: 98.29022790973825
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090793
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 27744
+      Time: 98.63113700064733
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 27840
+      Time: 98.97204609155642
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 28032
+      Time: 99.65386427337461
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 28128
+      Time: 99.9947733642837
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 28416
+      Time: 101.01750063701097
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 28512
+      Time: 101.35840972792006
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 28608
+      Time: 101.69931881882916
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 28800
+      Time: 102.38113700064733
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 28896
+      Time: 102.72204609155642
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 28992
+      Time: 103.06295518246552
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 29184
+      Time: 103.7447733642837
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 29280
+      Time: 104.0856824551928
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090793
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 29376
+      Time: 104.42659154610187
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 29568
+      Time: 105.10840972792006
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 29664
+      Time: 105.44931881882916
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090793
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 29760
+      Time: 105.79022790973823
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 29952
+      Time: 106.47204609155642
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3448275862068897
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 30048
+      Time: 106.81687367776331
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3448275862069039
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 30144
+      Time: 107.16170126397022
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 30336
+      Time: 107.85135643638401
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3448275862068897
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 30432
+      Time: 108.1961840225909
+      Index: 10
+      AltLightTick: 96
+      AltLightTime: 0.3448275862069039
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 30528
+      Time: 108.5410116087978
+      Index: 10
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137936
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 30720
+      Time: 109.2306667812116
+      Index: 13
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 30816
+      Time: 109.57157587212069
+      Index: 13
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 30912
+      Time: 109.91248496302978
+      Index: 13
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090793
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 31008
+      Time: 110.25339405393886
+      Index: 13
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 31104
+      Time: 110.59430314484796
+      Index: 13
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 31200
+      Time: 110.93521223575705
+      Index: 13
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 31296
+      Time: 111.27612132666614
+      Index: 13
+      AltLightTick: 48
+      AltLightTime: 0.17045454545454675
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 31344
+      Time: 111.44657587212069
+      Index: 13
+      AltLightTick: 48
+      AltLightTime: 0.17045454545454675
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 31392
+      Time: 111.61703041757524
+      Index: 13
+      AltLightTick: 48
+      AltLightTime: 0.17045454545454675
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 31440
+      Time: 111.78748496302978
+      Index: 13
+      AltLightTick: 48
+      AltLightTime: 0.17045454545454675
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 31488
+      Time: 111.95793950848433
+      Index: 16
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181728
+      Type: 0
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 32064
+      Time: 114.00339405393886
+      Index: 14
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 32064
+      Time: 114.00339405393886
+      Index: 15
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 0
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 32832
+      Time: 116.7306667812116
+      Index: 17
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 0
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 33600
+      Time: 119.45793950848432
+      Index: 18
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 33600
+      Time: 119.45793950848432
+      Index: 19
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 40704
+      Time: 144.7165601981395
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545453254
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 40752
+      Time: 144.88701474359402
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 40848
+      Time: 145.22792383450312
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545456096
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 40896
+      Time: 145.39837837995768
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 40992
+      Time: 145.73928747086677
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545453254
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41040
+      Time: 145.9097420163213
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 41136
+      Time: 146.2506511072304
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545456096
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41184
+      Time: 146.42110565268496
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.34090909090906507
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 41280
+      Time: 146.76201474359402
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545456096
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41328
+      Time: 146.93246928904858
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 41472
+      Time: 147.4438329254122
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545456096
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41520
+      Time: 147.61428747086677
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 41616
+      Time: 147.95519656177586
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545453254
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41664
+      Time: 148.1256511072304
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 41760
+      Time: 148.4665601981395
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545453254
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41808
+      Time: 148.63701474359402
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 41904
+      Time: 148.97792383450312
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545456096
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 41952
+      Time: 149.14837837995768
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 42048
+      Time: 149.48928747086677
+      Index: 21
+      AltLightTick: 48
+      AltLightTime: 0.17045454545453254
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 42096
+      Time: 149.6597420163213
+      Index: 21
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 42240
+      Time: 150.17110565268496
+      Index: 18
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181586
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 42240
+      Time: 150.17110565268496
+      Index: 19
+      AltLightTick: 192
+      AltLightTime: 0.6818181818181586
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 43776
+      Time: 155.6256511072304
+      Index: 20
+      AltLightTick: 384
+      AltLightTime: 1.363636363636374
+      Type: 2
+      TimeType: 1
+      ShouldLerp: 0
+    - Tick: 44496
+      Time: 158.18246928904858
+      Index: 20
+      AltLightTick: 48
+      AltLightTime: 0.17045454545453254
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 44544
+      Time: 158.35292383450312
+      Index: 20
+      AltLightTick: 384
+      AltLightTime: 1.363636363636374
+      Type: 2
+      TimeType: 1
+      ShouldLerp: 0
+    - Tick: 45024
+      Time: 160.05746928904858
+      Index: 20
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 45168
+      Time: 160.5688329254122
+      Index: 20
+      AltLightTick: 48
+      AltLightTime: 0.17045454545456096
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 45216
+      Time: 160.73928747086677
+      Index: 20
+      AltLightTick: 96
+      AltLightTime: 0.3409090909090935
+      Type: 2
+      TimeType: 3
+      ShouldLerp: 0
+    - Tick: 45312
+      Time: 161.08019656177586
+      Index: 20
+      AltLightTick: 384
+      AltLightTime: 1.3793103448275872
+      Type: 2
+      TimeType: 1
+      ShouldLerp: 0
+    - Tick: 45504
+      Time: 161.76985173418964
+      Index: 20
+      AltLightTick: 192
+      AltLightTime: 0.6896551724138078
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 45696
+      Time: 162.45950690660345
+      Index: 20
+      AltLightTick: 192
+      AltLightTime: 0.6896551724137794
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 45888
+      Time: 163.14916207901723
+      Index: 20
+      AltLightTick: 192
+      AltLightTime: 0.6896551724138078
+      Type: 2
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 46032
+      Time: 163.66640345832758
+      Index: 20
+      AltLightTick: 48
+      AltLightTime: 0.17241379310345906
+      Type: 2
+      TimeType: 4
+      ShouldLerp: 0
+    - Tick: 46080
+      Time: 163.83881725143104
+      Index: 20
+      AltLightTick: 384
+      AltLightTime: 1.363636363636374
+      Type: 2
+      TimeType: 1
+      ShouldLerp: 0
+    - Tick: 46848
+      Time: 166.56608997870376
+      Index: 13
+      AltLightTick: 768
+      AltLightTime: 2.727272727272748
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 47616
+      Time: 169.2933627059765
+      Index: 13
+      AltLightTick: 768
+      AltLightTime: 2.7586206896551744
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 48384
+      Time: 172.05198339563168
+      Index: 13
+      AltLightTick: 768
+      AltLightTime: 2.696629213483135
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 49152
+      Time: 174.74861260911482
+      Index: 13
+      AltLightTick: 768
+      AltLightTime: 2.7272727272727195
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
+    - Tick: 49728
+      Time: 176.79406715456935
+      Index: 17
+      AltLightTick: 192
+      AltLightTime: 0.681818181818187
+      Type: 0
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 50496
+      Time: 179.5448508536289
+      Index: 18
+      AltLightTick: 192
+      AltLightTime: 0.6896551724138078
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 50496
+      Time: 179.5448508536289
+      Index: 19
+      AltLightTick: 192
+      AltLightTime: 0.6896551724138078
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 1
+    - Tick: 58752
+      Time: 208.8715741109992
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58776
+      Time: 208.95680138372649
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272725206
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58800
+      Time: 209.04202865645374
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58824
+      Time: 209.12725592918102
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58848
+      Time: 209.2124832019083
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272725206
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58872
+      Time: 209.29771047463555
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58896
+      Time: 209.38293774736283
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58920
+      Time: 209.4681650200901
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58944
+      Time: 209.5533922928174
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272725206
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58968
+      Time: 209.63861956554464
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 58992
+      Time: 209.72384683827192
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 59016
+      Time: 209.8090741109992
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 59040
+      Time: 209.89430138372649
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272725206
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 59064
+      Time: 209.97952865645374
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 59088
+      Time: 210.06475592918102
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272728048
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 59112
+      Time: 210.1499832019083
+      Index: 21
+      AltLightTick: 24
+      AltLightTime: 0.08522727272725206
+      Type: 2
+      TimeType: 5
+      ShouldLerp: 0
+    - Tick: 59136
+      Time: 210.23521047463555
+      Index: 18
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 59136
+      Time: 210.23521047463555
+      Index: 19
+      AltLightTick: 0
+      AltLightTime: 0
+      Type: 1
+      TimeType: 2
+      ShouldLerp: 0
+    - Tick: 65280
+      Time: 232.05339229281736
+      Index: 21
+      AltLightTick: 768
+      AltLightTime: 2.727272727272748
+      Type: 2
+      TimeType: 0
+      ShouldLerp: 0
   Lights:
   - {fileID: 11400000, guid: 024a17b8019ed4c46aacfa39b21968eb, type: 2}
   - {fileID: 11400000, guid: 076457d05b29595499109a8cde643819, type: 2}
@@ -7003,3 +8486,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0891ef4730f50c64f98d71bf754a31bd, type: 2}
   - {fileID: 11400000, guid: bb6b08715da3c744fa6db81f0c3ca2a9, type: 2}
   - {fileID: 11400000, guid: 9f8b8dcfa9d39fb4a8cb3b2d499897b1, type: 2}
+  - {fileID: 11400000, guid: 6fb4b12429eb04347a8c5b92f2a756e6, type: 2}
+  - {fileID: 11400000, guid: 08eb32db1fb2bb94c81b18843de0a8fa, type: 2}
+  - {fileID: 11400000, guid: f8707c16e78178d47ae127afb8d22072, type: 2}
+  - {fileID: 11400000, guid: 597099e595c98824995414bfc8be04f3, type: 2}
+  - {fileID: 11400000, guid: 295c97bcd2843fa4c82c96591d9267fc, type: 2}
+  - {fileID: 11400000, guid: 1a814d313494a90418200fd0396703b3, type: 2}
+  - {fileID: 11400000, guid: 79feb04d23e8f2e4ba73d67c7f1b0835, type: 2}
+  - {fileID: 11400000, guid: c6cfc7476a7805a49a7720f241aea924, type: 2}
+  - {fileID: 11400000, guid: 1d963f6cfb568ec4188fa84e991bcc91, type: 2}
+  - {fileID: 11400000, guid: b9d6e8e17f7762e44a5dafbbce5c5766, type: 2}
+  - {fileID: 11400000, guid: e53b480d31dff2845b80a51f53f6e581, type: 2}
+  - {fileID: 11400000, guid: 684f2aa346cd889458ee541c2dbce10e, type: 2}
+  - {fileID: 11400000, guid: 0a2db59272a8d1b4eb9d97977a0844b2, type: 2}
+  - {fileID: 11400000, guid: 27c8a6205abf26049b71dfc1536dd831, type: 2}
+  - {fileID: 11400000, guid: 8f4a4b6d94b32a14c955fd78b15275df, type: 2}
+  - {fileID: 11400000, guid: 233b32d00a6c59d41bb8f82c27b0aea8, type: 2}

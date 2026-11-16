@@ -88,7 +88,7 @@ namespace RetroRecord.Engine.Lights
 
                     m_count++;
 
-                    if (m_count > 1)
+                    if (m_count > data.Colors.Length - 1)
                         m_count = 0;
                     break;
                 }
@@ -147,6 +147,7 @@ namespace RetroRecord.Engine.Lights
             }
             
             m_renderer.color = endColor;
+            m_isLerping = false;
         }
     }
 }

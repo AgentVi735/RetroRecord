@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7a75a53533b42e9a8e0bf2add49bb52, type: 3}
-  m_Name: Dark Blue-Light Green Sides
+  m_Name: Dark Blue-White Lanes
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Lights.LightColor
   <Colors>k__BackingField:
-  - {r: 0.06132078, g: 0.22064991, b: 1, a: 0.69803923}
-  - {r: 0.26721528, g: 0.9339623, b: 0.20705767, a: 0.69803923}
-  <Type>k__BackingField: 0
-  <Side>k__BackingField: 1
+  - {r: 0.06132078, g: 0.22064991, b: 1, a: 0.2}
+  - {r: 0.06132078, g: 0.22064991, b: 1, a: 0.2}
+  - {r: 1, g: 1, b: 1, a: 0.101960786}
+  - {r: 0.06132078, g: 0.22064991, b: 1, a: 0.2}
+  <Type>k__BackingField: 1
+  <Side>k__BackingField: 2
   <Time>k__BackingField: 2

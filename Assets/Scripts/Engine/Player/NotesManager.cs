@@ -135,7 +135,8 @@ namespace RetroRecord.Engine.Player
             m_globalEvents.SetItems();
             m_currentGlobalEventIndex = m_globalEvents.GetCurrentTimeIndex(spawnTime);
 
-            LightsEvent currentLightEvent = null;
+            LightsEvent currentSidesLights = null;
+            LightsEvent currentLanesLights = null;
             foreach (LightsEvent item in m_globalEvents.Lights)
             {
                 foreach (NoteGroup noteGroup in m_noteGroups)
@@ -145,11 +146,26 @@ namespace RetroRecord.Engine.Player
                 }
                 
                 if (item.Time > spawnTime) continue;
-                currentLightEvent = item;
+                switch (m_lightManager.GetLightSide(item))
+                {
+                    default:
+                    case LightSide.All:
+                        currentSidesLights = item;
+                        currentLanesLights = item;
+                        break;
+                    case LightSide.Side:
+                        currentSidesLights = item;
+                        break;
+                    case LightSide.Lanes:
+                        currentLanesLights = item;
+                        break;
+                }
             }
-            
-            if (currentLightEvent != null)
-                m_lightManager.OnLightEvent(currentLightEvent);
+
+            if (currentSidesLights != null)
+                m_lightManager.OnLightEvent(currentSidesLights);
+            if (currentLanesLights != null)
+                m_lightManager.OnLightEvent(currentLanesLights);
 
             GenerateBeatlines(noteChart.LastTick);
             RefreshStrongBeats();

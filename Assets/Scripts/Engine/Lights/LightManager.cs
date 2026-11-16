@@ -198,5 +198,7 @@ namespace RetroRecord.Engine.Lights
                 light.EnableLerp(lightsEvent.AltLightTime, color, true);
             }
         }
+
+        public LightSide GetLightSide(LightsEvent lightsEvent) => m_lightData[lightsEvent.Index].Side;
     }
 }
