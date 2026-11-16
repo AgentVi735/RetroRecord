@@ -89,8 +89,8 @@ MonoBehaviour:
       - Tick: 3840
         Time: 10.680767210882887
         Lane: 2
-        TickSustainLength: 80
-        TimeSustainLength: 0.21739130434782616
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 3936
       Time: 10.941636776100278
       Notes:
@@ -107,22 +107,14 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-    - Tick: 4096
-      Time: 11.37641938479593
+    - Tick: 4128
+      Time: 11.463375906535061
       Notes:
-      - Tick: 4096
-        Time: 11.37641938479593
+      - Tick: 4128
+        Time: 11.463375906535061
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-    - Tick: 4160
-      Time: 11.550332428274192
-      Notes:
-      - Tick: 4160
-        Time: 11.550332428274192
-        Lane: 2
-        TickSustainLength: 64
-        TimeSustainLength: 0.17391304347825987
     - Tick: 4224
       Time: 11.724245471752452
       Notes:
@@ -131,19 +123,11 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-    - Tick: 4384
-      Time: 12.159028080448104
+    - Tick: 4416
+      Time: 12.245984602187235
       Notes:
-      - Tick: 4384
-        Time: 12.159028080448104
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 4448
-      Time: 12.332941123926366
-      Notes:
-      - Tick: 4448
-        Time: 12.332941123926366
+      - Tick: 4416
+        Time: 12.245984602187235
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -153,13 +137,21 @@ MonoBehaviour:
       - Tick: 4512
         Time: 12.506854167404626
         Lane: 2
-        TickSustainLength: 96
-        TimeSustainLength: 0.26086956521739246
-    - Tick: 4672
-      Time: 12.941636776100278
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4608
+      Time: 12.767723732622018
       Notes:
-      - Tick: 4672
-        Time: 12.941636776100278
+      - Tick: 4608
+        Time: 12.767723732622018
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.2608695652173907
+    - Tick: 4704
+      Time: 13.028593297839409
+      Notes:
+      - Tick: 4704
+        Time: 13.028593297839409
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -169,21 +161,29 @@ MonoBehaviour:
       - Tick: 4800
         Time: 13.289462863056801
         Lane: 2
-        TickSustainLength: 64
-        TimeSustainLength: 0.17391304347825987
-    - Tick: 4864
-      Time: 13.463375906535061
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4848
+      Time: 13.419897645665497
       Notes:
-      - Tick: 4864
-        Time: 13.463375906535061
+      - Tick: 4848
+        Time: 13.419897645665497
         Lane: 2
-        TickSustainLength: 64
-        TimeSustainLength: 0.17391304347826164
-    - Tick: 4928
-      Time: 13.637288950013323
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4944
+      Time: 13.680767210882887
       Notes:
-      - Tick: 4928
-        Time: 13.637288950013323
+      - Tick: 4944
+        Time: 13.680767210882887
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5040
+      Time: 13.941636776100278
+      Notes:
+      - Tick: 5040
+        Time: 13.941636776100278
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -193,32 +193,16 @@ MonoBehaviour:
       - Tick: 5184
         Time: 14.332941123926366
         Lane: 2
-        TickSustainLength: 32
-        TimeSustainLength: 0.08695652173913082
-    - Tick: 5216
-      Time: 14.419897645665497
+        TickSustainLength: 48
+        TimeSustainLength: 0.13043478260869534
+    - Tick: 5280
+      Time: 14.593810689143757
       Notes:
-      - Tick: 5216
-        Time: 14.419897645665497
+      - Tick: 5280
+        Time: 14.593810689143757
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-    - Tick: 5264
-      Time: 14.550332428274192
-      Notes:
-      - Tick: 5264
-        Time: 14.550332428274192
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 5312
-      Time: 14.680767210882887
-      Notes:
-      - Tick: 5312
-        Time: 14.680767210882887
-        Lane: 2
-        TickSustainLength: 64
-        TimeSustainLength: 0.17391304347826164
     - Tick: 5376
       Time: 14.85468025436115
       Notes:
@@ -233,16 +217,8 @@ MonoBehaviour:
       - Tick: 5536
         Time: 15.289462863056801
         Lane: 2
-        TickSustainLength: 48
-        TimeSustainLength: 0.13043478260869534
-    - Tick: 5584
-      Time: 15.419897645665497
-      Notes:
-      - Tick: 5584
-        Time: 15.419897645665497
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        TickSustainLength: 56
+        TimeSustainLength: 0.15217391304347672
     - Tick: 5648
       Time: 15.593810689143757
       Notes:
@@ -281,16 +257,8 @@ MonoBehaviour:
       - Tick: 6528
         Time: 17.97611953472097
         Lane: 2
-        TickSustainLength: 48
-        TimeSustainLength: 0.1293103448275872
-    - Tick: 6576
-      Time: 18.105429879548556
-      Notes:
-      - Tick: 6576
-        Time: 18.105429879548556
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        TickSustainLength: 72
+        TimeSustainLength: 0.19396551724137723
     - Tick: 6624
       Time: 18.23474022437614
       Notes:
@@ -305,8 +273,8 @@ MonoBehaviour:
       - Tick: 6720
         Time: 18.493360914031314
         Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        TickSustainLength: 48
+        TimeSustainLength: 0.12931034482758363
     - Tick: 6816
       Time: 18.751981603686485
       Notes:
@@ -321,8 +289,8 @@ MonoBehaviour:
       - Tick: 6864
         Time: 18.881291948514072
         Lane: 2
-        TickSustainLength: 48
-        TimeSustainLength: 0.1293103448275872
+        TickSustainLength: 96
+        TimeSustainLength: 0.2586206896551708
     - Tick: 7128
       Time: 19.592498845065794
       Notes:
@@ -355,11 +323,11 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-    - Tick: 7416
-      Time: 20.368360914031314
+    - Tick: 7440
+      Time: 20.433016086445107
       Notes:
-      - Tick: 7416
-        Time: 20.368360914031314
+      - Tick: 7440
+        Time: 20.433016086445107
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -411,27 +379,19 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 96
         TimeSustainLength: 0.2586206896551744
-    - Tick: 8160
-      Time: 22.3726712588589
+    - Tick: 8184
+      Time: 22.437326431272695
       Notes:
-      - Tick: 8160
-        Time: 22.3726712588589
+      - Tick: 8184
+        Time: 22.437326431272695
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
-    - Tick: 8208
-      Time: 22.501981603686485
+    - Tick: 8232
+      Time: 22.566636776100278
       Notes:
-      - Tick: 8208
-        Time: 22.501981603686485
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
-    - Tick: 8256
-      Time: 22.631291948514072
-      Notes:
-      - Tick: 8256
-        Time: 22.631291948514072
+      - Tick: 8232
+        Time: 22.566636776100278
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -1155,14 +1115,6 @@ MonoBehaviour:
         Lane: 2
         TickSustainLength: 96
         TimeSustainLength: 0.2608695652173907
-    - Tick: 21792
-      Time: 59.27260311648324
-      Notes:
-      - Tick: 21792
-        Time: 59.27260311648324
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
     - Tick: 21864
       Time: 59.468255290396286
       Notes:
@@ -1193,21 +1145,21 @@ MonoBehaviour:
       - Tick: 22080
         Time: 60.05521181213541
         Lane: 2
-        TickSustainLength: 72
-        TimeSustainLength: 0.19565217391304657
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 22152
       Time: 60.25086398604846
       Notes:
       - Tick: 22152
         Time: 60.25086398604846
         Lane: 2
-        TickSustainLength: 192
-        TimeSustainLength: 0.5217391304347814
-    - Tick: 22344
-      Time: 60.77260311648324
+        TickSustainLength: 216
+        TimeSustainLength: 0.5869565217391255
+    - Tick: 22368
+      Time: 60.83782050778758
       Notes:
-      - Tick: 22344
-        Time: 60.77260311648324
+      - Tick: 22368
+        Time: 60.83782050778758
         Lane: 2
         TickSustainLength: 0
         TimeSustainLength: 0
@@ -1313,8 +1265,8 @@ MonoBehaviour:
       - Tick: 23568
         Time: 64.09869007300497
         Lane: 2
-        TickSustainLength: 120
-        TimeSustainLength: 0.326086956521749
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 23688
       Time: 64.42477702952672
       Notes:
@@ -1385,16 +1337,8 @@ MonoBehaviour:
       - Tick: 24960
         Time: 67.88129876865715
         Lane: 2
-        TickSustainLength: 72
-        TimeSustainLength: 0.19565217391304657
-    - Tick: 25056
-      Time: 68.14216833387454
-      Notes:
-      - Tick: 25056
-        Time: 68.14216833387454
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        TickSustainLength: 96
+        TimeSustainLength: 0.2608695652173907
     - Tick: 25128
       Time: 68.33782050778758
       Notes:
@@ -1409,8 +1353,8 @@ MonoBehaviour:
       - Tick: 25176
         Time: 68.46825529039629
         Lane: 2
-        TickSustainLength: 72
-        TimeSustainLength: 0.19565217391303236
+        TickSustainLength: 0
+        TimeSustainLength: 0
     - Tick: 25248
       Time: 68.66390746430932
       Notes:
@@ -1433,16 +1377,8 @@ MonoBehaviour:
       - Tick: 26904
         Time: 73.16390746430932
         Lane: 2
-        TickSustainLength: 80
-        TimeSustainLength: 0.21739130434782794
-    - Tick: 27000
-      Time: 73.42477702952672
-      Notes:
-      - Tick: 27000
-        Time: 73.42477702952672
-        Lane: 2
-        TickSustainLength: 0
-        TimeSustainLength: 0
+        TickSustainLength: 96
+        TimeSustainLength: 0.2608695652174049
     - Tick: 27072
       Time: 73.62042920343976
       Notes:

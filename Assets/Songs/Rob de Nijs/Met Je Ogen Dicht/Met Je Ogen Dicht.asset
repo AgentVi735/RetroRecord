@@ -17,4 +17,5 @@ MonoBehaviour:
   Year: 1980
   Genre: Nederpop
   Cover: {fileID: 21300000, guid: 49608e48eb90c1d43bfe43a050dfda6a, type: 3}
-  Songs: []
+  Songs:
+  - {fileID: 11400000, guid: 83b420a115a97cc458ba3a0b17c5555a, type: 2}
