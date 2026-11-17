@@ -81,3 +81,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b66bc201b4280a9eea16b1dd83ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Library.Crates.Divider
+  m_character: 0
