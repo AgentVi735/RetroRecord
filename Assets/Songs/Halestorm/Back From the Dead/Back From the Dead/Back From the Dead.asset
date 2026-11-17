@@ -15482,6 +15482,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 768
       Time: 2.857142857142857
       Index: 1
@@ -15489,6 +15490,7 @@ MonoBehaviour:
       AltLightTime: 2.857142857142857
       Type: 2
       TimeType: 0
+      ShouldLerp: 0
     - Tick: 1536
       Time: 5.714285714285714
       Index: 1
@@ -15496,6 +15498,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857144
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 1728
       Time: 6.428571428571429
       Index: 1
@@ -15503,6 +15506,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857144
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 1920
       Time: 7.142857142857143
       Index: 1
@@ -15510,6 +15514,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857144
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 2112
       Time: 7.857142857142858
       Index: 1
@@ -15517,6 +15522,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857135
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 2304
       Time: 8.571428571428571
       Index: 3
@@ -15524,6 +15530,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 2304
       Time: 8.571428571428571
       Index: 4
@@ -15531,6 +15538,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 3456
       Time: 12.857142857142858
       Index: 5
@@ -15538,6 +15546,7 @@ MonoBehaviour:
       AltLightTime: 1.4285714285714288
       Type: 2
       TimeType: 1
+      ShouldLerp: 0
     - Tick: 3840
       Time: 14.285714285714286
       Index: 3
@@ -15545,6 +15554,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 4992
       Time: 18.571428571428573
       Index: 5
@@ -15552,6 +15562,7 @@ MonoBehaviour:
       AltLightTime: 1.428571428571427
       Type: 2
       TimeType: 1
+      ShouldLerp: 0
     - Tick: 5376
       Time: 20
       Index: 6
@@ -15559,6 +15570,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 6144
       Time: 22.857142857142858
       Index: 7
@@ -15566,6 +15578,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857153
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 6336
       Time: 23.571428571428573
       Index: 8
@@ -15573,6 +15586,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 6432
       Time: 23.92857142857143
       Index: 8
@@ -15580,6 +15594,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857117
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 6624
       Time: 24.642857142857142
       Index: 7
@@ -15587,6 +15602,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 6720
       Time: 25
       Index: 7
@@ -15594,6 +15610,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 6816
       Time: 25.357142857142858
       Index: 10
@@ -15601,6 +15618,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 6912
       Time: 25.714285714285715
       Index: 4
@@ -15608,6 +15626,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 6912
       Time: 25.714285714285715
       Index: 6
@@ -15615,6 +15634,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 7680
       Time: 28.571428571428573
       Index: 7
@@ -15622,6 +15642,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857117
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 7872
       Time: 29.285714285714285
       Index: 8
@@ -15629,6 +15650,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 7968
       Time: 29.642857142857142
       Index: 8
@@ -15636,6 +15658,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857153
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 8160
       Time: 30.357142857142858
       Index: 7
@@ -15643,6 +15666,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 8256
       Time: 30.714285714285715
       Index: 7
@@ -15650,6 +15674,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 8352
       Time: 31.071428571428573
       Index: 10
@@ -15657,6 +15682,7 @@ MonoBehaviour:
       AltLightTime: 0.35714285714285765
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 8448
       Time: 31.42857142857143
       Index: 4
@@ -15664,6 +15690,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 8448
       Time: 31.42857142857143
       Index: 6
@@ -15671,6 +15698,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 9216
       Time: 34.285714285714285
       Index: 7
@@ -15678,6 +15706,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857153
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 9408
       Time: 35
       Index: 8
@@ -15685,6 +15714,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 9504
       Time: 35.35714285714286
       Index: 8
@@ -15692,6 +15722,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857082
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 9696
       Time: 36.07142857142857
       Index: 7
@@ -15699,6 +15730,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 9792
       Time: 36.42857142857143
       Index: 7
@@ -15706,6 +15738,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428541
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 9888
       Time: 36.785714285714285
       Index: 10
@@ -15713,6 +15746,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 9984
       Time: 37.142857142857146
       Index: 4
@@ -15720,6 +15754,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 9984
       Time: 37.142857142857146
       Index: 6
@@ -15727,6 +15762,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 10752
       Time: 40
       Index: 9
@@ -15734,6 +15770,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 12288
       Time: 45.714285714285715
       Index: 11
@@ -15741,6 +15778,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 12288
       Time: 45.714285714285715
       Index: 16
@@ -15748,6 +15786,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428541
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 18048
       Time: 67.14285714285714
       Index: 8
@@ -15755,6 +15794,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18072
       Time: 67.23214285714286
       Index: 8
@@ -15762,6 +15802,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18096
       Time: 67.32142857142857
       Index: 8
@@ -15769,6 +15810,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18120
       Time: 67.41071428571429
       Index: 8
@@ -15776,6 +15818,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18144
       Time: 67.5
       Index: 8
@@ -15783,6 +15826,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18168
       Time: 67.58928571428572
       Index: 8
@@ -15790,6 +15834,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18192
       Time: 67.67857142857143
       Index: 8
@@ -15797,6 +15842,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18216
       Time: 67.76785714285714
       Index: 8
@@ -15804,6 +15850,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18240
       Time: 67.85714285714286
       Index: 8
@@ -15811,6 +15858,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 18432
       Time: 68.57142857142857
       Index: 12
@@ -15818,6 +15866,7 @@ MonoBehaviour:
       AltLightTime: 1.4285714285714306
       Type: 2
       TimeType: 1
+      ShouldLerp: 0
     - Tick: 18432
       Time: 68.57142857142857
       Index: 13
@@ -15825,6 +15874,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 18528
       Time: 68.92857142857143
       Index: 13
@@ -15832,6 +15882,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18576
       Time: 69.10714285714286
       Index: 13
@@ -15839,6 +15890,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18624
       Time: 69.28571428571429
       Index: 13
@@ -15846,6 +15898,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18672
       Time: 69.46428571428572
       Index: 13
@@ -15853,6 +15906,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18720
       Time: 69.64285714285714
       Index: 13
@@ -15860,6 +15914,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18768
       Time: 69.82142857142857
       Index: 13
@@ -15867,6 +15922,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18816
       Time: 70
       Index: 8
@@ -15874,6 +15930,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18864
       Time: 70.17857142857143
       Index: 8
@@ -15881,6 +15938,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18912
       Time: 70.35714285714286
       Index: 8
@@ -15888,6 +15946,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 18960
       Time: 70.53571428571429
       Index: 8
@@ -15895,6 +15954,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19008
       Time: 70.71428571428572
       Index: 8
@@ -15902,6 +15962,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19056
       Time: 70.89285714285714
       Index: 8
@@ -15909,6 +15970,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19104
       Time: 71.07142857142857
       Index: 8
@@ -15916,6 +15978,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19152
       Time: 71.25
       Index: 8
@@ -15923,6 +15986,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19200
       Time: 71.42857142857143
       Index: 8
@@ -15930,6 +15994,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19248
       Time: 71.60714285714286
       Index: 8
@@ -15937,6 +16002,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19296
       Time: 71.78571428571429
       Index: 8
@@ -15944,6 +16010,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19344
       Time: 71.96428571428572
       Index: 8
@@ -15951,6 +16018,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19392
       Time: 72.14285714285714
       Index: 8
@@ -15958,6 +16026,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19440
       Time: 72.32142857142857
       Index: 8
@@ -15965,6 +16034,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19488
       Time: 72.5
       Index: 8
@@ -15972,6 +16042,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19536
       Time: 72.67857142857143
       Index: 8
@@ -15979,6 +16050,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 19872
       Time: 73.92857142857143
       Index: 4
@@ -15986,6 +16058,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 19872
       Time: 73.92857142857143
       Index: 6
@@ -15993,6 +16066,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 20736
       Time: 77.14285714285714
       Index: 7
@@ -16000,6 +16074,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857224
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 20928
       Time: 77.85714285714286
       Index: 8
@@ -16007,6 +16082,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 21024
       Time: 78.21428571428572
       Index: 8
@@ -16014,6 +16090,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857082
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 21216
       Time: 78.92857142857143
       Index: 7
@@ -16021,6 +16098,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 21312
       Time: 79.28571428571429
       Index: 7
@@ -16028,6 +16106,7 @@ MonoBehaviour:
       AltLightTime: 0.357142857142847
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 21408
       Time: 79.64285714285714
       Index: 10
@@ -16035,6 +16114,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 21504
       Time: 80
       Index: 4
@@ -16042,6 +16122,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 21504
       Time: 80
       Index: 6
@@ -16049,6 +16130,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 22272
       Time: 82.85714285714286
       Index: 7
@@ -16056,6 +16138,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857082
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 22464
       Time: 83.57142857142857
       Index: 8
@@ -16063,6 +16146,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 22560
       Time: 83.92857142857143
       Index: 8
@@ -16070,6 +16154,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857082
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 22752
       Time: 84.64285714285714
       Index: 7
@@ -16077,6 +16162,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 22848
       Time: 85
       Index: 7
@@ -16084,6 +16170,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 22944
       Time: 85.35714285714286
       Index: 10
@@ -16091,6 +16178,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 23040
       Time: 85.71428571428572
       Index: 4
@@ -16098,6 +16186,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 23040
       Time: 85.71428571428572
       Index: 6
@@ -16105,6 +16194,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 23808
       Time: 88.57142857142857
       Index: 7
@@ -16112,6 +16202,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857224
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 24000
       Time: 89.28571428571429
       Index: 8
@@ -16119,6 +16210,7 @@ MonoBehaviour:
       AltLightTime: 0.357142857142847
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 24096
       Time: 89.64285714285714
       Index: 8
@@ -16126,6 +16218,7 @@ MonoBehaviour:
       AltLightTime: 0.7142857142857224
       Type: 2
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 24288
       Time: 90.35714285714286
       Index: 7
@@ -16133,6 +16226,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 24384
       Time: 90.71428571428572
       Index: 7
@@ -16140,6 +16234,7 @@ MonoBehaviour:
       AltLightTime: 0.357142857142847
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 24480
       Time: 91.07142857142857
       Index: 10
@@ -16147,6 +16242,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 24576
       Time: 91.42857142857143
       Index: 4
@@ -16154,6 +16250,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 24576
       Time: 91.42857142857143
       Index: 6
@@ -16161,6 +16258,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 25344
       Time: 94.28571428571429
       Index: 9
@@ -16168,6 +16266,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 26112
       Time: 97.14285714285714
       Index: 8
@@ -16175,6 +16274,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 26136
       Time: 97.23214285714286
       Index: 8
@@ -16182,6 +16282,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 26160
       Time: 97.32142857142857
       Index: 8
@@ -16189,6 +16290,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 26184
       Time: 97.41071428571429
       Index: 8
@@ -16196,6 +16298,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 26208
       Time: 97.5
       Index: 8
@@ -16203,6 +16306,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26256
       Time: 97.67857142857143
       Index: 8
@@ -16210,6 +16314,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26304
       Time: 97.85714285714286
       Index: 8
@@ -16217,6 +16322,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26352
       Time: 98.03571428571429
       Index: 8
@@ -16224,6 +16330,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26400
       Time: 98.21428571428572
       Index: 8
@@ -16231,6 +16338,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26448
       Time: 98.39285714285714
       Index: 8
@@ -16238,6 +16346,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26496
       Time: 98.57142857142857
       Index: 8
@@ -16245,6 +16354,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26544
       Time: 98.75
       Index: 8
@@ -16252,6 +16362,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26592
       Time: 98.92857142857143
       Index: 8
@@ -16259,6 +16370,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714306
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 26880
       Time: 100
       Index: 11
@@ -16266,6 +16378,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 26880
       Time: 100
       Index: 16
@@ -16273,6 +16386,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 32448
       Time: 120.71428571428572
       Index: 8
@@ -16280,6 +16394,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32472
       Time: 120.80357142857143
       Index: 8
@@ -16287,6 +16402,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32496
       Time: 120.89285714285714
       Index: 8
@@ -16294,6 +16410,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32520
       Time: 120.98214285714286
       Index: 8
@@ -16301,6 +16418,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32544
       Time: 121.07142857142857
       Index: 8
@@ -16308,6 +16426,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32568
       Time: 121.16071428571429
       Index: 8
@@ -16315,6 +16434,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32592
       Time: 121.25
       Index: 8
@@ -16322,6 +16442,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32616
       Time: 121.33928571428572
       Index: 8
@@ -16329,6 +16450,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32640
       Time: 121.42857142857143
       Index: 8
@@ -16336,6 +16458,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32664
       Time: 121.51785714285714
       Index: 8
@@ -16343,6 +16466,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32688
       Time: 121.60714285714286
       Index: 8
@@ -16350,6 +16474,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32712
       Time: 121.69642857142857
       Index: 8
@@ -16357,6 +16482,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32736
       Time: 121.78571428571429
       Index: 8
@@ -16364,6 +16490,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32760
       Time: 121.875
       Index: 8
@@ -16371,6 +16498,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32784
       Time: 121.96428571428572
       Index: 8
@@ -16378,6 +16506,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32808
       Time: 122.05357142857143
       Index: 8
@@ -16385,6 +16514,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857082
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 32832
       Time: 122.14285714285714
       Index: 8
@@ -16392,6 +16522,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 33024
       Time: 122.85714285714286
       Index: 7
@@ -16399,6 +16530,7 @@ MonoBehaviour:
       AltLightTime: 2.857142857142861
       Type: 2
       TimeType: 0
+      ShouldLerp: 0
     - Tick: 33792
       Time: 125.71428571428572
       Index: 7
@@ -16406,6 +16538,7 @@ MonoBehaviour:
       AltLightTime: 0.357142857142847
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 33984
       Time: 126.42857142857143
       Index: 7
@@ -16413,6 +16546,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 34176
       Time: 127.14285714285714
       Index: 7
@@ -16420,6 +16554,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 34368
       Time: 127.85714285714286
       Index: 7
@@ -16427,6 +16562,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 34560
       Time: 128.57142857142858
       Index: 8
@@ -16434,6 +16570,7 @@ MonoBehaviour:
       AltLightTime: 2.857142857142861
       Type: 2
       TimeType: 0
+      ShouldLerp: 0
     - Tick: 35328
       Time: 131.42857142857144
       Index: 8
@@ -16441,6 +16578,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428328
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 35520
       Time: 132.14285714285714
       Index: 8
@@ -16448,6 +16586,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 35712
       Time: 132.85714285714286
       Index: 8
@@ -16455,6 +16594,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 35808
       Time: 133.21428571428572
       Index: 8
@@ -16462,6 +16602,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 35856
       Time: 133.39285714285714
       Index: 8
@@ -16469,6 +16610,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714448
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 35904
       Time: 133.57142857142858
       Index: 8
@@ -16476,6 +16618,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 35952
       Time: 133.75
       Index: 8
@@ -16483,6 +16626,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714448
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 36000
       Time: 133.92857142857144
       Index: 8
@@ -16490,6 +16634,7 @@ MonoBehaviour:
       AltLightTime: 0.1785714285714164
       Type: 2
       TimeType: 4
+      ShouldLerp: 0
     - Tick: 36096
       Time: 134.28571428571428
       Index: 3
@@ -16497,6 +16642,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 40704
       Time: 151.42857142857144
       Index: 14
@@ -16504,6 +16650,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 43776
       Time: 162.85714285714286
       Index: 3
@@ -16511,6 +16658,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 46848
       Time: 174.28571428571428
       Index: 11
@@ -16518,6 +16666,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 46848
       Time: 174.28571428571428
       Index: 16
@@ -16525,6 +16674,7 @@ MonoBehaviour:
       AltLightTime: 0.3571428571428612
       Type: 2
       TimeType: 3
+      ShouldLerp: 0
     - Tick: 52416
       Time: 195
       Index: 8
@@ -16532,6 +16682,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52440
       Time: 195.08928571428572
       Index: 8
@@ -16539,6 +16690,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52464
       Time: 195.17857142857144
       Index: 8
@@ -16546,6 +16698,7 @@ MonoBehaviour:
       AltLightTime: 0.08928571428569398
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52488
       Time: 195.26785714285714
       Index: 8
@@ -16553,6 +16706,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52512
       Time: 195.35714285714286
       Index: 8
@@ -16560,6 +16714,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52536
       Time: 195.44642857142858
       Index: 8
@@ -16567,6 +16722,7 @@ MonoBehaviour:
       AltLightTime: 0.08928571428569398
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52560
       Time: 195.53571428571428
       Index: 8
@@ -16574,6 +16730,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52584
       Time: 195.625
       Index: 8
@@ -16581,6 +16738,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52608
       Time: 195.71428571428572
       Index: 8
@@ -16588,6 +16746,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52632
       Time: 195.80357142857144
       Index: 8
@@ -16595,6 +16754,7 @@ MonoBehaviour:
       AltLightTime: 0.08928571428569398
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52656
       Time: 195.89285714285714
       Index: 8
@@ -16602,6 +16762,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52680
       Time: 195.98214285714286
       Index: 8
@@ -16609,6 +16770,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52704
       Time: 196.07142857142858
       Index: 8
@@ -16616,6 +16778,7 @@ MonoBehaviour:
       AltLightTime: 0.08928571428569398
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52728
       Time: 196.16071428571428
       Index: 8
@@ -16623,6 +16786,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52752
       Time: 196.25
       Index: 8
@@ -16630,6 +16794,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52776
       Time: 196.33928571428572
       Index: 8
@@ -16637,6 +16802,7 @@ MonoBehaviour:
       AltLightTime: 0.0892857142857224
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52800
       Time: 196.42857142857144
       Index: 8
@@ -16644,6 +16810,7 @@ MonoBehaviour:
       AltLightTime: 0.08928571428569398
       Type: 2
       TimeType: 5
+      ShouldLerp: 0
     - Tick: 52992
       Time: 197.14285714285714
       Index: 3
@@ -16651,6 +16818,7 @@ MonoBehaviour:
       AltLightTime: 0
       Type: 1
       TimeType: 2
+      ShouldLerp: 0
     - Tick: 56064
       Time: 208.57142857142858
       Index: 15
@@ -16658,6 +16826,7 @@ MonoBehaviour:
       AltLightTime: 1.4285714285714164
       Type: 2
       TimeType: 1
+      ShouldLerp: 0
   Lights:
   - {fileID: 11400000, guid: 024a17b8019ed4c46aacfa39b21968eb, type: 2}
   - {fileID: 11400000, guid: 74a704d8c42fbdf45a3f0b98b03321df, type: 2}

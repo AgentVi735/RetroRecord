@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EngineSettingsObj
   CoverFileName: Cover.png
   OverrideSettings: 1
-  Song: {fileID: 11400000, guid: ec9a4f432d8638443942af79e30e9d4b, type: 2}
+  Song: {fileID: 11400000, guid: 26c42230deef54140a31b97601238c21, type: 2}
   difficulty: 2
   Volume: 0.254
   StartTime: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   NoteSpawnDistance: 2
   MinSecShowStopSustain: 0.16
   TimeAfterSong: 1
-  AudioOffset: 0.2
+  AudioOffset: 0
   LaneColourUpdateTimeCount: 1
   ShowSongNameTimeCount: 1
   ShowSongNameStayBeatCount: 6

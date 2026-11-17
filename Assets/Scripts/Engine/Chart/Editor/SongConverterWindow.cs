@@ -1,4 +1,5 @@
 ﻿using System;
+using RetroRecord.Library;
 using UnityEditor;
 using UnityEngine;
 
@@ -96,6 +97,15 @@ namespace RetroRecord.Engine.Chart.Editor
 
             m_serializedObject.ApplyModifiedProperties();
 
+            GUILayout.Space(10);
+
+            if (GUILayout.Button("Update library albums"))
+            {
+                AssetDatabase.Refresh();
+                SongConverter.UpdateLibrary(AlbumLibrary);
+                AssetDatabase.Refresh();
+            }
+            
             GUILayout.Space(10);
 
             if (GUILayout.Button("Convert all songs from library"))

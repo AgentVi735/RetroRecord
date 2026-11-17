@@ -2366,55 +2366,7 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 64416
   GlobalEvents:
-    <Items>k__BackingField:
-    - Tick: 768
-      Time: 2.962962962962963
-      ItemType: 9
-      Index: 0
-    - Tick: 3840
-      Time: 15.076887013595874
-      ItemType: 9
-      Index: 1
-    - Tick: 9984
-      Time: 39.115799343647446
-      ItemType: 9
-      Index: 2
-    - Tick: 15840
-      Time: 61.686711719437874
-      ItemType: 9
-      Index: 3
-    - Tick: 21984
-      Time: 85.23410454276369
-      ItemType: 9
-      Index: 4
-    - Tick: 28416
-      Time: 109.907999601576
-      ItemType: 9
-      Index: 5
-    - Tick: 34560
-      Time: 133.50507625507345
-      ItemType: 9
-      Index: 6
-    - Tick: 40416
-      Time: 155.82302011724303
-      ItemType: 9
-      Index: 7
-    - Tick: 46752
-      Time: 180.0777626646685
-      ItemType: 9
-      Index: 8
-    - Tick: 52224
-      Time: 201.07685932230174
-      ItemType: 9
-      Index: 9
-    - Tick: 58080
-      Time: 223.50233357704428
-      ItemType: 9
-      Index: 10
-    - Tick: 64512
-      Time: 248.1799098399864
-      ItemType: 9
-      Index: 11
+    <Items>k__BackingField: []
     Sections:
     - Tick: 768
       Time: 2.962962962962963

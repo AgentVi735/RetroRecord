@@ -1,7 +1,8 @@
 ﻿using System.Linq;
+using RetroRecord.Engine.Chart;
 using UnityEngine;
 
-namespace RetroRecord.Engine.Chart
+namespace RetroRecord.Library
 {
     [CreateAssetMenu(menuName = "Data/Album Library", fileName = "Album Library")]
     public class AlbumLibrary : ScriptableObject

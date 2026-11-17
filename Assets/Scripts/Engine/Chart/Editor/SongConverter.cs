@@ -6,6 +6,7 @@ using System.Linq;
 using RetroRecord.Engine.Chart.Events;
 using RetroRecord.Engine.Lights;
 using RetroRecord.Engine.Settings;
+using RetroRecord.Library;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -71,7 +72,52 @@ namespace RetroRecord.Engine.Chart.Editor
         private const string k_lightSixtyFourthEventKey = "_F";
         private const string k_lightLerpToEventKey = "_LP";
 
+        public static void UpdateLibrary(AlbumLibrary albumLibrary)
+        {
+            s_albumLibrary = albumLibrary;
 
+            string[] guidsFound = AssetDatabase.FindAssets("t:Album", new[] { Path.Combine("Assets", "Songs") });
+
+            List<string> paths = new();
+
+            foreach (string guid in guidsFound)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                if (!path.EndsWith(".asset"))
+                    continue;
+
+                if (path.Contains("Editor"))
+                    continue;
+
+                paths.Add(path);
+            }
+
+            List<Album> tempAlbums = new();
+            foreach (string path in paths)
+            {
+                Album album = AssetDatabase.LoadAssetAtPath<Album>(path);
+                
+                if (album == null || albumLibrary.Albums.Contains(album))
+                    continue;
+                
+                tempAlbums = albumLibrary.Albums.ToList();
+                tempAlbums.Add(album);
+                
+                albumLibrary.Albums = tempAlbums.OrderBy(a => a.ArtistName)
+                    .ThenBy(a => a.AlbumName)
+                    .ToArray();
+            }
+
+            tempAlbums.Clear();
+            tempAlbums.AddRange(albumLibrary.Albums.Where(album => album != null));
+
+            albumLibrary.Albums = tempAlbums.OrderBy(album => album.ArtistName)
+                .ThenBy(album => album.AlbumName)
+                .ToArray();
+
+            AssetDatabase.Refresh();
+        }
+        
         public static void ConvertAllSongs(AlbumLibrary albumLibrary)
         {
             s_albumLibrary = albumLibrary;
@@ -124,7 +170,7 @@ namespace RetroRecord.Engine.Chart.Editor
 
             AssetDatabase.Refresh();
         }
-
+        
         public static void ConvertAllSongsFromLibrary(AlbumLibrary library, Song[] songsToIgnore)
         {
             s_albumLibrary = library;

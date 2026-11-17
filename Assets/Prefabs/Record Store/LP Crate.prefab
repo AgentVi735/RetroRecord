@@ -71,5 +71,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9782bd7ac6b36ef40a8c89ad08eed8ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5025579771210168415}
   m_SourcePrefab: {fileID: 100100000, guid: 9782bd7ac6b36ef40a8c89ad08eed8ae, type: 3}
+--- !u!1 &4533536349760295633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9782bd7ac6b36ef40a8c89ad08eed8ae, type: 3}
+  m_PrefabInstance: {fileID: 3615038770212351872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5025579771210168415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533536349760295633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be0b9fac25e41eca708218283a323cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Library.Crates.CrateController
+  m_albumsStartingPoint: {x: 0, y: -0.000000021583446, z: -0.111}
+  m_albumsOffset: {x: 0, y: 0, z: 0.009}
+  m_albumsRotation: {x: 0.6420118, y: 0, z: 0, w: 0.7666947}
+  m_albumsFlipRotation: {x: 0, y: 0, z: 0, w: 0}
