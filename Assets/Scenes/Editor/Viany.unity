@@ -936,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 614132630334834483, guid: b8d56f7334f582944ba9ba4a5500f0cb, type: 3}
       propertyPath: m_Name
-      value: LP Display (1)
+      value: LP Display
       objectReference: {fileID: 0}
     - target: {fileID: 5169466107093655462, guid: b8d56f7334f582944ba9ba4a5500f0cb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2419,7 +2419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 614132630334834483, guid: b8d56f7334f582944ba9ba4a5500f0cb, type: 3}
       propertyPath: m_Name
-      value: LP Display (2)
+      value: LP Display
       objectReference: {fileID: 0}
     - target: {fileID: 5169466107093655462, guid: b8d56f7334f582944ba9ba4a5500f0cb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
