@@ -8,8 +8,6 @@ namespace RetroRecord.Engine.Settings
     {
         public string CoverFileName = "Cover.png";
 
-#if UNITY_EDITOR
-        public bool OverrideSettings;
         public Song Song;
         public Difficulty difficulty = Difficulty.Hard;
 
@@ -17,7 +15,6 @@ namespace RetroRecord.Engine.Settings
         public float Volume = 1f;
 
         public double StartTime = 0;
-#endif
 
         public DifficultySettings HardSettings;
         public DifficultySettings NormalSettings;

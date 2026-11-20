@@ -1,4 +1,5 @@
 ﻿using RetroRecord.Library.Crates;
+using RetroRecord.Library.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,9 @@ namespace RetroRecord.Library
     {
         [SerializeField]
         private CameraManager m_cameraManager;
+
+        [SerializeField]
+        private UILpManager m_uiLpManager;
         
         [SerializeField]
         private CrateManager m_crateManager;
@@ -27,15 +31,23 @@ namespace RetroRecord.Library
         private string m_selectInputPath;
         private InputAction m_selectInput;
 
+        [SerializeField]
+        private string m_deselectInputPath;
+        private InputAction m_deselectInput;
+        
+        public bool HasAlbumSelected { get; private set; }
+
         private void Awake()
         {
             m_forwardInput = m_inputActionAsset.FindAction(m_forwardInputPath);
             m_backwardInput = m_inputActionAsset.FindAction(m_backwardInputPath);
             m_selectInput = m_inputActionAsset.FindAction(m_selectInputPath);
+            m_deselectInput = m_inputActionAsset.FindAction(m_selectInputPath);
 
             m_forwardInput.started += OnForward;
             m_backwardInput.started += OnBackward;
             m_selectInput.started += OnSelect;
+            m_deselectInput.started += OnDeselect;
         }
 
         private void OnDestroy()
@@ -43,6 +55,7 @@ namespace RetroRecord.Library
             m_forwardInput.started -= OnForward;
             m_backwardInput.started -= OnBackward;
             m_selectInput.started -= OnSelect;
+            m_deselectInput.started -= OnDeselect;
         }
 
         private void Start()
@@ -65,12 +78,23 @@ namespace RetroRecord.Library
         private void OnSelect(InputAction.CallbackContext ctx)
         {
             if (!CanMove()) return;
-            Debug.Log(m_crateManager.GetCurrentAlbum().Album.AlbumName);
+            HasAlbumSelected = true;
+            AlbumObject obj = m_crateManager.GetCurrentAlbum();
+            Debug.Log(obj.Album.AlbumName);
+            bool isAllowed = m_uiLpManager.SelectAlbum(obj.Album);
+            
+            if (isAllowed) return;
+            
+            HasAlbumSelected = false;
         }
 
-        private bool CanMove()
+        private void OnDeselect(InputAction.CallbackContext ctx)
         {
-            return !m_cameraManager.IsMoving;
+            if (!CanMove()) return;
+            HasAlbumSelected = false;
+            m_uiLpManager.DeselectAlbum();
         }
+
+        private bool CanMove() => !m_cameraManager.IsMoving && !HasAlbumSelected;
     }
 }

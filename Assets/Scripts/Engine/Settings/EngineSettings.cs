@@ -66,15 +66,10 @@ namespace RetroRecord.Engine.Settings
 
             CoverFileName = m_settings.CoverFileName;
 
-#if UNITY_EDITOR
-            if (m_settings.OverrideSettings)
-            {
-                Song = m_settings.Song;
-                Difficulty = m_settings.difficulty;
-                Volume = m_settings.Volume;
-                StartTime = m_settings.StartTime;
-            }
-#endif
+            Song = m_settings.Song;
+            Difficulty = m_settings.difficulty;
+            Volume = m_settings.Volume;
+            StartTime = m_settings.StartTime;
 
             CurrentDifficultySettings = Difficulty switch
             {

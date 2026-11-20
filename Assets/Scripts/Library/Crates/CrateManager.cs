@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RetroRecord.Engine.Chart;
+using RetroRecord.Library.UI;
 using UnityEngine;
 
 namespace RetroRecord.Library.Crates
@@ -18,6 +19,9 @@ namespace RetroRecord.Library.Crates
 
         [SerializeField]
         private AlbumLibrary m_albumLibrary;
+        
+        [SerializeField]
+        private UILpManager m_uiLpManager;
 
         [SerializeField]
         private uint m_maxObjectsPerCrate;
@@ -147,6 +151,8 @@ namespace RetroRecord.Library.Crates
             }
             
             ToNextCrate();
+
+            m_uiLpManager.Setup(m_albumLibrary);
 
             return;
 

@@ -1,8 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace RetroRecord.Library
 {
+    // TODO:
+    // make the camera move through every crate instead of only the next one with an album
+    // make it auto continue if there's no album
+    
     public class CameraManager : MonoBehaviour
     {
         [SerializeField]
@@ -18,23 +23,30 @@ namespace RetroRecord.Library
         public Vector3 CamRotOffset { get; private set; }
 
         [SerializeField]
+        private Turntable m_turntable;
+
+        [SerializeField]
         private float m_moveTime;
 
         [field: SerializeField]
         public bool IsMoving { get; private set; }
 
-        public void MoveCamera(CameraPosition newPosition)
+        public void MoveCamera(CameraPosition data)
         {
-            StartCoroutine(MoveCam(newPosition));
+            StartCoroutine(MoveCamToTarget(data, true));
         }
 
-        private IEnumerator MoveCam(CameraPosition data)
+        private IEnumerator MoveCamToTarget(CameraPosition data, bool useOffsets)
         {
             IsMoving = true;
-            m_camTarget.transform.position = data.position; // TODO: smooth
+            
+            m_camTarget.transform.position = data.position;
             m_camTarget.transform.rotation = data.rotation;
-            m_camTarget.transform.Translate(CamPosOffset);
-            m_camTarget.transform.Rotate(CamRotOffset);
+            if (useOffsets)
+            {
+                m_camTarget.transform.Translate(CamPosOffset);
+                m_camTarget.transform.Rotate(CamRotOffset);
+            }
 
             Vector3 startPos = m_camera.transform.position;
             Vector3 endPos = m_camTarget.position;
@@ -51,6 +63,11 @@ namespace RetroRecord.Library
             m_camera.transform.position = endPos;
             m_camera.transform.rotation = endRot;
             IsMoving = false;
+        }
+
+        private void MoveToTurntable()
+        {
+            StartCoroutine(MoveCamToTarget(m_turntable.CamPos, false));
         }
     }
 }
