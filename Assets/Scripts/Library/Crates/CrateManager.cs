@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RetroRecord.Engine.Chart;
 using UnityEngine;
@@ -8,6 +7,12 @@ namespace RetroRecord.Library.Crates
 {
     public class CrateManager : MonoBehaviour
     {
+        [SerializeField]
+        private CameraManager m_cameraManager;
+
+        [SerializeField]
+        private LibraryInputManager m_libraryInputManager;
+        
         [SerializeField]
         private CrateController[] m_controllers;
 
@@ -26,7 +31,13 @@ namespace RetroRecord.Library.Crates
         [field: SerializeField]
         public AlbumObject m_albumPrefab { get; private set; }
 
-        private void Start()
+        private CrateController m_currentCrate;
+        private int m_currentCrateIndex;
+        private int m_currentObjectIndex;
+
+        private int m_previousCrateIdx;
+
+        private void Awake()
         {
             if (m_albumLibrary.Albums == null || m_albumLibrary.Albums.Length == 0)
             {
@@ -143,8 +154,9 @@ namespace RetroRecord.Library.Crates
             {
                 if (currentObjectsCount == 0)
                     return;
-                
-                m_controllers[currentCrateIdx].Load(currentAlbums.ToArray(), currentDividers.ToArray(), this);
+
+                int objIdx = m_currentCrateIndex == currentCrateIdx ? m_currentObjectIndex : -1;
+                m_controllers[currentCrateIdx].Load(currentAlbums.ToArray(), currentDividers.ToArray(), this, objIdx);
                 currentCrateIdx++;
                 currentObjectsCount = 0;
                 currentDividerCount = 0;
@@ -163,11 +175,88 @@ namespace RetroRecord.Library.Crates
                 currentObjectsCount++;
                 currentDividerCount++;
             }
+        }
 
-            // foreach (CrateController controller in m_controllers)
-            // {
-            //     controller.Load(m_albumLibrary.Albums, this);
-            // }
+        public CameraPosition GetNextPosition()
+        {
+            while (true)
+            {
+                m_currentObjectIndex--;
+                if (m_currentObjectIndex >= 0) return GetObjectPositon(true);
+                MoveCrate(1);
+                
+                m_currentObjectIndex = m_currentCrate.LastAlbumIdx;
+
+                if (m_currentObjectIndex < 0) continue;
+
+                return GetObjectPositon(false);
+            }
+        }
+
+        public CameraPosition GetBackPosition()
+        {
+            while (true)
+            {
+                m_currentObjectIndex++;
+                if (m_currentCrate.ObjectCount > m_currentObjectIndex) return GetObjectPositon(false);
+                MoveCrate(-1);
+                
+                m_currentObjectIndex = m_currentCrate.FirstAlbumIdx;
+
+                if (m_currentObjectIndex < 0) continue;
+
+                return GetObjectPositon(false);
+            }
+        }
+
+        private CameraPosition GetObjectPositon(bool wentForward)
+        {
+            AlbumObject obj = GetCurrentAlbum();
+            if (obj == null)
+            {
+                return wentForward ? GetNextPosition() : GetBackPosition();
+            }
+            CameraPosition data = obj.GetPositon();
+
+            Vector3 rotation = m_currentCrate.transform.rotation.eulerAngles;
+            rotation.y -= 180;
+            data.rotation = Quaternion.Euler(rotation);
+            
+            if (m_previousCrateIdx != m_currentObjectIndex)
+                m_controllers[m_previousCrateIdx].FlipAlbums(-1);
+            m_previousCrateIdx = m_currentCrateIndex;
+            m_controllers[m_previousCrateIdx].FlipAlbums(m_currentObjectIndex);
+            
+            return data;
+        }
+
+        public CameraPosition GetCurrentPosition()
+        {
+            return GetObjectPositon(true);
+        }
+
+        public AlbumObject GetCurrentAlbum()
+        {
+            return m_controllers[m_currentCrateIndex].GetAlbumObject(m_currentObjectIndex);
+        }
+
+        private void MoveCrate(int movement) => SetCrate(m_currentCrateIndex += movement);
+
+        private void SetCrate(int idx)
+        {
+            m_currentCrateIndex = idx;
+
+            if (m_controllers == null || m_controllers.Length == 0)
+                return;
+            
+            if (m_currentCrateIndex < 0)
+                SetCrate(m_controllers.Length - 1);
+            
+            if (m_currentCrateIndex >= m_controllers.Length)
+                SetCrate(0);
+            
+            m_currentCrate = m_controllers[m_currentCrateIndex];
+
         }
     }
 }

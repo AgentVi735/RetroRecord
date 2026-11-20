@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9782bd7ac6b36ef40a8c89ad08eed8ae, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9782bd7ac6b36ef40a8c89ad08eed8ae, type: 3}
       propertyPath: m_LocalRotation.y
@@ -97,3 +97,5 @@ MonoBehaviour:
   m_albumsOffset: {x: 0, y: 0, z: 0.009}
   m_albumsRotation: {x: 0.6420118, y: 0, z: 0, w: 0.7666947}
   m_albumsFlipRotation: {x: 0, y: 0, z: 0, w: 0}
+  <m_camOffset>k__BackingField: {x: 0, y: 0.4, z: 0.4264}
+  <m_camRotOffset>k__BackingField: {x: 0, y: 0.2, z: 0}

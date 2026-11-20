@@ -87,3 +87,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Library.Crates.AlbumObject
   m_meshRenderer: {fileID: 5349474216334959288}
+  m_settings: {fileID: 11400000, guid: 9357df841e9fc7c4bb0c02c4df8396c2, type: 2}

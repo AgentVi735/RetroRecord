@@ -3,20 +3,32 @@ using UnityEngine;
 
 namespace RetroRecord.Library.Crates
 {
-    public class AlbumObject : MonoBehaviour
+    public class AlbumObject : CrateObject
     {
+        public override CrateObjectType Type => CrateObjectType.Album;
+        
         [SerializeField]
         private MeshRenderer m_meshRenderer;
+        
+        public Album Album { get; private set; }
 
-        private Album m_album;
-
-        public void Load(Album album)
+        public void Load(Album album, bool startFlipped)
         {
-            m_album = album;
-            if (m_album.Cover != null)
-                m_meshRenderer.material.mainTexture = m_album.Cover.texture;
+            Album = album;
+            transform.localRotation = Quaternion.Euler(startFlipped ? m_settings.FlippedRotation : m_settings.DefaultRotation);
+            if (Album.Cover != null)
+                m_meshRenderer.material.mainTexture = Album.Cover.texture;
             else
-                Debug.LogWarning($"{m_album.AlbumName} doesn't have a cover texture");
+                Debug.LogWarning($"{Album.AlbumName} doesn't have a cover texture");
+        }
+
+        public CameraPosition GetPositon()
+        {
+            CameraPosition data = new()
+            {
+                position = transform.position
+            };
+            return data;
         }
     }
 }
