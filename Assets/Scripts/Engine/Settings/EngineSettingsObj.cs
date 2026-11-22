@@ -9,7 +9,7 @@ namespace RetroRecord.Engine.Settings
         public string CoverFileName = "Cover.png";
 
         public Song Song;
-        public Difficulty difficulty = Difficulty.Hard;
+        public Difficulty Difficulty = Difficulty.Hard;
 
         [Range(0f, 1f)]
         public float Volume = 1f;
@@ -26,7 +26,7 @@ namespace RetroRecord.Engine.Settings
         public double PerfectHitboxInSec = 0.035;
         public float HighwaySpeed = 8;
         public float NoteSpawnDistance = 2;
-        public double MinSecShowStopSustain = 0.15;
+        public double MinSecShowStopSustain = 0.16;
 
         public float TimeAfterSong = 1;
 
@@ -34,6 +34,6 @@ namespace RetroRecord.Engine.Settings
 
         public float LaneColourUpdateTimeCount = 1;
         public float ShowSongNameTimeCount = 1;
-        public float ShowSongNameStayBeatCount = 4;
+        public float ShowSongNameStayBeatCount = 6;
     }
 }

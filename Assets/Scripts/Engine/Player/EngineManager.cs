@@ -19,6 +19,9 @@ namespace RetroRecord.Engine.Player
         public static EngineManager s_Instance;
 
         [SerializeField]
+        private RenderTexture m_renderTexture;
+
+        [SerializeField]
         private GameObject m_gameParent;
 
         [SerializeField]
@@ -65,9 +68,11 @@ namespace RetroRecord.Engine.Player
             Initialize();
         }
 
-        private void Initialize()
+        public void Initialize()
         {
             s_Instance = this;
+            m_renderTexture.width = Screen.width;
+            m_renderTexture.height = Screen.height;
             m_engineSettings.Initialize();
             m_bassManager.Initialize();
             m_songPlayer.Initialize();

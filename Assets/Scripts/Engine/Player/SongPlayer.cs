@@ -1,6 +1,5 @@
 ﻿using RetroRecord.Audio;
 using RetroRecord.Engine.Settings;
-using RetroRecord.Engine.Statistics;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
@@ -36,9 +35,7 @@ namespace RetroRecord.Engine.Player
         public void Initialize()
         {
             if (s_Instance != null)
-            {
                 Destroy(s_Instance.gameObject);
-            }
 
             s_Instance = this;
         }

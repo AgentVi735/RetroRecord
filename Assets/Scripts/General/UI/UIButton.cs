@@ -66,7 +66,8 @@ namespace RetroRecord.General.UI
                 return;
 
             DoStateTransition(SelectionState.Pressed, false);
-            StartCoroutine(OnFinishSubmit());
+            if (gameObject.activeInHierarchy)
+                StartCoroutine(OnFinishSubmit());
         }
 
         private IEnumerator OnFinishSubmit()
@@ -114,7 +115,8 @@ namespace RetroRecord.General.UI
                 return;
             if (m_scaleCoroutine != null)
                 StopCoroutine(m_scaleCoroutine);
-            m_scaleCoroutine = StartCoroutine(LerpScaleCoroutine(toggle));
+            if (gameObject.activeInHierarchy)
+                m_scaleCoroutine = StartCoroutine(LerpScaleCoroutine(toggle));
         }
 
         private IEnumerator LerpScaleCoroutine(bool toggle)

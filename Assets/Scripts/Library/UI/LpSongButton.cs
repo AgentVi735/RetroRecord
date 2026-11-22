@@ -12,6 +12,8 @@ namespace RetroRecord.Library.UI
         
         private Song m_song;
 
+        private Difficulty m_difficulty;
+
         private UILpManager m_uiLpManager;
         
         public void Setup(UILpManager lpManager)
@@ -38,6 +40,17 @@ namespace RetroRecord.Library.UI
             gameObject.SetActive(true);
         }
 
+        public void Load(Difficulty difficulty)
+        {
+            m_song = null;
+            m_difficulty = difficulty;
+            
+            interactable = true;
+            m_text.text = difficulty.ToString();
+
+            gameObject.SetActive(true);
+        }
+
         public void Disable()
         {
             gameObject.SetActive(false);
@@ -45,7 +58,10 @@ namespace RetroRecord.Library.UI
 
         public void OnPress()
         {
-            m_uiLpManager.OnSelectSong(m_song);
+            if (m_song != null)
+                m_uiLpManager.OnSelectSong(m_song);
+            else
+                m_uiLpManager.OnSelectDifficulty(m_difficulty);
         }
     }
 }

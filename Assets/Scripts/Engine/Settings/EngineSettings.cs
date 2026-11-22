@@ -67,7 +67,7 @@ namespace RetroRecord.Engine.Settings
             CoverFileName = m_settings.CoverFileName;
 
             Song = m_settings.Song;
-            Difficulty = m_settings.difficulty;
+            Difficulty = m_settings.Difficulty;
             Volume = m_settings.Volume;
             StartTime = m_settings.StartTime;
 
