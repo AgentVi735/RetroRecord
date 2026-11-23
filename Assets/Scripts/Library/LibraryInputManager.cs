@@ -42,7 +42,7 @@ namespace RetroRecord.Library
             m_forwardInput = m_inputActionAsset.FindAction(m_forwardInputPath);
             m_backwardInput = m_inputActionAsset.FindAction(m_backwardInputPath);
             m_selectInput = m_inputActionAsset.FindAction(m_selectInputPath);
-            m_deselectInput = m_inputActionAsset.FindAction(m_selectInputPath);
+            m_deselectInput = m_inputActionAsset.FindAction(m_deselectInputPath);
 
             m_forwardInput.started += OnForward;
             m_backwardInput.started += OnBackward;
@@ -90,7 +90,7 @@ namespace RetroRecord.Library
 
         private void OnDeselect(InputAction.CallbackContext ctx)
         {
-            if (!CanMove()) return;
+            if (!HasAlbumSelected) return;
             HasAlbumSelected = false;
             m_uiLpManager.DeselectAlbum();
         }

@@ -101,7 +101,12 @@ namespace RetroRecord.Library.Crates
             if (obj.Type != CrateObjectType.Album)
                 return null;
             AlbumObject albumObj = (AlbumObject)obj;
-            return albumObj.Album == null ? null : albumObj;
+            if (albumObj.Album == null)
+                return null;
+
+            if (albumObj.Album.Songs == null || albumObj.Album.Songs.Length == 0)
+                return null;
+            return albumObj;
         }
 
         public void FlipAlbums(int currentIndex)

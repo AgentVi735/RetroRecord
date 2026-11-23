@@ -195,7 +195,7 @@ namespace RetroRecord.Library.Crates
 
                 if (m_currentObjectIndex < 0) continue;
 
-                return GetObjectPositon(false);
+                return GetObjectPositon(true);
             }
         }
 
@@ -219,9 +219,7 @@ namespace RetroRecord.Library.Crates
         {
             AlbumObject obj = GetCurrentAlbum();
             if (obj == null)
-            {
                 return wentForward ? GetNextPosition() : GetBackPosition();
-            }
             CameraPosition data = obj.GetPositon();
 
             Vector3 rotation = m_currentCrate.transform.rotation.eulerAngles;
