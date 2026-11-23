@@ -18,7 +18,7 @@ namespace RetroRecord.General.UI
         private Vector3 m_hoverScale = Vector3.one;
 
         [SerializeField]
-        private float m_scaleTime;
+        private float m_scaleTime = 0.1f;
 
         private float m_scaleLerpIndex;
         private Coroutine m_scaleCoroutine;
@@ -31,11 +31,18 @@ namespace RetroRecord.General.UI
 
         protected override void Awake()
         {
+#if UNITY_EDITOR
+            if (m_rectTransform == null)
+                m_rectTransform = GetComponent<RectTransform>();
+            
+            if (!Application.isPlaying)
+                return;
+#endif
             base.Awake();
             if (m_shouldScale)
                 m_defaultScale = m_rectTransform.localScale;
         }
-        
+
         public override void OnPointerEnter(PointerEventData eventData)
         {
             if (m_shouldScale)

@@ -37,17 +37,24 @@ namespace RetroRecord.Library
         
         public bool HasAlbumSelected { get; private set; }
 
-        private void Awake()
+        private bool m_isEnabled;
+
+        public void Setup()
         {
             m_forwardInput = m_inputActionAsset.FindAction(m_forwardInputPath);
             m_backwardInput = m_inputActionAsset.FindAction(m_backwardInputPath);
             m_selectInput = m_inputActionAsset.FindAction(m_selectInputPath);
             m_deselectInput = m_inputActionAsset.FindAction(m_deselectInputPath);
-
+            
             m_forwardInput.started += OnForward;
             m_backwardInput.started += OnBackward;
             m_selectInput.started += OnSelect;
             m_deselectInput.started += OnDeselect;
+        }
+
+        public void Toggle(bool toggle)
+        {
+            m_isEnabled = toggle;
         }
 
         private void OnDestroy()
@@ -56,11 +63,6 @@ namespace RetroRecord.Library
             m_backwardInput.started -= OnBackward;
             m_selectInput.started -= OnSelect;
             m_deselectInput.started -= OnDeselect;
-        }
-
-        private void Start()
-        {
-            m_cameraManager.MoveCamera(m_crateManager.GetCurrentPosition());
         }
 
         private void OnForward(InputAction.CallbackContext ctx)
@@ -80,7 +82,6 @@ namespace RetroRecord.Library
             if (!CanMove()) return;
             HasAlbumSelected = true;
             AlbumObject obj = m_crateManager.GetCurrentAlbum();
-            Debug.Log(obj.Album.AlbumName);
             bool isAllowed = m_uiLpManager.SelectAlbum(obj.Album);
             
             if (isAllowed) return;
@@ -95,6 +96,6 @@ namespace RetroRecord.Library
             m_uiLpManager.DeselectAlbum();
         }
 
-        private bool CanMove() => !m_cameraManager.IsMoving && !HasAlbumSelected;
+        private bool CanMove() => m_isEnabled && !m_cameraManager.IsMoving && !HasAlbumSelected;
     }
 }

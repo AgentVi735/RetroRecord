@@ -31,6 +31,12 @@ namespace RetroRecord.Library
         [field: SerializeField]
         public bool IsMoving { get; private set; }
 
+        public void SetPosition(CameraPosition data)
+        {
+            m_camera.transform.position = data.position;
+            m_camera.transform.rotation = data.rotation;
+        }
+        
         public void MoveCamera(CameraPosition data)
         {
             StartCoroutine(MoveCamToTarget(data, true));
@@ -65,9 +71,9 @@ namespace RetroRecord.Library
             IsMoving = false;
         }
 
-        private void MoveToTurntable()
+        public IEnumerator MoveToTurntable()
         {
-            StartCoroutine(MoveCamToTarget(m_turntable.CamPos, false));
+            yield return StartCoroutine(MoveCamToTarget(m_turntable.CamPos, false));
         }
     }
 }

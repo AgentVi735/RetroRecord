@@ -1,19 +1,14 @@
 ﻿using System.Linq;
 using RetroRecord.Engine.Chart;
-using RetroRecord.Engine.Player;
 using RetroRecord.Engine.Settings;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace RetroRecord.Library.UI
 {
     public class UILpManager : MonoBehaviour
     {
         [SerializeField]
-        private Camera m_camera;
-
-        [SerializeField]
-        private GameObject m_gameTexture;
+        private RecordStoreManager m_recordStoreManager;
         
         [SerializeField]
         private LpSongButton m_buttonPrefab;
@@ -81,8 +76,7 @@ namespace RetroRecord.Library.UI
         {
             gameObject.SetActive(false);
             m_engineSettings.Difficulty = difficulty;
-            SceneManager.LoadScene(1, LoadSceneMode.Additive);
-            m_gameTexture.SetActive(true);
+            m_recordStoreManager.OnSelectSong();
         }
     }
 }

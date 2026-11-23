@@ -121,14 +121,5 @@ namespace RetroRecord.Engine.Player
             m_statisticsDisplay.Enable();
             StatisticsManager.Dispose();
         }
-
-        private static void ExitGame()
-        {
-#if UNITY_EDITOR
-            EditorApplication.ExitPlaymode();
-#else
-        Application.Quit();
-#endif
-        }
     }
 }

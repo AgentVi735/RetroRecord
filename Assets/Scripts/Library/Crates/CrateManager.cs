@@ -41,7 +41,7 @@ namespace RetroRecord.Library.Crates
 
         private int m_previousCrateIdx;
 
-        private void Awake()
+        public void Load()
         {
             if (m_albumLibrary.Albums == null || m_albumLibrary.Albums.Length == 0)
             {
