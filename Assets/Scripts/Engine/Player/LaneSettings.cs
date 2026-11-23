@@ -6,10 +6,10 @@ namespace RetroRecord.Engine.Player
     public class LaneSettings : ScriptableObject
     {
         [System.Serializable]
-        public class SpriteData
+        public class LaneData
         {
             [field: SerializeField]
-            public Sprite Sprite { get; private set; }
+            public Material Material { get; private set; }
 
             [field: SerializeField]
             public Color DefaultColor { get; private set; }
@@ -19,12 +19,12 @@ namespace RetroRecord.Engine.Player
         }
 
         [field: SerializeField]
-        public SpriteData LaneSprite { get; private set; }
+        public LaneData LaneSprite { get; private set; }
 
         [field: SerializeField]
-        public SpriteData StrikelineSprite { get; private set; }
+        public LaneData StrikelineSprite { get; private set; }
         
         [field: SerializeField]
-        public SpriteData StrikelineHitSprite { get; private set; }
+        public LaneData StrikelineHitSprite { get; private set; }
     }
 }

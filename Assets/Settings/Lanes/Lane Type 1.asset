@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Lane Type 1
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Player.LaneSettings
   <LaneSprite>k__BackingField:
-    <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    <Material>k__BackingField: {fileID: 2100000, guid: 754c95b4516cae54fb49b6f895d08812, type: 2}
     <DefaultColor>k__BackingField: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
     <SecondaryColor>k__BackingField: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
   <StrikelineSprite>k__BackingField:
-    <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    <Material>k__BackingField: {fileID: 0}
     <DefaultColor>k__BackingField: {r: 0.29411766, g: 0.45490196, b: 0.2509804, a: 1}
     <SecondaryColor>k__BackingField: {r: 0.4117647, g: 0.9529412, b: 0.26666668, a: 1}
   <StrikelineHitSprite>k__BackingField:
-    <Sprite>k__BackingField: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    <Material>k__BackingField: {fileID: 0}
     <DefaultColor>k__BackingField: {r: 0.2509804, g: 0.36862746, b: 0.22352941, a: 1}
     <SecondaryColor>k__BackingField: {r: 0.20784314, g: 0.7176471, b: 0.07450981, a: 1}

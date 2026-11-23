@@ -10,7 +10,7 @@ namespace RetroRecord.Engine.Player.Renderer
     public class HighwayLane : MonoBehaviour
     {
         [SerializeField]
-        private SpriteRenderer m_spriteRenderer;
+        private MeshRenderer m_meshRenderer;
 
         [SerializeField]
         private LightController m_lightController;
@@ -52,16 +52,16 @@ namespace RetroRecord.Engine.Player.Renderer
 
             if (Idx % 2 == 0)
             {
-                m_spriteRenderer.color = m_settings.LaneSprite.DefaultColor;
+                m_meshRenderer.material.color = m_settings.LaneSprite.DefaultColor;
                 m_strikeline.ChangeColor(false);
             }
             else
             {
-                m_spriteRenderer.color = m_settings.LaneSprite.SecondaryColor;
+                m_meshRenderer.material.color = m_settings.LaneSprite.SecondaryColor;
                 m_strikeline.ChangeColor(true);
             }
 
-            m_newColor = m_spriteRenderer.color;
+            m_newColor = m_meshRenderer.material.color;
 
             m_strikeline.UpdateColorAmt(1);
 
@@ -70,6 +70,12 @@ namespace RetroRecord.Engine.Player.Renderer
                 : m_defaultLanePos;
 
             m_lightController.Setup(transform.position.x, shouldTurnOn);
+        }
+
+        public void ManualUpdate()
+        {
+            m_meshRenderer.material.mainTextureOffset =
+                new Vector2(0, (float)SongPlayer.ConvertedCurrentInputTime * (EngineSettings.HighwaySpeed / 10));
         }
 
         public void ChangeColor(LaneSettings newSettings)
@@ -111,7 +117,7 @@ namespace RetroRecord.Engine.Player.Renderer
             while (amt < 1)
             {
                 amt = Mathf.InverseLerp(startTime, time, (float)SongPlayer.CurrentAudioTime);
-                m_spriteRenderer.color = Color.Lerp(m_prevColor, m_newColor, amt);
+                m_meshRenderer.material.color = Color.Lerp(m_prevColor, m_newColor, amt);
                 m_strikeline.UpdateColorAmt(amt);
                 yield return null;
             }

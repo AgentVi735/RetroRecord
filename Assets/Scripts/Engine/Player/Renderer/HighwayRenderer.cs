@@ -172,6 +172,12 @@ namespace RetroRecord.Engine.Player.Renderer
                 beatline.Unload();
                 m_activeBeatlines.Remove(beatline);
             }
+
+            foreach (HighwayLane lane in Lanes)
+            {
+                if (lane.isActiveAndEnabled)
+                    lane.ManualUpdate();
+            }
         }
 
         public void UpdatePos(float newPos) => m_cam.position = new Vector3(0, newPos + m_camOffset, -10);

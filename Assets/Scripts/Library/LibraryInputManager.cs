@@ -20,20 +20,16 @@ namespace RetroRecord.Library
         private InputActionAsset m_inputActionAsset;
 
         [SerializeField]
-        private string m_forwardInputPath;
-        private InputAction m_forwardInput;
+        private InputActionReference m_forwardInput;
 
         [SerializeField]
-        private string m_backwardInputPath;
-        private InputAction m_backwardInput;
+        private InputActionReference m_backwardInput;
 
         [SerializeField]
-        private string m_selectInputPath;
-        private InputAction m_selectInput;
+        private InputActionReference m_selectInput;
 
         [SerializeField]
-        private string m_deselectInputPath;
-        private InputAction m_deselectInput;
+        private InputActionReference m_deselectInput;
         
         public bool HasAlbumSelected { get; private set; }
 
@@ -41,15 +37,10 @@ namespace RetroRecord.Library
 
         public void Setup()
         {
-            m_forwardInput = m_inputActionAsset.FindAction(m_forwardInputPath);
-            m_backwardInput = m_inputActionAsset.FindAction(m_backwardInputPath);
-            m_selectInput = m_inputActionAsset.FindAction(m_selectInputPath);
-            m_deselectInput = m_inputActionAsset.FindAction(m_deselectInputPath);
-            
-            m_forwardInput.started += OnForward;
-            m_backwardInput.started += OnBackward;
-            m_selectInput.started += OnSelect;
-            m_deselectInput.started += OnDeselect;
+            m_forwardInput.action.started += OnForward;
+            m_backwardInput.action.started += OnBackward;
+            m_selectInput.action.started += OnSelect;
+            m_deselectInput.action.started += OnDeselect;
         }
 
         public void Toggle(bool toggle)
@@ -59,10 +50,10 @@ namespace RetroRecord.Library
 
         private void OnDestroy()
         {
-            m_forwardInput.started -= OnForward;
-            m_backwardInput.started -= OnBackward;
-            m_selectInput.started -= OnSelect;
-            m_deselectInput.started -= OnDeselect;
+            m_forwardInput.action.started -= OnForward;
+            m_backwardInput.action.started -= OnBackward;
+            m_selectInput.action.started -= OnSelect;
+            m_deselectInput.action.started -= OnDeselect;
         }
 
         private void OnForward(InputAction.CallbackContext ctx)

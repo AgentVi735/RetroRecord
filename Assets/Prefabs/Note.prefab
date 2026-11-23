@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.21846724, b: 1, a: 1}
+  m_Color: {r: 0.5221297, g: 0.0521983, b: 0.6509434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,10 +108,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteObject
   m_lineRenderer: {fileID: 1501287340470911145}
   m_spriteRenderer: {fileID: 5636319521130541600}
-  m_noteColor: {r: 0, g: 0.21960784, b: 1, a: 1}
+  m_noteColor: {r: 0.5254902, g: 0.05490196, b: 0.6509804, a: 1}
   m_missedNoteColor: {r: 0.4117647, g: 0.41960785, b: 0.4509804, a: 1}
-  m_lineColor: {r: 0.13333334, g: 0.41568628, b: 0.54901963, a: 1}
-  m_missedLineColor: {r: 0.21568628, g: 0.2627451, b: 0.28235295, a: 1}
+  m_lineColor: {r: 0.3203425, g: 0.07115523, b: 0.38679248, a: 1}
+  m_missedLineColor: {r: 0.2318302, g: 0.21693666, b: 0.23584908, a: 1}
 --- !u!120 &1501287340470911145
 LineRenderer:
   serializedVersion: 3
@@ -184,8 +184,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.13163047, g: 0.41500846, b: 0.5471698, a: 1}
-      key1: {r: 0.13163047, g: 0.41500846, b: 0.5471698, a: 1}
+      key0: {r: 0.32156864, g: 0.07058824, b: 0.3882353, a: 1}
+      key1: {r: 0.26518488, g: 0.055980776, b: 0.3207547, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -208,7 +208,7 @@ LineRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 1
+      m_Mode: 0
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
