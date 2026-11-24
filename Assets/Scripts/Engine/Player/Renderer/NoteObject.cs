@@ -9,19 +9,31 @@ namespace RetroRecord.Engine.Player.Renderer
 {
     public class NoteObject : MonoBehaviour
     {
+        private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
         public Note Note { get; private set; }
 
         [SerializeField]
         private LineRenderer m_lineRenderer;
 
         [SerializeField]
-        private SpriteRenderer m_spriteRenderer;
+        private MeshRenderer m_meshRenderer;
+
+        [SerializeField]
+        private Vector3 m_defaultRotation = new(-90, 0, 0);
 
         [SerializeField]
         private Color m_noteColor = Color.white;
 
         [SerializeField]
+        [ColorUsage(showAlpha:true, hdr:true)]
+        private Color m_noteColorEmission = Color.white;
+
+        [SerializeField]
         private Color m_missedNoteColor = Color.white;
+
+        [SerializeField]
+        [ColorUsage(showAlpha:true, hdr:true)]
+        private Color m_missedNoteColorEmission = Color.white;
 
         [SerializeField]
         private Color m_lineColor = Color.white;
@@ -45,8 +57,10 @@ namespace RetroRecord.Engine.Player.Renderer
             transform.position = pos;
             m_sustainEndTime = Note.Time + Note.TimeSustainLength;
             DespawnTime = m_sustainEndTime + EngineSettings.MinSecUntilNoteDespawn;
-            m_spriteRenderer.color = m_noteColor;
-            m_spriteRenderer.enabled = true;
+            m_meshRenderer.material.color = m_noteColor;
+            m_meshRenderer.material.SetColor(EmissionColor, m_noteColorEmission);
+            transform.rotation = Quaternion.Euler(m_defaultRotation);
+            m_meshRenderer.enabled = true;
 
             if (Note.TickSustainLength > 0)
             {
@@ -78,7 +92,7 @@ namespace RetroRecord.Engine.Player.Renderer
 
         public void HitSustain(InputAction action)
         {
-            m_spriteRenderer.enabled = false;
+            m_meshRenderer.enabled = false;
             m_isHoldingSustain = true;
             StartCoroutine(SustainLoop());
             m_sustainAction = action;
@@ -111,12 +125,7 @@ namespace RetroRecord.Engine.Player.Renderer
             m_isHoldingSustain = false;
             if (Math.Abs(Note.Time + Note.TimeSustainLength - SongPlayer.ConvertedCurrentInputTime) >
                 EngineSettings.MinSecShowStopSustain)
-            {
-                m_spriteRenderer.color = m_missedNoteColor;
-                m_spriteRenderer.enabled = true;
-                m_lineRenderer.startColor = m_missedLineColor;
-                m_lineRenderer.endColor = m_missedLineColor;
-            }
+                Miss();
             else
                 Unload();
 
@@ -127,8 +136,9 @@ namespace RetroRecord.Engine.Player.Renderer
 
         public void Miss()
         {
-            m_spriteRenderer.color = m_missedNoteColor;
-            m_spriteRenderer.enabled = true;
+            m_meshRenderer.material.color = m_missedNoteColor;
+            m_meshRenderer.material.SetColor(EmissionColor, m_missedNoteColorEmission);
+            m_meshRenderer.enabled = true;
             m_lineRenderer.startColor = m_missedLineColor;
             m_lineRenderer.endColor = m_missedLineColor;
         }

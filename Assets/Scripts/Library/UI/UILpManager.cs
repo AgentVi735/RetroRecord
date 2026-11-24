@@ -52,6 +52,8 @@ namespace RetroRecord.Library.UI
                 button.Load(album.Songs.Length <= m_songButtons.Length ? album.Songs[i] : null);
             }
 
+            gameObject.SetActive(true);
+
             return true;
         }
         
