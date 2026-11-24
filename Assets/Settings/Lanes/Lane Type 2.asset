@@ -15,8 +15,8 @@ MonoBehaviour:
   <LaneSprite>k__BackingField:
     <PrimaryMaterial>k__BackingField: {fileID: 2100000, guid: 754c95b4516cae54fb49b6f895d08812, type: 2}
     <SecondaryMaterial>k__BackingField: {fileID: 2100000, guid: 591110bb99a209c449e259faa804ef75, type: 2}
-    <DefaultColor>k__BackingField: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
-    <SecondaryColor>k__BackingField: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
+    <DefaultColor>k__BackingField: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    <SecondaryColor>k__BackingField: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
   <StrikelineSprite>k__BackingField:
     <PrimaryMaterial>k__BackingField: {fileID: 0}
     <SecondaryMaterial>k__BackingField: {fileID: 0}

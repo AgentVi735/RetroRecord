@@ -1,5 +1,4 @@
 ﻿using RetroRecord.General.UI;
-using UnityEditor;
 using UnityEngine;
 
 namespace RetroRecord.Library.UI.MainMenu
@@ -15,6 +14,11 @@ namespace RetroRecord.Library.UI.MainMenu
         [SerializeField]
         private UIButton m_quitButton;
 
+        public void Toggle(bool toggle)
+        {
+            gameObject.SetActive(toggle);
+        }
+        
         public void OnStart()
         {
             gameObject.SetActive(false);
@@ -23,11 +27,7 @@ namespace RetroRecord.Library.UI.MainMenu
 
         public void OnQuit()
         {
-#if UNITY_EDITOR
-            EditorApplication.ExitPlaymode();
-#else
-        Application.Quit();
-#endif
+            m_recordStoreManager.OnQuit();
         }
     }
 }

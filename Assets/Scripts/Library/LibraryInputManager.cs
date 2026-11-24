@@ -8,6 +8,9 @@ namespace RetroRecord.Library
     public class LibraryInputManager : MonoBehaviour
     {
         [SerializeField]
+        private RecordStoreManager m_recordStoreManager;
+        
+        [SerializeField]
         private CameraManager m_cameraManager;
 
         [SerializeField]
@@ -46,6 +49,10 @@ namespace RetroRecord.Library
         public void Toggle(bool toggle)
         {
             m_isEnabled = toggle;
+            if (toggle)
+                m_forwardInput.action.actionMap.Enable();
+            else
+                m_forwardInput.action.actionMap.Disable();
         }
 
         private void OnDestroy()
@@ -81,6 +88,17 @@ namespace RetroRecord.Library
         }
 
         private void OnDeselect(InputAction.CallbackContext ctx)
+        {
+            if (!HasAlbumSelected)
+                m_recordStoreManager.DisableLibrary();
+            else
+            {
+                HasAlbumSelected = false;
+                m_uiLpManager.DeselectAlbum();
+            }
+        }
+
+        public void UnselectAlbum()
         {
             if (!HasAlbumSelected) return;
             HasAlbumSelected = false;

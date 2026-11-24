@@ -41,6 +41,11 @@ namespace RetroRecord.Library
         {
             StartCoroutine(MoveCamToTarget(data, true));
         }
+        
+        public IEnumerator MoveCamera_Coroutine(CameraPosition data)
+        {
+            yield return StartCoroutine(MoveCamToTarget(data, true));
+        }
 
         private IEnumerator MoveCamToTarget(CameraPosition data, bool useOffsets)
         {

@@ -7,6 +7,7 @@ using RetroRecord.Engine.Settings;
 using RetroRecord.Engine.Statistics;
 using RetroRecord.Engine.UI;
 using RetroRecord.Engine.UI.Statistics;
+using RetroRecord.Library;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -18,6 +19,9 @@ namespace RetroRecord.Engine.Player
     {
         public static EngineManager s_Instance;
 
+        [SerializeField]
+        private RecordStoreManager m_recordStoreManager;
+        
         [SerializeField]
         private RenderTexture m_renderTexture;
 
@@ -63,14 +67,12 @@ namespace RetroRecord.Engine.Player
         [SerializeField]
         private float m_delayUntilStart;
 
-        private void Awake()
-        {
-            Initialize();
-        }
+        private void Awake() => Initialize();
 
-        public void Initialize()
+        private void Initialize()
         {
             s_Instance = this;
+            m_recordStoreManager = FindAnyObjectByType<RecordStoreManager>();
             m_renderTexture.width = Screen.width;
             m_renderTexture.height = Screen.height;
             m_engineSettings.Initialize();
@@ -120,6 +122,11 @@ namespace RetroRecord.Engine.Player
             
             m_statisticsDisplay.Enable();
             StatisticsManager.Dispose();
+        }
+
+        public void OnExitStatistics()
+        {
+            m_recordStoreManager.OnEndSong();
         }
     }
 }

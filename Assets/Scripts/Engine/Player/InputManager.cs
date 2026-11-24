@@ -26,6 +26,9 @@ namespace RetroRecord.Engine.Player
 
         private Action<InputAction.CallbackContext>[] m_actionCallbacks;
 
+        [SerializeField]
+        private InputActionReference m_pauseAction;
+
         public NoteGroup NextGroup { get; private set; }
         public NoteGroup NextGroup2 { get; private set; }
         private int m_groupIdx;
@@ -52,6 +55,8 @@ namespace RetroRecord.Engine.Player
                 action.performed += m_actionCallbacks[i];
                 m_highwayRenderer.SetLaneAction(i, action);
             }
+
+            m_pauseAction.action.performed += OnPause;
         }
 
         private void OnDestroy()
@@ -68,6 +73,8 @@ namespace RetroRecord.Engine.Player
                 InputAction action = actionMap.FindAction(m_laneNames[i]);
                 action.performed -= m_actionCallbacks[i];
             }
+
+            m_pauseAction.action.performed -= OnPause;
         }
 
         private void OnLaneInput(InputAction.CallbackContext ctx, int idx)
@@ -151,6 +158,11 @@ namespace RetroRecord.Engine.Player
                 NextGroup2 = null;
                 gameObject.SetActive(false);
             }
+        }
+
+        private void OnPause(InputAction.CallbackContext ctx)
+        {
+            EngineManager.s_Instance.OnExitStatistics();
         }
     }
 }

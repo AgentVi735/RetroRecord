@@ -107,12 +107,12 @@ MonoBehaviour:
   m_lineRenderer: {fileID: 1501287340470911145}
   m_meshRenderer: {fileID: 1366902241903592850}
   m_defaultRotation: {x: -90, y: 0, z: 0}
-  m_noteColor: {r: 0.60463023, g: 0.06317032, b: 0.74901956, a: 1}
-  m_noteColorEmission: {r: 2.4156864, g: 0.2509804, b: 2.9960785, a: 1}
+  m_noteColor: {r: 1, g: 0, b: 0.03137255, a: 1}
+  m_noteColorEmission: {r: 5.9921565, g: 0, b: 0.26442224, a: 1}
   m_missedNoteColor: {r: 0.6838875, g: 0.6969139, b: 0.74901956, a: 1}
-  m_missedNoteColorEmission: {r: 2.7294118, g: 2.792157, b: 2.9960785, a: 1}
-  m_lineColor: {r: 0.3203425, g: 0.07115523, b: 0.38679248, a: 1}
-  m_missedLineColor: {r: 0.2318302, g: 0.21693666, b: 0.23584908, a: 1}
+  m_missedNoteColorEmission: {r: 0.043137256, g: 0.043137256, b: 0.047058824, a: 1}
+  m_lineColor: {r: 0.3882353, g: 0.07058824, b: 0.080640085, a: 1}
+  m_missedLineColor: {r: 0.23529412, g: 0.21568628, b: 0.21684897, a: 1}
 --- !u!120 &1501287340470911145
 LineRenderer:
   serializedVersion: 3

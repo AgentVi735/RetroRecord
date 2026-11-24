@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using RetroRecord.Engine.Chart;
 using RetroRecord.Engine.Chart.Events;
@@ -47,6 +48,10 @@ namespace RetroRecord.Engine.Lights
                 if (!light.IsEnabled) continue;
                 m_onQuarterBeatSide += light.OnQuarterBeat;
             }
+
+            List<LightController> tempLaneLights = new();
+            tempLaneLights.AddRange(m_laneLights.Where(light => light.IsEnabled));
+            m_laneLights = tempLaneLights.ToArray();
             
             foreach (LightController light in m_laneLights)
             {
