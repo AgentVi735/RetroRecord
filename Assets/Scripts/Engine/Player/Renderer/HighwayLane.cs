@@ -52,11 +52,13 @@ namespace RetroRecord.Engine.Player.Renderer
 
             if (Idx % 2 == 0)
             {
+                m_meshRenderer.material = m_settings.LaneSprite.PrimaryMaterial;
                 m_meshRenderer.material.color = m_settings.LaneSprite.DefaultColor;
                 m_strikeline.ChangeColor(false);
             }
             else
             {
+                m_meshRenderer.material = m_settings.LaneSprite.SecondaryMaterial;
                 m_meshRenderer.material.color = m_settings.LaneSprite.SecondaryColor;
                 m_strikeline.ChangeColor(true);
             }

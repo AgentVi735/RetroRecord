@@ -9,7 +9,10 @@ namespace RetroRecord.Engine.Player
         public class LaneData
         {
             [field: SerializeField]
-            public Material Material { get; private set; }
+            public Material PrimaryMaterial { get; private set; }
+            
+            [field: SerializeField]
+            public Material SecondaryMaterial { get; private set; }
 
             [field: SerializeField]
             public Color DefaultColor { get; private set; }
