@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46ab3c28a534ce8be023423d1cd1d6c, type: 3}
+  m_Name: The Black Parade
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Album
+  AlbumName: The Black Parade
+  ArtistName: My Chemical Romance
+  Year: 2006
+  Genre: Emo rock
+  Cover: {fileID: 21300000, guid: 438ee7b1fb7140f4095580801d963d9b, type: 3}
+  Songs:
+  - {fileID: 11400000, guid: 86cb129558e13bc4381af013d8a97207, type: 2}

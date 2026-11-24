@@ -69,9 +69,15 @@ namespace RetroRecord.Library.UI
             foreach (LpSongButton button in m_songButtons)
                 button.Disable();
             m_engineSettings.Song = song;
-            m_songButtons[0].Load(Difficulty.Hard);
-            m_songButtons[1].Load(Difficulty.Normal);
-            m_songButtons[2].Load(Difficulty.Easy);
+
+            if (song.Charts == null || song.Charts.Length == 0)
+            {
+                DeselectAlbum();
+                return;
+            }
+
+            for (int i = 0; i < song.Charts.Length; i++)
+                m_songButtons[i].Load(song.Charts[i].Difficulty);
         }
 
         public void OnSelectDifficulty(Difficulty difficulty)

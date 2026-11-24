@@ -1,0 +1,337 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde023024f46eb540b2ef6bfbe33a290, type: 3}
+  m_Name: The End Dead
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
+  SongInfo:
+    SongName: The End/Dead
+    Album: {fileID: 11400000, guid: e110eca6adba62041b60772626db4c93, type: 2}
+    OverrideArtist: 
+    Charter: Vicky
+    Difficulty: 4
+    Audio: {fileID: 8300000, guid: d2d8eba50a44ee34b9e2f99eb4495c41, type: 3}
+  BeatTrack:
+    TempoChanges:
+    - Tick: 0
+      Time: 0
+      Tempo: 99
+    - Tick: 576
+      Time: 1.8181818181818183
+      Tempo: 88
+    - Tick: 2304
+      Time: 7.954545454545454
+      Tempo: 84
+    - Tick: 2880
+      Time: 10.097402597402597
+      Tempo: 90
+    - Tick: 3456
+      Time: 12.097402597402597
+      Tempo: 86
+    - Tick: 4032
+      Time: 14.190425853216551
+      Tempo: 87
+    - Tick: 6336
+      Time: 22.46628792218207
+      Tempo: 86
+    - Tick: 6912
+      Time: 24.559311177996022
+      Tempo: 87
+    - Tick: 12096
+      Time: 43.180000833168435
+      Tempo: 89
+    - Tick: 12672
+      Time: 45.202472743280794
+      Tempo: 88
+    - Tick: 13248
+      Time: 47.24792728873534
+      Tempo: 90
+    - Tick: 13824
+      Time: 49.24792728873534
+      Tempo: 88
+    - Tick: 14976
+      Time: 53.338836379644434
+      Tempo: 89
+    - Tick: 16128
+      Time: 57.38378019986915
+      Tempo: 88
+    - Tick: 17280
+      Time: 61.474689290778244
+      Tempo: 89
+    - Tick: 17856
+      Time: 63.4971612008906
+      Tempo: 88
+    - Tick: 18432
+      Time: 65.54261574634515
+      Tempo: 89
+    - Tick: 19584
+      Time: 69.58755956656987
+      Tempo: 88
+    - Tick: 20160
+      Time: 71.63301411202441
+      Tempo: 90
+    - Tick: 20736
+      Time: 73.63301411202441
+      Tempo: 92
+    - Tick: 21888
+      Time: 77.54605759028529
+      Tempo: 82
+    - Tick: 22464
+      Time: 79.7411795415048
+      Tempo: 86
+    - Tick: 23040
+      Time: 81.83420279731877
+      Tempo: 88
+    - Tick: 23616
+      Time: 83.87965734277331
+      Tempo: 85
+    - Tick: 24192
+      Time: 85.99730440159685
+      Tempo: 93
+    - Tick: 24768
+      Time: 87.9327882725646
+      Tempo: 90
+    - Tick: 25344
+      Time: 89.9327882725646
+      Tempo: 88
+    - Tick: 26496
+      Time: 94.02369736347369
+      Tempo: 89
+    - Tick: 27072
+      Time: 96.04616927358605
+      Tempo: 90
+    - Tick: 27648
+      Time: 98.04616927358605
+      Tempo: 88
+    - Tick: 30528
+      Time: 108.27344200085878
+      Tempo: 92
+    - Tick: 30816
+      Time: 109.251702870424
+      Tempo: 88
+    - Tick: 31680
+      Time: 112.31988468860581
+      Tempo: 90
+    - Tick: 32256
+      Time: 114.31988468860581
+      Tempo: 197
+    - Tick: 34560
+      Time: 117.9747070236312
+      Tempo: 200
+    - Tick: 41472
+      Time: 128.7747070236312
+      Tempo: 193
+    - Tick: 42240
+      Time: 130.0182303396934
+      Tempo: 196
+    - Tick: 43008
+      Time: 131.24272013561176
+      Tempo: 202
+    - Tick: 43776
+      Time: 132.43083894749296
+      Tempo: 199
+    - Tick: 45312
+      Time: 134.84289924900048
+      Tempo: 193
+    - Tick: 46080
+      Time: 136.08642256506266
+      Tempo: 202
+    - Tick: 47616
+      Time: 138.46266018882503
+      Tempo: 197
+    - Tick: 48384
+      Time: 139.68093430050016
+      Tempo: 193
+    - Tick: 49152
+      Time: 140.92445761656234
+      Tempo: 196
+    - Tick: 49920
+      Time: 142.1489474124807
+      Tempo: 202
+    - Tick: 50688
+      Time: 143.3370662243619
+      Tempo: 196
+    - Tick: 52224
+      Time: 145.78604581619865
+      Tempo: 201
+    - Tick: 53760
+      Time: 148.1741055176912
+      Tempo: 197
+    - Tick: 56832
+      Time: 153.04720196439172
+      Tempo: 199
+    - Tick: 58368
+      Time: 155.45926226589927
+      Tempo: 198
+    - Tick: 59136
+      Time: 156.6713834780205
+      Tempo: 201
+    - Tick: 59904
+      Time: 157.86541332876675
+      Tempo: 200
+    - Tick: 61440
+      Time: 160.26541332876675
+      Tempo: 197
+    - Tick: 62208
+      Time: 161.48368744044188
+      Tempo: 201
+    - Tick: 62976
+      Time: 162.67771729118815
+      Tempo: 197
+    - Tick: 63744
+      Time: 163.89599140286327
+      Tempo: 198
+    - Tick: 65280
+      Time: 166.3202338271057
+      Tempo: 203
+    - Tick: 66048
+      Time: 167.50249983695792
+      Tempo: 196
+    - Tick: 67584
+      Time: 169.95147942879467
+      Tempo: 201
+    - Tick: 68352
+      Time: 171.14550927954093
+      Tempo: 199
+    - Tick: 69120
+      Time: 172.3515394302947
+      Tempo: 204
+    - Tick: 69888
+      Time: 173.52801001853
+      Tempo: 195
+    - Tick: 70656
+      Time: 174.75877924929924
+      Tempo: 199
+    - Tick: 71424
+      Time: 175.964809400053
+      Tempo: 198
+    - Tick: 72192
+      Time: 177.17693061217423
+      Tempo: 198
+    - Tick: 73728
+      Time: 179.60117303641667
+      Tempo: 203
+    - Tick: 75264
+      Time: 181.9657050561211
+      Tempo: 196
+    - Tick: 76032
+      Time: 183.19019485203947
+      Tempo: 198
+    - Tick: 77568
+      Time: 185.6144372762819
+      Tempo: 201
+    - Tick: 79104
+      Time: 188.00249697777446
+      Tempo: 194
+    - Tick: 79872
+      Time: 189.2396103798363
+      Tempo: 201
+    - Tick: 81408
+      Time: 191.62767008132886
+      Tempo: 199
+    - Tick: 82944
+      Time: 194.0397303828364
+      Tempo: 202
+    - Tick: 83712
+      Time: 195.2278491947176
+      Tempo: 196
+    - Tick: 84480
+      Time: 196.45233899063598
+      Tempo: 199
+    - Tick: 89088
+      Time: 203.6885198951586
+      Tempo: 194
+    - Tick: 89856
+      Time: 204.92563329722046
+      Tempo: 205
+    - Tick: 90624
+      Time: 206.09636500453752
+      Tempo: 197
+    - Tick: 92160
+      Time: 208.53291322788778
+      Tempo: 200
+    - Tick: 95232
+      Time: 213.3329132278878
+      Tempo: 197
+    - Tick: 96000
+      Time: 214.55118733956292
+      Tempo: 202
+    - Tick: 96768
+      Time: 215.7393061514441
+      Tempo: 199
+    - Tick: 98304
+      Time: 218.15136645295166
+      Tempo: 192
+    - Tick: 99072
+      Time: 219.40136645295166
+      Tempo: 201
+    - Tick: 101376
+      Time: 222.98345600519048
+      Tempo: 198
+    - Tick: 102912
+      Time: 225.4076984294329
+      Tempo: 204
+    - Tick: 103680
+      Time: 226.58416901766822
+      Tempo: 196
+    - Tick: 104448
+      Time: 227.8086588135866
+      Tempo: 199
+    - Tick: 112128
+      Time: 239.8689603211243
+      Tempo: 195
+    - Tick: 112896
+      Time: 241.09972955189352
+      Tempo: 200
+    - Tick: 115200
+      Time: 244.6997295518935
+      Tempo: 197
+    - Tick: 115968
+      Time: 245.91800366356864
+      Tempo: 200
+    - Tick: 118272
+      Time: 249.51800366356863
+      Tempo: 180
+    - Tick: 123648
+      Time: 258.851336996902
+      Tempo: 175
+    - Tick: 125184
+      Time: 261.5941941397591
+      Tempo: 199
+    - Tick: 125952
+      Time: 262.80022429051286
+      Tempo: 193
+    - Tick: 128256
+      Time: 266.5307942386994
+      Tempo: 197
+    - Tick: 129024
+      Time: 267.7490683503745
+      Tempo: 194
+    - Tick: 151296
+      Time: 303.62535701016833
+      Tempo: 199
+    TimeSignatureChanges:
+    - Tick: 0
+      Time: 0
+      Numerator: 3
+      Denominator: 4
+    - Tick: 32256
+      Time: 114.31988468860581
+      Numerator: 4
+      Denominator: 4
+  Charts: []
+  GlobalEvents:
+    <Items>k__BackingField: []
+    Sections: []
+    ShowSongInfoEvents: []
+    Effects: []
+    Lights: []
+  Lights: []

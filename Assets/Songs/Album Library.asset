@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Album Library
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.AlbumLibrary
   Albums:
+  - {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
   - {fileID: 11400000, guid: 64267922e2795ac40a7663f4c922861d, type: 2}
   - {fileID: 11400000, guid: 1ff4375ebd4146a40a5e72c487cab915, type: 2}
+  - {fileID: 11400000, guid: e110eca6adba62041b60772626db4c93, type: 2}
   - {fileID: 11400000, guid: cebcce9de6d4f3947abfb9055bc2a1ec, type: 2}
   - {fileID: 11400000, guid: 722ccd688340d0f4291ad816b776be9b, type: 2}
   - {fileID: 11400000, guid: fb4132004b122d848aa201cc91c2283e, type: 2}
@@ -23,7 +25,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72daf191d891a394b83e74ba61f10faa, type: 2}
   - {fileID: 11400000, guid: f53dccc855a89fc44bbd29d590b2a546, type: 2}
   - {fileID: 11400000, guid: d5bee6b3788eb1d40817c03bd52b6b8b, type: 2}
-  - {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
   - {fileID: 11400000, guid: 29c2a3468fadd23489488ccf2548954d, type: 2}
   Resolution: 192
   CoverFileName: Cover.png
