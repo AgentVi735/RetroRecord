@@ -327,10 +327,1731 @@ MonoBehaviour:
       Time: 114.31988468860581
       Numerator: 4
       Denominator: 4
-  Charts: []
+  Charts:
+  - Difficulty: 2
+    Notes:
+    - Tick: 1152
+      Time: 3.8636363636363638
+      Notes:
+      - Tick: 1152
+        Time: 3.8636363636363638
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1152
+        Time: 3.8636363636363638
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1248
+      Time: 4.204545454545455
+      Notes:
+      - Tick: 1248
+        Time: 4.204545454545455
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1296
+      Time: 4.375
+      Notes:
+      - Tick: 1296
+        Time: 4.375
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1344
+      Time: 4.545454545454545
+      Notes:
+      - Tick: 1344
+        Time: 4.545454545454545
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1392
+      Time: 4.715909090909091
+      Notes:
+      - Tick: 1392
+        Time: 4.715909090909091
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1440
+      Time: 4.886363636363637
+      Notes:
+      - Tick: 1440
+        Time: 4.886363636363637
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1440
+        Time: 4.886363636363637
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1536
+      Time: 5.227272727272727
+      Notes:
+      - Tick: 1536
+        Time: 5.227272727272727
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1584
+      Time: 5.3977272727272725
+      Notes:
+      - Tick: 1584
+        Time: 5.3977272727272725
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1632
+      Time: 5.568181818181818
+      Notes:
+      - Tick: 1632
+        Time: 5.568181818181818
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1680
+      Time: 5.738636363636363
+      Notes:
+      - Tick: 1680
+        Time: 5.738636363636363
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1728
+      Time: 5.909090909090909
+      Notes:
+      - Tick: 1728
+        Time: 5.909090909090909
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 1728
+        Time: 5.909090909090909
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1824
+      Time: 6.25
+      Notes:
+      - Tick: 1824
+        Time: 6.25
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1872
+      Time: 6.420454545454545
+      Notes:
+      - Tick: 1872
+        Time: 6.420454545454545
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1920
+      Time: 6.590909090909091
+      Notes:
+      - Tick: 1920
+        Time: 6.590909090909091
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 1968
+      Time: 6.761363636363636
+      Notes:
+      - Tick: 1968
+        Time: 6.761363636363636
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2016
+      Time: 6.931818181818182
+      Notes:
+      - Tick: 2016
+        Time: 6.931818181818182
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 2016
+        Time: 6.931818181818182
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2112
+      Time: 7.2727272727272725
+      Notes:
+      - Tick: 2112
+        Time: 7.2727272727272725
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2160
+      Time: 7.443181818181818
+      Notes:
+      - Tick: 2160
+        Time: 7.443181818181818
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2208
+      Time: 7.613636363636363
+      Notes:
+      - Tick: 2208
+        Time: 7.613636363636363
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.17045454545454586
+      - Tick: 2208
+        Time: 7.613636363636363
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2256
+      Time: 7.784090909090909
+      Notes:
+      - Tick: 2256
+        Time: 7.784090909090909
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2304
+      Time: 7.954545454545454
+      Notes:
+      - Tick: 2304
+        Time: 7.954545454545454
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 2304
+        Time: 7.954545454545454
+        Lane: 4
+        TickSustainLength: 0
+        TimeSustainLength: 0
+      - Tick: 2304
+        Time: 7.954545454545454
+        Lane: 5
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2352
+      Time: 8.133116883116882
+      Notes:
+      - Tick: 2352
+        Time: 8.133116883116882
+        Lane: 3
+        TickSustainLength: 96
+        TimeSustainLength: 0.35714285714285765
+    - Tick: 2496
+      Time: 8.668831168831169
+      Notes:
+      - Tick: 2496
+        Time: 8.668831168831169
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 2544
+      Time: 8.847402597402597
+      Notes:
+      - Tick: 2544
+        Time: 8.847402597402597
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.17857142857142883
+    - Tick: 2688
+      Time: 9.383116883116882
+      Notes:
+      - Tick: 2688
+        Time: 9.383116883116882
+        Lane: 0
+        TickSustainLength: 48
+        TimeSustainLength: 0.17857142857142883
+    - Tick: 2784
+      Time: 9.74025974025974
+      Notes:
+      - Tick: 2784
+        Time: 9.74025974025974
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.17857142857142883
+    - Tick: 2880
+      Time: 10.097402597402597
+      Notes:
+      - Tick: 2880
+        Time: 10.097402597402597
+        Lane: 2
+        TickSustainLength: 48
+        TimeSustainLength: 0.16666666666666607
+    - Tick: 2976
+      Time: 10.430735930735931
+      Notes:
+      - Tick: 2976
+        Time: 10.430735930735931
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3072
+      Time: 10.764069264069263
+      Notes:
+      - Tick: 3072
+        Time: 10.764069264069263
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3120
+      Time: 10.930735930735931
+      Notes:
+      - Tick: 3120
+        Time: 10.930735930735931
+        Lane: 1
+        TickSustainLength: 144
+        TimeSustainLength: 0.5
+    - Tick: 3456
+      Time: 12.097402597402597
+      Notes:
+      - Tick: 3456
+        Time: 12.097402597402597
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3504
+      Time: 12.27182120205376
+      Notes:
+      - Tick: 3504
+        Time: 12.27182120205376
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.174418604651164
+    - Tick: 3600
+      Time: 12.620658411356086
+      Notes:
+      - Tick: 3600
+        Time: 12.620658411356086
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3744
+      Time: 13.143914225309574
+      Notes:
+      - Tick: 3744
+        Time: 13.143914225309574
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3792
+      Time: 13.318332829960736
+      Notes:
+      - Tick: 3792
+        Time: 13.318332829960736
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 3936
+      Time: 13.841588643914225
+      Notes:
+      - Tick: 3936
+        Time: 13.841588643914225
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4032
+      Time: 14.190425853216551
+      Notes:
+      - Tick: 4032
+        Time: 14.190425853216551
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4080
+      Time: 14.36283964632
+      Notes:
+      - Tick: 4080
+        Time: 14.36283964632
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4224
+      Time: 14.880081025630345
+      Notes:
+      - Tick: 4224
+        Time: 14.880081025630345
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4320
+      Time: 15.224908611837241
+      Notes:
+      - Tick: 4320
+        Time: 15.224908611837241
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4512
+      Time: 15.914563784251033
+      Notes:
+      - Tick: 4512
+        Time: 15.914563784251033
+        Lane: 2
+        TickSustainLength: 48
+        TimeSustainLength: 0.1724137931034484
+    - Tick: 4608
+      Time: 16.25939137045793
+      Notes:
+      - Tick: 4608
+        Time: 16.25939137045793
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4656
+      Time: 16.43180516356138
+      Notes:
+      - Tick: 4656
+        Time: 16.43180516356138
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 4800
+      Time: 16.949046542871724
+      Notes:
+      - Tick: 4800
+        Time: 16.949046542871724
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4848
+      Time: 17.121460335975172
+      Notes:
+      - Tick: 4848
+        Time: 17.121460335975172
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 4944
+      Time: 17.46628792218207
+      Notes:
+      - Tick: 4944
+        Time: 17.46628792218207
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.1724137931034484
+    - Tick: 5088
+      Time: 17.983529301492414
+      Notes:
+      - Tick: 5088
+        Time: 17.983529301492414
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 5184
+      Time: 18.32835688769931
+      Notes:
+      - Tick: 5184
+        Time: 18.32835688769931
+        Lane: 3
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 5280
+      Time: 18.673184473906208
+      Notes:
+      - Tick: 5280
+        Time: 18.673184473906208
+        Lane: 2
+        TickSustainLength: 48
+        TimeSustainLength: 0.1724137931034484
+    - Tick: 5376
+      Time: 19.0180120601131
+      Notes:
+      - Tick: 5376
+        Time: 19.0180120601131
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5424
+      Time: 19.190425853216553
+      Notes:
+      - Tick: 5424
+        Time: 19.190425853216553
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5568
+      Time: 19.707667232526894
+      Notes:
+      - Tick: 5568
+        Time: 19.707667232526894
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5616
+      Time: 19.880081025630346
+      Notes:
+      - Tick: 5616
+        Time: 19.880081025630346
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5760
+      Time: 20.397322404940688
+      Notes:
+      - Tick: 5760
+        Time: 20.397322404940688
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5808
+      Time: 20.569736198044136
+      Notes:
+      - Tick: 5808
+        Time: 20.569736198044136
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 5952
+      Time: 21.08697757735448
+      Notes:
+      - Tick: 5952
+        Time: 21.08697757735448
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6048
+      Time: 21.43180516356138
+      Notes:
+      - Tick: 6048
+        Time: 21.43180516356138
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6144
+      Time: 21.776632749768275
+      Notes:
+      - Tick: 6144
+        Time: 21.776632749768275
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6240
+      Time: 22.121460335975172
+      Notes:
+      - Tick: 6240
+        Time: 22.121460335975172
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6336
+      Time: 22.46628792218207
+      Notes:
+      - Tick: 6336
+        Time: 22.46628792218207
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6432
+      Time: 22.815125131484393
+      Notes:
+      - Tick: 6432
+        Time: 22.815125131484393
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6528
+      Time: 23.16396234078672
+      Notes:
+      - Tick: 6528
+        Time: 23.16396234078672
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6576
+      Time: 23.338380945437883
+      Notes:
+      - Tick: 6576
+        Time: 23.338380945437883
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6720
+      Time: 23.86163675939137
+      Notes:
+      - Tick: 6720
+        Time: 23.86163675939137
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6816
+      Time: 24.210473968693698
+      Notes:
+      - Tick: 6816
+        Time: 24.210473968693698
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 6912
+      Time: 24.559311177996022
+      Notes:
+      - Tick: 6912
+        Time: 24.559311177996022
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7008
+      Time: 24.90413876420292
+      Notes:
+      - Tick: 7008
+        Time: 24.90413876420292
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7104
+      Time: 25.248966350409816
+      Notes:
+      - Tick: 7104
+        Time: 25.248966350409816
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7152
+      Time: 25.421380143513264
+      Notes:
+      - Tick: 7152
+        Time: 25.421380143513264
+        Lane: 3
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 7296
+      Time: 25.93862152282361
+      Notes:
+      - Tick: 7296
+        Time: 25.93862152282361
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7392
+      Time: 26.283449109030506
+      Notes:
+      - Tick: 7392
+        Time: 26.283449109030506
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7488
+      Time: 26.628276695237403
+      Notes:
+      - Tick: 7488
+        Time: 26.628276695237403
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7584
+      Time: 26.9731042814443
+      Notes:
+      - Tick: 7584
+        Time: 26.9731042814443
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7680
+      Time: 27.317931867651197
+      Notes:
+      - Tick: 7680
+        Time: 27.317931867651197
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7728
+      Time: 27.49034566075464
+      Notes:
+      - Tick: 7728
+        Time: 27.49034566075464
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7872
+      Time: 28.007587040064987
+      Notes:
+      - Tick: 7872
+        Time: 28.007587040064987
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 7968
+      Time: 28.352414626271884
+      Notes:
+      - Tick: 7968
+        Time: 28.352414626271884
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8064
+      Time: 28.69724221247878
+      Notes:
+      - Tick: 8064
+        Time: 28.69724221247878
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8160
+      Time: 29.042069798685677
+      Notes:
+      - Tick: 8160
+        Time: 29.042069798685677
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8256
+      Time: 29.386897384892574
+      Notes:
+      - Tick: 8256
+        Time: 29.386897384892574
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8352
+      Time: 29.73172497109947
+      Notes:
+      - Tick: 8352
+        Time: 29.73172497109947
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8448
+      Time: 30.076552557306368
+      Notes:
+      - Tick: 8448
+        Time: 30.076552557306368
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8496
+      Time: 30.248966350409816
+      Notes:
+      - Tick: 8496
+        Time: 30.248966350409816
+        Lane: 3
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 8640
+      Time: 30.76620772972016
+      Notes:
+      - Tick: 8640
+        Time: 30.76620772972016
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8736
+      Time: 31.111035315927058
+      Notes:
+      - Tick: 8736
+        Time: 31.111035315927058
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8784
+      Time: 31.283449109030506
+      Notes:
+      - Tick: 8784
+        Time: 31.283449109030506
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 8880
+      Time: 31.628276695237403
+      Notes:
+      - Tick: 8880
+        Time: 31.628276695237403
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9072
+      Time: 32.3179318676512
+      Notes:
+      - Tick: 9072
+        Time: 32.3179318676512
+        Lane: 3
+        TickSustainLength: 48
+        TimeSustainLength: 0.17241379310344485
+    - Tick: 9168
+      Time: 32.662759453858094
+      Notes:
+      - Tick: 9168
+        Time: 32.662759453858094
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9216
+      Time: 32.83517324696154
+      Notes:
+      - Tick: 9216
+        Time: 32.83517324696154
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9264
+      Time: 33.00758704006499
+      Notes:
+      - Tick: 9264
+        Time: 33.00758704006499
+        Lane: 0
+        TickSustainLength: 144
+        TimeSustainLength: 0.5172413793103416
+    - Tick: 9504
+      Time: 33.86965600558223
+      Notes:
+      - Tick: 9504
+        Time: 33.86965600558223
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9552
+      Time: 34.04206979868568
+      Notes:
+      - Tick: 9552
+        Time: 34.04206979868568
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9600
+      Time: 34.214483591789126
+      Notes:
+      - Tick: 9600
+        Time: 34.214483591789126
+        Lane: 1
+        TickSustainLength: 144
+        TimeSustainLength: 0.5172413793103416
+    - Tick: 9792
+      Time: 34.90413876420292
+      Notes:
+      - Tick: 9792
+        Time: 34.90413876420292
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9888
+      Time: 35.248966350409816
+      Notes:
+      - Tick: 9888
+        Time: 35.248966350409816
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 9984
+      Time: 35.59379393661671
+      Notes:
+      - Tick: 9984
+        Time: 35.59379393661671
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10032
+      Time: 35.766207729720165
+      Notes:
+      - Tick: 10032
+        Time: 35.766207729720165
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10176
+      Time: 36.28344910903051
+      Notes:
+      - Tick: 10176
+        Time: 36.28344910903051
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10224
+      Time: 36.45586290213396
+      Notes:
+      - Tick: 10224
+        Time: 36.45586290213396
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10368
+      Time: 36.9731042814443
+      Notes:
+      - Tick: 10368
+        Time: 36.9731042814443
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10464
+      Time: 37.3179318676512
+      Notes:
+      - Tick: 10464
+        Time: 37.3179318676512
+        Lane: 0
+        TickSustainLength: 144
+        TimeSustainLength: 0.5172413793103416
+    - Tick: 10656
+      Time: 38.00758704006499
+      Notes:
+      - Tick: 10656
+        Time: 38.00758704006499
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10752
+      Time: 38.35241462627189
+      Notes:
+      - Tick: 10752
+        Time: 38.35241462627189
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 10800
+      Time: 38.52482841937533
+      Notes:
+      - Tick: 10800
+        Time: 38.52482841937533
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 10944
+      Time: 39.04206979868568
+      Notes:
+      - Tick: 10944
+        Time: 39.04206979868568
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.17241379310344485
+    - Tick: 11040
+      Time: 39.38689738489258
+      Notes:
+      - Tick: 11040
+        Time: 39.38689738489258
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 11088
+      Time: 39.55931117799602
+      Notes:
+      - Tick: 11088
+        Time: 39.55931117799602
+        Lane: 1
+        TickSustainLength: 96
+        TimeSustainLength: 0.3448275862068968
+    - Tick: 11232
+      Time: 40.07655255730637
+      Notes:
+      - Tick: 11232
+        Time: 40.07655255730637
+        Lane: 3
+        TickSustainLength: 240
+        TimeSustainLength: 0.8620689655172384
+    - Tick: 18336
+      Time: 65.20170665543606
+      Notes:
+      - Tick: 18336
+        Time: 65.20170665543606
+        Lane: 0
+        TickSustainLength: 96
+        TimeSustainLength: 0.3409090909090935
+    - Tick: 18432
+      Time: 65.54261574634515
+      Notes:
+      - Tick: 18432
+        Time: 65.54261574634515
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 18480
+      Time: 65.71115507218785
+      Notes:
+      - Tick: 18480
+        Time: 65.71115507218785
+        Lane: 1
+        TickSustainLength: 96
+        TimeSustainLength: 0.3370786516853883
+    - Tick: 18624
+      Time: 66.21677304971594
+      Notes:
+      - Tick: 18624
+        Time: 66.21677304971594
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.3370786516853883
+    - Tick: 18720
+      Time: 66.55385170140133
+      Notes:
+      - Tick: 18720
+        Time: 66.55385170140133
+        Lane: 3
+        TickSustainLength: 96
+        TimeSustainLength: 0.3370786516853883
+    - Tick: 18912
+      Time: 67.22800900477212
+      Notes:
+      - Tick: 18912
+        Time: 67.22800900477212
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.16853932584268705
+    - Tick: 19008
+      Time: 67.56508765645751
+      Notes:
+      - Tick: 19008
+        Time: 67.56508765645751
+        Lane: 0
+        TickSustainLength: 96
+        TimeSustainLength: 0.3370786516853883
+    - Tick: 19104
+      Time: 67.9021663081429
+      Notes:
+      - Tick: 19104
+        Time: 67.9021663081429
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 19152
+      Time: 68.0707056339856
+      Notes:
+      - Tick: 19152
+        Time: 68.0707056339856
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 19248
+      Time: 68.40778428567099
+      Notes:
+      - Tick: 19248
+        Time: 68.40778428567099
+        Lane: 2
+        TickSustainLength: 144
+        TimeSustainLength: 0.5056179775280896
+    - Tick: 19488
+      Time: 69.25048091488448
+      Notes:
+      - Tick: 19488
+        Time: 69.25048091488448
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 19584
+      Time: 69.58755956656987
+      Notes:
+      - Tick: 19584
+        Time: 69.58755956656987
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 19680
+      Time: 69.92846865747896
+      Notes:
+      - Tick: 19680
+        Time: 69.92846865747896
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 19728
+      Time: 70.0989232029335
+      Notes:
+      - Tick: 19728
+        Time: 70.0989232029335
+        Lane: 1
+        TickSustainLength: 96
+        TimeSustainLength: 0.3409090909090935
+    - Tick: 19872
+      Time: 70.61028683929713
+      Notes:
+      - Tick: 19872
+        Time: 70.61028683929713
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.3409090909090935
+    - Tick: 19968
+      Time: 70.95119593020623
+      Notes:
+      - Tick: 19968
+        Time: 70.95119593020623
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20064
+      Time: 71.29210502111532
+      Notes:
+      - Tick: 20064
+        Time: 71.29210502111532
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20160
+      Time: 71.63301411202441
+      Notes:
+      - Tick: 20160
+        Time: 71.63301411202441
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20256
+      Time: 71.96634744535774
+      Notes:
+      - Tick: 20256
+        Time: 71.96634744535774
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20304
+      Time: 72.13301411202441
+      Notes:
+      - Tick: 20304
+        Time: 72.13301411202441
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20400
+      Time: 72.46634744535774
+      Notes:
+      - Tick: 20400
+        Time: 72.46634744535774
+        Lane: 2
+        TickSustainLength: 144
+        TimeSustainLength: 0.5
+    - Tick: 20640
+      Time: 73.29968077869108
+      Notes:
+      - Tick: 20640
+        Time: 73.29968077869108
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20736
+      Time: 73.63301411202441
+      Notes:
+      - Tick: 20736
+        Time: 73.63301411202441
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20832
+      Time: 73.95910106854615
+      Notes:
+      - Tick: 20832
+        Time: 73.95910106854615
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 20880
+      Time: 74.12214454680702
+      Notes:
+      - Tick: 20880
+        Time: 74.12214454680702
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.1630434782608745
+    - Tick: 21024
+      Time: 74.61127498158963
+      Notes:
+      - Tick: 21024
+        Time: 74.61127498158963
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21120
+      Time: 74.93736193811137
+      Notes:
+      - Tick: 21120
+        Time: 74.93736193811137
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21168
+      Time: 75.10040541637224
+      Notes:
+      - Tick: 21168
+        Time: 75.10040541637224
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21312
+      Time: 75.58953585115485
+      Notes:
+      - Tick: 21312
+        Time: 75.58953585115485
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21408
+      Time: 75.91562280767658
+      Notes:
+      - Tick: 21408
+        Time: 75.91562280767658
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21456
+      Time: 76.07866628593746
+      Notes:
+      - Tick: 21456
+        Time: 76.07866628593746
+        Lane: 0
+        TickSustainLength: 96
+        TimeSustainLength: 0.3260869565217348
+    - Tick: 21600
+      Time: 76.56779672072007
+      Notes:
+      - Tick: 21600
+        Time: 76.56779672072007
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21744
+      Time: 77.05692715550268
+      Notes:
+      - Tick: 21744
+        Time: 77.05692715550268
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21792
+      Time: 77.21997063376354
+      Notes:
+      - Tick: 21792
+        Time: 77.21997063376354
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21888
+      Time: 77.54605759028529
+      Notes:
+      - Tick: 21888
+        Time: 77.54605759028529
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 21984
+      Time: 77.91191124882187
+      Notes:
+      - Tick: 21984
+        Time: 77.91191124882187
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 22128
+      Time: 78.46069173662676
+      Notes:
+      - Tick: 22128
+        Time: 78.46069173662676
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 22176
+      Time: 78.64361856589504
+      Notes:
+      - Tick: 22176
+        Time: 78.64361856589504
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 22272
+      Time: 79.00947222443163
+      Notes:
+      - Tick: 22272
+        Time: 79.00947222443163
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 22320
+      Time: 79.19239905369992
+      Notes:
+      - Tick: 22320
+        Time: 79.19239905369992
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 22464
+      Time: 79.7411795415048
+      Notes:
+      - Tick: 22464
+        Time: 79.7411795415048
+        Lane: 3
+        TickSustainLength: 48
+        TimeSustainLength: 0.17441860465116577
+    - Tick: 22560
+      Time: 80.09001675080714
+      Notes:
+      - Tick: 22560
+        Time: 80.09001675080714
+        Lane: 2
+        TickSustainLength: 48
+        TimeSustainLength: 0.17441860465115155
+    - Tick: 22656
+      Time: 80.43885396010945
+      Notes:
+      - Tick: 22656
+        Time: 80.43885396010945
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.17441860465116577
+    - Tick: 22752
+      Time: 80.78769116941179
+      Notes:
+      - Tick: 22752
+        Time: 80.78769116941179
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 22848
+      Time: 81.1365283787141
+      Notes:
+      - Tick: 22848
+        Time: 81.1365283787141
+        Lane: 1
+        TickSustainLength: 48
+        TimeSustainLength: 0.17441860465116577
+    - Tick: 22944
+      Time: 81.48536558801644
+      Notes:
+      - Tick: 22944
+        Time: 81.48536558801644
+        Lane: 2
+        TickSustainLength: 48
+        TimeSustainLength: 0.17441860465116577
+    - Tick: 23040
+      Time: 81.83420279731877
+      Notes:
+      - Tick: 23040
+        Time: 81.83420279731877
+        Lane: 3
+        TickSustainLength: 864
+        TimeSustainLength: 3.104278074866315
+    - Tick: 24000
+      Time: 85.29142204865566
+      Notes:
+      - Tick: 24000
+        Time: 85.29142204865566
+        Lane: 2
+        TickSustainLength: 192
+        TimeSustainLength: 0.7058823529411882
+    - Tick: 24192
+      Time: 85.99730440159685
+      Notes:
+      - Tick: 24192
+        Time: 85.99730440159685
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 24240
+      Time: 86.15859472417749
+      Notes:
+      - Tick: 24240
+        Time: 86.15859472417749
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 24288
+      Time: 86.31988504675815
+      Notes:
+      - Tick: 24288
+        Time: 86.31988504675815
+        Lane: 1
+        TickSustainLength: 480
+        TimeSustainLength: 1.6129032258064484
+    - Tick: 25104
+      Time: 89.09945493923126
+      Notes:
+      - Tick: 25104
+        Time: 89.09945493923126
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 25248
+      Time: 89.59945493923126
+      Notes:
+      - Tick: 25248
+        Time: 89.59945493923126
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 25344
+      Time: 89.9327882725646
+      Notes:
+      - Tick: 25344
+        Time: 89.9327882725646
+        Lane: 3
+        TickSustainLength: 864
+        TimeSustainLength: 3.068181818181813
+    - Tick: 26208
+      Time: 93.0009700907464
+      Notes:
+      - Tick: 26208
+        Time: 93.0009700907464
+        Lane: 2
+        TickSustainLength: 96
+        TimeSustainLength: 0.3409090909090935
+    - Tick: 26304
+      Time: 93.3418791816555
+      Notes:
+      - Tick: 26304
+        Time: 93.3418791816555
+        Lane: 1
+        TickSustainLength: 96
+        TimeSustainLength: 0.3409090909090935
+    - Tick: 26400
+      Time: 93.6827882725646
+      Notes:
+      - Tick: 26400
+        Time: 93.6827882725646
+        Lane: 0
+        TickSustainLength: 96
+        TimeSustainLength: 0.3409090909090935
+    - Tick: 26496
+      Time: 94.02369736347369
+      Notes:
+      - Tick: 26496
+        Time: 94.02369736347369
+        Lane: 1
+        TickSustainLength: 288
+        TimeSustainLength: 1.0112359550561791
+    - Tick: 27072
+      Time: 96.04616927358605
+      Notes:
+      - Tick: 27072
+        Time: 96.04616927358605
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27120
+      Time: 96.21283594025272
+      Notes:
+      - Tick: 27120
+        Time: 96.21283594025272
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27216
+      Time: 96.54616927358605
+      Notes:
+      - Tick: 27216
+        Time: 96.54616927358605
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27264
+      Time: 96.71283594025272
+      Notes:
+      - Tick: 27264
+        Time: 96.71283594025272
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27360
+      Time: 97.04616927358605
+      Notes:
+      - Tick: 27360
+        Time: 97.04616927358605
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27408
+      Time: 97.21283594025272
+      Notes:
+      - Tick: 27408
+        Time: 97.21283594025272
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27504
+      Time: 97.54616927358605
+      Notes:
+      - Tick: 27504
+        Time: 97.54616927358605
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27600
+      Time: 97.87950260691937
+      Notes:
+      - Tick: 27600
+        Time: 97.87950260691937
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 27648
+      Time: 98.04616927358605
+      Notes:
+      - Tick: 27648
+        Time: 98.04616927358605
+        Lane: 1
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727337
+    - Tick: 27936
+      Time: 99.06889654631331
+      Notes:
+      - Tick: 27936
+        Time: 99.06889654631331
+        Lane: 3
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727337
+    - Tick: 28224
+      Time: 100.09162381904059
+      Notes:
+      - Tick: 28224
+        Time: 100.09162381904059
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 28320
+      Time: 100.43253290994969
+      Notes:
+      - Tick: 28320
+        Time: 100.43253290994969
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 28416
+      Time: 100.77344200085878
+      Notes:
+      - Tick: 28416
+        Time: 100.77344200085878
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 28512
+      Time: 101.11435109176786
+      Notes:
+      - Tick: 28512
+        Time: 101.11435109176786
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 28608
+      Time: 101.45526018267695
+      Notes:
+      - Tick: 28608
+        Time: 101.45526018267695
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 28704
+      Time: 101.79616927358605
+      Notes:
+      - Tick: 28704
+        Time: 101.79616927358605
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 28800
+      Time: 102.13707836449514
+      Notes:
+      - Tick: 28800
+        Time: 102.13707836449514
+        Lane: 3
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727195
+    - Tick: 29088
+      Time: 103.1598056372224
+      Notes:
+      - Tick: 29088
+        Time: 103.1598056372224
+        Lane: 2
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727337
+    - Tick: 29376
+      Time: 104.18253290994969
+      Notes:
+      - Tick: 29376
+        Time: 104.18253290994969
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 29472
+      Time: 104.52344200085878
+      Notes:
+      - Tick: 29472
+        Time: 104.52344200085878
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 29568
+      Time: 104.86435109176786
+      Notes:
+      - Tick: 29568
+        Time: 104.86435109176786
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 29664
+      Time: 105.20526018267695
+      Notes:
+      - Tick: 29664
+        Time: 105.20526018267695
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 29760
+      Time: 105.54616927358605
+      Notes:
+      - Tick: 29760
+        Time: 105.54616927358605
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 29856
+      Time: 105.88707836449514
+      Notes:
+      - Tick: 29856
+        Time: 105.88707836449514
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 29952
+      Time: 106.22798745540423
+      Notes:
+      - Tick: 29952
+        Time: 106.22798745540423
+        Lane: 3
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727195
+    - Tick: 30240
+      Time: 107.2507147281315
+      Notes:
+      - Tick: 30240
+        Time: 107.2507147281315
+        Lane: 2
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727337
+    - Tick: 30528
+      Time: 108.27344200085878
+      Notes:
+      - Tick: 30528
+        Time: 108.27344200085878
+        Lane: 0
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 30624
+      Time: 108.59952895738051
+      Notes:
+      - Tick: 30624
+        Time: 108.59952895738051
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 30720
+      Time: 108.92561591390226
+      Notes:
+      - Tick: 30720
+        Time: 108.92561591390226
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 30816
+      Time: 109.251702870424
+      Notes:
+      - Tick: 30816
+        Time: 109.251702870424
+        Lane: 3
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 30912
+      Time: 109.59261196133309
+      Notes:
+      - Tick: 30912
+        Time: 109.59261196133309
+        Lane: 2
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 31008
+      Time: 109.93352105224218
+      Notes:
+      - Tick: 31008
+        Time: 109.93352105224218
+        Lane: 1
+        TickSustainLength: 0
+        TimeSustainLength: 0
+    - Tick: 31104
+      Time: 110.27443014315126
+      Notes:
+      - Tick: 31104
+        Time: 110.27443014315126
+        Lane: 3
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727337
+    - Tick: 31392
+      Time: 111.29715741587854
+      Notes:
+      - Tick: 31392
+        Time: 111.29715741587854
+        Lane: 2
+        TickSustainLength: 240
+        TimeSustainLength: 0.8522727272727195
+    - Tick: 31680
+      Time: 112.31988468860581
+      Notes:
+      - Tick: 31680
+        Time: 112.31988468860581
+        Lane: 3
+        TickSustainLength: 288
+        TimeSustainLength: 1
+    - Tick: 31968
+      Time: 113.31988468860581
+      Notes:
+      - Tick: 31968
+        Time: 113.31988468860581
+        Lane: 2
+        TickSustainLength: 240
+        TimeSustainLength: 0.8333333333333286
+    LocalEvents:
+      LaneSwitchEvents: []
+    LastTick: 32208
   GlobalEvents:
     <Items>k__BackingField: []
-    Sections: []
+    Sections:
+    - Tick: 576
+      Time: 1.8181818181818183
+      SectionName: Intro
+    - Tick: 2304
+      Time: 7.954545454545454
+      SectionName: Verse1
+    - Tick: 11520
+      Time: 41.111035315927055
+      SectionName: Interlude
+    - Tick: 18432
+      Time: 65.54261574634515
+      SectionName: Verse2
+    - Tick: 23040
+      Time: 81.83420279731877
+      SectionName: Bridge
+    - Tick: 27648
+      Time: 98.04616927358605
+      SectionName: Outro
+    - Tick: 32256
+      Time: 114.31988468860581
+      SectionName: Intro
+    - Tick: 35328
+      Time: 119.1747070236312
+      SectionName: Solo1
+    - Tick: 41472
+      Time: 128.7747070236312
+      SectionName: Verse1
+    - Tick: 47616
+      Time: 138.46266018882503
+      SectionName: Pre-Chorus1
+    - Tick: 56832
+      Time: 153.04720196439172
+      SectionName: Chorus1
+    - Tick: 69120
+      Time: 172.3515394302947
+      SectionName: Post-Chorus
+    - Tick: 72192
+      Time: 177.17693061217423
+      SectionName: Verse2
+    - Tick: 78336
+      Time: 186.80846712702817
+      SectionName: Pre-Chorus2
+    - Tick: 87552
+      Time: 201.27645959365105
+      SectionName: Chorus2
+    - Tick: 99840
+      Time: 220.59539630369792
+      SectionName: Bridge
+    - Tick: 112128
+      Time: 239.8689603211243
+      SectionName: Solo2
+    - Tick: 125184
+      Time: 261.5941941397591
+      SectionName: Breakdown
+    - Tick: 139008
+      Time: 283.83154257717865
+      SectionName: Outro
     ShowSongInfoEvents: []
     Effects: []
     Lights: []

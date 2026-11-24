@@ -57,10 +57,13 @@ namespace RetroRecord.Engine.Player
             }
 
             m_pauseAction.action.performed += OnPause;
+            m_pauseAction.action.actionMap.Enable();
         }
 
         private void OnDestroy()
         {
+            m_pauseAction.action.actionMap.Disable();
+            m_pauseAction.action.performed -= OnPause;
             InputActionMap actionMap = m_inputActionAsset.FindActionMap(m_actionMapName);
             if (m_actionCallbacks == null)
                 return;
@@ -73,8 +76,6 @@ namespace RetroRecord.Engine.Player
                 InputAction action = actionMap.FindAction(m_laneNames[i]);
                 action.performed -= m_actionCallbacks[i];
             }
-
-            m_pauseAction.action.performed -= OnPause;
         }
 
         private void OnLaneInput(InputAction.CallbackContext ctx, int idx)

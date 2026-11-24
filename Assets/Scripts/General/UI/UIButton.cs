@@ -15,7 +15,7 @@ namespace RetroRecord.General.UI
         private Vector3 m_defaultScale;
 
         [SerializeField]
-        private Vector3 m_hoverScale = Vector3.one;
+        private Vector3 m_hoverScale = new(1.1f, 1.1f, 1.1f);
 
         [SerializeField]
         private float m_scaleTime = 0.1f;
