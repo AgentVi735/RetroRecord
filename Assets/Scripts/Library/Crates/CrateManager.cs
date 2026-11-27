@@ -49,7 +49,7 @@ namespace RetroRecord.Library.Crates
                 return;
             }
 
-            string alphabetString = "abcdefhijklmnopqrstuvwxyz";
+            string alphabetString = "abcdefghijklmnopqrstuvwxyz";
             string extraCharacters = "";
 
 
