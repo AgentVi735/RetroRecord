@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Album Library
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.AlbumLibrary
   Albums:
-  - {fileID: 11400000, guid: 33b036cd7b78f4b46b0244a9d579aae5, type: 2}
   - {fileID: 11400000, guid: 64267922e2795ac40a7663f4c922861d, type: 2}
   - {fileID: 11400000, guid: 1ff4375ebd4146a40a5e72c487cab915, type: 2}
   - {fileID: 11400000, guid: e110eca6adba62041b60772626db4c93, type: 2}

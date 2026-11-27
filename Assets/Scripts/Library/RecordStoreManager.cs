@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using RetroRecord.General.UI;
 using RetroRecord.Library.Crates;
@@ -8,7 +7,6 @@ using RetroRecord.Library.UI.MainMenu;
 using UnityEditor;
 #endif
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -16,6 +14,9 @@ namespace RetroRecord.Library
 {
     public class RecordStoreManager : MonoBehaviour
     {
+        [SerializeField]
+        private AlbumLibrary m_albumLibrary;
+        
         [SerializeField]
         private CameraManager m_mainMenuCameraManager;
         
@@ -46,11 +47,21 @@ namespace RetroRecord.Library
         [SerializeField]
         private GameObject[] m_objectToHide;
 
+        [SerializeField]
+        private AlbumObject[] m_randomAlbums;
+
         private void Awake()
         {
             m_crateManager.Load();
             m_libraryInputManager.Toggle(false);
             m_libraryInputManager.Setup();
+            SetRandomAlbums();
+        }
+
+        private void SetRandomAlbums()
+        {
+            foreach (AlbumObject album in m_randomAlbums)
+                album.Load(m_albumLibrary.Albums[Random.Range(0, m_albumLibrary.Albums.Length)]);
         }
 
         public void OnStart()
@@ -179,6 +190,7 @@ namespace RetroRecord.Library
             m_libraryInputManager.UnselectAlbum();
             foreach (GameObject obj in m_objectToHide)
                 obj.SetActive(true);
+            SetRandomAlbums();
             m_backgroundImage.gameObject.SetActive(false);
             yield return StartCoroutine(m_cameraManager.MoveCamera_Coroutine(m_crateManager.GetCurrentPosition()));
             m_libraryInputManager.Toggle(true);

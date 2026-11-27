@@ -12,6 +12,21 @@ namespace RetroRecord.Library.Crates
         
         public Album Album { get; private set; }
 
+        public void Load(Album album)
+        {
+            Album = album;
+            if (Album.Cover != null)
+            {
+                m_meshRenderer.material.mainTexture = Album.Cover.texture;
+                gameObject.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning($"{Album.AlbumName} doesn't have a cover texture");
+                gameObject.SetActive(false);
+            }
+        }
+        
         public void Load(Album album, bool startFlipped)
         {
             Album = album;
