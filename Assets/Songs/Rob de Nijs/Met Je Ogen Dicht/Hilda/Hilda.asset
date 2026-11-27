@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hilda
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
   SongInfo:
-    SongName: Hilda
+    SongName: 'Hilda [WIP]'
     Album: {fileID: 11400000, guid: f466cfe888e21bd49bb02c0d07e6a663, type: 2}
     OverrideArtist: 
     Charter: Viany

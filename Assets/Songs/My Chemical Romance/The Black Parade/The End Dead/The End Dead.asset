@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The End Dead
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
   SongInfo:
-    SongName: The End/Dead
+    SongName: 'The End/Dead [WIP]'
     Album: {fileID: 11400000, guid: e110eca6adba62041b60772626db4c93, type: 2}
     OverrideArtist: 
     Charter: Vicky
@@ -1993,7 +1993,83 @@ MonoBehaviour:
       LaneSwitchEvents: []
     LastTick: 32208
   GlobalEvents:
-    <Items>k__BackingField: []
+    <Items>k__BackingField:
+    - Tick: 576
+      Time: 1.8181818181818183
+      ItemType: 9
+      Index: 0
+    - Tick: 2304
+      Time: 7.954545454545454
+      ItemType: 9
+      Index: 1
+    - Tick: 11520
+      Time: 41.111035315927055
+      ItemType: 9
+      Index: 2
+    - Tick: 18432
+      Time: 65.54261574634515
+      ItemType: 9
+      Index: 3
+    - Tick: 23040
+      Time: 81.83420279731877
+      ItemType: 9
+      Index: 4
+    - Tick: 27648
+      Time: 98.04616927358605
+      ItemType: 9
+      Index: 5
+    - Tick: 32256
+      Time: 114.31988468860581
+      ItemType: 9
+      Index: 6
+    - Tick: 35328
+      Time: 119.1747070236312
+      ItemType: 9
+      Index: 7
+    - Tick: 41472
+      Time: 128.7747070236312
+      ItemType: 9
+      Index: 8
+    - Tick: 47616
+      Time: 138.46266018882503
+      ItemType: 9
+      Index: 9
+    - Tick: 56832
+      Time: 153.04720196439172
+      ItemType: 9
+      Index: 10
+    - Tick: 69120
+      Time: 172.3515394302947
+      ItemType: 9
+      Index: 11
+    - Tick: 72192
+      Time: 177.17693061217423
+      ItemType: 9
+      Index: 12
+    - Tick: 78336
+      Time: 186.80846712702817
+      ItemType: 9
+      Index: 13
+    - Tick: 87552
+      Time: 201.27645959365105
+      ItemType: 9
+      Index: 14
+    - Tick: 99840
+      Time: 220.59539630369792
+      ItemType: 9
+      Index: 15
+    - Tick: 112128
+      Time: 239.8689603211243
+      ItemType: 9
+      Index: 16
+    - Tick: 125184
+      Time: 261.5941941397591
+      ItemType: 9
+      Index: 17
+    - Tick: 139008
+      Time: 283.83154257717865
+      ItemType: 9
+      Index: 18
     Sections:
     - Tick: 576
       Time: 1.8181818181818183

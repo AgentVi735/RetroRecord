@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: War Pigs Luke's Wall
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
   SongInfo:
-    SongName: War Pigs / Luke's Wall (WIP)
+    SongName: 'War Pigs / Luke''s Wall [WIP]'
     Album: {fileID: 11400000, guid: 64267922e2795ac40a7663f4c922861d, type: 2}
     OverrideArtist: Black Sababth
     Charter: Vicky
@@ -4807,7 +4807,59 @@ MonoBehaviour:
         Lanes: 00001111
     LastTick: 97920
   GlobalEvents:
-    <Items>k__BackingField: []
+    <Items>k__BackingField:
+    - Tick: 1152
+      Time: 3.1578947368421053
+      ItemType: 9
+      Index: 0
+    - Tick: 19584
+      Time: 54.7722451384755
+      ItemType: 9
+      Index: 1
+    - Tick: 34944
+      Time: 108.70008240005217
+      ItemType: 9
+      Index: 2
+    - Tick: 41088
+      Time: 129.69381691341582
+      ItemType: 9
+      Index: 3
+    - Tick: 59520
+      Time: 192.1367332500233
+      ItemType: 9
+      Index: 4
+    - Tick: 65664
+      Time: 213.02880622307407
+      ItemType: 9
+      Index: 5
+    - Tick: 82560
+      Time: 271.7730506847366
+      ItemType: 9
+      Index: 6
+    - Tick: 97920
+      Time: 325.1801315271601
+      ItemType: 9
+      Index: 7
+    - Tick: 104064
+      Time: 345.72077572642934
+      ItemType: 9
+      Index: 8
+    - Tick: 118656
+      Time: 396.72668878644623
+      ItemType: 9
+      Index: 9
+    - Tick: 124704
+      Time: 418.0753401350976
+      ItemType: 9
+      Index: 10
+    - Tick: 130944
+      Time: 439.46119946520673
+      ItemType: 9
+      Index: 11
+    - Tick: 137088
+      Time: 460.86900685835303
+      ItemType: 9
+      Index: 12
     Sections:
     - Tick: 1152
       Time: 3.1578947368421053

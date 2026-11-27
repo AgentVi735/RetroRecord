@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "H\xE9 Speelman"
   m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Engine.Chart.Song
   SongInfo:
-    SongName: "H\xE9 Speelman"
+    SongName: "H\xE9 Speelman [WIP]"
     Album: {fileID: 11400000, guid: 722ccd688340d0f4291ad816b776be9b, type: 2}
     OverrideArtist: 
     Charter: Viany
