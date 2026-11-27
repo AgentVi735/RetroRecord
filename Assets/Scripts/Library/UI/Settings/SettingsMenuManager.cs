@@ -1,6 +1,8 @@
-﻿using RetroRecord.Engine.Settings;
+﻿using System.Globalization;
+using RetroRecord.Engine.Settings;
 using RetroRecord.General.UI;
 using RetroRecord.Library.UI.MainMenu;
+using TMPro;
 using UnityEngine;
 
 namespace RetroRecord.Library.UI.Settings
@@ -25,9 +27,13 @@ namespace RetroRecord.Library.UI.Settings
         [SerializeField]
         private UISlider m_sfxSlider;
 
+        [SerializeField]
+        private TMP_InputField m_audioDelayField;
+
         private void Awake()
         {
             m_musicSlider.value = m_engineSettings.Volume;
+            m_audioDelayField.text = m_engineSettings.AudioOffset.ToString(CultureInfo.InvariantCulture);
         }
 
         public void Toggle(bool toggle)
@@ -44,6 +50,14 @@ namespace RetroRecord.Library.UI.Settings
         public void SetMusicVolume(float value)
         {
             m_engineSettings.Volume = value;
+        }
+
+        public void SetAudioDelay(string value)
+        {
+            bool couldParse = float.TryParse(value, out float newValue);
+            if (!couldParse)
+                return;
+            m_engineSettings.AudioOffset = newValue;
         }
     }
 }
