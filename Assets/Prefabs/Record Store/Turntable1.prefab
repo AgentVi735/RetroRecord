@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5441136741624133380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8976817115791455270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6479699394893886943}
+  m_Layer: 0
+  m_Name: Cam Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6479699394893886943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8976817115791455270}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.055143036, y: 0.9433832, z: -0.20255487, w: -0.2568245}
+  m_LocalPosition: {x: 0.27849102, y: 0.434402, z: 0.50763273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5441136741624133380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5478756991422189807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,8 +164,32 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a21696be14144bc46a521eccaf7c0ffc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3805962242471585372}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a21696be14144bc46a521eccaf7c0ffc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6479699394893886943}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a21696be14144bc46a521eccaf7c0ffc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7143542618721233460}
   m_SourcePrefab: {fileID: 100100000, guid: a21696be14144bc46a521eccaf7c0ffc, type: 3}
+--- !u!1 &4668295084736081342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a21696be14144bc46a521eccaf7c0ffc, type: 3}
+  m_PrefabInstance: {fileID: 5478756991422189807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7143542618721233460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4668295084736081342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d1d65ac2a0497dbaeb04d32df9f181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RetroRecord.Library.Turntable
+  m_camPos: {fileID: 6479699394893886943}
 --- !u!4 &5441136741624133380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a21696be14144bc46a521eccaf7c0ffc, type: 3}
