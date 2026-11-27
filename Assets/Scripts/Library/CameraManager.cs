@@ -10,8 +10,8 @@ namespace RetroRecord.Library
     
     public class CameraManager : MonoBehaviour
     {
-        [SerializeField]
-        private Camera m_camera;
+        [field: SerializeField]
+        public Camera Camera { get; private set; }
 
         [SerializeField]
         private Transform m_camTarget;
@@ -33,8 +33,8 @@ namespace RetroRecord.Library
 
         public void SetPosition(CameraPosition data)
         {
-            m_camera.transform.position = data.position;
-            m_camera.transform.rotation = data.rotation;
+            Camera.transform.position = data.position;
+            Camera.transform.rotation = data.rotation;
         }
         
         public void MoveCamera(CameraPosition data)
@@ -59,20 +59,20 @@ namespace RetroRecord.Library
                 m_camTarget.transform.Rotate(CamRotOffset);
             }
 
-            Vector3 startPos = m_camera.transform.position;
+            Vector3 startPos = Camera.transform.position;
             Vector3 endPos = m_camTarget.position;
-            Quaternion startRot = m_camera.transform.rotation;
+            Quaternion startRot = Camera.transform.rotation;
             Quaternion endRot = m_camTarget.rotation;
             for (float i = 0; i < m_moveTime; i += Time.deltaTime)
             {
                 float ratio = i / m_moveTime;
-                m_camera.transform.position = Vector3.Lerp(startPos, endPos, ratio);
-                m_camera.transform.rotation = Quaternion.Lerp(startRot, endRot, ratio);
+                Camera.transform.position = Vector3.Lerp(startPos, endPos, ratio);
+                Camera.transform.rotation = Quaternion.Lerp(startRot, endRot, ratio);
                 yield return null;
             }
 
-            m_camera.transform.position = endPos;
-            m_camera.transform.rotation = endRot;
+            Camera.transform.position = endPos;
+            Camera.transform.rotation = endRot;
             IsMoving = false;
         }
 

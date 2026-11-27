@@ -55,7 +55,7 @@ namespace RetroRecord.Library
                 m_forwardInput.action.actionMap.Disable();
         }
 
-        private void OnDestroy()
+        public void Dispose()
         {
             m_forwardInput.action.started -= OnForward;
             m_backwardInput.action.started -= OnBackward;

@@ -73,8 +73,8 @@ namespace RetroRecord.Engine.Player
         {
             s_Instance = this;
             m_recordStoreManager = FindAnyObjectByType<RecordStoreManager>();
-            m_renderTexture.width = Screen.width;
-            m_renderTexture.height = Screen.height;
+            // m_renderTexture.width = Screen.width;
+            // m_renderTexture.height = Screen.height;
             m_engineSettings.Initialize();
             m_bassManager.Initialize();
             m_songPlayer.Initialize();
